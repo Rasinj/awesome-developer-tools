@@ -41,6 +41,33 @@
 - commitizen: https://commitizen-tools.github.io/commitizen/
 - semantic-release: https://semantic-release.gitbook.io/
 
+## Terminal & Shell
+
+
+### Terminal Emulators
+
+- Alacritty: https://alacritty.org/
+- WezTerm: https://wezfurlong.org/wezterm/
+- iTerm2: https://iterm2.com/
+- Windows Terminal: https://github.com/microsoft/terminal
+
+### Shell Enhancement
+
+- Fish: https://fishshell.com/
+- Zsh: https://www.zsh.org/
+- Oh My Zsh: https://ohmyz.sh/
+- Starship: https://starship.rs/
+
+### Terminal Utilities
+
+- tmux: https://github.com/tmux/tmux
+- fzf: https://github.com/junegunn/fzf
+- ripgrep: https://github.com/BurntSushi/ripgrep
+- bat: https://github.com/sharkdp/bat
+- exa: https://the.exa.website/
+- fd: https://github.com/sharkdp/fd
+- htop: https://htop.dev/
+
 ## Package Managers
 
 
@@ -59,3 +86,253 @@
 - Homebrew: https://brew.sh/
 - Chocolatey: https://chocolatey.org/
 - Scoop: https://scoop.sh/
+
+## Build Tools & Task Runners
+
+
+### Build Systems
+
+- Webpack: https://webpack.js.org/
+- Vite: https://vitejs.dev/
+- Rollup: https://rollupjs.org/
+- esbuild: https://esbuild.github.io/
+- Turbo: https://turbo.build/
+
+### Task Runners
+
+- Make: https://www.gnu.org/software/make/
+- just: https://github.com/casey/just
+- Task: https://taskfile.dev/
+- npm scripts: https://docs.npmjs.com/cli/v7/using-npm/scripts
+
+## Testing
+
+
+### Testing Frameworks
+
+- Jest: https://jestjs.io/
+- Vitest: https://vitest.dev/
+- Playwright: https://playwright.dev/
+- Cypress: https://www.cypress.io/
+- pytest: https://pytest.org/
+- JUnit: https://junit.org/
+
+### Testing Utilities
+
+- Faker.js: https://fakerjs.dev/
+- Storybook: https://storybook.js.org/
+- Testing Library: https://testing-library.com/
+
+## Debugging & Profiling
+
+
+### Debuggers
+
+- Chrome DevTools: https://developer.chrome.com/docs/devtools/
+- React Developer Tools: https://react.dev/learn/react-developer-tools
+- Vue.js DevTools: https://devtools.vuejs.org/
+- pdb: https://docs.python.org/3/library/pdb.html
+- gdb: https://www.gnu.org/software/gdb/
+
+### Performance Profiling
+
+- Lighthouse: https://developers.google.com/web/tools/lighthouse
+- WebPageTest: https://www.webpagetest.org/
+- Pyflame: https://github.com/uber-archive/pyflame
+- perf: https://perf.wiki.kernel.org/
+
+## Code Quality & Linting
+
+
+### Linters & Formatters
+
+- ESLint: https://eslint.org/
+- Prettier: https://prettier.io/
+- Black: https://black.readthedocs.io/
+- Pylint: https://pylint.org/
+- Flake8: https://flake8.pycqa.org/
+- Rustfmt: https://github.com/rust-lang/rustfmt
+- Clippy: https://github.com/rust-lang/rust-clippy
+
+### Code Analysis
+
+- SonarQube: https://www.sonarqube.org/
+- CodeClimate: https://codeclimate.com/
+- Semgrep: https://semgrep.dev/
+
+## API Development & Testing
+
+
+### API Testing
+
+- Postman: https://www.postman.com/
+- Insomnia: https://insomnia.rest/
+- HTTPie: https://httpie.io/
+- curl: https://curl.se/
+
+### API Documentation
+
+- Swagger/OpenAPI: https://swagger.io/
+- Redoc: https://redoc.ly/
+- API Blueprint: https://apiblueprint.org/
+
+### Mock Servers
+
+- json-server: https://github.com/typicode/json-server
+- WireMock: http://wiremock.org/
+- Mockoon: https://mockoon.com/
+
+## Database Tools
+
+
+### Database Clients
+
+- DBeaver: https://dbeaver.io/
+- TablePlus: https://tableplus.com/
+- pgAdmin: https://www.pgadmin.org/
+- MongoDB Compass: https://www.mongodb.com/products/compass
+
+### Database Development
+
+- Prisma: https://www.prisma.io/
+- Drizzle: https://orm.drizzle.team/
+- Flyway: https://flywaydb.org/
+- Liquibase: https://www.liquibase.org/
+
+## DevOps & Infrastructure
+
+
+### Containerization
+
+- Docker: https://www.docker.com/
+- Podman: https://podman.io/
+- Docker Compose: https://docs.docker.com/compose/
+
+### Orchestration
+
+- Kubernetes: https://kubernetes.io/
+- k9s: https://k9scli.io/
+- Helm: https://helm.sh/
+- Skaffold: https://skaffold.dev/
+
+### Infrastructure as Code
+
+- Terraform: https://www.terraform.io/
+- Ansible: https://www.ansible.com/
+- Pulumi: https://www.pulumi.com/
+- AWS CDK: https://aws.amazon.com/cdk/
+
+### CI/CD
+
+- GitHub Actions: https://github.com/features/actions
+- GitLab CI: https://docs.gitlab.com/ee/ci/
+- Jenkins: https://www.jenkins.io/
+- Circle CI: https://circleci.com/
+
+## Monitoring & Logging
+
+
+### Application Monitoring
+
+- Datadog: https://www.datadoghq.com/
+- New Relic: https://newrelic.com/
+- Sentry: https://sentry.io/
+- Grafana: https://grafana.com/
+
+### Logging
+
+- ELK Stack: https://www.elastic.co/elk-stack
+- Fluentd: https://www.fluentd.org/
+- Loki: https://grafana.com/oss/loki/
+
+## Security
+
+
+### Security Scanning
+
+- Snyk: https://snyk.io/
+- OWASP ZAP: https://owasp.org/www-project-zap/
+- Bandit: https://bandit.readthedocs.io/
+- npm audit: https://docs.npmjs.com/cli/v7/commands/npm-audit
+
+### Secret Management
+
+- HashiCorp Vault: https://www.vaultproject.io/
+- 1Password CLI: https://developer.1password.com/docs/cli/
+- AWS Secrets Manager: https://aws.amazon.com/secrets-manager/
+
+## Documentation
+
+
+### Documentation Generators
+
+- GitBook: https://www.gitbook.com/
+- Notion: https://www.notion.so/
+- MkDocs: https://www.mkdocs.org/
+- Docusaurus: https://docusaurus.io/
+- VitePress: https://vitepress.dev/
+
+### API Documentation
+
+- Stoplight: https://stoplight.io/
+- Readme.io: https://readme.com/
+
+## Design & Prototyping
+
+
+### Design Tools
+
+- Figma: https://www.figma.com/
+- Sketch: https://www.sketch.com/
+- Adobe XD: https://www.adobe.com/products/xd.html
+
+### Asset Management
+
+- ImageOptim: https://imageoptim.com/
+- TinyPNG: https://tinypng.com/
+- SVGO: https://github.com/svg/svgo
+
+## Productivity
+
+
+### Project Management
+
+- Linear: https://linear.app/
+- Notion: https://www.notion.so/
+- Obsidian: https://obsidian.md/
+- Jira: https://www.atlassian.com/software/jira
+
+### Time Management
+
+- RescueTime: https://www.rescuetime.com/
+- Toggl: https://toggl.com/
+- Focus: https://heyfocus.com/
+
+### Note Taking
+
+- Obsidian: https://obsidian.md/
+- Roam Research: https://roamresearch.com/
+- Logseq: https://logseq.com/
+
+## Learning & References
+
+
+### Documentation
+
+- DevDocs: https://devdocs.io/
+- MDN Web Docs: https://developer.mozilla.org/
+- Stack Overflow: https://stackoverflow.com/
+
+### Learning Platforms
+
+- freeCodeCamp: https://www.freecodecamp.org/
+- Codecademy: https://www.codecademy.com/
+- Pluralsight: https://www.pluralsight.com/
+- Udemy: https://www.udemy.com/
+
+### Practice & Challenges
+
+- LeetCode: https://leetcode.com/
+- HackerRank: https://www.hackerrank.com/
+- Codewars: https://www.codewars.com/
+- Exercism: https://exercism.io/

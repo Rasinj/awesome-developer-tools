@@ -18,6 +18,21 @@ Version Control,Git Tools,Sourcetree,https://www.sourcetreeapp.com/,Free Git GUI
 Version Control,Git Utilities,pre-commit,https://pre-commit.com/,Framework for managing git pre-commit hooks
 Version Control,Git Utilities,commitizen,https://commitizen-tools.github.io/commitizen/,Tool for creating committing rules
 Version Control,Git Utilities,semantic-release,https://semantic-release.gitbook.io/,Automated version management and package publishing
+Terminal & Shell,Terminal Emulators,Alacritty,https://alacritty.org/,"Fast, cross-platform terminal emulator"
+Terminal & Shell,Terminal Emulators,WezTerm,https://wezfurlong.org/wezterm/,GPU-accelerated terminal emulator and multiplexer
+Terminal & Shell,Terminal Emulators,iTerm2,https://iterm2.com/,macOS terminal replacement with advanced features
+Terminal & Shell,Terminal Emulators,Windows Terminal,https://github.com/microsoft/terminal,Modern terminal for Windows
+Terminal & Shell,Shell Enhancement,Fish,https://fishshell.com/,Smart and user-friendly command line shell
+Terminal & Shell,Shell Enhancement,Zsh,https://www.zsh.org/,Extended Bourne shell with improvements
+Terminal & Shell,Shell Enhancement,Oh My Zsh,https://ohmyz.sh/,Framework for managing Zsh configuration
+Terminal & Shell,Shell Enhancement,Starship,https://starship.rs/,"Fast, customizable prompt for any shell"
+Terminal & Shell,Terminal Utilities,tmux,https://github.com/tmux/tmux,Terminal multiplexer
+Terminal & Shell,Terminal Utilities,fzf,https://github.com/junegunn/fzf,Command-line fuzzy finder
+Terminal & Shell,Terminal Utilities,ripgrep,https://github.com/BurntSushi/ripgrep,Fast line-oriented search tool
+Terminal & Shell,Terminal Utilities,bat,https://github.com/sharkdp/bat,Cat clone with syntax highlighting
+Terminal & Shell,Terminal Utilities,exa,https://the.exa.website/,Modern replacement for ls
+Terminal & Shell,Terminal Utilities,fd,https://github.com/sharkdp/fd,"Simple, fast alternative to find"
+Terminal & Shell,Terminal Utilities,htop,https://htop.dev/,Interactive process viewer
 Package Managers,Language-Specific,npm,https://www.npmjs.com/,Node.js package manager
 Package Managers,Language-Specific,Yarn,https://yarnpkg.com/,"Fast, reliable JavaScript package manager"
 Package Managers,Language-Specific,pnpm,https://pnpm.io/,Efficient package manager for Node.js
@@ -28,3 +43,121 @@ Package Managers,Language-Specific,Go Modules,https://golang.org/ref/mod,Go depe
 Package Managers,System Package Managers,Homebrew,https://brew.sh/,Package manager for macOS and Linux
 Package Managers,System Package Managers,Chocolatey,https://chocolatey.org/,Package manager for Windows
 Package Managers,System Package Managers,Scoop,https://scoop.sh/,Command-line installer for Windows
+Build Tools & Task Runners,Build Systems,Webpack,https://webpack.js.org/,Module bundler for JavaScript applications
+Build Tools & Task Runners,Build Systems,Vite,https://vitejs.dev/,Fast build tool for modern web projects
+Build Tools & Task Runners,Build Systems,Rollup,https://rollupjs.org/,Module bundler for JavaScript libraries
+Build Tools & Task Runners,Build Systems,esbuild,https://esbuild.github.io/,Extremely fast JavaScript bundler
+Build Tools & Task Runners,Build Systems,Turbo,https://turbo.build/,High-performance build system for JavaScript/TypeScript
+Build Tools & Task Runners,Task Runners,Make,https://www.gnu.org/software/make/,Classic build automation tool
+Build Tools & Task Runners,Task Runners,just,https://github.com/casey/just,Command runner with syntax similar to make
+Build Tools & Task Runners,Task Runners,Task,https://taskfile.dev/,Task runner written in Go
+Build Tools & Task Runners,Task Runners,npm scripts,https://docs.npmjs.com/cli/v7/using-npm/scripts,Built-in task runner for Node.js projects
+Testing,Testing Frameworks,Jest,https://jestjs.io/,JavaScript testing framework with focus on simplicity
+Testing,Testing Frameworks,Vitest,https://vitest.dev/,Fast unit test framework powered by Vite
+Testing,Testing Frameworks,Playwright,https://playwright.dev/,End-to-end testing for modern web apps
+Testing,Testing Frameworks,Cypress,https://www.cypress.io/,JavaScript end-to-end testing framework
+Testing,Testing Frameworks,pytest,https://pytest.org/,Python testing framework
+Testing,Testing Frameworks,JUnit,https://junit.org/,Unit testing framework for Java
+Testing,Testing Utilities,Faker.js,https://fakerjs.dev/,Generate massive amounts of fake data
+Testing,Testing Utilities,Storybook,https://storybook.js.org/,Tool for building UI components in isolation
+Testing,Testing Utilities,Testing Library,https://testing-library.com/,Simple testing utilities for DOM testing
+Debugging & Profiling,Debuggers,Chrome DevTools,https://developer.chrome.com/docs/devtools/,Web debugging tools
+Debugging & Profiling,Debuggers,React Developer Tools,https://react.dev/learn/react-developer-tools,Browser extension for debugging React
+Debugging & Profiling,Debuggers,Vue.js DevTools,https://devtools.vuejs.org/,Browser extension for debugging Vue.js
+Debugging & Profiling,Debuggers,pdb,https://docs.python.org/3/library/pdb.html,Python debugger
+Debugging & Profiling,Debuggers,gdb,https://www.gnu.org/software/gdb/,GNU debugger for C/C++
+Debugging & Profiling,Performance Profiling,Lighthouse,https://developers.google.com/web/tools/lighthouse,Web performance auditing tool
+Debugging & Profiling,Performance Profiling,WebPageTest,https://www.webpagetest.org/,Website performance testing
+Debugging & Profiling,Performance Profiling,Pyflame,https://github.com/uber-archive/pyflame,Profiling tool for Python
+Debugging & Profiling,Performance Profiling,perf,https://perf.wiki.kernel.org/,Linux profiling tool
+Code Quality & Linting,Linters & Formatters,ESLint,https://eslint.org/,JavaScript and TypeScript linter
+Code Quality & Linting,Linters & Formatters,Prettier,https://prettier.io/,Opinionated code formatter
+Code Quality & Linting,Linters & Formatters,Black,https://black.readthedocs.io/,Python code formatter
+Code Quality & Linting,Linters & Formatters,Pylint,https://pylint.org/,Python static code analysis
+Code Quality & Linting,Linters & Formatters,Flake8,https://flake8.pycqa.org/,Python linting tool
+Code Quality & Linting,Linters & Formatters,Rustfmt,https://github.com/rust-lang/rustfmt,Rust code formatter
+Code Quality & Linting,Linters & Formatters,Clippy,https://github.com/rust-lang/rust-clippy,Rust linter
+Code Quality & Linting,Code Analysis,SonarQube,https://www.sonarqube.org/,Static code analysis platform
+Code Quality & Linting,Code Analysis,CodeClimate,https://codeclimate.com/,Automated code review
+Code Quality & Linting,Code Analysis,Semgrep,https://semgrep.dev/,Static analysis tool for finding bugs
+API Development & Testing,API Testing,Postman,https://www.postman.com/,API development and testing platform
+API Development & Testing,API Testing,Insomnia,https://insomnia.rest/,HTTP and GraphQL client
+API Development & Testing,API Testing,HTTPie,https://httpie.io/,Command-line HTTP client
+API Development & Testing,API Testing,curl,https://curl.se/,Command-line tool for transferring data
+API Development & Testing,API Documentation,Swagger/OpenAPI,https://swagger.io/,API documentation framework
+API Development & Testing,API Documentation,Redoc,https://redoc.ly/,OpenAPI documentation generator
+API Development & Testing,API Documentation,API Blueprint,https://apiblueprint.org/,API documentation format
+API Development & Testing,Mock Servers,json-server,https://github.com/typicode/json-server,Full fake REST API
+API Development & Testing,Mock Servers,WireMock,http://wiremock.org/,HTTP service virtualization
+API Development & Testing,Mock Servers,Mockoon,https://mockoon.com/,Desktop API mocking application
+Database Tools,Database Clients,DBeaver,https://dbeaver.io/,Universal database tool
+Database Tools,Database Clients,TablePlus,https://tableplus.com/,"Modern, native database client"
+Database Tools,Database Clients,pgAdmin,https://www.pgadmin.org/,PostgreSQL administration tool
+Database Tools,Database Clients,MongoDB Compass,https://www.mongodb.com/products/compass,GUI for MongoDB
+Database Tools,Database Development,Prisma,https://www.prisma.io/,Next-generation ORM for Node.js and TypeScript
+Database Tools,Database Development,Drizzle,https://orm.drizzle.team/,TypeScript ORM with SQL-like syntax
+Database Tools,Database Development,Flyway,https://flywaydb.org/,Database migration tool
+Database Tools,Database Development,Liquibase,https://www.liquibase.org/,Database schema change management
+DevOps & Infrastructure,Containerization,Docker,https://www.docker.com/,Platform for developing and running applications in containers
+DevOps & Infrastructure,Containerization,Podman,https://podman.io/,Daemonless container engine
+DevOps & Infrastructure,Containerization,Docker Compose,https://docs.docker.com/compose/,Tool for defining multi-container Docker applications
+DevOps & Infrastructure,Orchestration,Kubernetes,https://kubernetes.io/,Container orchestration platform
+DevOps & Infrastructure,Orchestration,k9s,https://k9scli.io/,Terminal UI for Kubernetes
+DevOps & Infrastructure,Orchestration,Helm,https://helm.sh/,Package manager for Kubernetes
+DevOps & Infrastructure,Orchestration,Skaffold,https://skaffold.dev/,Workflow tool for Kubernetes applications
+DevOps & Infrastructure,Infrastructure as Code,Terraform,https://www.terraform.io/,Infrastructure as code tool
+DevOps & Infrastructure,Infrastructure as Code,Ansible,https://www.ansible.com/,IT automation platform
+DevOps & Infrastructure,Infrastructure as Code,Pulumi,https://www.pulumi.com/,Modern infrastructure as code
+DevOps & Infrastructure,Infrastructure as Code,AWS CDK,https://aws.amazon.com/cdk/,Cloud Development Kit for AWS
+DevOps & Infrastructure,CI/CD,GitHub Actions,https://github.com/features/actions,CI/CD platform integrated with GitHub
+DevOps & Infrastructure,CI/CD,GitLab CI,https://docs.gitlab.com/ee/ci/,Continuous integration service
+DevOps & Infrastructure,CI/CD,Jenkins,https://www.jenkins.io/,Open-source automation server
+DevOps & Infrastructure,CI/CD,Circle CI,https://circleci.com/,Continuous integration and delivery platform
+Monitoring & Logging,Application Monitoring,Datadog,https://www.datadoghq.com/,Monitoring and analytics platform
+Monitoring & Logging,Application Monitoring,New Relic,https://newrelic.com/,Application performance monitoring
+Monitoring & Logging,Application Monitoring,Sentry,https://sentry.io/,Error tracking and performance monitoring
+Monitoring & Logging,Application Monitoring,Grafana,https://grafana.com/,Open-source analytics and monitoring
+Monitoring & Logging,Logging,ELK Stack,https://www.elastic.co/elk-stack,"Elasticsearch, Logstash, and Kibana"
+Monitoring & Logging,Logging,Fluentd,https://www.fluentd.org/,Open-source data collector
+Monitoring & Logging,Logging,Loki,https://grafana.com/oss/loki/,Log aggregation system
+Security,Security Scanning,Snyk,https://snyk.io/,Developer-first security platform
+Security,Security Scanning,OWASP ZAP,https://owasp.org/www-project-zap/,Web application security scanner
+Security,Security Scanning,Bandit,https://bandit.readthedocs.io/,Security linter for Python
+Security,Security Scanning,npm audit,https://docs.npmjs.com/cli/v7/commands/npm-audit,Security vulnerability scanner for npm
+Security,Secret Management,HashiCorp Vault,https://www.vaultproject.io/,Secrets management platform
+Security,Secret Management,1Password CLI,https://developer.1password.com/docs/cli/,Command-line interface for 1Password
+Security,Secret Management,AWS Secrets Manager,https://aws.amazon.com/secrets-manager/,Secrets management service
+Documentation,Documentation Generators,GitBook,https://www.gitbook.com/,Modern documentation platform
+Documentation,Documentation Generators,Notion,https://www.notion.so/,All-in-one workspace for notes and docs
+Documentation,Documentation Generators,MkDocs,https://www.mkdocs.org/,Static site generator for documentation
+Documentation,Documentation Generators,Docusaurus,https://docusaurus.io/,Documentation website generator
+Documentation,Documentation Generators,VitePress,https://vitepress.dev/,Static site generator powered by Vite
+Documentation,API Documentation,Stoplight,https://stoplight.io/,API design and documentation platform
+Documentation,API Documentation,Readme.io,https://readme.com/,Developer hub for API documentation
+Design & Prototyping,Design Tools,Figma,https://www.figma.com/,Collaborative design and prototyping tool
+Design & Prototyping,Design Tools,Sketch,https://www.sketch.com/,Digital design toolkit (macOS)
+Design & Prototyping,Design Tools,Adobe XD,https://www.adobe.com/products/xd.html,UI/UX design and collaboration tool
+Design & Prototyping,Asset Management,ImageOptim,https://imageoptim.com/,Image optimization tool
+Design & Prototyping,Asset Management,TinyPNG,https://tinypng.com/,Online image compression
+Design & Prototyping,Asset Management,SVGO,https://github.com/svg/svgo,SVG optimizer
+Productivity,Project Management,Linear,https://linear.app/,Issue tracking for modern software teams
+Productivity,Project Management,Notion,https://www.notion.so/,All-in-one workspace
+Productivity,Project Management,Obsidian,https://obsidian.md/,Knowledge management with linked notes
+Productivity,Project Management,Jira,https://www.atlassian.com/software/jira,Issue and project tracking
+Productivity,Time Management,RescueTime,https://www.rescuetime.com/,Time tracking and productivity insights
+Productivity,Time Management,Toggl,https://toggl.com/,Time tracking tool
+Productivity,Time Management,Focus,https://heyfocus.com/,Website and application blocker
+Productivity,Note Taking,Obsidian,https://obsidian.md/,Knowledge management with bidirectional links
+Productivity,Note Taking,Roam Research,https://roamresearch.com/,Note-taking tool for networked thought
+Productivity,Note Taking,Logseq,https://logseq.com/,Open-source knowledge management
+Learning & References,Documentation,DevDocs,https://devdocs.io/,API documentation browser
+Learning & References,Documentation,MDN Web Docs,https://developer.mozilla.org/,Web technology documentation
+Learning & References,Documentation,Stack Overflow,https://stackoverflow.com/,Q&A platform for developers
+Learning & References,Learning Platforms,freeCodeCamp,https://www.freecodecamp.org/,Free coding education
+Learning & References,Learning Platforms,Codecademy,https://www.codecademy.com/,Interactive coding lessons
+Learning & References,Learning Platforms,Pluralsight,https://www.pluralsight.com/,Technology skills platform
+Learning & References,Learning Platforms,Udemy,https://www.udemy.com/,Online learning marketplace
+Learning & References,Practice & Challenges,LeetCode,https://leetcode.com/,Coding interview preparation
+Learning & References,Practice & Challenges,HackerRank,https://www.hackerrank.com/,Programming challenges
+Learning & References,Practice & Challenges,Codewars,https://www.codewars.com/,Coding challenges and kata
+Learning & References,Practice & Challenges,Exercism,https://exercism.io/,Code practice and mentorship
