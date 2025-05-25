@@ -128,7 +128,6 @@ Security,Secret Management,HashiCorp Vault,https://www.vaultproject.io/,Secrets 
 Security,Secret Management,1Password CLI,https://developer.1password.com/docs/cli/,Command-line interface for 1Password
 Security,Secret Management,AWS Secrets Manager,https://aws.amazon.com/secrets-manager/,Secrets management service
 Documentation,Documentation Generators,GitBook,https://www.gitbook.com/,Modern documentation platform
-Documentation,Documentation Generators,Notion,https://www.notion.so/,All-in-one workspace for notes and docs
 Documentation,Documentation Generators,MkDocs,https://www.mkdocs.org/,Static site generator for documentation
 Documentation,Documentation Generators,Docusaurus,https://docusaurus.io/,Documentation website generator
 Documentation,Documentation Generators,VitePress,https://vitepress.dev/,Static site generator powered by Vite
@@ -142,7 +141,6 @@ Design & Prototyping,Asset Management,TinyPNG,https://tinypng.com/,Online image 
 Design & Prototyping,Asset Management,SVGO,https://github.com/svg/svgo,SVG optimizer
 Productivity,Project Management,Linear,https://linear.app/,Issue tracking for modern software teams
 Productivity,Project Management,Notion,https://www.notion.so/,All-in-one workspace
-Productivity,Project Management,Obsidian,https://obsidian.md/,Knowledge management with linked notes
 Productivity,Project Management,Jira,https://www.atlassian.com/software/jira,Issue and project tracking
 Productivity,Time Management,RescueTime,https://www.rescuetime.com/,Time tracking and productivity insights
 Productivity,Time Management,Toggl,https://toggl.com/,Time tracking tool

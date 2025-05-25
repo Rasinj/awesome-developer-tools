@@ -267,7 +267,6 @@
 ### Documentation Generators
 
 - GitBook: https://www.gitbook.com/
-- Notion: https://www.notion.so/
 - MkDocs: https://www.mkdocs.org/
 - Docusaurus: https://docusaurus.io/
 - VitePress: https://vitepress.dev/
@@ -299,7 +298,6 @@
 
 - Linear: https://linear.app/
 - Notion: https://www.notion.so/
-- Obsidian: https://obsidian.md/
 - Jira: https://www.atlassian.com/software/jira
 
 ### Time Management

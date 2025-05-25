@@ -906,11 +906,6 @@
               "description": "Modern documentation platform"
             },
             {
-              "name": "Notion",
-              "url": "https://www.notion.so/",
-              "description": "All-in-one workspace for notes and docs"
-            },
-            {
               "name": "MkDocs",
               "url": "https://www.mkdocs.org/",
               "description": "Static site generator for documentation"
@@ -1008,11 +1003,6 @@
               "name": "Notion",
               "url": "https://www.notion.so/",
               "description": "All-in-one workspace"
-            },
-            {
-              "name": "Obsidian",
-              "url": "https://obsidian.md/",
-              "description": "Knowledge management with linked notes"
             },
             {
               "name": "Jira",

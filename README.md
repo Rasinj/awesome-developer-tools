@@ -305,7 +305,6 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 
 ### Documentation Generators
 - **[GitBook](https://www.gitbook.com/)** - Modern documentation platform
-- **[Notion](https://www.notion.so/)** - All-in-one workspace for notes and docs
 - **[MkDocs](https://www.mkdocs.org/)** - Static site generator for documentation
 - **[Docusaurus](https://docusaurus.io/)** - Documentation website generator
 - **[VitePress](https://vitepress.dev/)** - Static site generator powered by Vite
@@ -339,7 +338,6 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 ### Project Management
 - **[Linear](https://linear.app/)** - Issue tracking for modern software teams
 - **[Notion](https://www.notion.so/)** - All-in-one workspace
-- **[Obsidian](https://obsidian.md/)** - Knowledge management with linked notes
 - **[Jira](https://www.atlassian.com/software/jira)** - Issue and project tracking
 
 
