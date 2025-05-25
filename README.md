@@ -87,7 +87,7 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - **[Yarn](https://yarnpkg.com/)** - Fast, reliable JavaScript package manager
 - **[pnpm](https://pnpm.io/)** - Efficient package manager for Node.js
 - **[pip](https://pip.pypa.io/)** - Python package installer
-- **[Poetry](https://python-poetry.org/)** - Python dependency management and packaging
+- **[uv](https://docs.astral.sh/uv/)** - Fast Python package installer and resolver
 - **[Cargo](https://doc.rust-lang.org/cargo/)** - Rust package manager
 - **[Go Modules](https://golang.org/ref/mod)** - Go dependency management
 
