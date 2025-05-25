@@ -1,0 +1,61 @@
+# Awesome Developer Tools
+
+
+## Code Editors & IDEs
+
+
+### Modern Editors
+
+- Visual Studio Code: https://code.visualstudio.com/
+- Neovim: https://neovim.io/
+- Helix: https://helix-editor.com/
+- Zed: https://zed.dev/
+
+### Full IDEs
+
+- IntelliJ IDEA: https://www.jetbrains.com/idea/
+- PyCharm: https://www.jetbrains.com/pycharm/
+- WebStorm: https://www.jetbrains.com/webstorm/
+- Android Studio: https://developer.android.com/studio
+
+### Online Editors
+
+- GitHub Codespaces: https://github.com/features/codespaces
+- Replit: https://replit.com/
+- CodeSandbox: https://codesandbox.io/
+
+## Version Control
+
+
+### Git Tools
+
+- Git: https://git-scm.com/
+- GitHub CLI: https://cli.github.com/
+- Lazygit: https://github.com/jesseduffield/lazygit
+- GitKraken: https://www.gitkraken.com/
+- Sourcetree: https://www.sourcetreeapp.com/
+
+### Git Utilities
+
+- pre-commit: https://pre-commit.com/
+- commitizen: https://commitizen-tools.github.io/commitizen/
+- semantic-release: https://semantic-release.gitbook.io/
+
+## Package Managers
+
+
+### Language-Specific
+
+- npm: https://www.npmjs.com/
+- Yarn: https://yarnpkg.com/
+- pnpm: https://pnpm.io/
+- pip: https://pip.pypa.io/
+- uv: https://docs.astral.sh/uv/
+- Cargo: https://doc.rust-lang.org/cargo/
+- Go Modules: https://golang.org/ref/mod
+
+### System Package Managers
+
+- Homebrew: https://brew.sh/
+- Chocolatey: https://chocolatey.org/
+- Scoop: https://scoop.sh/

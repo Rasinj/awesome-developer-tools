@@ -1,0 +1,52 @@
+# {{ metadata.title }} 🛠️
+
+[![{{ metadata.badge_alt }}]({{ metadata.badge_url }})](https://awesome.re)
+
+{{ metadata.description }}
+
+## Contents
+
+{% for category in categories -%}
+- [{{ category.name }}](#{{ category.id }})
+{% endfor %}
+
+{% for category in categories %}
+## {{ category.name }}
+{% if category.description %}
+
+{{ category.description }}
+{% endif %}
+{% for subcategory in category.subcategories %}
+
+### {{ subcategory.name }}
+{% for tool in subcategory.tools -%}
+- **[{{ tool.name }}]({{ tool.url }})** - {{ tool.description }}
+{% endfor %}
+{%- endfor %}
+{% endfor %}
+
+## Contributing
+
+Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
+1. Fork the repository
+2. Create a new branch for your addition
+3. Add your tool with a brief description and link
+4. Ensure it fits the category and maintains quality standards
+5. Submit a pull request
+
+## Criteria for Inclusion
+
+To maintain quality, tools included in this list should be:
+
+- **Actively maintained** - Regular updates and community support
+- **Widely adopted** - Used by a significant portion of the developer community
+- **High quality** - Well-designed, reliable, and performant
+- **Developer-focused** - Specifically designed to improve developer productivity
+- **Accessible** - Available to developers regardless of budget (free or reasonable pricing)
+
+## License
+
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+This work is licensed under a [Creative Commons Zero v1.0 Universal](LICENSE) license.

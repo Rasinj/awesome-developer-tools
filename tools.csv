@@ -1,0 +1,30 @@
+category,subcategory,name,url,description
+Code Editors & IDEs,Modern Editors,Visual Studio Code,https://code.visualstudio.com/,"Microsoft's lightweight, extensible code editor with massive ecosystem"
+Code Editors & IDEs,Modern Editors,Neovim,https://neovim.io/,Modern Vim fork with better defaults and Lua configuration
+Code Editors & IDEs,Modern Editors,Helix,https://helix-editor.com/,Post-modern modal text editor written in Rust
+Code Editors & IDEs,Modern Editors,Zed,https://zed.dev/,"High-performance, multiplayer code editor built in Rust"
+Code Editors & IDEs,Full IDEs,IntelliJ IDEA,https://www.jetbrains.com/idea/,Powerful Java IDE with excellent refactoring tools
+Code Editors & IDEs,Full IDEs,PyCharm,https://www.jetbrains.com/pycharm/,Professional Python IDE with advanced debugging
+Code Editors & IDEs,Full IDEs,WebStorm,https://www.jetbrains.com/webstorm/,JavaScript and TypeScript IDE
+Code Editors & IDEs,Full IDEs,Android Studio,https://developer.android.com/studio,Official Android development environment
+Code Editors & IDEs,Online Editors,GitHub Codespaces,https://github.com/features/codespaces,Cloud development environments
+Code Editors & IDEs,Online Editors,Replit,https://replit.com/,Browser-based IDE for collaborative coding
+Code Editors & IDEs,Online Editors,CodeSandbox,https://codesandbox.io/,Online code editor for web development
+Version Control,Git Tools,Git,https://git-scm.com/,Distributed version control system
+Version Control,Git Tools,GitHub CLI,https://cli.github.com/,Command-line tool for GitHub
+Version Control,Git Tools,Lazygit,https://github.com/jesseduffield/lazygit,Simple terminal UI for git commands
+Version Control,Git Tools,GitKraken,https://www.gitkraken.com/,Cross-platform Git GUI client
+Version Control,Git Tools,Sourcetree,https://www.sourcetreeapp.com/,Free Git GUI for Mac and Windows
+Version Control,Git Utilities,pre-commit,https://pre-commit.com/,Framework for managing git pre-commit hooks
+Version Control,Git Utilities,commitizen,https://commitizen-tools.github.io/commitizen/,Tool for creating committing rules
+Version Control,Git Utilities,semantic-release,https://semantic-release.gitbook.io/,Automated version management and package publishing
+Package Managers,Language-Specific,npm,https://www.npmjs.com/,Node.js package manager
+Package Managers,Language-Specific,Yarn,https://yarnpkg.com/,"Fast, reliable JavaScript package manager"
+Package Managers,Language-Specific,pnpm,https://pnpm.io/,Efficient package manager for Node.js
+Package Managers,Language-Specific,pip,https://pip.pypa.io/,Python package installer
+Package Managers,Language-Specific,uv,https://docs.astral.sh/uv/,Fast Python package installer and resolver
+Package Managers,Language-Specific,Cargo,https://doc.rust-lang.org/cargo/,Rust package manager
+Package Managers,Language-Specific,Go Modules,https://golang.org/ref/mod,Go dependency management
+Package Managers,System Package Managers,Homebrew,https://brew.sh/,Package manager for macOS and Linux
+Package Managers,System Package Managers,Chocolatey,https://chocolatey.org/,Package manager for Windows
+Package Managers,System Package Managers,Scoop,https://scoop.sh/,Command-line installer for Windows

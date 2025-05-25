@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "title": "Awesome Developer Tools",
+    "description": "A curated list of awesome tools, resources, and utilities that make developers' lives easier and more productive.",
+    "badge_url": "https://awesome.re/badge.svg",
+    "badge_alt": "Awesome"
+  },
+  "categories": [
+    {
+      "name": "Code Editors & IDEs",
+      "id": "code-editors--ides",
+      "description": "",
+      "subcategories": [
+        {
+          "name": "Modern Editors",
+          "tools": [
+            {
+              "name": "Visual Studio Code",
+              "url": "https://code.visualstudio.com/",
+              "description": "Microsoft's lightweight, extensible code editor with massive ecosystem"
+            },
+            {
+              "name": "Neovim",
+              "url": "https://neovim.io/",
+              "description": "Modern Vim fork with better defaults and Lua configuration"
+            },
+            {
+              "name": "Helix",
+              "url": "https://helix-editor.com/",
+              "description": "Post-modern modal text editor written in Rust"
+            },
+            {
+              "name": "Zed",
+              "url": "https://zed.dev/",
+              "description": "High-performance, multiplayer code editor built in Rust"
+            }
+          ]
+        },
+        {
+          "name": "Full IDEs",
+          "tools": [
+            {
+              "name": "IntelliJ IDEA",
+              "url": "https://www.jetbrains.com/idea/",
+              "description": "Powerful Java IDE with excellent refactoring tools"
+            },
+            {
+              "name": "PyCharm",
+              "url": "https://www.jetbrains.com/pycharm/",
+              "description": "Professional Python IDE with advanced debugging"
+            },
+            {
+              "name": "WebStorm",
+              "url": "https://www.jetbrains.com/webstorm/",
+              "description": "JavaScript and TypeScript IDE"
+            },
+            {
+              "name": "Android Studio",
+              "url": "https://developer.android.com/studio",
+              "description": "Official Android development environment"
+            }
+          ]
+        },
+        {
+          "name": "Online Editors",
+          "tools": [
+            {
+              "name": "GitHub Codespaces",
+              "url": "https://github.com/features/codespaces",
+              "description": "Cloud development environments"
+            },
+            {
+              "name": "Replit",
+              "url": "https://replit.com/",
+              "description": "Browser-based IDE for collaborative coding"
+            },
+            {
+              "name": "CodeSandbox",
+              "url": "https://codesandbox.io/",
+              "description": "Online code editor for web development"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Version Control",
+      "id": "version-control",
+      "description": "",
+      "subcategories": [
+        {
+          "name": "Git Tools",
+          "tools": [
+            {
+              "name": "Git",
+              "url": "https://git-scm.com/",
+              "description": "Distributed version control system"
+            },
+            {
+              "name": "GitHub CLI",
+              "url": "https://cli.github.com/",
+              "description": "Command-line tool for GitHub"
+            },
+            {
+              "name": "Lazygit",
+              "url": "https://github.com/jesseduffield/lazygit",
+              "description": "Simple terminal UI for git commands"
+            },
+            {
+              "name": "GitKraken",
+              "url": "https://www.gitkraken.com/",
+              "description": "Cross-platform Git GUI client"
+            },
+            {
+              "name": "Sourcetree",
+              "url": "https://www.sourcetreeapp.com/",
+              "description": "Free Git GUI for Mac and Windows"
+            }
+          ]
+        },
+        {
+          "name": "Git Utilities",
+          "tools": [
+            {
+              "name": "pre-commit",
+              "url": "https://pre-commit.com/",
+              "description": "Framework for managing git pre-commit hooks"
+            },
+            {
+              "name": "commitizen",
+              "url": "https://commitizen-tools.github.io/commitizen/",
+              "description": "Tool for creating committing rules"
+            },
+            {
+              "name": "semantic-release",
+              "url": "https://semantic-release.gitbook.io/",
+              "description": "Automated version management and package publishing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Package Managers",
+      "id": "package-managers",
+      "description": "",
+      "subcategories": [
+        {
+          "name": "Language-Specific",
+          "tools": [
+            {
+              "name": "npm",
+              "url": "https://www.npmjs.com/",
+              "description": "Node.js package manager"
+            },
+            {
+              "name": "Yarn",
+              "url": "https://yarnpkg.com/",
+              "description": "Fast, reliable JavaScript package manager"
+            },
+            {
+              "name": "pnpm",
+              "url": "https://pnpm.io/",
+              "description": "Efficient package manager for Node.js"
+            },
+            {
+              "name": "pip",
+              "url": "https://pip.pypa.io/",
+              "description": "Python package installer"
+            },
+            {
+              "name": "uv",
+              "url": "https://docs.astral.sh/uv/",
+              "description": "Fast Python package installer and resolver"
+            },
+            {
+              "name": "Cargo",
+              "url": "https://doc.rust-lang.org/cargo/",
+              "description": "Rust package manager"
+            },
+            {
+              "name": "Go Modules",
+              "url": "https://golang.org/ref/mod",
+              "description": "Go dependency management"
+            }
+          ]
+        },
+        {
+          "name": "System Package Managers",
+          "tools": [
+            {
+              "name": "Homebrew",
+              "url": "https://brew.sh/",
+              "description": "Package manager for macOS and Linux"
+            },
+            {
+              "name": "Chocolatey",
+              "url": "https://chocolatey.org/",
+              "description": "Package manager for Windows"
+            },
+            {
+              "name": "Scoop",
+              "url": "https://scoop.sh/",
+              "description": "Command-line installer for Windows"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
