@@ -1,13 +1,43 @@
 #!/usr/bin/env python3
 """
-Validation script for tools.yaml data structure.
+YAML Data Validation Script for Awesome Developer Tools
+======================================================
 
-This script validates:
-- YAML structure and syntax
-- Required fields presence
-- URL accessibility (optional)
-- Duplicate tool names
-- Proper category and subcategory structure
+A comprehensive validation tool that ensures data quality and consistency
+in the tools.yaml file used to generate all output formats.
+
+WHAT THIS SCRIPT VALIDATES:
+--------------------------
+✅ YAML Structure & Syntax
+   - Valid YAML format and parsing
+   - Required top-level sections (metadata, categories)
+   - Proper nesting hierarchy
+
+✅ Data Completeness
+   - All required fields present at each level
+   - Metadata: title, description, badge_url, badge_alt
+   - Categories: name, id, subcategories
+   - Tools: name, url, description
+
+✅ Data Quality
+   - No duplicate tool names across categories
+   - No duplicate URLs
+   - Valid URL formats
+   - Category IDs follow naming conventions
+
+✅ Optional Checks
+   - URL accessibility testing (with --check-urls flag)
+   - Tool count statistics (with --stats flag)
+
+USAGE:
+------
+python scripts/validate.py                    # Basic validation
+python scripts/validate.py --check-urls       # Include URL accessibility
+python scripts/validate.py --stats            # Show statistics
+python scripts/validate.py --file custom.yaml # Custom YAML file
+
+This validation helps maintain the integrity of the awesome developer tools
+collection and ensures all generated formats (README, JSON, CSV) are reliable.
 """
 
 import yaml
