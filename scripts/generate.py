@@ -69,12 +69,14 @@ def generate_csv(data: dict, output_path: Path):
 
 def generate_simple_list(data: dict, output_path: Path):
     """Generate simple text list of tools."""
-    lines = [f"# {data['metadata']['title']}\n"]
-    
+    lines = [f"# {data['metadata']['title']}"]
+
     for category in data['categories']:
-        lines.append(f"\n## {category['name']}\n")
+        lines.append("")
+        lines.append(f"## {category['name']}")
         for subcategory in category['subcategories']:
-            lines.append(f"\n### {subcategory['name']}\n")
+            lines.append("")
+            lines.append(f"### {subcategory['name']}")
             for tool in subcategory['tools']:
                 lines.append(f"- {tool['name']}: {tool['url']}")
     
