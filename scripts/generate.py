@@ -79,7 +79,7 @@ def generate_simple_list(data: dict, output_path: Path):
                 lines.append(f"- {tool['name']}: {tool['url']}")
     
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(lines))
+        f.write('\n'.join(lines) + '\n')
     
     print(f"✅ Generated simple list at {output_path}")
 
