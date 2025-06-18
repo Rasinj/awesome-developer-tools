@@ -9,7 +9,7 @@
     {
       "name": "Code Editors & IDEs",
       "id": "code-editors--ides",
-      "description": "",
+      "description": "Essential text editors and integrated development environments for writing, editing, and managing code across different programming languages.",
       "subcategories": [
         {
           "name": "Modern Editors",
@@ -86,7 +86,7 @@
     {
       "name": "Version Control",
       "id": "version-control",
-      "description": "",
+      "description": "Tools for tracking changes in code, collaborating with teams, and managing different versions of software projects.",
       "subcategories": [
         {
           "name": "Git Tools",
@@ -143,7 +143,7 @@
     {
       "name": "Terminal & Shell",
       "id": "terminal--shell",
-      "description": "",
+      "description": "Command-line interfaces, terminal emulators, shells, and utilities that enhance productivity in the terminal environment.",
       "subcategories": [
         {
           "name": "Terminal Emulators",
@@ -201,7 +201,7 @@
             {
               "name": "tmux",
               "url": "https://github.com/tmux/tmux",
-              "description": "Terminal multiplexer"
+              "description": "Terminal multiplexer for managing multiple terminal sessions in a single window"
             },
             {
               "name": "fzf",
@@ -240,7 +240,7 @@
     {
       "name": "Package Managers",
       "id": "package-managers",
-      "description": "",
+      "description": "Tools for installing, updating, and managing software dependencies and libraries across different programming languages and platforms.",
       "subcategories": [
         {
           "name": "Language-Specific",
@@ -307,7 +307,7 @@
     {
       "name": "Build Tools & Task Runners",
       "id": "build-tools--task-runners",
-      "description": "",
+      "description": "Automation tools for compiling code, running tasks, managing builds, and streamlining development workflows.",
       "subcategories": [
         {
           "name": "Build Systems",
@@ -369,7 +369,7 @@
     {
       "name": "Testing",
       "id": "testing",
-      "description": "",
+      "description": "Frameworks and tools for writing, running, and managing different types of tests including unit tests, integration tests, and end-to-end testing.",
       "subcategories": [
         {
           "name": "Testing Frameworks",
@@ -431,7 +431,7 @@
     {
       "name": "Debugging & Profiling",
       "id": "debugging--profiling",
-      "description": "",
+      "description": "Tools for identifying bugs, analyzing code performance, memory usage, and optimizing application behavior during development.",
       "subcategories": [
         {
           "name": "Debuggers",
@@ -454,7 +454,7 @@
             {
               "name": "pdb",
               "url": "https://docs.python.org/3/library/pdb.html",
-              "description": "Python debugger"
+              "description": "Built-in Python debugger for interactive debugging and code inspection"
             },
             {
               "name": "gdb",
@@ -493,7 +493,7 @@
     {
       "name": "Code Quality & Linting",
       "id": "code-quality--linting",
-      "description": "",
+      "description": "Static analysis tools, linters, and formatters that enforce coding standards, detect potential issues, and maintain consistent code style.",
       "subcategories": [
         {
           "name": "Linters & Formatters",
@@ -531,7 +531,7 @@
             {
               "name": "Clippy",
               "url": "https://github.com/rust-lang/rust-clippy",
-              "description": "Rust linter"
+              "description": "Rust linter that catches common mistakes and suggests idiomatic code improvements"
             }
           ]
         },
@@ -560,7 +560,7 @@
     {
       "name": "API Development & Testing",
       "id": "api-development--testing",
-      "description": "",
+      "description": "Tools for designing, building, testing, and documenting APIs including REST, GraphQL, and other web service interfaces.",
       "subcategories": [
         {
           "name": "API Testing",
@@ -613,7 +613,7 @@
             {
               "name": "json-server",
               "url": "https://github.com/typicode/json-server",
-              "description": "Full fake REST API"
+              "description": "Create a full fake REST API with zero coding in less than 30 seconds"
             },
             {
               "name": "WireMock",
@@ -632,7 +632,7 @@
     {
       "name": "Database Tools",
       "id": "database-tools",
-      "description": "",
+      "description": "Database management systems, GUI clients, migration tools, and utilities for working with various types of databases.",
       "subcategories": [
         {
           "name": "Database Clients",
@@ -689,7 +689,7 @@
     {
       "name": "DevOps & Infrastructure",
       "id": "devops--infrastructure",
-      "description": "",
+      "description": "Deployment, containerization, orchestration, and infrastructure management tools for modern software development and operations.",
       "subcategories": [
         {
           "name": "Containerization",
@@ -791,7 +791,7 @@
     {
       "name": "Monitoring & Logging",
       "id": "monitoring--logging",
-      "description": "",
+      "description": "Application performance monitoring, log aggregation, error tracking, and observability tools for production systems.",
       "subcategories": [
         {
           "name": "Application Monitoring",
@@ -843,7 +843,7 @@
     {
       "name": "Security",
       "id": "security",
-      "description": "",
+      "description": "Tools for vulnerability scanning, security testing, secret management, and protecting applications from security threats.",
       "subcategories": [
         {
           "name": "Security Scanning",
@@ -895,7 +895,7 @@
     {
       "name": "Documentation",
       "id": "documentation",
-      "description": "",
+      "description": "Static site generators, documentation platforms, and tools for creating and maintaining technical documentation and knowledge bases.",
       "subcategories": [
         {
           "name": "Documentation Generators",
@@ -942,7 +942,7 @@
     {
       "name": "Design & Prototyping",
       "id": "design--prototyping",
-      "description": "",
+      "description": "UI/UX design tools, wireframing software, and prototyping platforms for creating user interfaces and design systems.",
       "subcategories": [
         {
           "name": "Design Tools",
@@ -989,7 +989,7 @@
     {
       "name": "Productivity",
       "id": "productivity",
-      "description": "",
+      "description": "Note-taking apps, task management tools, time tracking software, and utilities that enhance developer productivity and organization.",
       "subcategories": [
         {
           "name": "Project Management",
@@ -1056,7 +1056,7 @@
     {
       "name": "Learning & References",
       "id": "learning--references",
-      "description": "",
+      "description": "Educational platforms, coding challenges, documentation sites, and reference materials for learning programming and staying updated with technology.",
       "subcategories": [
         {
           "name": "Documentation",
@@ -1125,6 +1125,147 @@
               "name": "Exercism",
               "url": "https://exercism.io/",
               "description": "Code practice and mentorship"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud Platforms",
+      "id": "cloud-platforms",
+      "description": "Command-line tools and SDKs for interacting with major cloud service providers and managing cloud infrastructure.",
+      "subcategories": [
+        {
+          "name": "AWS Tools",
+          "tools": [
+            {
+              "name": "AWS CLI",
+              "url": "https://aws.amazon.com/cli/",
+              "description": "Official command-line interface for Amazon Web Services"
+            }
+          ]
+        },
+        {
+          "name": "Google Cloud",
+          "tools": [
+            {
+              "name": "Google Cloud CLI",
+              "url": "https://cloud.google.com/sdk/gcloud",
+              "description": "Command-line interface for Google Cloud Platform services"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft Azure",
+          "tools": [
+            {
+              "name": "Azure CLI",
+              "url": "https://docs.microsoft.com/en-us/cli/azure/",
+              "description": "Cross-platform command-line interface for Microsoft Azure"
+            }
+          ]
+        },
+        {
+          "name": "Multi-Cloud",
+          "tools": [
+            {
+              "name": "Crossplane",
+              "url": "https://crossplane.io/",
+              "description": "Multi-cloud control plane for managing infrastructure across cloud providers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "id": "mobile-development",
+      "description": "Frameworks, tools, and platforms for developing mobile applications across iOS, Android, and cross-platform solutions.",
+      "subcategories": [
+        {
+          "name": "Cross-Platform",
+          "tools": [
+            {
+              "name": "Flutter",
+              "url": "https://flutter.dev/",
+              "description": "Google's UI toolkit for building natively compiled mobile, web, and desktop apps"
+            },
+            {
+              "name": "React Native",
+              "url": "https://reactnative.dev/",
+              "description": "Framework for building mobile apps using React and JavaScript"
+            },
+            {
+              "name": "Expo",
+              "url": "https://expo.dev/",
+              "description": "Platform for universal React applications with tools and services"
+            }
+          ]
+        },
+        {
+          "name": "Native Development",
+          "tools": [
+            {
+              "name": "Xcode",
+              "url": "https://developer.apple.com/xcode/",
+              "description": "Apple's integrated development environment for iOS and macOS applications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Science & Machine Learning",
+      "id": "data-science--machine-learning",
+      "description": "Tools, frameworks, and platforms for data analysis, machine learning, artificial intelligence, and scientific computing.",
+      "subcategories": [
+        {
+          "name": "Notebooks & Analysis",
+          "tools": [
+            {
+              "name": "Jupyter Notebook",
+              "url": "https://jupyter.org/",
+              "description": "Interactive computing environment for creating and sharing documents with code and visualizations"
+            },
+            {
+              "name": "JupyterLab",
+              "url": "https://jupyterlab.readthedocs.io/",
+              "description": "Web-based interactive development environment for Jupyter notebooks and data science"
+            }
+          ]
+        },
+        {
+          "name": "Machine Learning Libraries",
+          "tools": [
+            {
+              "name": "TensorFlow",
+              "url": "https://www.tensorflow.org/",
+              "description": "Open-source machine learning framework for building and deploying ML models"
+            },
+            {
+              "name": "PyTorch",
+              "url": "https://pytorch.org/",
+              "description": "Deep learning framework with dynamic computational graphs and Python-first approach"
+            },
+            {
+              "name": "scikit-learn",
+              "url": "https://scikit-learn.org/",
+              "description": "Machine learning library for Python with simple and efficient tools for data analysis"
+            }
+          ]
+        },
+        {
+          "name": "Data Processing",
+          "tools": [
+            {
+              "name": "pandas",
+              "url": "https://pandas.pydata.org/",
+              "description": "Powerful data manipulation and analysis library for Python"
+            },
+            {
+              "name": "NumPy",
+              "url": "https://numpy.org/",
+              "description": "Fundamental package for scientific computing with Python"
             }
           ]
         }
