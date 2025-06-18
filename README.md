@@ -98,14 +98,50 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 - **[Starship](https://starship.rs/)** - Fast, customizable prompt for any shell
 
 
-### Terminal Utilities
+### Session Management
 - **[tmux](https://github.com/tmux/tmux)** - Terminal multiplexer for managing multiple terminal sessions in a single window
+- **[zellij](https://zellij.dev/)** - Modern terminal workspace with multiplayer collaboration and floating panes
+
+
+### File Navigation & Search
 - **[fzf](https://github.com/junegunn/fzf)** - Command-line fuzzy finder
-- **[ripgrep](https://github.com/BurntSushi/ripgrep)** - Fast line-oriented search tool
-- **[bat](https://github.com/sharkdp/bat)** - Cat clone with syntax highlighting
-- **[exa](https://the.exa.website/)** - Modern replacement for ls
 - **[fd](https://github.com/sharkdp/fd)** - Simple, fast alternative to find
-- **[htop](https://htop.dev/)** - Interactive process viewer
+- **[ripgrep](https://github.com/BurntSushi/ripgrep)** - Fast line-oriented search tool
+- **[broot](https://github.com/Canop/broot)** - Interactive tree navigation with fuzzy search and directory sizes
+- **[ranger](https://github.com/ranger/ranger)** - Console file manager with vi key bindings and three-column layout
+- **[nnn](https://github.com/jarun/nnn)** - Extremely fast and lightweight terminal file manager with plugin support
+- **[zoxide](https://github.com/ajeetdsouza/zoxide)** - Smarter cd command that learns your habits and jumps to frequently used directories
+
+
+### Text Processing & Viewing
+- **[bat](https://github.com/sharkdp/bat)** - Cat clone with syntax highlighting and Git integration
+- **[exa](https://the.exa.website/)** - Modern replacement for ls with colors and Git status
+- **[jq](https://github.com/jqlang/jq)** - Lightweight command-line JSON processor for parsing and transforming data
+- **[fx](https://github.com/antonmedv/fx)** - Interactive JSON processor and filter with JavaScript expressions
+- **[yq](https://github.com/mikefarah/yq)** - Portable command-line YAML, JSON, XML, CSV, TOML processor
+- **[delta](https://github.com/dandavison/delta)** - Syntax-highlighting pager for git diff output with side-by-side views
+
+
+### System Monitoring
+- **[htop](https://htop.dev/)** - Interactive process viewer and system monitor
+- **[bottom](https://github.com/ClementTsang/bottom)** - Cross-platform graphical process monitor with customizable widgets
+- **[procs](https://github.com/dalance/procs)** - Modern replacement for ps with colored output and search capabilities
+- **[bandwhich](https://github.com/imsnif/bandwhich)** - CLI utility for displaying network utilization by process and connection
+- **[dust](https://github.com/bootandy/dust)** - Intuitive disk usage analyzer with colored tree output
+- **[duf](https://github.com/muesli/duf)** - Better df alternative with colorful disk usage information
+
+
+### Development Tools
+- **[tokei](https://github.com/XAMPPRocky/tokei)** - Fast code statistics tool counting lines across 150+ programming languages
+- **[hyperfine](https://github.com/sharkdp/hyperfine)** - Command-line benchmarking tool with statistical analysis and warmup runs
+- **[watchexec](https://watchexec.github.io/)** - File watcher that runs commands when files change with flexible filtering
+- **[lazydocker](https://github.com/jesseduffield/lazydocker)** - Terminal UI for Docker and Docker Compose with container management
+
+
+### Productivity & Workflow
+- **[direnv](https://direnv.net/)** - Loads and unloads environment variables based on current directory
+- **[tldr](https://github.com/tldr-pages/tldr)** - Collaborative cheatsheets providing simplified examples for console commands
+- **[lnav](https://lnav.org/)** - Advanced log file navigator with automatic format detection and SQL querying
 
 
 ## Package Managers

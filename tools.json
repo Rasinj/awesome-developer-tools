@@ -196,7 +196,7 @@
           ]
         },
         {
-          "name": "Terminal Utilities",
+          "name": "Session Management",
           "tools": [
             {
               "name": "tmux",
@@ -204,24 +204,19 @@
               "description": "Terminal multiplexer for managing multiple terminal sessions in a single window"
             },
             {
+              "name": "zellij",
+              "url": "https://zellij.dev/",
+              "description": "Modern terminal workspace with multiplayer collaboration and floating panes"
+            }
+          ]
+        },
+        {
+          "name": "File Navigation & Search",
+          "tools": [
+            {
               "name": "fzf",
               "url": "https://github.com/junegunn/fzf",
               "description": "Command-line fuzzy finder"
-            },
-            {
-              "name": "ripgrep",
-              "url": "https://github.com/BurntSushi/ripgrep",
-              "description": "Fast line-oriented search tool"
-            },
-            {
-              "name": "bat",
-              "url": "https://github.com/sharkdp/bat",
-              "description": "Cat clone with syntax highlighting"
-            },
-            {
-              "name": "exa",
-              "url": "https://the.exa.website/",
-              "description": "Modern replacement for ls"
             },
             {
               "name": "fd",
@@ -229,9 +224,144 @@
               "description": "Simple, fast alternative to find"
             },
             {
+              "name": "ripgrep",
+              "url": "https://github.com/BurntSushi/ripgrep",
+              "description": "Fast line-oriented search tool"
+            },
+            {
+              "name": "broot",
+              "url": "https://github.com/Canop/broot",
+              "description": "Interactive tree navigation with fuzzy search and directory sizes"
+            },
+            {
+              "name": "ranger",
+              "url": "https://github.com/ranger/ranger",
+              "description": "Console file manager with vi key bindings and three-column layout"
+            },
+            {
+              "name": "nnn",
+              "url": "https://github.com/jarun/nnn",
+              "description": "Extremely fast and lightweight terminal file manager with plugin support"
+            },
+            {
+              "name": "zoxide",
+              "url": "https://github.com/ajeetdsouza/zoxide",
+              "description": "Smarter cd command that learns your habits and jumps to frequently used directories"
+            }
+          ]
+        },
+        {
+          "name": "Text Processing & Viewing",
+          "tools": [
+            {
+              "name": "bat",
+              "url": "https://github.com/sharkdp/bat",
+              "description": "Cat clone with syntax highlighting and Git integration"
+            },
+            {
+              "name": "exa",
+              "url": "https://the.exa.website/",
+              "description": "Modern replacement for ls with colors and Git status"
+            },
+            {
+              "name": "jq",
+              "url": "https://github.com/jqlang/jq",
+              "description": "Lightweight command-line JSON processor for parsing and transforming data"
+            },
+            {
+              "name": "fx",
+              "url": "https://github.com/antonmedv/fx",
+              "description": "Interactive JSON processor and filter with JavaScript expressions"
+            },
+            {
+              "name": "yq",
+              "url": "https://github.com/mikefarah/yq",
+              "description": "Portable command-line YAML, JSON, XML, CSV, TOML processor"
+            },
+            {
+              "name": "delta",
+              "url": "https://github.com/dandavison/delta",
+              "description": "Syntax-highlighting pager for git diff output with side-by-side views"
+            }
+          ]
+        },
+        {
+          "name": "System Monitoring",
+          "tools": [
+            {
               "name": "htop",
               "url": "https://htop.dev/",
-              "description": "Interactive process viewer"
+              "description": "Interactive process viewer and system monitor"
+            },
+            {
+              "name": "bottom",
+              "url": "https://github.com/ClementTsang/bottom",
+              "description": "Cross-platform graphical process monitor with customizable widgets"
+            },
+            {
+              "name": "procs",
+              "url": "https://github.com/dalance/procs",
+              "description": "Modern replacement for ps with colored output and search capabilities"
+            },
+            {
+              "name": "bandwhich",
+              "url": "https://github.com/imsnif/bandwhich",
+              "description": "CLI utility for displaying network utilization by process and connection"
+            },
+            {
+              "name": "dust",
+              "url": "https://github.com/bootandy/dust",
+              "description": "Intuitive disk usage analyzer with colored tree output"
+            },
+            {
+              "name": "duf",
+              "url": "https://github.com/muesli/duf",
+              "description": "Better df alternative with colorful disk usage information"
+            }
+          ]
+        },
+        {
+          "name": "Development Tools",
+          "tools": [
+            {
+              "name": "tokei",
+              "url": "https://github.com/XAMPPRocky/tokei",
+              "description": "Fast code statistics tool counting lines across 150+ programming languages"
+            },
+            {
+              "name": "hyperfine",
+              "url": "https://github.com/sharkdp/hyperfine",
+              "description": "Command-line benchmarking tool with statistical analysis and warmup runs"
+            },
+            {
+              "name": "watchexec",
+              "url": "https://watchexec.github.io/",
+              "description": "File watcher that runs commands when files change with flexible filtering"
+            },
+            {
+              "name": "lazydocker",
+              "url": "https://github.com/jesseduffield/lazydocker",
+              "description": "Terminal UI for Docker and Docker Compose with container management"
+            }
+          ]
+        },
+        {
+          "name": "Productivity & Workflow",
+          "tools": [
+            {
+              "name": "direnv",
+              "url": "https://direnv.net/",
+              "description": "Loads and unloads environment variables based on current directory"
+            },
+            {
+              "name": "tldr",
+              "url": "https://github.com/tldr-pages/tldr",
+              "description": "Collaborative cheatsheets providing simplified examples for console commands"
+            },
+            {
+              "name": "lnav",
+              "url": "https://lnav.org/",
+              "description": "Advanced log file navigator with automatic format detection and SQL querying"
             }
           ]
         }

@@ -26,13 +26,34 @@ Terminal & Shell,Shell Enhancement,Fish,https://fishshell.com/,Smart and user-fr
 Terminal & Shell,Shell Enhancement,Zsh,https://www.zsh.org/,Extended Bourne shell with improvements
 Terminal & Shell,Shell Enhancement,Oh My Zsh,https://ohmyz.sh/,Framework for managing Zsh configuration
 Terminal & Shell,Shell Enhancement,Starship,https://starship.rs/,"Fast, customizable prompt for any shell"
-Terminal & Shell,Terminal Utilities,tmux,https://github.com/tmux/tmux,Terminal multiplexer for managing multiple terminal sessions in a single window
-Terminal & Shell,Terminal Utilities,fzf,https://github.com/junegunn/fzf,Command-line fuzzy finder
-Terminal & Shell,Terminal Utilities,ripgrep,https://github.com/BurntSushi/ripgrep,Fast line-oriented search tool
-Terminal & Shell,Terminal Utilities,bat,https://github.com/sharkdp/bat,Cat clone with syntax highlighting
-Terminal & Shell,Terminal Utilities,exa,https://the.exa.website/,Modern replacement for ls
-Terminal & Shell,Terminal Utilities,fd,https://github.com/sharkdp/fd,"Simple, fast alternative to find"
-Terminal & Shell,Terminal Utilities,htop,https://htop.dev/,Interactive process viewer
+Terminal & Shell,Session Management,tmux,https://github.com/tmux/tmux,Terminal multiplexer for managing multiple terminal sessions in a single window
+Terminal & Shell,Session Management,zellij,https://zellij.dev/,Modern terminal workspace with multiplayer collaboration and floating panes
+Terminal & Shell,File Navigation & Search,fzf,https://github.com/junegunn/fzf,Command-line fuzzy finder
+Terminal & Shell,File Navigation & Search,fd,https://github.com/sharkdp/fd,"Simple, fast alternative to find"
+Terminal & Shell,File Navigation & Search,ripgrep,https://github.com/BurntSushi/ripgrep,Fast line-oriented search tool
+Terminal & Shell,File Navigation & Search,broot,https://github.com/Canop/broot,Interactive tree navigation with fuzzy search and directory sizes
+Terminal & Shell,File Navigation & Search,ranger,https://github.com/ranger/ranger,Console file manager with vi key bindings and three-column layout
+Terminal & Shell,File Navigation & Search,nnn,https://github.com/jarun/nnn,Extremely fast and lightweight terminal file manager with plugin support
+Terminal & Shell,File Navigation & Search,zoxide,https://github.com/ajeetdsouza/zoxide,Smarter cd command that learns your habits and jumps to frequently used directories
+Terminal & Shell,Text Processing & Viewing,bat,https://github.com/sharkdp/bat,Cat clone with syntax highlighting and Git integration
+Terminal & Shell,Text Processing & Viewing,exa,https://the.exa.website/,Modern replacement for ls with colors and Git status
+Terminal & Shell,Text Processing & Viewing,jq,https://github.com/jqlang/jq,Lightweight command-line JSON processor for parsing and transforming data
+Terminal & Shell,Text Processing & Viewing,fx,https://github.com/antonmedv/fx,Interactive JSON processor and filter with JavaScript expressions
+Terminal & Shell,Text Processing & Viewing,yq,https://github.com/mikefarah/yq,"Portable command-line YAML, JSON, XML, CSV, TOML processor"
+Terminal & Shell,Text Processing & Viewing,delta,https://github.com/dandavison/delta,Syntax-highlighting pager for git diff output with side-by-side views
+Terminal & Shell,System Monitoring,htop,https://htop.dev/,Interactive process viewer and system monitor
+Terminal & Shell,System Monitoring,bottom,https://github.com/ClementTsang/bottom,Cross-platform graphical process monitor with customizable widgets
+Terminal & Shell,System Monitoring,procs,https://github.com/dalance/procs,Modern replacement for ps with colored output and search capabilities
+Terminal & Shell,System Monitoring,bandwhich,https://github.com/imsnif/bandwhich,CLI utility for displaying network utilization by process and connection
+Terminal & Shell,System Monitoring,dust,https://github.com/bootandy/dust,Intuitive disk usage analyzer with colored tree output
+Terminal & Shell,System Monitoring,duf,https://github.com/muesli/duf,Better df alternative with colorful disk usage information
+Terminal & Shell,Development Tools,tokei,https://github.com/XAMPPRocky/tokei,Fast code statistics tool counting lines across 150+ programming languages
+Terminal & Shell,Development Tools,hyperfine,https://github.com/sharkdp/hyperfine,Command-line benchmarking tool with statistical analysis and warmup runs
+Terminal & Shell,Development Tools,watchexec,https://watchexec.github.io/,File watcher that runs commands when files change with flexible filtering
+Terminal & Shell,Development Tools,lazydocker,https://github.com/jesseduffield/lazydocker,Terminal UI for Docker and Docker Compose with container management
+Terminal & Shell,Productivity & Workflow,direnv,https://direnv.net/,Loads and unloads environment variables based on current directory
+Terminal & Shell,Productivity & Workflow,tldr,https://github.com/tldr-pages/tldr,Collaborative cheatsheets providing simplified examples for console commands
+Terminal & Shell,Productivity & Workflow,lnav,https://lnav.org/,Advanced log file navigator with automatic format detection and SQL querying
 Package Managers,Language-Specific,npm,https://www.npmjs.com/,Node.js package manager
 Package Managers,Language-Specific,Yarn,https://yarnpkg.com/,"Fast, reliable JavaScript package manager"
 Package Managers,Language-Specific,pnpm,https://pnpm.io/,Efficient package manager for Node.js
