@@ -47,13 +47,11 @@
 - Oh My Zsh: https://ohmyz.sh/
 - Starship: https://starship.rs/
 
-
-### Terminal Utilities
+### Session Management
 - tmux: https://github.com/tmux/tmux
 - zellij: https://zellij.dev/
 
 ### File Navigation & Search
-
 - fzf: https://github.com/junegunn/fzf
 - fd: https://github.com/sharkdp/fd
 - ripgrep: https://github.com/BurntSushi/ripgrep
@@ -63,7 +61,6 @@
 - zoxide: https://github.com/ajeetdsouza/zoxide
 
 ### Text Processing & Viewing
-
 - bat: https://github.com/sharkdp/bat
 - exa: https://the.exa.website/
 - jq: https://github.com/jqlang/jq
@@ -72,7 +69,6 @@
 - delta: https://github.com/dandavison/delta
 
 ### System Monitoring
-
 - htop: https://htop.dev/
 - bottom: https://github.com/ClementTsang/bottom
 - procs: https://github.com/dalance/procs
@@ -81,14 +77,12 @@
 - duf: https://github.com/muesli/duf
 
 ### Development Tools
-
 - tokei: https://github.com/XAMPPRocky/tokei
 - hyperfine: https://github.com/sharkdp/hyperfine
 - watchexec: https://watchexec.github.io/
 - lazydocker: https://github.com/jesseduffield/lazydocker
 
 ### Productivity & Workflow
-
 - direnv: https://direnv.net/
 - tldr: https://github.com/tldr-pages/tldr
 - lnav: https://lnav.org/
@@ -315,51 +309,39 @@
 
 ## Cloud Platforms
 
-
 ### AWS Tools
-
 - AWS CLI: https://aws.amazon.com/cli/
 
 ### Google Cloud
-
 - Google Cloud CLI: https://cloud.google.com/sdk/gcloud
 
 ### Microsoft Azure
-
 - Azure CLI: https://docs.microsoft.com/en-us/cli/azure/
 
 ### Multi-Cloud
-
 - Crossplane: https://crossplane.io/
 
 ## Mobile Development
 
-
 ### Cross-Platform
-
 - Flutter: https://flutter.dev/
 - React Native: https://reactnative.dev/
 - Expo: https://expo.dev/
 
 ### Native Development
-
 - Xcode: https://developer.apple.com/xcode/
 
 ## Data Science & Machine Learning
 
-
 ### Notebooks & Analysis
-
 - Jupyter Notebook: https://jupyter.org/
 - JupyterLab: https://jupyterlab.readthedocs.io/
 
 ### Machine Learning Libraries
-
 - TensorFlow: https://www.tensorflow.org/
 - PyTorch: https://pytorch.org/
 - scikit-learn: https://scikit-learn.org/
 
 ### Data Processing
-
 - pandas: https://pandas.pydata.org/
 - NumPy: https://numpy.org/
