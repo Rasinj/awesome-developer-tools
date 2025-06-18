@@ -47,14 +47,45 @@
 - Oh My Zsh: https://ohmyz.sh/
 - Starship: https://starship.rs/
 
-### Terminal Utilities
+### Session Management
 - tmux: https://github.com/tmux/tmux
+- zellij: https://zellij.dev/
+
+### File Navigation & Search
 - fzf: https://github.com/junegunn/fzf
+- fd: https://github.com/sharkdp/fd
 - ripgrep: https://github.com/BurntSushi/ripgrep
+- broot: https://github.com/Canop/broot
+- ranger: https://github.com/ranger/ranger
+- nnn: https://github.com/jarun/nnn
+- zoxide: https://github.com/ajeetdsouza/zoxide
+
+### Text Processing & Viewing
 - bat: https://github.com/sharkdp/bat
 - exa: https://the.exa.website/
-- fd: https://github.com/sharkdp/fd
+- jq: https://github.com/jqlang/jq
+- fx: https://github.com/antonmedv/fx
+- yq: https://github.com/mikefarah/yq
+- delta: https://github.com/dandavison/delta
+
+### System Monitoring
 - htop: https://htop.dev/
+- bottom: https://github.com/ClementTsang/bottom
+- procs: https://github.com/dalance/procs
+- bandwhich: https://github.com/imsnif/bandwhich
+- dust: https://github.com/bootandy/dust
+- duf: https://github.com/muesli/duf
+
+### Development Tools
+- tokei: https://github.com/XAMPPRocky/tokei
+- hyperfine: https://github.com/sharkdp/hyperfine
+- watchexec: https://watchexec.github.io/
+- lazydocker: https://github.com/jesseduffield/lazydocker
+
+### Productivity & Workflow
+- direnv: https://direnv.net/
+- tldr: https://github.com/tldr-pages/tldr
+- lnav: https://lnav.org/
 
 ## Package Managers
 
@@ -275,3 +306,42 @@
 - HackerRank: https://www.hackerrank.com/
 - Codewars: https://www.codewars.com/
 - Exercism: https://exercism.io/
+
+## Cloud Platforms
+
+### AWS Tools
+- AWS CLI: https://aws.amazon.com/cli/
+
+### Google Cloud
+- Google Cloud CLI: https://cloud.google.com/sdk/gcloud
+
+### Microsoft Azure
+- Azure CLI: https://docs.microsoft.com/en-us/cli/azure/
+
+### Multi-Cloud
+- Crossplane: https://crossplane.io/
+
+## Mobile Development
+
+### Cross-Platform
+- Flutter: https://flutter.dev/
+- React Native: https://reactnative.dev/
+- Expo: https://expo.dev/
+
+### Native Development
+- Xcode: https://developer.apple.com/xcode/
+
+## Data Science & Machine Learning
+
+### Notebooks & Analysis
+- Jupyter Notebook: https://jupyter.org/
+- JupyterLab: https://jupyterlab.readthedocs.io/
+
+### Machine Learning Libraries
+- TensorFlow: https://www.tensorflow.org/
+- PyTorch: https://pytorch.org/
+- scikit-learn: https://scikit-learn.org/
+
+### Data Processing
+- pandas: https://pandas.pydata.org/
+- NumPy: https://numpy.org/
