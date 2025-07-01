@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools Constellation - Interactive Visual Discovery</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #constellation-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #constellation-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: grab;
+        }
+
+        #constellation-svg:active {
+            cursor: grabbing;
+        }
+
+        /* Control Panel */
+        .control-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            z-index: 1000;
+            max-width: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .control-panel.collapsed {
+            transform: translateX(-280px);
+        }
+
+        .panel-toggle {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0 10px 10px 0;
+            padding: 10px 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .view-modes {
+            margin-bottom: 20px;
+        }
+
+        .view-modes h3 {
+            margin-bottom: 10px;
+            color: #64ffda;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mode-buttons {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .mode-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .mode-btn.active {
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            border-color: #64ffda;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #64ffda;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-clear {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-group h4 {
+            margin-bottom: 8px;
+            color: #64ffda;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .filter-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tag:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-tag.active {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-color: #ff6b6b;
+        }
+
+        /* Info Panel */
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            z-index: 1000;
+            max-width: 350px;
+            min-height: 200px;
+            transform: translateX(400px);
+            transition: all 0.3s ease;
+        }
+
+        .info-panel.visible {
+            transform: translateX(0);
+        }
+
+        .info-panel h3 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-panel .tool-url {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .info-panel .tool-url:hover {
+            text-decoration: underline;
+        }
+
+        .info-panel .tool-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .tool-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tool-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .legend h4 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        .stats-panel h4 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+
+        .stat-value {
+            color: #00bcd4;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .control-panel {
+                width: 280px;
+                max-width: none;
+            }
+            
+            .info-panel {
+                width: 300px;
+                max-width: none;
+            }
+            
+            .legend, .stats-panel {
+                font-size: 10px;
+            }
+        }
+
+        /* Tool nodes */
+        .tool-node {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tool-node:hover {
+            filter: brightness(1.5);
+        }
+
+        .tool-node.highlighted {
+            filter: brightness(2) saturate(1.5);
+        }
+
+        .tool-node.dimmed {
+            opacity: 0.3;
+        }
+
+        /* Connections */
+        .connection-line {
+            stroke: rgba(100, 255, 218, 0.3);
+            stroke-width: 1;
+            transition: all 0.3s ease;
+        }
+
+        .connection-line.highlighted {
+            stroke: rgba(100, 255, 218, 0.8);
+            stroke-width: 2;
+        }
+
+        .connection-line.dimmed {
+            opacity: 0.1;
+        }
+
+        /* Loading screen */
+        .loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #64ffda;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: #64ffda;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .loading-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="constellation-container">
+        <!-- Loading Screen -->
+        <div class="loading-screen" id="loading-screen">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Initializing Tool Constellation</div>
+            <div class="loading-subtitle">Mapping the developer tool universe...</div>
+        </div>
+
+        <!-- Main SVG Canvas -->
+        <svg id="constellation-svg"></svg>
+
+        <!-- Control Panel -->
+        <div class="control-panel" id="control-panel">
+            <div class="panel-toggle" id="panel-toggle">◀</div>
+            
+            <div class="view-modes">
+                <h3>Visualization Mode</h3>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="galaxy">Galaxy</button>
+                    <button class="mode-btn" data-mode="solar">Solar</button>
+                    <button class="mode-btn" data-mode="tree">Tree</button>
+                </div>
+            </div>
+
+            <div class="search-container" style="position: relative;">
+                <input type="text" class="search-input" id="search-input" placeholder="Search tools..." autocomplete="off">
+                <button class="search-clear" id="search-clear">×</button>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <h4>Difficulty Level</h4>
+                    <div class="filter-tags">
+                        <span class="filter-tag" data-filter="difficulty" data-value="beginner">Beginner</span>
+                        <span class="filter-tag" data-filter="difficulty" data-value="intermediate">Intermediate</span>
+                        <span class="filter-tag" data-filter="difficulty" data-value="advanced">Advanced</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Technology</h4>
+                    <div class="filter-tags" id="tech-filters">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <div class="filter-tags" id="category-filters">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel" id="info-panel">
+            <h3 id="tool-name">Select a tool to explore</h3>
+            <a href="#" id="tool-url" class="tool-url" target="_blank" style="display: none;"></a>
+            <div id="tool-description" class="tool-description">
+                Click on any tool in the constellation to learn more about it and see its connections.
+            </div>
+            <div class="tool-meta" id="tool-meta" style="display: none;">
+                <!-- Populated dynamically -->
+            </div>
+            <div class="tool-tags" id="tool-tags">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <h4>Legend</h4>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #64ffda;"></div>
+                <span>Popular Tools</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff6b6b;"></div>
+                <span>Beginner Friendly</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #feca57;"></div>
+                <span>Intermediate</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff9ff3;"></div>
+                <span>Advanced</span>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <h4>Statistics</h4>
+            <div class="stat-item">
+                <span>Total Tools:</span>
+                <span class="stat-value" id="total-tools">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Visible:</span>
+                <span class="stat-value" id="visible-tools">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Categories:</span>
+                <span class="stat-value" id="total-categories">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Connections:</span>
+                <span class="stat-value" id="total-connections">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ToolConstellation {
+            constructor() {
+                this.data = null;
+                this.currentMode = 'galaxy';
+                this.selectedTool = null;
+                this.activeFilters = new Set();
+                this.searchQuery = '';
+                this.simulation = null;
+                this.transform = d3.zoomIdentity;
+                
+                this.width = window.innerWidth;
+                this.height = window.innerHeight;
+                
+                this.svg = d3.select('#constellation-svg')
+                    .attr('width', this.width)
+                    .attr('height', this.height);
+                
+                this.container = this.svg.append('g');
+                
+                this.setupZoom();
+                this.setupEventListeners();
+                this.loadData();
+            }
+            
+            async loadData() {
+                try {
+                    const response = await fetch('constellation-data.json');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    this.data = await response.json();
+                    await this.initializeVisualization();
+                } catch (error) {
+                    console.error('Error loading constellation data:', error);
+                    this.showError('Failed to load tool constellation data. Make sure constellation-data.json is generated.');
+                }
+            }
+            
+            
+            async initializeVisualization() {
+                this.populateFilters();
+                this.updateStats();
+                this.createVisualization();
+                this.hideLoading();
+            }
+            
+            populateFilters() {
+                // Populate technology filters
+                const techTags = new Set();
+                const categoryTags = new Set();
+                
+                // Define common technology tags to prioritize
+                const commonTechTags = ['javascript', 'python', 'rust', 'go', 'web', 'cli', 'docker', 'git', 'java'];
+                
+                this.data.tools.forEach(tool => {
+                    tool.tags.forEach(tag => {
+                        if (commonTechTags.includes(tag)) {
+                            techTags.add(tag);
+                        } else if (!tag.includes('&') && !tag.includes('--')) {
+                            // Avoid category-style tags (with & or --) for tech filters
+                            categoryTags.add(tag);
+                        }
+                    });
+                });
+                
+                // Also add main categories
+                Object.keys(this.data.categories).forEach(categoryId => {
+                    const category = this.data.categories[categoryId];
+                    if (category.name) {
+                        categoryTags.add(categoryId);
+                    }
+                });
+                
+                const techContainer = document.getElementById('tech-filters');
+                techContainer.innerHTML = ''; // Clear existing
+                Array.from(techTags).sort().slice(0, 10).forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = 'filter-tag';
+                    span.dataset.filter = 'tech';
+                    span.dataset.value = tag;
+                    span.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+                    techContainer.appendChild(span);
+                });
+                
+                const categoryContainer = document.getElementById('category-filters');
+                categoryContainer.innerHTML = ''; // Clear existing
+                Array.from(categoryTags).sort().slice(0, 12).forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = 'filter-tag';
+                    span.dataset.filter = 'category';
+                    span.dataset.value = tag;
+                    span.textContent = tag.replace(/-/g, ' ').replace(/&/g, '&').split(' ').map(word => 
+                        word.charAt(0).toUpperCase() + word.slice(1)
+                    ).join(' ');
+                    categoryContainer.appendChild(span);
+                });
+            }
+            
+            updateStats() {
+                const visibleTools = this.getVisibleTools();
+                const totalConnections = this.data.tools.reduce((sum, tool) => sum + tool.connections.length, 0);
+                
+                document.getElementById('total-tools').textContent = this.data.tools.length;
+                document.getElementById('visible-tools').textContent = visibleTools.length;
+                document.getElementById('total-categories').textContent = Object.keys(this.data.categories).length;
+                document.getElementById('total-connections').textContent = totalConnections;
+            }
+            
+            getVisibleTools() {
+                return this.data.tools.filter(tool => {
+                    // Search filter
+                    if (this.searchQuery) {
+                        const query = this.searchQuery.toLowerCase();
+                        if (!tool.name.toLowerCase().includes(query) && 
+                            !tool.description.toLowerCase().includes(query) &&
+                            !tool.tags.some(tag => tag.toLowerCase().includes(query))) {
+                            return false;
+                        }
+                    }
+                    
+                    // Active filters
+                    if (this.activeFilters.size > 0) {
+                        const toolFilters = new Set([
+                            tool.difficulty,
+                            ...tool.tags
+                        ]);
+                        
+                        return Array.from(this.activeFilters).some(filter => toolFilters.has(filter));
+                    }
+                    
+                    return true;
+                });
+            }
+            
+            createVisualization() {
+                this.container.selectAll('*').remove();
+                
+                const visibleTools = this.getVisibleTools();
+                const connections = this.getConnections(visibleTools);
+                
+                // Create force simulation
+                this.simulation = d3.forceSimulation(visibleTools)
+                    .force('link', d3.forceLink(connections).id(d => d.id).strength(d => d.strength * 0.1))
+                    .force('charge', d3.forceManyBody().strength(-100))
+                    .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+                    .force('collision', d3.forceCollide().radius(15));
+                
+                // Create connections
+                this.connectionLines = this.container.append('g')
+                    .attr('class', 'connections')
+                    .selectAll('line')
+                    .data(connections)
+                    .enter().append('line')
+                    .attr('class', 'connection-line')
+                    .style('stroke-width', d => d.strength * 2);
+                
+                // Create tool nodes
+                this.toolNodes = this.container.append('g')
+                    .attr('class', 'tools')
+                    .selectAll('g')
+                    .data(visibleTools)
+                    .enter().append('g')
+                    .attr('class', 'tool-node')
+                    .call(this.createDragBehavior());
+                
+                // Add circles for tools
+                this.toolNodes.append('circle')
+                    .attr('r', d => 5 + d.popularity * 10)
+                    .style('fill', d => this.getToolColor(d))
+                    .style('stroke', '#ffffff')
+                    .style('stroke-width', 1);
+                
+                // Add labels
+                this.toolNodes.append('text')
+                    .attr('dx', 12)
+                    .attr('dy', 4)
+                    .style('font-size', '10px')
+                    .style('fill', '#ffffff')
+                    .style('pointer-events', 'none')
+                    .text(d => d.name);
+                
+                // Set initial positions based on mode
+                this.updatePositions();
+                
+                // Add interaction handlers
+                this.toolNodes.on('click', (event, d) => this.selectTool(d))
+                    .on('mouseover', (event, d) => this.highlightTool(d))
+                    .on('mouseout', () => this.clearHighlight());
+                
+                // Update simulation
+                this.simulation.on('tick', () => {
+                    this.connectionLines
+                        .attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+                    
+                    this.toolNodes
+                        .attr('transform', d => `translate(${d.x},${d.y})`);
+                });
+                
+                this.updateStats();
+            }
+            
+            getConnections(tools) {
+                const connections = [];
+                const toolIds = new Set(tools.map(t => t.id));
+                
+                tools.forEach(tool => {
+                    tool.connections.forEach(conn => {
+                        if (toolIds.has(conn.target)) {
+                            connections.push({
+                                source: tool.id,
+                                target: conn.target,
+                                strength: conn.strength,
+                                type: conn.type
+                            });
+                        }
+                    });
+                });
+                
+                return connections;
+            }
+            
+            getToolColor(tool) {
+                if (tool.popularity > 0.8) return '#64ffda'; // Popular - cyan
+                
+                switch (tool.difficulty) {
+                    case 'beginner': return '#ff6b6b'; // Red
+                    case 'intermediate': return '#feca57'; // Yellow
+                    case 'advanced': return '#ff9ff3'; // Pink
+                    default: return '#ffffff';
+                }
+            }
+            
+            updatePositions() {
+                if (!this.toolNodes) return;
+                
+                this.toolNodes.each(d => {
+                    const pos = d.position[this.currentMode];
+                    d.fx = pos.x + this.width / 2;
+                    d.fy = pos.y + this.height / 2;
+                });
+                
+                if (this.simulation) {
+                    this.simulation.alpha(0.3).restart();
+                }
+            }
+            
+            selectTool(tool) {
+                this.selectedTool = tool;
+                this.updateInfoPanel(tool);
+                this.highlightTool(tool);
+            }
+            
+            updateInfoPanel(tool) {
+                document.getElementById('tool-name').textContent = tool.name;
+                document.getElementById('tool-url').href = tool.url;
+                document.getElementById('tool-url').textContent = tool.url;
+                document.getElementById('tool-url').style.display = 'block';
+                document.getElementById('tool-description').textContent = tool.description;
+                
+                // Update meta information
+                const metaContainer = document.getElementById('tool-meta');
+                metaContainer.innerHTML = `
+                    <div class="meta-item">Category: ${tool.category}</div>
+                    <div class="meta-item">Difficulty: ${tool.difficulty}</div>
+                    <div class="meta-item">Popularity: ${Math.round(tool.popularity * 100)}%</div>
+                `;
+                metaContainer.style.display = 'flex';
+                
+                // Update tags
+                const tagsContainer = document.getElementById('tool-tags');
+                tagsContainer.innerHTML = tool.tags.map(tag => 
+                    `<span class="tool-tag">${tag}</span>`
+                ).join('');
+                
+                // Show info panel
+                document.getElementById('info-panel').classList.add('visible');
+            }
+            
+            highlightTool(tool) {
+                if (!this.toolNodes) return;
+                
+                // Dim all tools
+                this.toolNodes.classed('dimmed', true);
+                this.connectionLines.classed('dimmed', true);
+                
+                // Highlight selected tool and connections
+                const connectedIds = new Set([tool.id, ...tool.connections.map(c => c.target)]);
+                
+                this.toolNodes
+                    .classed('highlighted', d => connectedIds.has(d.id))
+                    .classed('dimmed', d => !connectedIds.has(d.id));
+                
+                this.connectionLines
+                    .classed('highlighted', d => d.source.id === tool.id || d.target.id === tool.id)
+                    .classed('dimmed', d => d.source.id !== tool.id && d.target.id !== tool.id);
+            }
+            
+            clearHighlight() {
+                if (!this.selectedTool) {
+                    this.toolNodes.classed('highlighted', false).classed('dimmed', false);
+                    this.connectionLines.classed('highlighted', false).classed('dimmed', false);
+                }
+            }
+            
+            setupZoom() {
+                const zoom = d3.zoom()
+                    .scaleExtent([0.1, 3.0])
+                    .on('zoom', (event) => {
+                        this.transform = event.transform;
+                        this.container.attr('transform', this.transform);
+                    });
+                
+                this.svg.call(zoom);
+            }
+            
+            setupEventListeners() {
+                // Mode buttons
+                document.querySelectorAll('.mode-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        this.currentMode = btn.dataset.mode;
+                        this.updatePositions();
+                    });
+                });
+                
+                // Search
+                const searchInput = document.getElementById('search-input');
+                searchInput.addEventListener('input', (e) => {
+                    this.searchQuery = e.target.value;
+                    this.createVisualization();
+                });
+                
+                document.getElementById('search-clear').addEventListener('click', () => {
+                    searchInput.value = '';
+                    this.searchQuery = '';
+                    this.createVisualization();
+                });
+                
+                // Filters
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('filter-tag')) {
+                        const filterValue = e.target.dataset.value;
+                        
+                        if (this.activeFilters.has(filterValue)) {
+                            this.activeFilters.delete(filterValue);
+                            e.target.classList.remove('active');
+                        } else {
+                            this.activeFilters.add(filterValue);
+                            e.target.classList.add('active');
+                        }
+                        
+                        this.createVisualization();
+                    }
+                });
+                
+                // Panel toggle
+                document.getElementById('panel-toggle').addEventListener('click', () => {
+                    const panel = document.getElementById('control-panel');
+                    const toggle = document.getElementById('panel-toggle');
+                    
+                    if (panel.classList.contains('collapsed')) {
+                        panel.classList.remove('collapsed');
+                        toggle.textContent = '◀';
+                    } else {
+                        panel.classList.add('collapsed');
+                        toggle.textContent = '▶';
+                    }
+                });
+                
+                // Resize handler
+                window.addEventListener('resize', () => {
+                    this.width = window.innerWidth;
+                    this.height = window.innerHeight;
+                    this.svg.attr('width', this.width).attr('height', this.height);
+                    
+                    if (this.simulation) {
+                        this.simulation.force('center', d3.forceCenter(this.width / 2, this.height / 2));
+                        this.simulation.alpha(0.3).restart();
+                    }
+                });
+            }
+            
+            createDragBehavior() {
+                return d3.drag()
+                    .on('start', (event, d) => {
+                        if (!event.active) this.simulation.alphaTarget(0.3).restart();
+                        d.fx = d.x;
+                        d.fy = d.y;
+                    })
+                    .on('drag', (event, d) => {
+                        d.fx = event.x;
+                        d.fy = event.y;
+                    })
+                    .on('end', (event, d) => {
+                        if (!event.active) this.simulation.alphaTarget(0);
+                        d.fx = null;
+                        d.fy = null;
+                    });
+            }
+            
+            hideLoading() {
+                const loadingScreen = document.getElementById('loading-screen');
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+            
+            showError(message) {
+                const loadingText = document.querySelector('.loading-text');
+                const loadingSubtitle = document.querySelector('.loading-subtitle');
+                const spinner = document.querySelector('.loading-spinner');
+                
+                loadingText.textContent = 'Error Loading Constellation';
+                loadingSubtitle.textContent = message;
+                spinner.style.display = 'none';
+            }
+        }
+        
+        // Initialize the constellation when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new ToolConstellation();
+        });
+    </script>
+</body>
+</html>

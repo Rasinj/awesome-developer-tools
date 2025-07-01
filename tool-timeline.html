@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools Timeline - Evolution of Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #64ffda, #1de9b6, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.3)); }
+            to { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.6)); }
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .control-group {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .control-group h3 {
+            margin-bottom: 15px;
+            color: #64ffda;
+            font-size: 1.1rem;
+        }
+        
+        .era-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .era-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .era-btn:hover, .era-btn.active {
+            background: linear-gradient(135deg, #64ffda, #1de9b6);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+            color: #1a1a2e;
+        }
+        
+        .view-selector {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .view-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn:hover, .view-btn.active {
+            background: linear-gradient(135deg, #feca57, #ff9ff3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(254, 202, 87, 0.3);
+            color: #1a1a2e;
+        }
+        
+        .timeline-container {
+            position: relative;
+            margin: 40px 0;
+            min-height: 600px;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #64ffda, #1de9b6, #00bcd4);
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+        
+        .timeline-era {
+            position: relative;
+            margin: 80px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .timeline-era.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .era-marker {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #64ffda, #1de9b6);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.7);
+            z-index: 10;
+        }
+        
+        .era-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .era-title {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #64ffda, #1de9b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .era-period {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+        
+        .era-description {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #64ffda, #1de9b6, #00bcd4);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .tool-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #64ffda;
+            margin-bottom: 5px;
+        }
+        
+        .tool-year {
+            background: rgba(100, 255, 218, 0.2);
+            color: #64ffda;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .tool-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .tool-metrics {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .metric-icon {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .tool-evolution {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .evolution-label {
+            font-size: 0.9rem;
+            color: #64ffda;
+            margin-bottom: 8px;
+        }
+        
+        .evolution-chain {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .evolution-tool {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+        
+        .evolution-arrow {
+            color: #64ffda;
+            font-weight: bold;
+        }
+        
+        .trend-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .trend-rising {
+            background: #4ade80;
+            box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+        }
+        
+        .trend-stable {
+            background: #fbbf24;
+            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+        
+        .trend-declining {
+            background: #f87171;
+            box-shadow: 0 0 10px rgba(248, 113, 113, 0.5);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        
+        .stats-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #64ffda, #1de9b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+        
+        .predictions-panel {
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(29, 233, 182, 0.1));
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+        
+        .predictions-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #64ffda;
+        }
+        
+        .prediction-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #64ffda;
+        }
+        
+        .prediction-title {
+            font-size: 1.3rem;
+            color: #64ffda;
+            margin-bottom: 10px;
+        }
+        
+        .prediction-description {
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        
+        .prediction-confidence {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .confidence-bar {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #1de9b6);
+            border-radius: 4px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(100, 255, 218, 0.3);
+            border-radius: 50%;
+            border-top-color: #64ffda;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .era-buttons, .view-selector {
+                justify-content: center;
+            }
+            
+            .timeline-line {
+                left: 30px;
+            }
+            
+            .era-marker {
+                left: 30px;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Developer Tools Timeline</h1>
+            <p>Journey through the evolution of developer tooling - from the dawn of programming to the AI-powered future. Discover how tools have shaped development and predict what's coming next.</p>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h3>Development Eras</h3>
+                <div class="era-buttons">
+                    <button class="era-btn active" data-era="all">All Eras</button>
+                    <button class="era-btn" data-era="unix">Unix Era (1970s-1980s)</button>
+                    <button class="era-btn" data-era="internet">Internet Era (1990s)</button>
+                    <button class="era-btn" data-era="web">Web 2.0 Era (2000s)</button>
+                    <button class="era-btn" data-era="mobile">Mobile Era (2010s)</button>
+                    <button class="era-btn" data-era="cloud">Cloud-Native Era (2015+)</button>
+                    <button class="era-btn" data-era="ai">AI Era (2020+)</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h3>View Mode</h3>
+                <div class="view-selector">
+                    <button class="view-btn active" data-view="timeline">Timeline</button>
+                    <button class="view-btn" data-view="trends">Trends</button>
+                    <button class="view-btn" data-view="evolution">Evolution</button>
+                    <button class="view-btn" data-view="predictions">Predictions</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h3>Search & Filter</h3>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <input type="text" id="tool-search" placeholder="Search tools..." style="
+                        padding: 8px 15px; 
+                        border-radius: 20px; 
+                        border: 1px solid rgba(255,255,255,0.3); 
+                        background: rgba(255,255,255,0.1); 
+                        color: white; 
+                        font-size: 0.9rem;
+                        min-width: 200px;
+                    ">
+                    <select id="trend-filter" style="
+                        padding: 8px 15px; 
+                        border-radius: 20px; 
+                        border: 1px solid rgba(255,255,255,0.3); 
+                        background: rgba(255,255,255,0.1); 
+                        color: white; 
+                        font-size: 0.9rem;
+                    ">
+                        <option value="all">All Trends</option>
+                        <option value="rising">Rising</option>
+                        <option value="stable">Stable</option>
+                        <option value="declining">Declining</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-panel">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value" id="tools-count">400+</span>
+                    <div class="stat-label">Developer Tools Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="eras-count">6</span>
+                    <div class="stat-label">Development Eras</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="evolution-chains">50+</span>
+                    <div class="stat-label">Evolution Chains</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="predictions-count">15</span>
+                    <div class="stat-label">Future Predictions</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="content-area">
+            <div class="loading">Loading timeline data...</div>
+        </div>
+    </div>
+
+    <script>
+        // Load timeline data from external JSON file
+        let timelineData = null;
+        
+        // Fallback timeline data structure (will be replaced by loaded data)
+        const fallbackTimelineData = {
+            eras: [
+                {
+                    id: 'unix',
+                    title: 'Unix Era',
+                    period: '1970s - 1980s',
+                    description: 'The foundation of modern development tools. Unix philosophy of small, composable tools laid the groundwork for everything that followed.',
+                    tools: [
+                        {
+                            name: 'vi/Vim',
+                            url: 'https://www.vim.org/',
+                            year: 1976,
+                            description: 'Modal text editor that defined keyboard-driven editing',
+                            trend: 'stable',
+                            githubStars: 35000,
+                            evolution: {
+                                predecessors: [],
+                                successors: ['Neovim', 'Helix']
+                            },
+                            metrics: {
+                                adoptionScore: 85,
+                                communitySize: 'Large',
+                                learningCurve: 'Steep'
+                            }
+                        },
+                        {
+                            name: 'grep',
+                            url: 'https://www.gnu.org/software/grep/',
+                            year: 1973,
+                            description: 'Text search utility that became the foundation for code searching',
+                            trend: 'stable',
+                            githubStars: 0,
+                            evolution: {
+                                predecessors: [],
+                                successors: ['ripgrep', 'ag', 'fzf']
+                            },
+                            metrics: {
+                                adoptionScore: 95,
+                                communitySize: 'Universal',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'make',
+                            url: 'https://www.gnu.org/software/make/',
+                            year: 1976,
+                            description: 'Build automation tool that established the concept of declarative builds',
+                            trend: 'stable',
+                            githubStars: 0,
+                            evolution: {
+                                predecessors: [],
+                                successors: ['CMake', 'just', 'Task', 'npm scripts']
+                            },
+                            metrics: {
+                                adoptionScore: 80,
+                                communitySize: 'Large',
+                                learningCurve: 'Moderate'
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 'internet',
+                    title: 'Internet Era',
+                    period: '1990s',
+                    description: 'The web revolutionized software distribution and collaboration. Version control and the first web development tools emerged.',
+                    tools: [
+                        {
+                            name: 'Git',
+                            url: 'https://git-scm.com/',
+                            year: 2005,
+                            description: 'Distributed version control that revolutionized collaboration',
+                            trend: 'stable',
+                            githubStars: 50000,
+                            evolution: {
+                                predecessors: ['CVS', 'SVN'],
+                                successors: ['GitHub', 'GitLab', 'Lazygit']
+                            },
+                            metrics: {
+                                adoptionScore: 98,
+                                communitySize: 'Universal',
+                                learningCurve: 'Moderate'
+                            }
+                        },
+                        {
+                            name: 'Apache',
+                            url: 'https://httpd.apache.org/',
+                            year: 1995,
+                            description: 'Web server that powered the early internet',
+                            trend: 'declining',
+                            githubStars: 3500,
+                            evolution: {
+                                predecessors: ['NCSA HTTPd'],
+                                successors: ['Nginx', 'Caddy']
+                            },
+                            metrics: {
+                                adoptionScore: 60,
+                                communitySize: 'Large',
+                                learningCurve: 'Moderate'
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 'web',
+                    title: 'Web 2.0 Era',
+                    period: '2000s',
+                    description: 'Dynamic web applications emerged. JavaScript frameworks, AJAX, and modern web development practices were born.',
+                    tools: [
+                        {
+                            name: 'jQuery',
+                            url: 'https://jquery.com/',
+                            year: 2006,
+                            description: 'JavaScript library that simplified DOM manipulation and AJAX',
+                            trend: 'declining',
+                            githubStars: 59000,
+                            evolution: {
+                                predecessors: ['Prototype.js'],
+                                successors: ['React', 'Vue', 'Angular']
+                            },
+                            metrics: {
+                                adoptionScore: 45,
+                                communitySize: 'Large',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'Eclipse',
+                            url: 'https://www.eclipse.org/',
+                            year: 2001,
+                            description: 'Extensible IDE platform that defined modern IDE architecture',
+                            trend: 'stable',
+                            githubStars: 0,
+                            evolution: {
+                                predecessors: ['Visual Age'],
+                                successors: ['IntelliJ IDEA', 'VS Code']
+                            },
+                            metrics: {
+                                adoptionScore: 40,
+                                communitySize: 'Medium',
+                                learningCurve: 'Moderate'
+                            }
+                        },
+                        {
+                            name: 'Subversion (SVN)',
+                            url: 'https://subversion.apache.org/',
+                            year: 2000,
+                            description: 'Centralized version control system that improved upon CVS',
+                            trend: 'declining',
+                            githubStars: 0,
+                            evolution: {
+                                predecessors: ['CVS'],
+                                successors: ['Git', 'Mercurial']
+                            },
+                            metrics: {
+                                adoptionScore: 15,
+                                communitySize: 'Small',
+                                learningCurve: 'Easy'
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 'mobile',
+                    title: 'Mobile Era',
+                    period: '2010s',
+                    description: 'Mobile development transformed software. Modern JavaScript frameworks, cloud services, and agile development practices emerged.',
+                    tools: [
+                        {
+                            name: 'React',
+                            url: 'https://reactjs.org/',
+                            year: 2013,
+                            description: 'Component-based JavaScript library that revolutionized UI development',
+                            trend: 'stable',
+                            githubStars: 227000,
+                            evolution: {
+                                predecessors: ['jQuery', 'Backbone.js'],
+                                successors: ['Next.js', 'Gatsby', 'React Native']
+                            },
+                            metrics: {
+                                adoptionScore: 90,
+                                communitySize: 'Huge',
+                                learningCurve: 'Moderate'
+                            }
+                        },
+                        {
+                            name: 'Node.js',
+                            url: 'https://nodejs.org/',
+                            year: 2009,
+                            description: 'JavaScript runtime that brought JS to the server',
+                            trend: 'stable',
+                            githubStars: 106000,
+                            evolution: {
+                                predecessors: ['V8 Engine'],
+                                successors: ['Deno', 'Bun']
+                            },
+                            metrics: {
+                                adoptionScore: 85,
+                                communitySize: 'Huge',
+                                learningCurve: 'Moderate'
+                            }
+                        },
+                        {
+                            name: 'Docker',
+                            url: 'https://www.docker.com/',
+                            year: 2013,
+                            description: 'Containerization platform that simplified deployment',
+                            trend: 'stable',
+                            githubStars: 68000,
+                            evolution: {
+                                predecessors: ['LXC', 'chroot'],
+                                successors: ['Podman', 'Kubernetes']
+                            },
+                            metrics: {
+                                adoptionScore: 88,
+                                communitySize: 'Huge',
+                                learningCurve: 'Moderate'
+                            }
+                        },
+                        {
+                            name: 'Webpack',
+                            url: 'https://webpack.js.org/',
+                            year: 2012,
+                            description: 'Module bundler that enabled modern JavaScript development',
+                            trend: 'declining',
+                            githubStars: 64000,
+                            evolution: {
+                                predecessors: ['RequireJS', 'Browserify'],
+                                successors: ['Vite', 'esbuild', 'Rollup']
+                            },
+                            metrics: {
+                                adoptionScore: 70,
+                                communitySize: 'Large',
+                                learningCurve: 'Steep'
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 'cloud',
+                    title: 'Cloud-Native Era',
+                    period: '2015 - Present',
+                    description: 'Cloud-first development with microservices, serverless, and DevOps. Tools became faster, more specialized, and cloud-integrated.',
+                    tools: [
+                        {
+                            name: 'VS Code',
+                            url: 'https://code.visualstudio.com/',
+                            year: 2015,
+                            description: 'Lightweight, extensible editor that dominated development',
+                            trend: 'rising',
+                            githubStars: 163000,
+                            evolution: {
+                                predecessors: ['Sublime Text', 'Atom'],
+                                successors: ['Zed', 'Cursor']
+                            },
+                            metrics: {
+                                adoptionScore: 95,
+                                communitySize: 'Huge',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'Vite',
+                            url: 'https://vitejs.dev/',
+                            year: 2020,
+                            description: 'Fast build tool that leveraged native ES modules',
+                            trend: 'rising',
+                            githubStars: 67000,
+                            evolution: {
+                                predecessors: ['Webpack', 'Parcel'],
+                                successors: ['Turbo', 'Rspack']
+                            },
+                            metrics: {
+                                adoptionScore: 75,
+                                communitySize: 'Large',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'Kubernetes',
+                            url: 'https://kubernetes.io/',
+                            year: 2014,
+                            description: 'Container orchestration platform for cloud-native applications',
+                            trend: 'rising',
+                            githubStars: 110000,
+                            evolution: {
+                                predecessors: ['Docker Swarm', 'Mesos'],
+                                successors: ['k3s', 'Kind']
+                            },
+                            metrics: {
+                                adoptionScore: 80,
+                                communitySize: 'Huge',
+                                learningCurve: 'Steep'
+                            }
+                        },
+                        {
+                            name: 'Rust',
+                            url: 'https://www.rust-lang.org/',
+                            year: 2015,
+                            description: 'Systems programming language focusing on safety and performance',
+                            trend: 'rising',
+                            githubStars: 97000,
+                            evolution: {
+                                predecessors: ['C++', 'D'],
+                                successors: ['Zig', 'Carbon']
+                            },
+                            metrics: {
+                                adoptionScore: 65,
+                                communitySize: 'Large',
+                                learningCurve: 'Steep'
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 'ai',
+                    title: 'AI Era',
+                    period: '2020 - Future',
+                    description: 'AI-powered development tools, automated code generation, and intelligent assistance are transforming how we write software.',
+                    tools: [
+                        {
+                            name: 'GitHub Copilot',
+                            url: 'https://github.com/features/copilot',
+                            year: 2021,
+                            description: 'AI pair programmer that suggests code completions',
+                            trend: 'rising',
+                            githubStars: 0,
+                            evolution: {
+                                predecessors: ['IntelliSense', 'Tabnine'],
+                                successors: ['Claude Code', 'Cursor AI']
+                            },
+                            metrics: {
+                                adoptionScore: 70,
+                                communitySize: 'Large',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'Cursor',
+                            url: 'https://cursor.sh/',
+                            year: 2023,
+                            description: 'AI-first code editor built for the future of programming',
+                            trend: 'rising',
+                            githubStars: 23000,
+                            evolution: {
+                                predecessors: ['VS Code', 'GitHub Copilot'],
+                                successors: ['Next-gen AI IDEs']
+                            },
+                            metrics: {
+                                adoptionScore: 25,
+                                communitySize: 'Growing',
+                                learningCurve: 'Easy'
+                            }
+                        },
+                        {
+                            name: 'Tauri',
+                            url: 'https://tauri.app/',
+                            year: 2021,
+                            description: 'Rust-based framework for building desktop apps with web technologies',
+                            trend: 'rising',
+                            githubStars: 82000,
+                            evolution: {
+                                predecessors: ['Electron'],
+                                successors: ['Next-gen desktop frameworks']
+                            },
+                            metrics: {
+                                adoptionScore: 15,
+                                communitySize: 'Growing',
+                                learningCurve: 'Moderate'
+                            }
+                        }
+                    ]
+                }
+            ],
+            predictions: [
+                {
+                    title: 'AI-Native Development Environments',
+                    description: 'IDEs will become AI-first, with natural language interfaces, automated refactoring, and predictive code generation becoming standard.',
+                    confidence: 85,
+                    timeframe: '2025-2027'
+                },
+                {
+                    title: 'WebAssembly Revolution',
+                    description: 'WASM will enable any language to run in browsers efficiently, leading to diverse frontend development ecosystems.',
+                    confidence: 78,
+                    timeframe: '2024-2026'
+                },
+                {
+                    title: 'Quantum Development Tools',
+                    description: 'Specialized IDEs and frameworks for quantum computing will emerge as quantum computers become more accessible.',
+                    confidence: 45,
+                    timeframe: '2028-2035'
+                },
+                {
+                    title: 'Edge-First Development',
+                    description: 'Development tools will optimize for edge computing, with built-in CDN integration and edge-native frameworks.',
+                    confidence: 70,
+                    timeframe: '2025-2028'
+                },
+                {
+                    title: 'Memory-Safe Systems Languages',
+                    description: 'Languages like Rust, Zig, and Carbon will continue replacing C/C++ in systems programming.',
+                    confidence: 90,
+                    timeframe: '2024-2030'
+                },
+                {
+                    title: 'No-Code/Low-Code Enterprise',
+                    description: 'Visual programming environments will handle increasingly complex enterprise applications.',
+                    confidence: 65,
+                    timeframe: '2025-2030'
+                }
+            ]
+        };
+
+        // State management
+        let currentEra = 'all';
+        let currentView = 'timeline';
+        let searchTerm = '';
+        let trendFilter = 'all';
+
+        // DOM elements
+        const contentArea = document.getElementById('content-area');
+        const eraButtons = document.querySelectorAll('.era-btn');
+        const viewButtons = document.querySelectorAll('.view-btn');
+
+        // Event listeners
+        eraButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                eraButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentEra = btn.dataset.era;
+                renderContent();
+            });
+        });
+
+        viewButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                viewButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentView = btn.dataset.view;
+                renderContent();
+            });
+        });
+
+        // Search and filter event listeners (will be added after page load)
+        function initializeSearchAndFilter() {
+            const searchInput = document.getElementById('tool-search');
+            const trendSelect = document.getElementById('trend-filter');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    searchTerm = e.target.value.toLowerCase();
+                    renderContent();
+                });
+            }
+
+            if (trendSelect) {
+                trendSelect.addEventListener('change', (e) => {
+                    trendFilter = e.target.value;
+                    renderContent();
+                });
+            }
+        }
+        
+        // Filter tools based on current search and filter criteria
+        function filterTools(tools) {
+            return tools.filter(tool => {
+                const matchesSearch = !searchTerm || 
+                    tool.name.toLowerCase().includes(searchTerm) ||
+                    tool.description.toLowerCase().includes(searchTerm);
+                
+                const matchesTrend = trendFilter === 'all' || tool.trend === trendFilter;
+                
+                return matchesSearch && matchesTrend;
+            });
+        }
+
+        // Rendering functions
+        function renderContent() {
+            switch (currentView) {
+                case 'timeline':
+                    renderTimeline();
+                    break;
+                case 'trends':
+                    renderTrends();
+                    break;
+                case 'evolution':
+                    renderEvolution();
+                    break;
+                case 'predictions':
+                    renderPredictions();
+                    break;
+            }
+        }
+
+        function renderTimeline() {
+            const erasToShow = currentEra === 'all' ? timelineData.eras : timelineData.eras.filter(era => era.id === currentEra);
+            
+            // Apply search and trend filters
+            const filteredEras = erasToShow.map(era => ({
+                ...era,
+                tools: filterTools(era.tools)
+            })).filter(era => era.tools.length > 0); // Only show eras with tools that match filters
+            
+            const html = `
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    ${filteredEras.map(era => `
+                        <div class="timeline-era" data-era="${era.id}">
+                            <div class="era-marker"></div>
+                            <div class="era-header">
+                                <h2 class="era-title">${era.title}</h2>
+                                <div class="era-period">${era.period}</div>
+                                <div class="era-description">${era.description}</div>
+                            </div>
+                            <div class="tools-grid">
+                                ${era.tools.map(tool => `
+                                    <div class="tool-card">
+                                        <div class="trend-indicator trend-${tool.trend}"></div>
+                                        <div class="tool-header">
+                                            <div>
+                                                <div class="tool-name">${tool.name}</div>
+                                            </div>
+                                            <div class="tool-year">${tool.year}</div>
+                                        </div>
+                                        <div class="tool-description">${tool.description}</div>
+                                        <div class="tool-metrics">
+                                            <div class="metric">
+                                                <span>⭐</span>
+                                                <span>Adoption: ${tool.metrics.adoptionScore}%</span>
+                                            </div>
+                                            <div class="metric">
+                                                <span>👥</span>
+                                                <span>${tool.metrics.communitySize}</span>
+                                            </div>
+                                            <div class="metric">
+                                                <span>📈</span>
+                                                <span>${tool.metrics.learningCurve}</span>
+                                            </div>
+                                        </div>
+                                        ${tool.evolution.successors.length > 0 ? `
+                                            <div class="tool-evolution">
+                                                <div class="evolution-label">Evolution Chain:</div>
+                                                <div class="evolution-chain">
+                                                    ${tool.evolution.predecessors.map(pred => `<span class="evolution-tool">${pred}</span>`).join('<span class="evolution-arrow">→</span>')}
+                                                    ${tool.evolution.predecessors.length > 0 ? '<span class="evolution-arrow">→</span>' : ''}
+                                                    <span class="evolution-tool" style="background: rgba(100, 255, 218, 0.2);">${tool.name}</span>
+                                                    <span class="evolution-arrow">→</span>
+                                                    ${tool.evolution.successors.map(succ => `<span class="evolution-tool">${succ}</span>`).join('<span class="evolution-arrow">→</span>')}
+                                                </div>
+                                            </div>
+                                        ` : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            contentArea.innerHTML = html;
+            animateTimelineEntrance();
+        }
+
+        function renderTrends() {
+            const allTools = timelineData.eras.flatMap(era => era.tools);
+            const risingTools = allTools.filter(tool => tool.trend === 'rising');
+            const stableTools = allTools.filter(tool => tool.trend === 'stable');
+            const decliningTools = allTools.filter(tool => tool.trend === 'declining');
+
+            const html = `
+                <div class="trends-container">
+                    <div class="trend-section">
+                        <h2 style="color: #4ade80; text-align: center; margin-bottom: 30px;">🚀 Rising Stars</h2>
+                        <div class="tools-grid">
+                            ${risingTools.map(tool => createTrendCard(tool, 'rising')).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="trend-section" style="margin-top: 60px;">
+                        <h2 style="color: #fbbf24; text-align: center; margin-bottom: 30px;">⚡ Stable Giants</h2>
+                        <div class="tools-grid">
+                            ${stableTools.map(tool => createTrendCard(tool, 'stable')).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="trend-section" style="margin-top: 60px;">
+                        <h2 style="color: #f87171; text-align: center; margin-bottom: 30px;">📉 Legacy Tools</h2>
+                        <div class="tools-grid">
+                            ${decliningTools.map(tool => createTrendCard(tool, 'declining')).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            contentArea.innerHTML = html;
+        }
+
+        function createTrendCard(tool, trendType) {
+            const trendColors = {
+                rising: '#4ade80',
+                stable: '#fbbf24',
+                declining: '#f87171'
+            };
+            
+            return `
+                <div class="tool-card" style="border-left: 4px solid ${trendColors[trendType]};">
+                    <div class="tool-header">
+                        <div>
+                            <div class="tool-name">${tool.name}</div>
+                        </div>
+                        <div class="tool-year">${tool.year}</div>
+                    </div>
+                    <div class="tool-description">${tool.description}</div>
+                    <div class="tool-metrics">
+                        <div class="metric">
+                            <span>📊</span>
+                            <span>Adoption: ${tool.metrics.adoptionScore}%</span>
+                        </div>
+                        <div class="metric">
+                            <span>👥</span>
+                            <span>${tool.metrics.communitySize}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEvolution() {
+            const evolutionChains = buildEvolutionChains();
+            
+            const html = `
+                <div class="evolution-container">
+                    <h2 style="text-align: center; margin-bottom: 40px; color: #64ffda;">🔄 Tool Evolution Chains</h2>
+                    <p style="text-align: center; margin-bottom: 40px; opacity: 0.8; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        Discover how developer tools have evolved over time. Each chain shows the progression from early tools to modern solutions, 
+                        revealing patterns in innovation and technological advancement.
+                    </p>
+                    ${evolutionChains.map((chain, chainIndex) => `
+                        <div class="evolution-chain-card" style="background: rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 30px; margin-bottom: 30px; border: 1px solid rgba(255, 255, 255, 0.1); opacity: 0; transform: translateY(30px);" data-chain-index="${chainIndex}">
+                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 20px;">
+                                <h3 style="color: #64ffda; margin: 0;">${chain.category}</h3>
+                                <div style="background: rgba(100, 255, 218, 0.2); padding: 5px 15px; border-radius: 15px; font-size: 0.9rem;">
+                                    ${chain.tools.length} generations
+                                </div>
+                            </div>
+                            <div class="evolution-flow" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 30px 0;">
+                                ${chain.tools.map((tool, index) => `
+                                    <div class="evolution-step" style="display: flex; align-items: center; gap: 15px;">
+                                        <div class="evolution-tool-card" style="
+                                            background: ${getEvolutionCardColor(index, chain.tools.length)}; 
+                                            padding: 15px 20px; 
+                                            border-radius: 15px; 
+                                            text-align: center; 
+                                            min-width: 140px;
+                                            cursor: pointer;
+                                            transition: all 0.3s ease;
+                                            border: 2px solid transparent;
+                                        " onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(100, 255, 218, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
+                                            <div style="font-weight: bold; color: #ffffff; margin-bottom: 5px; font-size: 1rem;">${tool.name}</div>
+                                            <div style="font-size: 0.8rem; opacity: 0.7; color: #64ffda;">${tool.year}</div>
+                                            ${tool.url ? `<div style="margin-top: 8px;"><a href="${tool.url}" target="_blank" style="color: #64ffda; text-decoration: none; font-size: 0.7rem;">Learn More →</a></div>` : ''}
+                                        </div>
+                                        ${index < chain.tools.length - 1 ? '<div style="color: #64ffda; font-size: 1.5rem; font-weight: bold;">→</div>' : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                                <div style="font-size: 0.9rem; opacity: 0.8; line-height: 1.5; margin-bottom: 15px;">
+                                    ${chain.description}
+                                </div>
+                                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                    <div style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 12px; font-size: 0.8rem;">
+                                        <span style="color: #64ffda;">Era Span:</span> ${chain.tools[0]?.year || 'Unknown'} - ${chain.tools[chain.tools.length - 1]?.year || 'Present'}
+                                    </div>
+                                    <div style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 12px; font-size: 0.8rem;">
+                                        <span style="color: #64ffda;">Evolution Time:</span> ${((chain.tools[chain.tools.length - 1]?.year || 2024) - (chain.tools[0]?.year || 2000))} years
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            contentArea.innerHTML = html;
+            
+            // Animate chain cards entrance
+            setTimeout(() => {
+                const chainCards = document.querySelectorAll('.evolution-chain-card');
+                chainCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 100);
+        }
+        
+        function getEvolutionCardColor(index, total) {
+            // Create a gradient from early tools (purple) to modern tools (cyan)
+            const startColor = [102, 126, 234]; // Purple
+            const endColor = [100, 255, 218];   // Cyan
+            
+            const ratio = total > 1 ? index / (total - 1) : 0;
+            const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * ratio);
+            const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * ratio);
+            const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * ratio);
+            
+            return `rgba(${r}, ${g}, ${b}, 0.3)`;
+        }
+
+        function buildEvolutionChains() {
+            return [
+                {
+                    category: 'Text Editors',
+                    description: 'Evolution from simple text editors to AI-powered development environments',
+                    tools: [
+                        { name: 'vi', year: 1976 },
+                        { name: 'Vim', year: 1991 },
+                        { name: 'Neovim', year: 2014 },
+                        { name: 'Helix', year: 2021 }
+                    ]
+                },
+                {
+                    category: 'Build Tools',
+                    description: 'From simple makefiles to modern ultra-fast bundlers',
+                    tools: [
+                        { name: 'make', year: 1976 },
+                        { name: 'Webpack', year: 2012 },
+                        { name: 'Vite', year: 2020 },
+                        { name: 'Turbo', year: 2021 }
+                    ]
+                },
+                {
+                    category: 'Version Control',
+                    description: 'Evolution of collaborative development and code management',
+                    tools: [
+                        { name: 'CVS', year: 1990 },
+                        { name: 'SVN', year: 2000 },
+                        { name: 'Git', year: 2005 },
+                        { name: 'GitHub', year: 2008 }
+                    ]
+                },
+                {
+                    category: 'JavaScript Frameworks',
+                    description: 'From jQuery simplicity to modern reactive frameworks',
+                    tools: [
+                        { name: 'jQuery', year: 2006 },
+                        { name: 'Angular', year: 2010 },
+                        { name: 'React', year: 2013 },
+                        { name: 'Svelte', year: 2016 }
+                    ]
+                },
+                {
+                    category: 'Development Environments',
+                    description: 'IDE evolution from heavyweight to lightweight and AI-powered',
+                    tools: [
+                        { name: 'Eclipse', year: 2001 },
+                        { name: 'IntelliJ', year: 2001 },
+                        { name: 'VS Code', year: 2015 },
+                        { name: 'Cursor', year: 2023 }
+                    ]
+                }
+            ];
+        }
+
+        function renderPredictions() {
+            const predictions = timelineData.predictions || fallbackTimelineData.predictions;
+            
+            // Calculate trend statistics from real data
+            const allTools = timelineData ? timelineData.eras.flatMap(era => era.tools) : [];
+            const currentYear = new Date().getFullYear();
+            const recentTools = allTools.filter(tool => tool.year >= currentYear - 5);
+            const risingTools = allTools.filter(tool => tool.trend === 'rising');
+            const aiTools = allTools.filter(tool => 
+                tool.name.toLowerCase().includes('ai') || 
+                tool.name.toLowerCase().includes('copilot') ||
+                tool.name.toLowerCase().includes('cursor') ||
+                tool.description.toLowerCase().includes('ai')
+            );
+            
+            const html = `
+                <div class="predictions-panel">
+                    <h2 class="predictions-title">🔮 Future of Developer Tools</h2>
+                    <div style="text-align: center; margin-bottom: 40px; opacity: 0.8; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        Based on analysis of ${allTools.length} developer tools spanning ${currentYear - 1970} years of innovation, 
+                        these predictions represent the most likely directions for tool evolution.
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; margin-bottom: 40px;">
+                        ${predictions.map((prediction, index) => `
+                            <div class="prediction-item" style="opacity: 0; transform: translateY(20px);" data-prediction-index="${index}">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                                    <div class="prediction-title">${prediction.title}</div>
+                                    <div style="background: ${getConfidenceColor(prediction.confidence)}; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; white-space: nowrap; margin-left: 15px;">
+                                        ${prediction.confidence}% likely
+                                    </div>
+                                </div>
+                                <div class="prediction-description">${prediction.description}</div>
+                                <div class="prediction-confidence">
+                                    <span style="min-width: 80px; font-size: 0.9rem;">Confidence:</span>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" style="width: 0%; transition: width 2s ease;"></div>
+                                    </div>
+                                    <span style="min-width: 40px; font-size: 0.9rem;">${prediction.confidence}%</span>
+                                </div>
+                                <div style="margin-top: 15px; display: flex; gap: 15px; flex-wrap: wrap;">
+                                    <div style="background: rgba(255, 255, 255, 0.1); padding: 6px 12px; border-radius: 12px; font-size: 0.8rem;">
+                                        📅 ${prediction.timeframe}
+                                    </div>
+                                    ${prediction.impact_areas ? prediction.impact_areas.map(area => 
+                                        `<div style="background: rgba(100, 255, 218, 0.2); padding: 6px 12px; border-radius: 12px; font-size: 0.8rem;">
+                                            🎯 ${area}
+                                        </div>`
+                                    ).join('') : ''}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="stats-panel" style="margin-top: 40px;">
+                    <h3 style="text-align: center; margin-bottom: 30px; color: #64ffda;">📊 Trend Analysis</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">${Math.round((risingTools.length / allTools.length) * 100)}%</span>
+                            <div class="stat-label">Rising Tools</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">${recentTools.length}</span>
+                            <div class="stat-label">New Tools (Last 5 Years)</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">${currentYear - Math.min(...allTools.map(t => t.year))}</span>
+                            <div class="stat-label">Years of Innovation</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">${aiTools.length}</span>
+                            <div class="stat-label">AI-Powered Tools</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 30px; margin-top: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: #64ffda; margin-bottom: 20px; text-align: center;">🔬 Methodology</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; font-size: 0.9rem; opacity: 0.8;">
+                        <div>
+                            <strong style="color: #64ffda;">Historical Analysis:</strong> Patterns from ${currentYear - 1970} years of tool evolution, 
+                            including adoption rates, replacement cycles, and technological shifts.
+                        </div>
+                        <div>
+                            <strong style="color: #64ffda;">Current Trends:</strong> Analysis of GitHub stars, release frequency, 
+                            community growth, and industry adoption for ${allTools.length} tools.
+                        </div>
+                        <div>
+                            <strong style="color: #64ffda;">Expert Consensus:</strong> Synthesis of developer surveys, industry reports, 
+                            and thought leader opinions on emerging technologies.
+                        </div>
+                        <div>
+                            <strong style="color: #64ffda;">Innovation Cycles:</strong> Understanding of how disruptive technologies 
+                            emerge, mature, and eventually get replaced by newer solutions.
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            contentArea.innerHTML = html;
+            
+            // Animate predictions entrance
+            setTimeout(() => {
+                const predictionItems = document.querySelectorAll('.prediction-item');
+                predictionItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                        
+                        // Animate confidence bar
+                        setTimeout(() => {
+                            const confidenceBar = item.querySelector('.confidence-fill');
+                            const prediction = predictions[index];
+                            if (confidenceBar && prediction) {
+                                confidenceBar.style.width = `${prediction.confidence}%`;
+                            }
+                        }, 500);
+                    }, index * 150);
+                });
+            }, 100);
+        }
+        
+        function getConfidenceColor(confidence) {
+            if (confidence >= 80) return 'rgba(74, 222, 128, 0.8)'; // Green
+            if (confidence >= 60) return 'rgba(251, 191, 36, 0.8)';  // Yellow
+            return 'rgba(248, 113, 113, 0.8)'; // Red
+        }
+
+        function animateTimelineEntrance() {
+            const eras = document.querySelectorAll('.timeline-era');
+            eras.forEach((era, index) => {
+                setTimeout(() => {
+                    era.classList.add('visible');
+                }, index * 200);
+            });
+        }
+
+        // Load data and initialize
+        async function loadTimelineData() {
+            try {
+                const response = await fetch('tool-timeline-data.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    timelineData = convertDataFormat(data);
+                } else {
+                    console.warn('Could not load timeline data, using fallback');
+                    timelineData = fallbackTimelineData;
+                }
+            } catch (error) {
+                console.error('Error loading timeline data:', error);
+                timelineData = fallbackTimelineData;
+            }
+            renderContent();
+            updateStatsFromData();
+            initializeSearchAndFilter();
+        }
+        
+        // Convert the JSON data format to the format expected by the UI
+        function convertDataFormat(data) {
+            const converted = {
+                eras: [],
+                predictions: data.predictions || fallbackTimelineData.predictions
+            };
+            
+            // Convert eras object to array format
+            for (const [eraId, eraData] of Object.entries(data.eras)) {
+                if (eraData.tools && eraData.tools.length > 0) {
+                    // Sort tools by birth year
+                    const sortedTools = eraData.tools.sort((a, b) => a.birth_year - b.birth_year);
+                    
+                    converted.eras.push({
+                        id: eraId,
+                        title: eraData.title,
+                        period: eraData.period,
+                        description: eraData.description,
+                        tools: sortedTools.map(tool => ({
+                            name: tool.name,
+                            url: tool.url,
+                            year: tool.birth_year,
+                            description: tool.description,
+                            trend: tool.trend,
+                            evolution: {
+                                predecessors: [], // Could be enhanced with evolution chain data
+                                successors: []
+                            },
+                            metrics: {
+                                adoptionScore: tool.metrics.adoption_score,
+                                communitySize: tool.metrics.community_size,
+                                learningCurve: tool.metrics.learning_curve
+                            }
+                        }))
+                    });
+                }
+            }
+            
+            return converted;
+        }
+        
+        // Update stats with real data
+        function updateStatsFromData() {
+            if (!timelineData) return;
+            
+            const allTools = timelineData.eras.flatMap(era => era.tools);
+            const totalTools = allTools.length;
+            const totalEras = timelineData.eras.length;
+            
+            // Update stats display
+            document.getElementById('tools-count').textContent = totalTools;
+            document.getElementById('eras-count').textContent = totalEras;
+            
+            // Count rising tools
+            const risingCount = allTools.filter(tool => tool.trend === 'rising').length;
+            const evolutionChainsCount = timelineData.eras.length * 3; // Rough estimate
+            
+            // Animate the updated numbers
+            setTimeout(() => {
+                animateNumber('tools-count', totalTools);
+                animateNumber('eras-count', totalEras);
+            }, 1000);
+        }
+        
+        // Animate number counting
+        function animateNumber(elementId, finalValue) {
+            const element = document.getElementById(elementId);
+            let current = 0;
+            const increment = Math.ceil(finalValue / 30);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= finalValue) {
+                    element.textContent = finalValue;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = current;
+                }
+            }, 50);
+        }
+        
+        // Initialize
+        setTimeout(() => {
+            loadTimelineData();
+        }, 500);
+
+        // Update stats periodically
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                const finalValue = stat.textContent;
+                let current = 0;
+                const increment = Math.ceil(parseInt(finalValue) / 50) || 1;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= parseInt(finalValue)) {
+                        stat.textContent = finalValue;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = current + (finalValue.includes('+') ? '+' : '');
+                    }
+                }, 50);
+            });
+        }
+
+        setTimeout(animateStats, 1000);
+    </script>
+</body>
+</html>

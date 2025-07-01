@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Quest - Developer Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #667db6);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"><animate attributeName="r" values="1;3;1" dur="3s" repeatCount="indefinite"/></circle><circle cx="70" cy="60" r="1" fill="rgba(255,255,255,0.1)"><animate attributeName="r" values="1;2;1" dur="2s" repeatCount="indefinite"/></circle><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"><animate attributeName="r" values="1;3;1" dur="4s" repeatCount="indefinite"/></circle></svg>');
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .game-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7)); }
+            to { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9)); }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .game-stats {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4aa, #00b894);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr 300px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .character-panel, .achievements-panel {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .character-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667db6, #0082c8, #667db6);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 3px solid #ffd700;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+
+        .character-name {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .character-class {
+            text-align: center;
+            color: #00d4aa;
+            margin-bottom: 20px;
+        }
+
+        .skill-tree {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .skill-node {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3742fa, #5352ed);
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .skill-node.unlocked {
+            background: linear-gradient(135deg, #ffd700, #f39c12);
+            border-color: #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .skill-node:hover {
+            transform: scale(1.1);
+        }
+
+        .discovery-area {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .discovery-wheel {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                #ff6b6b 0deg 45deg,
+                #4ecdc4 45deg 90deg,
+                #45b7d1 90deg 135deg,
+                #96ceb4 135deg 180deg,
+                #feca57 180deg 225deg,
+                #ff9ff3 225deg 270deg,
+                #54a0ff 270deg 315deg,
+                #5f27cd 315deg 360deg
+            );
+            margin: 20px auto;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .discovery-wheel.spinning {
+            animation: spin 3s ease-out;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(1440deg); }
+        }
+
+        .wheel-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ffd700, #f39c12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .discovery-button {
+            background: linear-gradient(135deg, #00d4aa, #00b894);
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 212, 170, 0.3);
+        }
+
+        .discovery-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 170, 0.4);
+        }
+
+        .discovery-button:active {
+            transform: translateY(0);
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        .tool-card.discovered {
+            animation: discover 0.8s ease-out forwards;
+        }
+
+        @keyframes discover {
+            0% {
+                transform: scale(0) rotate(180deg);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1) rotate(90deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .tool-rarity {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .rarity-common { background: #95a5a6; color: white; }
+        .rarity-uncommon { background: #27ae60; color: white; }
+        .rarity-rare { background: #3498db; color: white; }
+        .rarity-epic { background: #9b59b6; color: white; }
+        .rarity-legendary { background: #f39c12; color: white; }
+
+        .tool-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .tool-description {
+            opacity: 0.9;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .tool-xp {
+            background: rgba(0, 212, 170, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #00d4aa;
+            border: 1px solid rgba(0, 212, 170, 0.3);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .achievement-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #bdc3c7, #95a5a6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .achievement-badge.unlocked {
+            background: linear-gradient(135deg, #ffd700, #f39c12);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .quest-panel {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quest-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #ffd700;
+            transition: all 0.3s ease;
+        }
+
+        .quest-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .quest-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffd700;
+        }
+
+        .quest-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .quest-reward {
+            color: #00d4aa;
+            font-size: 0.8rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #fff;
+        }
+
+        .character-creation {
+            text-align: center;
+        }
+
+        .class-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .class-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .class-option:hover {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .class-option.selected {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .class-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .class-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .leaderboard {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .leaderboard-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .rank {
+            font-weight: bold;
+            color: #ffd700;
+            margin-right: 15px;
+        }
+
+        .player-info {
+            flex: 1;
+        }
+
+        .player-score {
+            color: #00d4aa;
+            font-weight: bold;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00d4aa, #00b894);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+            transform: translateX(400px);
+            transition: transform 0.5s ease;
+            z-index: 1001;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .floating-xp {
+            position: absolute;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.2rem;
+            pointer-events: none;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffd700;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="game-container">
+        <header class="header">
+            <h1 class="title">Tool Quest</h1>
+            <p class="subtitle">Embark on an epic adventure to discover and master developer tools</p>
+        </header>
+
+        <div class="game-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="player-level">1</div>
+                    <div class="stat-label">Level</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="level-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="tools-discovered">0</div>
+                    <div class="stat-label">Tools Discovered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-xp">0</div>
+                    <div class="stat-label">Total XP</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="quests-completed">0</div>
+                    <div class="stat-label">Quests Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="achievements-unlocked">0</div>
+                    <div class="stat-label">Achievements</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="character-panel">
+                <div class="section-title">Your Character</div>
+                <div class="character-avatar" id="character-avatar">👨‍💻</div>
+                <div class="character-name" id="character-name">Code Explorer</div>
+                <div class="character-class" id="character-class">Full Stack Developer</div>
+                
+                <div class="skill-tree">
+                    <div class="section-title" style="font-size: 1rem; margin-bottom: 10px;">Skill Tree</div>
+                    <div id="skill-nodes"></div>
+                </div>
+
+                <button class="discovery-button" onclick="openCharacterCreation()">Customize Character</button>
+            </div>
+
+            <div class="discovery-area">
+                <h2 style="margin-bottom: 20px;">Tool Discovery Portal</h2>
+                <div class="discovery-wheel" id="discovery-wheel" onclick="discoverTool()">
+                    <div class="wheel-center">🎲</div>
+                </div>
+                <div>
+                    <button class="discovery-button" onclick="discoverTool()">Discover Tool (10 XP)</button>
+                    <button class="discovery-button" onclick="discoverRareTool()">Premium Discovery (50 XP)</button>
+                </div>
+                
+                <div id="discovered-tools"></div>
+            </div>
+
+            <div class="achievements-panel">
+                <div class="section-title">Achievements</div>
+                <div class="achievements-grid" id="achievements-grid"></div>
+                
+                <div style="margin-top: 30px;">
+                    <div class="section-title" style="font-size: 1rem;">Tool Categories Mastered</div>
+                    <div id="category-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quest-panel">
+            <div class="section-title">Active Quests</div>
+            <div id="active-quests"></div>
+        </div>
+
+        <div class="leaderboard">
+            <div class="section-title">Global Leaderboard</div>
+            <div id="leaderboard-list"></div>
+        </div>
+    </div>
+
+    <!-- Character Creation Modal -->
+    <div id="character-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCharacterCreation()">&times;</span>
+            <div class="character-creation">
+                <h2>Create Your Developer Character</h2>
+                <div style="margin: 20px 0;">
+                    <label for="character-name-input">Character Name:</label>
+                    <input type="text" id="character-name-input" placeholder="Enter your developer name" 
+                           style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;">
+                </div>
+                
+                <h3>Choose Your Developer Class:</h3>
+                <div class="class-selection" id="class-selection"></div>
+                
+                <button class="discovery-button" onclick="createCharacter()">Start Your Adventure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Game data loaded from tools.yaml
+        let gameData = {};
+        let playerData = {
+            name: 'Code Explorer',
+            class: 'Full Stack Developer',
+            level: 1,
+            xp: 0,
+            discoveredTools: new Set(),
+            unlockedAchievements: new Set(),
+            completedQuests: new Set(),
+            skillPoints: {
+                frontend: 0,
+                backend: 0,
+                devops: 0,
+                mobile: 0,
+                data: 0,
+                security: 0
+            }
+        };
+
+        // Developer classes with their specializations
+        const developerClasses = {
+            'Full Stack Developer': {
+                icon: '👨‍💻',
+                description: 'Master of both frontend and backend',
+                bonuses: ['frontend', 'backend']
+            },
+            'Frontend Specialist': {
+                icon: '🎨',
+                description: 'Expert in user interfaces and experiences',
+                bonuses: ['frontend', 'design']
+            },
+            'Backend Engineer': {
+                icon: '⚙️',
+                description: 'Server-side architecture expert',
+                bonuses: ['backend', 'devops']
+            },
+            'DevOps Engineer': {
+                icon: '🚀',
+                description: 'Infrastructure and deployment specialist',
+                bonuses: ['devops', 'security']
+            },
+            'Mobile Developer': {
+                icon: '📱',
+                description: 'iOS and Android app creator',
+                bonuses: ['mobile', 'frontend']
+            },
+            'Data Scientist': {
+                icon: '📊',
+                description: 'Data analysis and ML expert',
+                bonuses: ['data', 'backend']
+            },
+            'Security Expert': {
+                icon: '🛡️',
+                description: 'Cybersecurity and protection specialist',
+                bonuses: ['security', 'backend']
+            }
+        };
+
+        // Tool rarities and XP values
+        const toolRarities = {
+            common: { weight: 50, xp: 10, color: '#95a5a6' },
+            uncommon: { weight: 30, xp: 25, color: '#27ae60' },
+            rare: { weight: 15, xp: 50, color: '#3498db' },
+            epic: { weight: 4, xp: 100, color: '#9b59b6' },
+            legendary: { weight: 1, xp: 250, color: '#f39c12' }
+        };
+
+        // Achievements system
+        const achievements = {
+            'first_tool': { name: 'First Discovery', description: 'Discover your first tool', icon: '🎯', xp: 50 },
+            'tool_collector': { name: 'Tool Collector', description: 'Discover 10 tools', icon: '📦', xp: 100 },
+            'tool_master': { name: 'Tool Master', description: 'Discover 50 tools', icon: '👑', xp: 500 },
+            'category_explorer': { name: 'Category Explorer', description: 'Discover tools from 5 categories', icon: '🗺️', xp: 200 },
+            'level_up': { name: 'Level Up', description: 'Reach level 5', icon: '⭐', xp: 100 },
+            'rare_finder': { name: 'Rare Finder', description: 'Discover a rare tool', icon: '💎', xp: 150 },
+            'legendary_hunter': { name: 'Legendary Hunter', description: 'Discover a legendary tool', icon: '🏆', xp: 1000 }
+        };
+
+        // Quest system
+        const quests = [
+            { id: 'discover_editor', title: 'Choose Your Weapon', description: 'Discover a code editor', category: 'code-editors--ides', reward: '100 XP', xp: 100 },
+            { id: 'version_control', title: 'Track Your Progress', description: 'Discover a version control tool', category: 'version-control', reward: '75 XP', xp: 75 },
+            { id: 'testing_tools', title: 'Quality Assurance', description: 'Discover 3 testing tools', category: 'testing', reward: '200 XP', count: 3, xp: 200 },
+            { id: 'build_pipeline', title: 'Automate Everything', description: 'Discover tools from Build Tools and DevOps categories', categories: ['build-tools--task-runners', 'devops--infrastructure'], reward: '300 XP', xp: 300 },
+            { id: 'full_stack', title: 'Full Stack Mastery', description: 'Discover tools from 8 different categories', categoriesCount: 8, reward: '500 XP', xp: 500 }
+        ];
+
+        // Initialize game
+        async function initGame() {
+            try {
+                const response = await fetch('tools.json');
+                gameData = await response.json();
+                loadPlayerData();
+                initializeUI();
+                renderAchievements();
+                renderQuests();
+                renderLeaderboard();
+                updateDisplay();
+                
+                // Show character creation for new players
+                if (!localStorage.getItem('toolQuestPlayer')) {
+                    openCharacterCreation();
+                }
+            } catch (error) {
+                console.error('Failed to load game data:', error);
+                // Fallback to embedded data
+                initializeFallbackData();
+            }
+        }
+
+        function initializeFallbackData() {
+            // Simplified fallback data structure
+            gameData = {
+                categories: [
+                    {
+                        name: "Code Editors & IDEs",
+                        id: "code-editors--ides",
+                        subcategories: [
+                            {
+                                name: "Modern Editors",
+                                tools: [
+                                    { name: "Visual Studio Code", url: "https://code.visualstudio.com/", description: "Microsoft's lightweight, extensible code editor" },
+                                    { name: "Neovim", url: "https://neovim.io/", description: "Modern Vim fork with better defaults" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "Version Control",
+                        id: "version-control",
+                        subcategories: [
+                            {
+                                name: "Git Tools",
+                                tools: [
+                                    { name: "Git", url: "https://git-scm.com/", description: "Distributed version control system" },
+                                    { name: "GitHub CLI", url: "https://cli.github.com/", description: "Command-line tool for GitHub" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            };
+            initializeUI();
+            renderAchievements();
+            renderQuests();
+            renderLeaderboard();
+            updateDisplay();
+        }
+
+        function loadPlayerData() {
+            const saved = localStorage.getItem('toolQuestPlayer');
+            if (saved) {
+                const savedData = JSON.parse(saved);
+                playerData = { ...playerData, ...savedData };
+                playerData.discoveredTools = new Set(savedData.discoveredTools || []);
+                playerData.unlockedAchievements = new Set(savedData.unlockedAchievements || []);
+                playerData.completedQuests = new Set(savedData.completedQuests || []);
+            }
+        }
+
+        function savePlayerData() {
+            const dataToSave = {
+                ...playerData,
+                discoveredTools: Array.from(playerData.discoveredTools),
+                unlockedAchievements: Array.from(playerData.unlockedAchievements),
+                completedQuests: Array.from(playerData.completedQuests)
+            };
+            localStorage.setItem('toolQuestPlayer', JSON.stringify(dataToSave));
+        }
+
+        function initializeUI() {
+            // Initialize class selection
+            const classSelection = document.getElementById('class-selection');
+            if (classSelection) {
+                classSelection.innerHTML = '';
+                Object.entries(developerClasses).forEach(([className, classData]) => {
+                    const classOption = document.createElement('div');
+                    classOption.className = 'class-option';
+                    classOption.onclick = () => selectClass(className);
+                    classOption.innerHTML = `
+                        <div class="class-icon">${classData.icon}</div>
+                        <div class="class-name">${className}</div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">${classData.description}</div>
+                    `;
+                    classSelection.appendChild(classOption);
+                });
+            }
+
+            // Initialize skill tree
+            updateSkillTree();
+        }
+
+        function selectClass(className) {
+            document.querySelectorAll('.class-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            event.target.closest('.class-option').classList.add('selected');
+            playerData.selectedClass = className;
+        }
+
+        function createCharacter() {
+            const nameInput = document.getElementById('character-name-input');
+            const name = nameInput.value.trim() || 'Code Explorer';
+            
+            if (playerData.selectedClass) {
+                playerData.name = name;
+                playerData.class = playerData.selectedClass;
+                const classData = developerClasses[playerData.selectedClass];
+                document.getElementById('character-avatar').textContent = classData.icon;
+                updateDisplay();
+                closeCharacterCreation();
+                showNotification(`Welcome, ${name}! Your adventure begins as a ${playerData.selectedClass}!`);
+                savePlayerData();
+            } else {
+                showNotification('Please select a developer class!');
+            }
+        }
+
+        function openCharacterCreation() {
+            document.getElementById('character-modal').style.display = 'block';
+        }
+
+        function closeCharacterCreation() {
+            document.getElementById('character-modal').style.display = 'none';
+        }
+
+        function updateDisplay() {
+            document.getElementById('player-level').textContent = playerData.level;
+            document.getElementById('tools-discovered').textContent = playerData.discoveredTools.size;
+            document.getElementById('total-xp').textContent = playerData.xp;
+            document.getElementById('quests-completed').textContent = playerData.completedQuests.size;
+            document.getElementById('achievements-unlocked').textContent = playerData.unlockedAchievements.size;
+            document.getElementById('character-name').textContent = playerData.name;
+            document.getElementById('character-class').textContent = playerData.class;
+
+            // Update level progress
+            const xpForNextLevel = (playerData.level * 1000);
+            const currentLevelXP = playerData.xp % 1000;
+            const progress = (currentLevelXP / 1000) * 100;
+            document.getElementById('level-progress').style.width = progress + '%';
+
+            updateSkillTree();
+        }
+
+        function updateSkillTree() {
+            const skillNodesContainer = document.getElementById('skill-nodes');
+            if (!skillNodesContainer) return;
+
+            skillNodesContainer.innerHTML = '';
+            Object.entries(playerData.skillPoints).forEach(([skill, points]) => {
+                const skillNode = document.createElement('div');
+                skillNode.className = 'skill-node';
+                if (points > 0) skillNode.classList.add('unlocked');
+                
+                const skillIcons = {
+                    frontend: '🎨',
+                    backend: '⚙️',
+                    devops: '🚀',
+                    mobile: '📱',
+                    data: '📊',
+                    security: '🛡️'
+                };
+                
+                skillNode.textContent = skillIcons[skill] || '⭐';
+                skillNode.title = `${skill.charAt(0).toUpperCase() + skill.slice(1)}: ${points} points`;
+                skillNodesContainer.appendChild(skillNode);
+            });
+        }
+
+        function getAllTools() {
+            const allTools = [];
+            if (gameData.categories) {
+                gameData.categories.forEach(category => {
+                    category.subcategories?.forEach(subcategory => {
+                        subcategory.tools?.forEach(tool => {
+                            allTools.push({
+                                ...tool,
+                                category: category.id,
+                                categoryName: category.name
+                            });
+                        });
+                    });
+                });
+            }
+            return allTools;
+        }
+
+        function getRandomRarity(isPremium = false) {
+            const weights = isPremium ? 
+                { common: 20, uncommon: 30, rare: 30, epic: 15, legendary: 5 } :
+                { common: 50, uncommon: 30, rare: 15, epic: 4, legendary: 1 };
+            
+            const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0);
+            let random = Math.random() * totalWeight;
+            
+            for (const [rarity, weight] of Object.entries(weights)) {
+                random -= weight;
+                if (random <= 0) return rarity;
+            }
+            return 'common';
+        }
+
+        function discoverTool(isPremium = false) {
+            if (playerData.xp < (isPremium ? 50 : 10)) {
+                showNotification('Not enough XP!');
+                return;
+            }
+
+            // Spend XP
+            playerData.xp -= isPremium ? 50 : 10;
+
+            const wheel = document.getElementById('discovery-wheel');
+            wheel.classList.add('spinning');
+            
+            setTimeout(() => {
+                wheel.classList.remove('spinning');
+                
+                const allTools = getAllTools();
+                if (allTools.length === 0) {
+                    showNotification('No tools available for discovery!');
+                    return;
+                }
+
+                const availableTools = allTools.filter(tool => 
+                    !playerData.discoveredTools.has(tool.name)
+                );
+
+                if (availableTools.length === 0) {
+                    showNotification('You have discovered all available tools! 🎉');
+                    return;
+                }
+
+                const randomTool = availableTools[Math.floor(Math.random() * availableTools.length)];
+                const rarity = getRandomRarity(isPremium);
+                const xpGained = toolRarities[rarity].xp;
+                
+                // Add tool to discovered set
+                playerData.discoveredTools.add(randomTool.name);
+                
+                // Gain XP
+                gainXP(xpGained);
+                
+                // Update skill points based on category
+                updateSkillPoints(randomTool.category);
+                
+                // Show discovered tool
+                showDiscoveredTool(randomTool, rarity, xpGained);
+                
+                // Check achievements and quests
+                checkAchievements();
+                checkQuests();
+                
+                updateDisplay();
+                savePlayerData();
+            }, 3000);
+        }
+
+        function discoverRareTool() {
+            discoverTool(true);
+        }
+
+        function gainXP(amount) {
+            playerData.xp += amount;
+            
+            // Check for level up
+            const newLevel = Math.floor(playerData.xp / 1000) + 1;
+            if (newLevel > playerData.level) {
+                playerData.level = newLevel;
+                showNotification(`🎉 Level Up! You are now level ${newLevel}!`);
+                
+                if (newLevel === 5) {
+                    unlockAchievement('level_up');
+                }
+            }
+            
+            // Show floating XP
+            showFloatingXP(amount);
+        }
+
+        function updateSkillPoints(categoryId) {
+            const skillMapping = {
+                'code-editors--ides': 'frontend',
+                'version-control': 'backend',
+                'terminal--shell': 'backend',
+                'package-managers': 'backend',
+                'build-tools--task-runners': 'devops',
+                'testing': 'backend',
+                'debugging--profiling': 'backend',
+                'code-quality--linting': 'backend',
+                'api-development--testing': 'backend',
+                'database-tools': 'backend',
+                'development-environments': 'devops',
+                'devops--infrastructure': 'devops',
+                'monitoring--logging': 'devops',
+                'security': 'security',
+                'documentation': 'frontend',
+                'design--prototyping': 'frontend',
+                'productivity': 'frontend',
+                'python-development': 'backend',
+                'learning--references': 'frontend',
+                'cloud-platforms': 'devops',
+                'mobile-development': 'mobile',
+                'data-science--machine-learning': 'data'
+            };
+            
+            const skill = skillMapping[categoryId] || 'backend';
+            playerData.skillPoints[skill] = (playerData.skillPoints[skill] || 0) + 1;
+        }
+
+        function showDiscoveredTool(tool, rarity, xp) {
+            const discoveredToolsContainer = document.getElementById('discovered-tools');
+            
+            const toolCard = document.createElement('div');
+            toolCard.className = 'tool-card';
+            toolCard.innerHTML = `
+                <div class="tool-rarity rarity-${rarity}">${rarity.toUpperCase()}</div>
+                <div class="tool-name">${tool.name}</div>
+                <div class="tool-description">${tool.description}</div>
+                <div class="tool-xp">+${xp} XP</div>
+            `;
+            
+            discoveredToolsContainer.insertBefore(toolCard, discoveredToolsContainer.firstChild);
+            
+            // Trigger discovery animation
+            setTimeout(() => {
+                toolCard.classList.add('discovered');
+            }, 100);
+            
+            // Remove old tool cards if too many
+            const toolCards = discoveredToolsContainer.querySelectorAll('.tool-card');
+            if (toolCards.length > 5) {
+                toolCards[toolCards.length - 1].remove();
+            }
+        }
+
+        function showFloatingXP(amount) {
+            const floatingXP = document.createElement('div');
+            floatingXP.className = 'floating-xp';
+            floatingXP.textContent = `+${amount} XP`;
+            floatingXP.style.left = Math.random() * 200 + 'px';
+            floatingXP.style.top = Math.random() * 100 + 200 + 'px';
+            
+            document.querySelector('.discovery-area').appendChild(floatingXP);
+            
+            setTimeout(() => {
+                floatingXP.remove();
+            }, 2000);
+        }
+
+        function checkAchievements() {
+            const toolCount = playerData.discoveredTools.size;
+            
+            if (toolCount === 1 && !playerData.unlockedAchievements.has('first_tool')) {
+                unlockAchievement('first_tool');
+            }
+            
+            if (toolCount === 10 && !playerData.unlockedAchievements.has('tool_collector')) {
+                unlockAchievement('tool_collector');
+            }
+            
+            if (toolCount === 50 && !playerData.unlockedAchievements.has('tool_master')) {
+                unlockAchievement('tool_master');
+            }
+            
+            // Check category exploration
+            const discoveredCategories = new Set();
+            const allTools = getAllTools();
+            allTools.forEach(tool => {
+                if (playerData.discoveredTools.has(tool.name)) {
+                    discoveredCategories.add(tool.category);
+                }
+            });
+            
+            if (discoveredCategories.size >= 5 && !playerData.unlockedAchievements.has('category_explorer')) {
+                unlockAchievement('category_explorer');
+            }
+        }
+
+        function unlockAchievement(achievementId) {
+            if (playerData.unlockedAchievements.has(achievementId)) return;
+            
+            playerData.unlockedAchievements.add(achievementId);
+            const achievement = achievements[achievementId];
+            
+            if (achievement) {
+                gainXP(achievement.xp);
+                showNotification(`🏆 Achievement Unlocked: ${achievement.name}!`);
+                renderAchievements();
+            }
+        }
+
+        function renderAchievements() {
+            const achievementsGrid = document.getElementById('achievements-grid');
+            if (!achievementsGrid) return;
+
+            achievementsGrid.innerHTML = '';
+            
+            Object.entries(achievements).forEach(([id, achievement]) => {
+                const badge = document.createElement('div');
+                badge.className = 'achievement-badge';
+                badge.title = `${achievement.name}: ${achievement.description}`;
+                
+                if (playerData.unlockedAchievements.has(id)) {
+                    badge.classList.add('unlocked');
+                }
+                
+                badge.textContent = achievement.icon;
+                achievementsGrid.appendChild(badge);
+            });
+        }
+
+        function checkQuests() {
+            const allTools = getAllTools();
+            const discoveredByCategory = {};
+            
+            allTools.forEach(tool => {
+                if (playerData.discoveredTools.has(tool.name)) {
+                    if (!discoveredByCategory[tool.category]) {
+                        discoveredByCategory[tool.category] = [];
+                    }
+                    discoveredByCategory[tool.category].push(tool);
+                }
+            });
+
+            quests.forEach(quest => {
+                if (playerData.completedQuests.has(quest.id)) return;
+
+                let completed = false;
+
+                switch (quest.id) {
+                    case 'discover_editor':
+                        completed = discoveredByCategory[quest.category]?.length > 0;
+                        break;
+                    case 'version_control':
+                        completed = discoveredByCategory[quest.category]?.length > 0;
+                        break;
+                    case 'testing_tools':
+                        completed = (discoveredByCategory[quest.category]?.length || 0) >= quest.count;
+                        break;
+                    case 'build_pipeline':
+                        completed = quest.categories.every(cat => 
+                            discoveredByCategory[cat]?.length > 0
+                        );
+                        break;
+                    case 'full_stack':
+                        completed = Object.keys(discoveredByCategory).length >= quest.categoriesCount;
+                        break;
+                }
+
+                if (completed) {
+                    playerData.completedQuests.add(quest.id);
+                    gainXP(quest.xp);
+                    showNotification(`🎯 Quest Completed: ${quest.title}!`);
+                    renderQuests();
+                }
+            });
+        }
+
+        function renderQuests() {
+            const activeQuestsContainer = document.getElementById('active-quests');
+            if (!activeQuestsContainer) return;
+
+            activeQuestsContainer.innerHTML = '';
+            
+            quests.forEach(quest => {
+                if (playerData.completedQuests.has(quest.id)) return;
+
+                const questItem = document.createElement('div');
+                questItem.className = 'quest-item';
+                questItem.innerHTML = `
+                    <div class="quest-title">${quest.title}</div>
+                    <div class="quest-description">${quest.description}</div>
+                    <div class="quest-reward">Reward: ${quest.reward}</div>
+                `;
+                activeQuestsContainer.appendChild(questItem);
+            });
+
+            if (activeQuestsContainer.children.length === 0) {
+                activeQuestsContainer.innerHTML = '<div style="text-align: center; opacity: 0.7;">All quests completed! 🎉</div>';
+            }
+        }
+
+        function renderLeaderboard() {
+            const leaderboardList = document.getElementById('leaderboard-list');
+            if (!leaderboardList) return;
+
+            // Generate sample leaderboard data
+            const samplePlayers = [
+                { name: 'CodeMaster', score: 15000, level: 15 },
+                { name: 'DevNinja', score: 12500, level: 12 },
+                { name: 'ToolCollector', score: 10000, level: 10 },
+                { name: 'ScriptKiddie', score: 8500, level: 8 },
+                { name: playerData.name, score: playerData.xp, level: playerData.level }
+            ];
+
+            // Sort by score
+            samplePlayers.sort((a, b) => b.score - a.score);
+
+            leaderboardList.innerHTML = '';
+            samplePlayers.forEach((player, index) => {
+                const leaderboardItem = document.createElement('div');
+                leaderboardItem.className = 'leaderboard-item';
+                if (player.name === playerData.name) {
+                    leaderboardItem.style.border = '2px solid #ffd700';
+                }
+                
+                leaderboardItem.innerHTML = `
+                    <span class="rank">#${index + 1}</span>
+                    <div class="player-info">
+                        <div>${player.name}</div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">Level ${player.level}</div>
+                    </div>
+                    <span class="player-score">${player.score.toLocaleString()} XP</span>
+                `;
+                leaderboardList.appendChild(leaderboardItem);
+            });
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Initialize game when page loads
+        document.addEventListener('DOMContentLoaded', initGame);
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('character-modal');
+            if (event.target === modal) {
+                closeCharacterCreation();
+            }
+        }
+    </script>
+</body>
+</html>

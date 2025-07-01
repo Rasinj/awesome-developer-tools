@@ -10,7 +10,9 @@ Key architecture:
 - `data/tools.yaml` - Single source of truth for all tool data
 - `templates/README.md.j2` - Jinja2 template for README generation  
 - `scripts/generate.py` - Python script that generates all output formats
+- `scripts/generate_matchmaker_data.py` - AI matchmaker data generation
 - Generated files: `README.md`, `tools.json`, `tools.csv`, `TOOLS_LIST.txt`
+- AI Matchmaker: `tool-matchmaker.html`, `tool-matchmaker-data.json`
 
 ## Essential Commands
 
@@ -34,6 +36,10 @@ make check
 
 # Clean generated files
 make clean
+
+# AI Matchmaker system
+make matchmaker       # Generate AI matchmaker data
+make matchmaker-data  # Generate only matchmaker data
 ```
 
 ## Development Workflow
@@ -66,9 +72,22 @@ Add new categories to the `categories` list in `data/tools.yaml`:
       tools: [...]
 ```
 
+## AI Matchmaker System
+
+The repository includes an advanced AI-powered tool matchmaking system:
+
+- `tool-matchmaker.html` - Interactive personality-driven tool recommendation engine
+- `scripts/generate_matchmaker_data.py` - Analyzes tools and generates compatibility scores
+- Developer archetype profiling with 6 distinct personality types
+- Machine learning algorithm that improves recommendations based on user feedback
+- Tool compatibility matrix showing synergistic tool combinations
+
+See `AI_MATCHMAKER.md` for detailed technical documentation.
+
 ## Critical Rules
 
 - The YAML file is the authoritative source - all changes must be made there
 - Generated files should never be manually edited
 - Always run `make generate` after YAML changes
+- Run `make matchmaker` to update AI recommendation data after tool changes
 - The `make check` command can verify if generated files are current

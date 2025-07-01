@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceTools - Hands-Free Developer Tool Discovery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            height: calc(100vh - 40px);
+        }
+        
+        .main-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .voice-controls {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe, #43e97b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes gradient-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(30deg); }
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .voice-indicator {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .voice-indicator.listening {
+            animation: pulse 2s infinite;
+        }
+        
+        .voice-indicator.speaking {
+            animation: speaking 1s infinite;
+        }
+        
+        .voice-indicator.processing {
+            animation: processing 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.7);
+                background: linear-gradient(45deg, #4facfe, #00f2fe);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(79, 172, 254, 0);
+                background: linear-gradient(45deg, #00f2fe, #4facfe);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 172, 254, 0);
+                background: linear-gradient(45deg, #4facfe, #00f2fe);
+            }
+        }
+        
+        @keyframes speaking {
+            0%, 100% { transform: scale(1); background: linear-gradient(45deg, #43e97b, #38f9d7); }
+            50% { transform: scale(1.1); background: linear-gradient(45deg, #38f9d7, #43e97b); }
+        }
+        
+        @keyframes processing {
+            0% { transform: rotate(0deg); background: linear-gradient(45deg, #fa709a, #fee140); }
+            100% { transform: rotate(360deg); background: linear-gradient(45deg, #fee140, #fa709a); }
+        }
+        
+        .voice-indicator::before {
+            content: '🎤';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+        }
+        
+        .voice-indicator.listening::before { content: '👂'; }
+        .voice-indicator.speaking::before { content: '🔊'; }
+        .voice-indicator.processing::before { content: '🧠'; }
+        
+        .status-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.9;
+        }
+        
+        .quick-commands {
+            margin-bottom: 30px;
+        }
+        
+        .quick-commands h3 {
+            margin-bottom: 15px;
+            color: #43e97b;
+            font-size: 1.1rem;
+        }
+        
+        .command-list {
+            list-style: none;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        .command-list li {
+            opacity: 0.8;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .command-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .conversation-area {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            border-radius: 15px;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+        
+        .message.user {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            margin-left: auto;
+            color: white;
+        }
+        
+        .message.assistant {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .message.system {
+            background: rgba(67, 233, 123, 0.2);
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            text-align: center;
+            margin: 10px auto;
+            max-width: 90%;
+            font-style: italic;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .tool-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #43e97b;
+            margin-bottom: 8px;
+        }
+        
+        .tool-description {
+            opacity: 0.9;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .tool-url {
+            color: #4facfe;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .tool-url:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .control-btn.active {
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+        
+        .text-input {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .text-input input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+        
+        .text-input input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .text-input button {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .text-input button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+        }
+        
+        .accessibility-notice {
+            background: rgba(67, 233, 123, 0.1);
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+        }
+        
+        .loading-dots::after {
+            content: '...';
+            animation: dots 2s steps(4, end) infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+            }
+            
+            .voice-controls {
+                order: 1;
+                height: auto;
+            }
+            
+            .main-panel {
+                order: 2;
+                height: 60vh;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .voice-indicator {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .voice-indicator::before {
+                font-size: 2rem;
+            }
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #fa709a, #fee140);
+            color: #1a1a2e;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+            background-size: 200% 100%;
+            animation: wave 3s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wave-animation"></div>
+    <div class="container">
+        <div class="main-panel">
+            <div class="header">
+                <h1>VoiceTools</h1>
+                <p>Hands-free developer tool discovery powered by voice AI</p>
+            </div>
+            
+            <div class="conversation-area" id="conversationArea">
+                <div class="message system">
+                    Welcome! Click the microphone and say something like:<br>
+                    "Find me a JavaScript testing framework" or "I need Python web development tools"
+                </div>
+            </div>
+            
+            <div class="text-input">
+                <input type="text" id="textInput" placeholder="Or type your question here..." />
+                <button onclick="processTextInput()">Ask</button>
+            </div>
+        </div>
+        
+        <div class="voice-controls">
+            <div class="voice-indicator" id="voiceIndicator" onclick="toggleVoice()"></div>
+            
+            <div class="status-text" id="statusText">
+                Click the microphone to start voice interaction
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" id="voiceBtn" onclick="toggleVoice()">Start Voice</button>
+                <button class="control-btn" onclick="clearConversation()">Clear Chat</button>
+                <button class="control-btn" onclick="toggleAudio()">🔊 Audio</button>
+                <button class="control-btn" onclick="showHelp()">Help</button>
+            </div>
+            
+            <div class="quick-commands">
+                <h3>Voice Commands</h3>
+                <ul class="command-list">
+                    <li>"Find tools for [technology]"</li>
+                    <li>"I need [type] development tools"</li>
+                    <li>"What's good for [specific task]?"</li>
+                    <li>"Show me Python frameworks"</li>
+                    <li>"Database tools for analytics"</li>
+                    <li>"List terminal utilities"</li>
+                    <li>"Stop listening" / "Be quiet"</li>
+                </ul>
+            </div>
+            
+            <div class="accessibility-notice">
+                <strong>Accessibility:</strong> This tool works with screen readers and supports keyboard navigation. Use Tab to navigate, Enter to activate buttons, and Space for the microphone.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Voice recognition and synthesis
+        let recognition;
+        let synthesis = window.speechSynthesis;
+        let isListening = false;
+        let isProcessing = false;
+        let isSpeaking = false;
+        let audioEnabled = true;
+        let toolsData = null;
+        let conversationHistory = [];
+
+        // Voice states
+        const VoiceState = {
+            IDLE: 'idle',
+            LISTENING: 'listening',
+            PROCESSING: 'processing',
+            SPEAKING: 'speaking'
+        };
+
+        let currentState = VoiceState.IDLE;
+
+        // Initialize the application
+        async function init() {
+            await loadToolsData();
+            initializeVoiceRecognition();
+            updateVoiceIndicator();
+            
+            // Keyboard accessibility
+            document.addEventListener('keydown', handleKeyboard);
+            
+            console.log('VoiceTools initialized with', getToolCount(), 'tools across', getCategoryCount(), 'categories');
+        }
+
+        // Load tools data
+        async function loadToolsData() {
+            try {
+                const response = await fetch('tools.json');
+                toolsData = await response.json();
+                console.log('Tools data loaded successfully');
+            } catch (error) {
+                console.error('Failed to load tools data:', error);
+                addMessage('system', 'Warning: Tools database could not be loaded. Using sample data.');
+                // Fallback to sample data
+                toolsData = getSampleToolsData();
+            }
+        }
+
+        // Initialize speech recognition
+        function initializeVoiceRecognition() {
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                addMessage('system', 'Speech recognition not supported in this browser. Please use Chrome, Edge, or Safari.');
+                document.getElementById('voiceBtn').disabled = true;
+                return;
+            }
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = () => {
+                changeState(VoiceState.LISTENING);
+                updateStatus('Listening... Speak now!');
+            };
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                changeState(VoiceState.PROCESSING);
+                updateStatus('Processing your request<span class="loading-dots"></span>');
+                
+                addMessage('user', transcript);
+                processVoiceInput(transcript);
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                changeState(VoiceState.IDLE);
+                
+                let errorMessage = 'Speech recognition error. ';
+                switch (event.error) {
+                    case 'no-speech':
+                        errorMessage += 'No speech detected. Try again.';
+                        break;
+                    case 'network':
+                        errorMessage += 'Network error. Check your connection.';
+                        break;
+                    case 'not-allowed':
+                        errorMessage += 'Microphone access denied. Please allow microphone access.';
+                        break;
+                    default:
+                        errorMessage += 'Please try again.';
+                }
+                
+                updateStatus(errorMessage);
+                setTimeout(() => updateStatus('Click the microphone to start'), 3000);
+            };
+
+            recognition.onend = () => {
+                if (currentState === VoiceState.LISTENING) {
+                    changeState(VoiceState.IDLE);
+                    updateStatus('Click the microphone to start voice interaction');
+                }
+            };
+        }
+
+        // Change voice state
+        function changeState(newState) {
+            currentState = newState;
+            updateVoiceIndicator();
+            updateVoiceButton();
+        }
+
+        // Update voice indicator
+        function updateVoiceIndicator() {
+            const indicator = document.getElementById('voiceIndicator');
+            indicator.className = 'voice-indicator ' + currentState;
+        }
+
+        // Update voice button
+        function updateVoiceButton() {
+            const btn = document.getElementById('voiceBtn');
+            switch (currentState) {
+                case VoiceState.LISTENING:
+                    btn.textContent = 'Stop';
+                    btn.classList.add('active');
+                    break;
+                case VoiceState.PROCESSING:
+                    btn.textContent = 'Processing...';
+                    btn.classList.add('active');
+                    break;
+                case VoiceState.SPEAKING:
+                    btn.textContent = 'Speaking...';
+                    btn.classList.add('active');
+                    break;
+                default:
+                    btn.textContent = 'Start Voice';
+                    btn.classList.remove('active');
+            }
+        }
+
+        // Update status text
+        function updateStatus(message) {
+            document.getElementById('statusText').innerHTML = message;
+        }
+
+        // Toggle voice recognition
+        function toggleVoice() {
+            if (currentState === VoiceState.LISTENING) {
+                stopListening();
+            } else if (currentState === VoiceState.SPEAKING) {
+                stopSpeaking();
+            } else if (currentState === VoiceState.IDLE) {
+                startListening();
+            }
+        }
+
+        // Start listening
+        function startListening() {
+            if (!recognition) {
+                addMessage('system', 'Speech recognition not available.');
+                return;
+            }
+            
+            try {
+                recognition.start();
+            } catch (error) {
+                console.error('Failed to start recognition:', error);
+                addMessage('system', 'Failed to start voice recognition. Please try again.');
+            }
+        }
+
+        // Stop listening
+        function stopListening() {
+            if (recognition) {
+                recognition.stop();
+            }
+            changeState(VoiceState.IDLE);
+            updateStatus('Click the microphone to start voice interaction');
+        }
+
+        // Stop speaking
+        function stopSpeaking() {
+            synthesis.cancel();
+            changeState(VoiceState.IDLE);
+            updateStatus('Click the microphone to start voice interaction');
+        }
+
+        // Process voice input
+        async function processVoiceInput(input) {
+            try {
+                const response = await processNaturalLanguageQuery(input);
+                addMessage('assistant', response.text, response.tools);
+                
+                if (audioEnabled && response.speech) {
+                    await speakResponse(response.speech);
+                } else {
+                    changeState(VoiceState.IDLE);
+                    updateStatus('Response ready. Click microphone for next query.');
+                }
+            } catch (error) {
+                console.error('Processing error:', error);
+                const errorResponse = "I apologize, but I encountered an error processing your request. Please try rephrasing your question.";
+                addMessage('assistant', errorResponse);
+                
+                if (audioEnabled) {
+                    await speakResponse(errorResponse);
+                } else {
+                    changeState(VoiceState.IDLE);
+                }
+            }
+        }
+
+        // Process text input
+        async function processTextInput() {
+            const input = document.getElementById('textInput').value.trim();
+            if (!input) return;
+            
+            document.getElementById('textInput').value = '';
+            addMessage('user', input);
+            
+            changeState(VoiceState.PROCESSING);
+            updateStatus('Processing your request<span class="loading-dots"></span>');
+            
+            try {
+                const response = await processNaturalLanguageQuery(input);
+                addMessage('assistant', response.text, response.tools);
+                changeState(VoiceState.IDLE);
+                updateStatus('Response ready. Ask another question!');
+            } catch (error) {
+                console.error('Processing error:', error);
+                addMessage('assistant', "I apologize, but I encountered an error processing your request. Please try rephrasing your question.");
+                changeState(VoiceState.IDLE);
+            }
+        }
+
+        // Process natural language query
+        async function processNaturalLanguageQuery(query) {
+            const lowerQuery = query.toLowerCase();
+            
+            // Handle stop commands
+            if (lowerQuery.includes('stop') || lowerQuery.includes('quiet') || lowerQuery.includes('shut up')) {
+                stopSpeaking();
+                return {
+                    text: "Voice interaction stopped. Click the microphone when you're ready to continue.",
+                    speech: "Stopped.",
+                    tools: []
+                };
+            }
+            
+            // Handle help requests
+            if (lowerQuery.includes('help') || lowerQuery.includes('how') || lowerQuery.includes('what can you do')) {
+                return getHelpResponse();
+            }
+            
+            // Handle greetings
+            if (lowerQuery.match(/^(hi|hello|hey|good (morning|afternoon|evening))/)) {
+                return {
+                    text: "Hello! I'm your voice-powered developer tool assistant. I can help you find tools by saying things like 'Find Python web frameworks' or 'Show me database tools'. What are you working on?",
+                    speech: "Hello! I'm your voice-powered developer tool assistant. What tools are you looking for today?",
+                    tools: []
+                };
+            }
+            
+            // Find matching tools
+            const matchedTools = findMatchingTools(query);
+            
+            if (matchedTools.length === 0) {
+                return {
+                    text: `I couldn't find specific tools matching "${query}". Try being more specific, like "Python web frameworks" or "JavaScript testing tools". You can also ask for tools by category like "terminal utilities" or "database clients".`,
+                    speech: "I couldn't find matching tools. Try being more specific about the technology or type of tool you need.",
+                    tools: []
+                };
+            }
+            
+            // Generate response
+            return generateToolResponse(query, matchedTools);
+        }
+
+        // Find matching tools based on query
+        function findMatchingTools(query) {
+            if (!toolsData || !toolsData.categories) return [];
+            
+            const lowerQuery = query.toLowerCase();
+            const keywords = extractKeywords(lowerQuery);
+            const matchedTools = [];
+            
+            // Search through all categories and tools
+            toolsData.categories.forEach(category => {
+                category.subcategories.forEach(subcategory => {
+                    subcategory.tools.forEach(tool => {
+                        const score = calculateRelevanceScore(tool, keywords, lowerQuery, category.name, subcategory.name);
+                        if (score > 0) {
+                            matchedTools.push({
+                                ...tool,
+                                category: category.name,
+                                subcategory: subcategory.name,
+                                score: score
+                            });
+                        }
+                    });
+                });
+            });
+            
+            // Sort by relevance score and return top matches
+            return matchedTools
+                .sort((a, b) => b.score - a.score)
+                .slice(0, 8); // Limit to 8 results for voice interaction
+        }
+
+        // Extract keywords from query
+        function extractKeywords(query) {
+            const stopWords = ['find', 'show', 'get', 'need', 'want', 'looking', 'for', 'tools', 'tool', 'a', 'an', 'the', 'me', 'i', 'am', 'is', 'are', 'what', 'how', 'best', 'good', 'recommend'];
+            return query.split(/\s+/)
+                .filter(word => word.length > 2 && !stopWords.includes(word))
+                .map(word => word.replace(/[^\w]/g, ''));
+        }
+
+        // Calculate relevance score for a tool
+        function calculateRelevanceScore(tool, keywords, query, categoryName, subcategoryName) {
+            let score = 0;
+            const toolText = `${tool.name} ${tool.description} ${categoryName} ${subcategoryName}`.toLowerCase();
+            
+            // Exact matches in name get highest score
+            if (tool.name.toLowerCase().includes(query)) {
+                score += 100;
+            }
+            
+            // Keyword matches
+            keywords.forEach(keyword => {
+                if (tool.name.toLowerCase().includes(keyword)) {
+                    score += 50;
+                } else if (tool.description.toLowerCase().includes(keyword)) {
+                    score += 20;
+                } else if (categoryName.toLowerCase().includes(keyword)) {
+                    score += 15;
+                } else if (subcategoryName.toLowerCase().includes(keyword)) {
+                    score += 10;
+                }
+            });
+            
+            // Technology-specific scoring
+            const techMappings = {
+                'python': ['python', 'py', 'django', 'flask', 'fastapi'],
+                'javascript': ['javascript', 'js', 'node', 'npm', 'react', 'vue', 'angular'],
+                'java': ['java', 'spring', 'maven', 'gradle'],
+                'database': ['database', 'sql', 'nosql', 'postgres', 'mysql', 'mongo'],
+                'docker': ['docker', 'container', 'kubernetes'],
+                'git': ['git', 'github', 'version control', 'vcs'],
+                'terminal': ['terminal', 'shell', 'command line', 'cli', 'bash', 'zsh'],
+                'testing': ['test', 'testing', 'jest', 'cypress', 'selenium'],
+                'web': ['web', 'frontend', 'backend', 'http', 'api', 'rest']
+            };
+            
+            Object.entries(techMappings).forEach(([tech, terms]) => {
+                if (terms.some(term => query.includes(term))) {
+                    if (terms.some(term => toolText.includes(term))) {
+                        score += 30;
+                    }
+                }
+            });
+            
+            return score;
+        }
+
+        // Generate tool response
+        function generateToolResponse(query, tools) {
+            const count = tools.length;
+            const categories = [...new Set(tools.map(t => t.category))];
+            
+            let text = `Found ${count} developer tools`;
+            if (categories.length === 1) {
+                text += ` in ${categories[0]}`;
+            }
+            text += ':\n\n';
+            
+            let speech = `I found ${count} tools`;
+            if (count <= 3) {
+                speech += '. Here they are: ';
+                speech += tools.map(tool => `${tool.name}, ${tool.description}`).join('. ');
+            } else {
+                speech += '. The top results are ';
+                speech += tools.slice(0, 3).map(tool => tool.name).join(', ');
+                speech += '. Check the screen for the complete list.';
+            }
+            
+            return { text, speech, tools };
+        }
+
+        // Get help response
+        function getHelpResponse() {
+            return {
+                text: `I can help you find developer tools using natural language! Try these examples:
+
+🎯 **Technology-specific**: "Find Python web frameworks" or "JavaScript testing tools"
+📂 **By category**: "Show me terminal utilities" or "Database management tools"
+🛠️ **By purpose**: "Tools for API development" or "Code formatting tools"
+🔍 **Specific tools**: "What is Docker?" or "Tell me about VS Code"
+
+**Voice Commands:**
+- "Stop listening" - Pause voice interaction
+- "Help" - Show this help
+- "Clear chat" - Reset conversation
+
+I understand casual language, so feel free to ask naturally!`,
+                speech: "I can help you find developer tools using natural language. Try saying things like 'Find Python web frameworks' or 'Show me terminal utilities'. I understand casual speech, so just ask naturally!",
+                tools: []
+            };
+        }
+
+        // Speak response
+        async function speakResponse(text) {
+            if (!audioEnabled || !synthesis) {
+                changeState(VoiceState.IDLE);
+                return;
+            }
+            
+            changeState(VoiceState.SPEAKING);
+            updateStatus('Speaking response...');
+            
+            return new Promise((resolve) => {
+                // Cancel any ongoing speech
+                synthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 1.0;
+                utterance.pitch = 1.0;
+                utterance.volume = 0.8;
+                
+                // Try to use a natural voice
+                const voices = synthesis.getVoices();
+                const preferredVoice = voices.find(voice => 
+                    voice.name.includes('Samantha') || 
+                    voice.name.includes('Alex') || 
+                    voice.name.includes('Karen') ||
+                    voice.lang.startsWith('en') && voice.localService
+                );
+                if (preferredVoice) {
+                    utterance.voice = preferredVoice;
+                }
+                
+                utterance.onend = () => {
+                    changeState(VoiceState.IDLE);
+                    updateStatus('Click the microphone for your next question');
+                    resolve();
+                };
+                
+                utterance.onerror = (error) => {
+                    console.error('Speech synthesis error:', error);
+                    changeState(VoiceState.IDLE);
+                    updateStatus('Speech error. Click microphone to continue.');
+                    resolve();
+                };
+                
+                synthesis.speak(utterance);
+            });
+        }
+
+        // Add message to conversation
+        function addMessage(type, content, tools = []) {
+            const conversationArea = document.getElementById('conversationArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            if (type === 'assistant' && tools && tools.length > 0) {
+                // Create message with tools
+                let html = content + '\n\n';
+                tools.forEach(tool => {
+                    html += `
+                        <div class="tool-card">
+                            <div class="category-badge">${tool.category}</div>
+                            <div class="tool-name">${tool.name}</div>
+                            <div class="tool-description">${tool.description}</div>
+                            <a href="${tool.url}" target="_blank" class="tool-url">${tool.url}</a>
+                        </div>
+                    `;
+                });
+                messageDiv.innerHTML = html.replace(/\n/g, '<br>');
+            } else {
+                messageDiv.innerHTML = content.replace(/\n/g, '<br>');
+            }
+            
+            conversationArea.appendChild(messageDiv);
+            conversationArea.scrollTop = conversationArea.scrollHeight;
+            
+            // Store in conversation history
+            conversationHistory.push({ type, content, tools, timestamp: Date.now() });
+        }
+
+        // Clear conversation
+        function clearConversation() {
+            document.getElementById('conversationArea').innerHTML = `
+                <div class="message system">
+                    Conversation cleared. Click the microphone and ask about developer tools!
+                </div>
+            `;
+            conversationHistory = [];
+            changeState(VoiceState.IDLE);
+            updateStatus('Click the microphone to start voice interaction');
+        }
+
+        // Toggle audio
+        function toggleAudio() {
+            audioEnabled = !audioEnabled;
+            const btn = event.target;
+            btn.textContent = audioEnabled ? '🔊 Audio' : '🔇 Muted';
+            btn.classList.toggle('active', !audioEnabled);
+            
+            if (!audioEnabled && currentState === VoiceState.SPEAKING) {
+                stopSpeaking();
+            }
+        }
+
+        // Show help
+        function showHelp() {
+            const helpResponse = getHelpResponse();
+            addMessage('assistant', helpResponse.text);
+        }
+
+        // Handle keyboard navigation
+        function handleKeyboard(event) {
+            if (event.target.tagName === 'INPUT') return; // Don't interfere with text input
+            
+            switch (event.key) {
+                case ' ':
+                case 'Enter':
+                    if (event.target.classList.contains('control-btn') || event.target.id === 'voiceIndicator') {
+                        event.preventDefault();
+                        event.target.click();
+                    } else if (document.activeElement === document.body) {
+                        event.preventDefault();
+                        toggleVoice();
+                    }
+                    break;
+                case 'Escape':
+                    if (currentState === VoiceState.LISTENING || currentState === VoiceState.SPEAKING) {
+                        event.preventDefault();
+                        toggleVoice();
+                    }
+                    break;
+                case 'h':
+                case 'H':
+                    if (event.ctrlKey || event.metaKey) {
+                        event.preventDefault();
+                        showHelp();
+                    }
+                    break;
+                case 'c':
+                case 'C':
+                    if (event.ctrlKey || event.metaKey) {
+                        if (!window.getSelection().toString()) {
+                            event.preventDefault();
+                            clearConversation();
+                        }
+                    }
+                    break;
+            }
+        }
+
+        // Utility functions
+        function getToolCount() {
+            if (!toolsData || !toolsData.categories) return 0;
+            return toolsData.categories.reduce((total, category) => {
+                return total + category.subcategories.reduce((subTotal, sub) => {
+                    return subTotal + sub.tools.length;
+                }, 0);
+            }, 0);
+        }
+
+        function getCategoryCount() {
+            return toolsData ? toolsData.categories.length : 0;
+        }
+
+        // Sample data fallback
+        function getSampleToolsData() {
+            return {
+                metadata: {
+                    title: "Sample Developer Tools",
+                    description: "Sample tools for voice interface demo"
+                },
+                categories: [
+                    {
+                        name: "Code Editors",
+                        id: "editors",
+                        subcategories: [
+                            {
+                                name: "Modern Editors",
+                                tools: [
+                                    {
+                                        name: "Visual Studio Code",
+                                        url: "https://code.visualstudio.com/",
+                                        description: "Lightweight, extensible code editor"
+                                    },
+                                    {
+                                        name: "Neovim",
+                                        url: "https://neovim.io/",
+                                        description: "Modern Vim fork with better defaults"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            };
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', init);
+        
+        // Handle visibility change to pause voice when tab is hidden
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden && currentState === VoiceState.LISTENING) {
+                stopListening();
+            }
+        });
+    </script>
+</body>
+</html>

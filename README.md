@@ -6,7 +6,8 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 
 ## 🔮 Revolutionary Tool Discovery
 
-**New!** Try our [**Developer Intent Engine**](./tool-finder.html) - a revolutionary way to find tools based on what you're trying to accomplish, not just browsing categories. Simply describe your goal and get personalized tool recommendations with explanations of why each tool is perfect for your situation.
+### [**Developer Intent Engine**](./tool-finder.html) 🎯
+Find tools based on what you're trying to accomplish, not just browsing categories. Simply describe your goal and get personalized tool recommendations.
 
 ✨ **Features:**
 - **Natural Language Search** - "I need to set up a new Python project quickly"
@@ -15,7 +16,18 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - **Problem-Solution Matcher** - Common frustrations mapped to solutions
 - **Intent-Driven Discovery** - Tools recommended based on your actual goals
 
-[🚀 **Launch Tool Finder**](./tool-finder.html)
+### [**Developer Tools Timeline**](./tool-timeline.html) ⏰
+**New!** Explore the evolution of developer tools from the Unix era to the AI-powered future. Understand how tools have evolved and discover what's coming next.
+
+🌟 **Features:**
+- **Historical Timeline** - Interactive journey through 50+ years of tool evolution
+- **Trend Analysis** - Discover rising, stable, and declining tools with predictive analytics
+- **Era-based Discovery** - Browse tools by development eras (Unix, Web 2.0, Mobile, Cloud-Native, AI)
+- **Evolution Chains** - See how tools replaced or evolved from others (Webpack → Vite, etc.)
+- **Future Predictions** - AI-powered predictions of emerging tool categories and trends
+- **Educational Timeline** - Learn the history and context behind developer tooling
+
+[🚀 **Launch Tool Finder**](./tool-finder.html) | [⏰ **Explore Timeline**](./tool-timeline.html)
 
 ## Contents
 

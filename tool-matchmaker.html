@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Matchmaker - Your Personal Developer Mentor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #a8edea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title .icon {
+            font-size: 1.5rem;
+        }
+        
+        .quiz-container {
+            display: none;
+        }
+        
+        .quiz-container.active {
+            display: block;
+        }
+        
+        .question {
+            margin-bottom: 25px;
+        }
+        
+        .question h3 {
+            margin-bottom: 15px;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+        
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .option {
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f7fafc;
+        }
+        
+        .option:hover {
+            border-color: #667eea;
+            background: #edf2f7;
+            transform: translateY(-2px);
+        }
+        
+        .option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .archetype-result {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .archetype-result.show {
+            display: block;
+        }
+        
+        .archetype-name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .archetype-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        
+        .archetype-traits {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .trait {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .recommendations {
+            display: none;
+        }
+        
+        .recommendations.show {
+            display: block;
+        }
+        
+        .recommendation-category {
+            margin-bottom: 30px;
+        }
+        
+        .category-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .category-title {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .compatibility-score {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .tool-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        
+        .tool-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .tool-description {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        
+        .tool-metadata {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        
+        .match-score {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .why-recommended {
+            color: #48bb78;
+            font-weight: 500;
+        }
+        
+        .learning-feedback {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .feedback-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .feedback-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .feedback-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .progress-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .welcome-screen {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .start-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(240, 147, 251, 0.4);
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .nav-btn {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .collaborative-section {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .similar-developers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .developer-profile {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .developer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .developer-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .developer-similarity {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .compatibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .compatibility-pair {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .compatibility-tools {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .compatibility-tool {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .compatibility-connector {
+            font-size: 1.5rem;
+            color: #48bb78;
+        }
+        
+        .compatibility-score {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .compatibility-reason {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Tool Matchmaker</h1>
+            <p>Your personal developer mentor that learns your preferences and finds your perfect tool matches</p>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="welcome-screen">
+            <div class="card">
+                <h2 style="font-size: 2rem; margin-bottom: 20px; color: #2d3748;">Welcome to the Future of Tool Discovery</h2>
+                <p style="font-size: 1.1rem; color: #4a5568; margin-bottom: 30px;">
+                    Like a dating app for developers and tools, we use AI to understand your personality, 
+                    working style, and preferences to recommend tools that truly fit you.
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <div class="feature-title">Personality Profiling</div>
+                        <div class="feature-desc">Discover your developer archetype through intelligent questioning</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Contextual AI</div>
+                        <div class="feature-desc">Smart recommendations based on your project context and goals</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <div class="feature-title">Tool Compatibility</div>
+                        <div class="feature-desc">Find tools that work beautifully together in your workflow</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <div class="feature-title">Learning Engine</div>
+                        <div class="feature-desc">Recommendations improve as you provide feedback</div>
+                    </div>
+                </div>
+                
+                <button class="start-btn" onclick="startAssessment()">Start Your Personality Assessment</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" class="main-content hidden">
+            <!-- Personality Assessment -->
+            <div class="card">
+                <div class="section-title">
+                    <span class="icon">🎭</span>
+                    Personality Assessment
+                </div>
+                
+                <div class="progress-indicator" id="progress-indicator">
+                    <!-- Progress dots will be added by JavaScript -->
+                </div>
+                
+                <div id="quiz-container" class="quiz-container active">
+                    <!-- Quiz questions will be populated by JavaScript -->
+                </div>
+                
+                <div class="navigation">
+                    <button class="nav-btn" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                    <button class="nav-btn" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+            </div>
+
+            <!-- Results & Recommendations -->
+            <div class="card">
+                <div class="section-title">
+                    <span class="icon">✨</span>
+                    Your AI-Powered Recommendations
+                </div>
+                
+                <div id="archetype-result" class="archetype-result">
+                    <!-- Archetype results will be populated by JavaScript -->
+                </div>
+                
+                <div id="recommendations" class="recommendations">
+                    <!-- Recommendations will be populated by JavaScript -->
+                </div>
+                
+                <div class="learning-feedback">
+                    <h3 style="margin-bottom: 10px; color: white;">Help Me Learn Your Preferences</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">
+                        Rate these recommendations to improve future suggestions
+                    </p>
+                    <div class="feedback-buttons">
+                        <button class="feedback-btn" onclick="provideFeedback('love')">😍 Love These!</button>
+                        <button class="feedback-btn" onclick="provideFeedback('good')">👍 Pretty Good</button>
+                        <button class="feedback-btn" onclick="provideFeedback('okay')">😐 Okay</button>
+                        <button class="feedback-btn" onclick="provideFeedback('poor')">👎 Not For Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tool Compatibility Matrix Section -->
+        <div id="compatibility-section" class="card hidden">
+            <div class="section-title">
+                <span class="icon">🔗</span>
+                Tool Compatibility Matrix
+            </div>
+            <p style="margin-bottom: 20px; color: #4a5568;">
+                These tools work exceptionally well together based on your recommendations and community usage patterns.
+            </p>
+            <div id="compatibility-matrix">
+                <!-- Compatibility matrix will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Collaborative Filtering Section -->
+        <div id="collaborative-section" class="collaborative-section hidden">
+            <h2 style="margin-bottom: 20px;">👥 Developers Like You Also Use</h2>
+            <p style="opacity: 0.9; margin-bottom: 20px;">
+                Based on similarity to your profile, here's what other developers with similar preferences are using
+            </p>
+            <div class="similar-developers" id="similar-developers">
+                <!-- Similar developer profiles will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Developer archetypes and their characteristics
+        const archetypes = {
+            minimalist: {
+                name: "The Minimalist",
+                description: "You believe in doing more with less. Clean, simple tools that get out of your way.",
+                traits: ["Simplicity", "Performance", "Low Overhead", "Essential Features"],
+                preferences: {
+                    complexity: "low",
+                    learning_curve: "gentle",
+                    customization: "minimal",
+                    performance: "high",
+                    ui_style: "clean"
+                }
+            },
+            tinkerer: {
+                name: "The Tinkerer",
+                description: "You love to customize, configure, and make tools truly yours. The journey is the destination.",
+                traits: ["Customization", "Flexibility", "Open Source", "Configuration"],
+                preferences: {
+                    complexity: "high",
+                    learning_curve: "steep",
+                    customization: "extensive",
+                    performance: "medium",
+                    ui_style: "configurable"
+                }
+            },
+            enterprise: {
+                name: "The Enterprise Architect",
+                description: "You build for scale, reliability, and team collaboration. Enterprise-grade is your standard.",
+                traits: ["Scalability", "Reliability", "Team Features", "Enterprise Support"],
+                preferences: {
+                    complexity: "medium",
+                    learning_curve: "moderate",
+                    customization: "moderate",
+                    performance: "high",
+                    ui_style: "professional"
+                }
+            },
+            explorer: {
+                name: "The Technology Explorer",
+                description: "You're always trying the latest and greatest. Cutting-edge technology excites you.",
+                traits: ["Innovation", "Modern Tech", "Experimentation", "Early Adoption"],
+                preferences: {
+                    complexity: "medium",
+                    learning_curve: "moderate",
+                    customization: "moderate",
+                    performance: "medium",
+                    ui_style: "modern"
+                }
+            },
+            pragmatist: {
+                name: "The Pragmatist",
+                description: "You choose battle-tested tools that just work. Reliability over novelty, every time.",
+                traits: ["Stability", "Proven Track Record", "Community Support", "Reliability"],
+                preferences: {
+                    complexity: "low",
+                    learning_curve: "gentle",
+                    customization: "moderate",
+                    performance: "high",
+                    ui_style: "familiar"
+                }
+            },
+            collaborator: {
+                name: "The Team Collaborator",
+                description: "You prioritize tools that enhance team productivity and communication.",
+                traits: ["Team Features", "Real-time Collaboration", "Sharing", "Communication"],
+                preferences: {
+                    complexity: "medium",
+                    learning_curve: "moderate",
+                    customization: "moderate",
+                    performance: "medium",
+                    ui_style: "collaborative"
+                }
+            }
+        };
+
+        // Quiz questions for personality assessment
+        const quizQuestions = [
+            {
+                question: "When choosing a new development tool, what matters most to you?",
+                options: [
+                    { text: "It should be simple and get out of my way", points: { minimalist: 3, pragmatist: 2 } },
+                    { text: "I want extensive customization options", points: { tinkerer: 3, explorer: 1 } },
+                    { text: "Enterprise features and team collaboration", points: { enterprise: 3, collaborator: 2 } },
+                    { text: "Cutting-edge technology and innovation", points: { explorer: 3, tinkerer: 1 } }
+                ]
+            },
+            {
+                question: "How do you prefer to learn new tools?",
+                options: [
+                    { text: "Quick start guide and I figure out the rest", points: { minimalist: 2, pragmatist: 3 } },
+                    { text: "Deep dive into documentation and configuration", points: { tinkerer: 3, enterprise: 1 } },
+                    { text: "Team training sessions and structured learning", points: { enterprise: 3, collaborator: 2 } },
+                    { text: "Tutorials, experiments, and community demos", points: { explorer: 3, collaborator: 1 } }
+                ]
+            },
+            {
+                question: "What's your ideal development environment setup?",
+                options: [
+                    { text: "Minimal setup, few tools, maximum efficiency", points: { minimalist: 3, pragmatist: 1 } },
+                    { text: "Heavily customized with my perfect configuration", points: { tinkerer: 3, minimalist: -1 } },
+                    { text: "Standardized across team with proper tooling", points: { enterprise: 3, collaborator: 2 } },
+                    { text: "Latest tools and experimental features", points: { explorer: 3, enterprise: -1 } }
+                ]
+            },
+            {
+                question: "When a tool doesn't work as expected, you typically:",
+                options: [
+                    { text: "Switch to a simpler alternative", points: { minimalist: 3, pragmatist: 2 } },
+                    { text: "Dive into configs and fix it myself", points: { tinkerer: 3, explorer: 1 } },
+                    { text: "Check enterprise support or team resources", points: { enterprise: 3, collaborator: 1 } },
+                    { text: "Research newer alternatives or beta versions", points: { explorer: 3, tinkerer: 1 } }
+                ]
+            },
+            {
+                question: "Your attitude towards tool updates and new versions:",
+                options: [
+                    { text: "Update only when necessary, if it works don't fix it", points: { pragmatist: 3, minimalist: 2 } },
+                    { text: "Love trying new features and configurations", points: { tinkerer: 2, explorer: 3 } },
+                    { text: "Wait for team approval and structured rollout", points: { enterprise: 3, collaborator: 2 } },
+                    { text: "Early adopter, often use beta versions", points: { explorer: 3, tinkerer: 1 } }
+                ]
+            },
+            {
+                question: "What size team do you typically work with?",
+                options: [
+                    { text: "Solo developer or very small team", points: { minimalist: 2, tinkerer: 2 } },
+                    { text: "Small agile team (3-8 people)", points: { collaborator: 3, explorer: 2 } },
+                    { text: "Medium to large team (8+ people)", points: { enterprise: 3, collaborator: 2 } },
+                    { text: "Mixed - sometimes solo, sometimes team", points: { pragmatist: 2, explorer: 1 } }
+                ]
+            },
+            {
+                question: "Your preferred approach to problem-solving:",
+                options: [
+                    { text: "Find the simplest solution that works", points: { minimalist: 3, pragmatist: 2 } },
+                    { text: "Engineer an elegant, highly customized solution", points: { tinkerer: 3, enterprise: 1 } },
+                    { text: "Use established patterns and team standards", points: { enterprise: 3, pragmatist: 2 } },
+                    { text: "Experiment with new approaches and technologies", points: { explorer: 3, collaborator: 1 } }
+                ]
+            },
+            {
+                question: "How important is community and ecosystem to you?",
+                options: [
+                    { text: "Not very - I prefer tools that just work", points: { minimalist: 2, pragmatist: 3 } },
+                    { text: "Love active communities and extensive plugins", points: { tinkerer: 3, explorer: 2 } },
+                    { text: "Enterprise support and professional ecosystem", points: { enterprise: 3, collaborator: 1 } },
+                    { text: "Vibrant community with lots of collaboration", points: { collaborator: 3, explorer: 2 } }
+                ]
+            }
+        ];
+
+        // Tools data - will be loaded from generated JSON file
+        let toolsData = {};
+        let categoriesData = {};
+
+        // State management
+        let currentQuestion = 0;
+        let answers = {};
+        let userArchetype = null;
+        let userProfile = {
+            preferences: {},
+            feedback_history: [],
+            compatibility_scores: {}
+        };
+
+        // Load tools data from generated JSON file
+        async function loadToolsData() {
+            try {
+                const response = await fetch('tool-matchmaker-data.json');
+                const data = await response.json();
+                toolsData = data.tools;
+                categoriesData = data.categories;
+                console.log(`Loaded ${Object.keys(toolsData).length} tools from ${Object.keys(categoriesData).length} categories`);
+            } catch (error) {
+                console.error('Error loading tools data:', error);
+                // Fallback to basic data if JSON file not available
+                toolsData = {};
+                categoriesData = {};
+            }
+        }
+
+        // Initialize the application
+        async function initializeApp() {
+            // Load tools data first
+            await loadToolsData();
+            
+            // Load any existing user profile from localStorage
+            const savedProfile = localStorage.getItem('toolMatchmakerProfile');
+            if (savedProfile) {
+                userProfile = { ...userProfile, ...JSON.parse(savedProfile) };
+            }
+        }
+
+        function startAssessment() {
+            document.getElementById('welcome-screen').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+            
+            // Initialize quiz
+            renderQuiz();
+            updateProgressIndicator();
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            const question = quizQuestions[currentQuestion];
+            
+            container.innerHTML = `
+                <div class="question">
+                    <h3>Question ${currentQuestion + 1} of ${quizQuestions.length}</h3>
+                    <h3>${question.question}</h3>
+                    <div class="options">
+                        ${question.options.map((option, index) => `
+                            <div class="option" onclick="selectOption(${index})" data-index="${index}">
+                                ${option.text}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // Restore previous answer if exists
+            if (answers[currentQuestion] !== undefined) {
+                const selectedOption = container.querySelector(`[data-index="${answers[currentQuestion]}"]`);
+                if (selectedOption) {
+                    selectedOption.classList.add('selected');
+                    document.getElementById('next-btn').disabled = false;
+                }
+            }
+            
+            updateNavigationButtons();
+        }
+
+        function selectOption(index) {
+            // Remove previous selection
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            
+            // Add selection to clicked option
+            document.querySelector(`[data-index="${index}"]`).classList.add('selected');
+            
+            // Store answer
+            answers[currentQuestion] = index;
+            
+            // Enable next button
+            document.getElementById('next-btn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                renderQuiz();
+                updateProgressIndicator();
+                updateNavigationButtons();
+            } else {
+                // Quiz complete, calculate archetype
+                calculateArchetype();
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuiz();
+                updateProgressIndicator();
+                updateNavigationButtons();
+            }
+        }
+
+        function updateNavigationButtons() {
+            document.getElementById('prev-btn').disabled = currentQuestion === 0;
+            document.getElementById('next-btn').disabled = answers[currentQuestion] === undefined;
+            
+            if (currentQuestion === quizQuestions.length - 1 && answers[currentQuestion] !== undefined) {
+                document.getElementById('next-btn').textContent = 'Get My Recommendations';
+            } else {
+                document.getElementById('next-btn').textContent = 'Next';
+            }
+        }
+
+        function updateProgressIndicator() {
+            const indicator = document.getElementById('progress-indicator');
+            indicator.innerHTML = '';
+            
+            for (let i = 0; i < quizQuestions.length; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'progress-dot';
+                if (i <= currentQuestion) {
+                    dot.classList.add('active');
+                }
+                indicator.appendChild(dot);
+            }
+        }
+
+        function calculateArchetype() {
+            const scores = {};
+            
+            // Initialize scores
+            Object.keys(archetypes).forEach(archetype => {
+                scores[archetype] = 0;
+            });
+            
+            // Calculate scores based on answers
+            Object.entries(answers).forEach(([questionIndex, answerIndex]) => {
+                const question = quizQuestions[questionIndex];
+                const selectedOption = question.options[answerIndex];
+                
+                Object.entries(selectedOption.points).forEach(([archetype, points]) => {
+                    scores[archetype] = (scores[archetype] || 0) + points;
+                });
+            });
+            
+            // Find dominant archetype
+            userArchetype = Object.entries(scores).reduce((a, b) => 
+                scores[a[0]] > scores[b[0]] ? a : b
+            )[0];
+            
+            // Store user profile
+            userProfile.archetype = userArchetype;
+            userProfile.archetype_scores = scores;
+            userProfile.preferences = archetypes[userArchetype].preferences;
+            
+            // Save to localStorage
+            localStorage.setItem('toolMatchmakerProfile', JSON.stringify(userProfile));
+        }
+
+        function showResults() {
+            const archetype = archetypes[userArchetype];
+            
+            // Show archetype result
+            const resultContainer = document.getElementById('archetype-result');
+            resultContainer.innerHTML = `
+                <div class="archetype-name">${archetype.name}</div>
+                <div class="archetype-description">${archetype.description}</div>
+                <div class="archetype-traits">
+                    ${archetype.traits.map(trait => `<span class="trait">${trait}</span>`).join('')}
+                </div>
+            `;
+            resultContainer.classList.add('show');
+            
+            // Generate and show recommendations
+            generateRecommendations();
+            
+            // Show tool compatibility matrix
+            showToolCompatibility();
+            
+            // Show collaborative filtering
+            showCollaborativeFiltering();
+        }
+
+        function generateRecommendations() {
+            const recommendations = calculateRecommendations();
+            const container = document.getElementById('recommendations');
+            
+            // Group recommendations by category
+            const categorizedRecs = {};
+            recommendations.forEach(rec => {
+                if (!categorizedRecs[rec.category]) {
+                    categorizedRecs[rec.category] = [];
+                }
+                categorizedRecs[rec.category].push(rec);
+            });
+            
+            // Render recommendations
+            let html = '';
+            Object.entries(categorizedRecs).forEach(([category, tools]) => {
+                const avgScore = Math.round(tools.reduce((sum, tool) => sum + tool.matchScore, 0) / tools.length);
+                
+                html += `
+                    <div class="recommendation-category">
+                        <div class="category-header">
+                            <div>
+                                <div class="category-title">${category}</div>
+                                <div class="compatibility-score">${avgScore}% Match</div>
+                            </div>
+                        </div>
+                        <div class="tools-grid">
+                            ${tools.map(tool => `
+                                <div class="tool-card" onclick="openTool('${tool.url}')">
+                                    <div class="tool-name">${tool.name}</div>
+                                    <div class="tool-description">${tool.description}</div>
+                                    <div class="tool-metadata">
+                                        <span class="why-recommended">${tool.reason}</span>
+                                        <span class="match-score">${tool.matchScore}%</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            container.classList.add('show');
+        }
+
+        function calculateRecommendations() {
+            const recommendations = [];
+            const userArchetypeScore = userProfile.archetype_scores[userArchetype];
+            
+            Object.entries(toolsData).forEach(([toolName, toolData]) => {
+                // Calculate base match score based on archetype alignment
+                const archetypeMatch = toolData.archetype_scores[userArchetype] || 0;
+                
+                // Apply learning weights if available
+                const weights = userProfile.learning_weights || {};
+                const archetypeAdjustment = weights.archetype_adjustment || 1.0;
+                
+                // Adjust score based on category preferences from learning
+                let categoryMultiplier = 1.0;
+                if (weights.category_preferences && weights.category_preferences[toolData.category]) {
+                    categoryMultiplier = weights.category_preferences[toolData.category];
+                }
+                
+                // Adjust score based on user feedback history
+                let feedbackAdjustment = 0;
+                const similarTools = userProfile.feedback_history.filter(feedback => 
+                    toolsData[feedback.tool] && 
+                    toolsData[feedback.tool].category === toolData.category
+                );
+                
+                if (similarTools.length > 0) {
+                    const avgFeedback = similarTools.reduce((sum, feedback) => {
+                        const feedbackScore = feedback.rating === 'love' ? 2 : 
+                                            feedback.rating === 'good' ? 1 : 
+                                            feedback.rating === 'okay' ? 0 : -1;
+                        return sum + feedbackScore;
+                    }, 0) / similarTools.length;
+                    
+                    feedbackAdjustment = avgFeedback * 10; // Scale feedback impact
+                }
+                
+                // Additional adjustments based on tool characteristics and learned preferences
+                let characteristicBonus = 0;
+                const characteristics = toolData.characteristics || {};
+                
+                // Apply learned characteristic preferences
+                if (characteristics.learning_curve && weights.characteristic_preferences) {
+                    const lcWeight = weights.characteristic_preferences[`learning_curve_${characteristics.learning_curve}`];
+                    if (lcWeight) {
+                        characteristicBonus += (lcWeight - 1.0) * 10; // Convert weight to bonus/penalty
+                    }
+                }
+                
+                if (characteristics.customization && weights.characteristic_preferences) {
+                    const custWeight = weights.characteristic_preferences[`customization_${characteristics.customization}`];
+                    if (custWeight) {
+                        characteristicBonus += (custWeight - 1.0) * 10; // Convert weight to bonus/penalty
+                    }
+                }
+                
+                // Traditional archetype-based characteristic bonuses (fallback)
+                if (characteristics.learning_curve === 'gentle' && userArchetype === 'minimalist') {
+                    characteristicBonus += 5;
+                }
+                if (characteristics.customization === 'extensive' && userArchetype === 'tinkerer') {
+                    characteristicBonus += 5;
+                }
+                if (characteristics.tags && characteristics.tags.includes('enterprise') && userArchetype === 'enterprise') {
+                    characteristicBonus += 5;
+                }
+                
+                // Calculate final match score with all adjustments
+                const baseScore = archetypeMatch * 10 * archetypeAdjustment;
+                const adjustedScore = baseScore * categoryMultiplier + feedbackAdjustment + characteristicBonus;
+                const matchScore = Math.min(100, Math.max(0, adjustedScore));
+                
+                // Generate contextual reason
+                const reason = generateRecommendationReason(toolData, userArchetype);
+                
+                if (matchScore >= 60) { // Only show good matches
+                    recommendations.push({
+                        name: toolName,
+                        category: toolData.category,
+                        url: toolData.url,
+                        description: toolData.description,
+                        matchScore: Math.round(matchScore),
+                        reason: reason,
+                        tags: toolData.tags
+                    });
+                }
+            });
+            
+            // Sort by match score and return top recommendations
+            return recommendations
+                .sort((a, b) => b.matchScore - a.matchScore)
+                .slice(0, 12); // Limit to top 12 recommendations
+        }
+
+        function generateRecommendationReason(toolData, archetype) {
+            const archetypeData = archetypes[archetype];
+            const characteristics = toolData.characteristics || {};
+            const tags = characteristics.tags || [];
+            const reasons = [];
+            
+            if (archetype === 'minimalist' && characteristics.learning_curve === 'gentle') {
+                reasons.push('Easy to learn');
+            }
+            if (archetype === 'tinkerer' && characteristics.customization === 'extensive') {
+                reasons.push('Highly customizable');
+            }
+            if (archetype === 'enterprise' && tags.includes('enterprise')) {
+                reasons.push('Enterprise-ready');
+            }
+            if (archetype === 'explorer' && tags.includes('modern')) {
+                reasons.push('Cutting-edge');
+            }
+            if (archetype === 'pragmatist' && tags.includes('popular')) {
+                reasons.push('Battle-tested');
+            }
+            if (archetype === 'collaborator' && tags.includes('collaborative')) {
+                reasons.push('Great for teams');
+            }
+            
+            // Fallback reasons based on archetype
+            if (reasons.length === 0) {
+                switch (archetype) {
+                    case 'minimalist':
+                        reasons.push('Simple and efficient');
+                        break;
+                    case 'tinkerer':
+                        reasons.push('Configurable');
+                        break;
+                    case 'enterprise':
+                        reasons.push('Professional grade');
+                        break;
+                    case 'explorer':
+                        reasons.push('Innovative');
+                        break;
+                    case 'pragmatist':
+                        reasons.push('Reliable choice');
+                        break;
+                    case 'collaborator':
+                        reasons.push('Team-friendly');
+                        break;
+                    default:
+                        reasons.push('Good fit for you');
+                }
+            }
+            
+            return reasons[0];
+        }
+
+        function showToolCompatibility() {
+            const recommendations = calculateRecommendations();
+            const compatibilityPairs = generateCompatibilityPairs(recommendations);
+            const container = document.getElementById('compatibility-matrix');
+            
+            container.innerHTML = `
+                <div class="compatibility-grid">
+                    ${compatibilityPairs.map(pair => `
+                        <div class="compatibility-pair">
+                            <div class="compatibility-tools">
+                                <div class="compatibility-tool">${pair.tool1}</div>
+                                <div class="compatibility-connector">+</div>
+                                <div class="compatibility-tool">${pair.tool2}</div>
+                            </div>
+                            <div class="compatibility-score">${pair.score}% Synergy</div>
+                            <div class="compatibility-reason">${pair.reason}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            document.getElementById('compatibility-section').classList.remove('hidden');
+        }
+
+        function generateCompatibilityPairs(recommendations) {
+            const pairs = [];
+            const compatibilityRules = {
+                // Editor + Terminal combinations
+                'Visual Studio Code': ['Git', 'Docker', 'Node.js'],
+                'Neovim': ['tmux', 'Git', 'fzf'],
+                
+                // DevOps tool combinations
+                'Docker': ['Kubernetes', 'Terraform', 'Git'],
+                'Kubernetes': ['Helm', 'Docker', 'Terraform'],
+                
+                // Development workflow combinations
+                'Git': ['GitHub CLI', 'pre-commit', 'Lazygit'],
+                'Jest': ['React', 'Node.js', 'npm'],
+                
+                // Data processing combinations
+                'Python': ['Jupyter', 'pandas', 'NumPy'],
+                'Rust': ['Cargo', 'Clippy', 'rustfmt']
+            };
+            
+            // Generate pairs based on compatibility rules and current recommendations
+            const recNames = recommendations.map(r => r.name);
+            
+            Object.entries(compatibilityRules).forEach(([tool1, compatibleTools]) => {
+                if (recNames.includes(tool1)) {
+                    compatibleTools.forEach(tool2 => {
+                        if (recNames.includes(tool2)) {
+                            const score = calculateCompatibilityScore(tool1, tool2);
+                            if (score >= 80) {
+                                pairs.push({
+                                    tool1,
+                                    tool2,
+                                    score,
+                                    reason: generateCompatibilityReason(tool1, tool2)
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+            
+            // Generate additional pairs based on category similarity
+            for (let i = 0; i < recommendations.length - 1; i++) {
+                for (let j = i + 1; j < recommendations.length; j++) {
+                    const rec1 = recommendations[i];
+                    const rec2 = recommendations[j];
+                    
+                    if (rec1.category === rec2.category && pairs.length < 6) {
+                        const score = Math.min(95, (rec1.matchScore + rec2.matchScore) / 2);
+                        if (score >= 80) {
+                            pairs.push({
+                                tool1: rec1.name,
+                                tool2: rec2.name,
+                                score: Math.round(score),
+                                reason: `Both excel in ${rec1.category.toLowerCase()}`
+                            });
+                        }
+                    }
+                }
+            }
+            
+            return pairs.slice(0, 6); // Limit to 6 pairs
+        }
+
+        function calculateCompatibilityScore(tool1, tool2) {
+            // Base compatibility score with some randomization for demo
+            let score = 80 + Math.random() * 15;
+            
+            // Boost score for known good combinations
+            const knownCombos = {
+                'Visual Studio Code': ['Git', 'Docker'],
+                'Docker': ['Kubernetes'],
+                'Git': ['GitHub CLI'],
+                'Python': ['Jupyter']
+            };
+            
+            if (knownCombos[tool1] && knownCombos[tool1].includes(tool2)) {
+                score += 10;
+            }
+            
+            return Math.round(Math.min(98, score));
+        }
+
+        function generateCompatibilityReason(tool1, tool2) {
+            const reasons = [
+                'Seamless integration',
+                'Complementary workflows',
+                'Shared ecosystem',
+                'Enhanced productivity',
+                'Popular combination',
+                'Tool synergy',
+                'Workflow optimization'
+            ];
+            
+            return reasons[Math.floor(Math.random() * reasons.length)];
+        }
+
+        function showCollaborativeFiltering() {
+            // Simulate similar developer profiles
+            const similarDevelopers = generateSimilarDevelopers();
+            const container = document.getElementById('similar-developers');
+            
+            container.innerHTML = similarDevelopers.map(dev => `
+                <div class="developer-profile">
+                    <div class="developer-avatar">${dev.avatar}</div>
+                    <div class="developer-name">${dev.name}</div>
+                    <div class="developer-similarity">${dev.similarity}% similar</div>
+                </div>
+            `).join('');
+            
+            document.getElementById('collaborative-section').classList.remove('hidden');
+        }
+
+        function generateSimilarDevelopers() {
+            const developers = [
+                { name: "Alex K.", avatar: "👨‍💻", similarity: 94 },
+                { name: "Sarah M.", avatar: "👩‍💻", similarity: 89 },
+                { name: "Jordan P.", avatar: "🧑‍💻", similarity: 87 },
+                { name: "Casey L.", avatar: "👨‍💻", similarity: 82 }
+            ];
+            
+            return developers;
+        }
+
+        function provideFeedback(rating) {
+            // Get currently displayed tools for feedback tracking
+            const currentRecommendations = calculateRecommendations();
+            
+            // Store comprehensive feedback for learning
+            userProfile.feedback_history.push({
+                timestamp: Date.now(),
+                rating: rating,
+                archetype: userArchetype,
+                session_id: Date.now(),
+                recommended_tools: currentRecommendations.map(r => ({
+                    name: r.name,
+                    category: r.category,
+                    match_score: r.matchScore,
+                    reason: r.reason
+                })),
+                context: {
+                    user_archetype_scores: userProfile.archetype_scores,
+                    quiz_answers: answers
+                }
+            });
+            
+            // Update learning weights based on feedback
+            updateLearningWeights(rating, currentRecommendations);
+            
+            // Save updated profile
+            localStorage.setItem('toolMatchmakerProfile', JSON.stringify(userProfile));
+            
+            // Show enhanced feedback confirmation with next steps
+            const feedbackButtons = document.querySelector('.feedback-buttons');
+            feedbackButtons.innerHTML = `
+                <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 10px;">
+                    Thank you! Your feedback helps improve recommendations for everyone.
+                </div>
+                ${rating === 'love' ? 
+                    '<div style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">We\'ll prioritize similar tools in future recommendations!</div>' :
+                    rating === 'poor' ?
+                    '<div style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">We\'ll adjust our algorithm to better match your preferences.</div>' :
+                    '<div style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Your input helps us fine-tune recommendations.</div>'
+                }
+            `;
+            
+            // Regenerate recommendations with improved learning
+            setTimeout(() => {
+                generateRecommendations();
+                showToolCompatibility();
+            }, 1500);
+        }
+
+        function updateLearningWeights(rating, recommendations) {
+            // Initialize learning weights if not present
+            if (!userProfile.learning_weights) {
+                userProfile.learning_weights = {
+                    category_preferences: {},
+                    characteristic_preferences: {},
+                    archetype_adjustment: 1.0
+                };
+            }
+            
+            const weights = userProfile.learning_weights;
+            const feedbackMultiplier = {
+                'love': 1.5,
+                'good': 1.2,
+                'okay': 1.0,
+                'poor': 0.7
+            }[rating];
+            
+            // Update category preferences based on feedback
+            recommendations.forEach(rec => {
+                const category = rec.category;
+                const currentWeight = weights.category_preferences[category] || 1.0;
+                weights.category_preferences[category] = Math.max(0.5, Math.min(2.0, 
+                    currentWeight * feedbackMultiplier
+                ));
+                
+                // Update characteristic preferences based on tool characteristics
+                const toolData = toolsData[rec.name];
+                if (toolData && toolData.characteristics) {
+                    const chars = toolData.characteristics;
+                    
+                    // Learning curve preference
+                    const lcKey = `learning_curve_${chars.learning_curve}`;
+                    const currentLcWeight = weights.characteristic_preferences[lcKey] || 1.0;
+                    weights.characteristic_preferences[lcKey] = Math.max(0.5, Math.min(2.0,
+                        currentLcWeight * feedbackMultiplier
+                    ));
+                    
+                    // Customization preference
+                    const custKey = `customization_${chars.customization}`;
+                    const currentCustWeight = weights.characteristic_preferences[custKey] || 1.0;
+                    weights.characteristic_preferences[custKey] = Math.max(0.5, Math.min(2.0,
+                        currentCustWeight * feedbackMultiplier
+                    ));
+                }
+            });
+            
+            // Adjust archetype confidence based on feedback
+            if (rating === 'love') {
+                weights.archetype_adjustment = Math.min(1.5, weights.archetype_adjustment * 1.1);
+            } else if (rating === 'poor') {
+                weights.archetype_adjustment = Math.max(0.8, weights.archetype_adjustment * 0.9);
+            }
+        }
+
+        function openTool(url) {
+            window.open(url, '_blank');
+        }
+
+        // Initialize app when page loads
+        document.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+</body>
+</html>
