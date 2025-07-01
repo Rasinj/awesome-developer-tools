@@ -10,6 +10,14 @@ Code Editors & IDEs,Full IDEs,Android Studio,https://developer.android.com/studi
 Code Editors & IDEs,Online Editors,GitHub Codespaces,https://github.com/features/codespaces,Cloud development environments
 Code Editors & IDEs,Online Editors,Replit,https://replit.com/,Browser-based IDE for collaborative coding
 Code Editors & IDEs,Online Editors,CodeSandbox,https://codesandbox.io/,Online code editor for web development
+Code Editors & IDEs,Vim & Modal Editors,Neovim,https://neovim.io/,"Modern Vim fork with better defaults, Lua scripting, and built-in LSP"
+Code Editors & IDEs,Vim & Modal Editors,Vim,https://www.vim.org/,Highly configurable text editor built to make creating and changing text efficient
+Code Editors & IDEs,Vim & Modal Editors,SpaceVim,https://spacevim.org/,Community-driven Vim distribution with modular configuration
+Code Editors & IDEs,Vim & Modal Editors,LazyVim,https://lazyvim.org/,Neovim configuration for the lazy with sane defaults and easy customization
+Code Editors & IDEs,Vim & Modal Editors,AstroNvim,https://astronvim.com/,Aesthetic and feature-rich neovim config that is extensible and easy to use
+Code Editors & IDEs,Vim & Modal Editors,LunarVim,https://lunarvim.org/,IDE layer for Neovim with sane defaults and plugin management
+Code Editors & IDEs,Vim & Modal Editors,NvChad,https://nvchad.com/,Blazing fast Neovim config providing solid defaults and beautiful UI
+Code Editors & IDEs,Vim & Modal Editors,Doom Emacs,https://doomemacs.org/,Emacs framework with Vim emulation and curated package selection
 Version Control,Git Tools,Git,https://git-scm.com/,Distributed version control system
 Version Control,Git Tools,GitHub CLI,https://cli.github.com/,Command-line tool for GitHub
 Version Control,Git Tools,Lazygit,https://github.com/jesseduffield/lazygit,Simple terminal UI for git commands
@@ -69,6 +77,11 @@ Package Managers,Language-Specific,Go Modules,https://golang.org/ref/mod,Go depe
 Package Managers,System Package Managers,Homebrew,https://brew.sh/,Package manager for macOS and Linux
 Package Managers,System Package Managers,Chocolatey,https://chocolatey.org/,Package manager for Windows
 Package Managers,System Package Managers,Scoop,https://scoop.sh/,Command-line installer for Windows
+Package Managers,Version Managers,nvm,https://github.com/nvm-sh/nvm,Node.js version manager with easy switching between versions
+Package Managers,Version Managers,fnm,https://github.com/Schniz/fnm,Fast and simple Node.js version manager built in Rust
+Package Managers,Version Managers,rbenv,https://github.com/rbenv/rbenv,Ruby version management with project-specific versions
+Package Managers,Version Managers,SDKMAN!,https://sdkman.io/,"Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)"
+Package Managers,Version Managers,rustup,https://rustup.rs/,Official Rust toolchain installer and version manager
 Build Tools & Task Runners,Build Systems,Webpack,https://webpack.js.org/,Module bundler for JavaScript applications
 Build Tools & Task Runners,Build Systems,Vite,https://vitejs.dev/,Fast build tool for modern web projects
 Build Tools & Task Runners,Build Systems,Rollup,https://rollupjs.org/,Module bundler for JavaScript libraries
@@ -132,6 +145,30 @@ Database Tools,Graph & Analytics Databases,KuzuDB,https://kuzudb.com/,Embeddable
 Database Tools,Graph & Analytics Databases,DuckDB,https://duckdb.org/,In-process analytical database designed for OLAP workloads
 Database Tools,Graph & Analytics Databases,ClickHouse,https://clickhouse.com/,Real-time analytics DBMS for big data and high performance
 Database Tools,Graph & Analytics Databases,Apache Parquet Tools,https://github.com/apache/parquet-mr,"Command-line tools for reading, writing and manipulating Parquet files"
+Development Environments,Containerized Environments,Dev Containers,https://containers.dev/,Open specification for development containers with VS Code integration
+Development Environments,Containerized Environments,Gitpod,https://gitpod.io/,Cloud development environments that start in seconds
+Development Environments,Containerized Environments,Devpod,https://devpod.sh/,Client-only tool for creating reproducible developer environments
+Development Environments,Containerized Environments,Coder,https://coder.com/,Self-hosted remote development environments on your infrastructure
+Development Environments,Virtual Machines,Vagrant,https://www.vagrantup.com/,Tool for building and managing virtual machine environments
+Development Environments,Virtual Machines,Lima,https://github.com/lima-vm/lima,Linux virtual machines for macOS with automatic file sharing
+Development Environments,Virtual Machines,Multipass,https://multipass.run/,Ubuntu VMs on demand for any workstation
+Development Environments,Virtual Machines,UTM,https://mac.getutm.app/,Virtual machines for iOS and macOS using QEMU
+Development Environments,Reproducible Systems,Nix,https://nixos.org/,Functional package manager for reproducible and declarative systems
+Development Environments,Reproducible Systems,asdf,https://asdf-vm.com/,Version manager for multiple runtime versions with plugin ecosystem
+Development Environments,Reproducible Systems,mise,https://mise.jdx.dev/,Fast polyglot tool version manager and task runner
+Development Environments,Reproducible Systems,Guix,https://guix.gnu.org/,Functional package manager and distribution for reproducible builds
+Development Environments,Local Development Orchestration,Tilt,https://tilt.dev/,Toolkit for microservice development with live updates
+Development Environments,Local Development Orchestration,DevSpace,https://devspace.sh/,Client-only developer tool for deploying & developing Kubernetes apps
+Development Environments,Local Development Orchestration,Garden,https://garden.io/,Automation platform for Kubernetes development and testing workflows
+Development Environments,Local Development Orchestration,Telepresence,https://telepresence.io/,Local development against remote Kubernetes clusters
+Development Environments,Remote Development,VS Code Remote,https://code.visualstudio.com/docs/remote/remote-overview,"VS Code extensions for remote development via SSH, containers, and WSL"
+Development Environments,Remote Development,code-server,https://github.com/coder/code-server,VS Code in the browser running on a remote server
+Development Environments,Remote Development,JetBrains Gateway,https://www.jetbrains.com/remote-development/gateway/,Remote development solution for JetBrains IDEs
+Development Environments,Remote Development,Theia,https://theia-ide.org/,Cloud and desktop IDE platform built with modern web technologies
+Development Environments,Project Scaffolding,Cookiecutter,https://cookiecutter.readthedocs.io/,Command-line utility for creating projects from templates
+Development Environments,Project Scaffolding,Yeoman,https://yeoman.io/,Web application scaffolding tool with generator ecosystem
+Development Environments,Project Scaffolding,degit,https://github.com/Rich-Harris/degit,Straightforward project scaffolding without git history
+Development Environments,Project Scaffolding,Plop,https://plopjs.com/,Micro-generator framework for teams to create consistent code
 DevOps & Infrastructure,Containerization,Docker,https://www.docker.com/,Platform for developing and running applications in containers
 DevOps & Infrastructure,Containerization,Podman,https://podman.io/,Daemonless container engine
 DevOps & Infrastructure,Containerization,Docker Compose,https://docs.docker.com/compose/,Tool for defining multi-container Docker applications

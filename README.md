@@ -16,6 +16,7 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - [Code Quality & Linting](#code-quality--linting)
 - [API Development & Testing](#api-development--testing)
 - [Database Tools](#database-tools)
+- [Development Environments](#development-environments)
 - [DevOps & Infrastructure](#devops--infrastructure)
 - [Monitoring & Logging](#monitoring--logging)
 - [Security](#security)
@@ -55,6 +56,17 @@ Essential text editors and integrated development environments for writing, edit
 - **[GitHub Codespaces](https://github.com/features/codespaces)** - Cloud development environments
 - **[Replit](https://replit.com/)** - Browser-based IDE for collaborative coding
 - **[CodeSandbox](https://codesandbox.io/)** - Online code editor for web development
+
+
+### Vim & Modal Editors
+- **[Neovim](https://neovim.io/)** - Modern Vim fork with better defaults, Lua scripting, and built-in LSP
+- **[Vim](https://www.vim.org/)** - Highly configurable text editor built to make creating and changing text efficient
+- **[SpaceVim](https://spacevim.org/)** - Community-driven Vim distribution with modular configuration
+- **[LazyVim](https://lazyvim.org/)** - Neovim configuration for the lazy with sane defaults and easy customization
+- **[AstroNvim](https://astronvim.com/)** - Aesthetic and feature-rich neovim config that is extensible and easy to use
+- **[LunarVim](https://lunarvim.org/)** - IDE layer for Neovim with sane defaults and plugin management
+- **[NvChad](https://nvchad.com/)** - Blazing fast Neovim config providing solid defaults and beautiful UI
+- **[Doom Emacs](https://doomemacs.org/)** - Emacs framework with Vim emulation and curated package selection
 
 
 ## Version Control
@@ -171,6 +183,14 @@ Tools for installing, updating, and managing software dependencies and libraries
 - **[Homebrew](https://brew.sh/)** - Package manager for macOS and Linux
 - **[Chocolatey](https://chocolatey.org/)** - Package manager for Windows
 - **[Scoop](https://scoop.sh/)** - Command-line installer for Windows
+
+
+### Version Managers
+- **[nvm](https://github.com/nvm-sh/nvm)** - Node.js version manager with easy switching between versions
+- **[fnm](https://github.com/Schniz/fnm)** - Fast and simple Node.js version manager built in Rust
+- **[rbenv](https://github.com/rbenv/rbenv)** - Ruby version management with project-specific versions
+- **[SDKMAN!](https://sdkman.io/)** - Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)
+- **[rustup](https://rustup.rs/)** - Official Rust toolchain installer and version manager
 
 
 ## Build Tools & Task Runners
@@ -318,6 +338,55 @@ Database management systems, GUI clients, migration tools, and utilities for wor
 - **[DuckDB](https://duckdb.org/)** - In-process analytical database designed for OLAP workloads
 - **[ClickHouse](https://clickhouse.com/)** - Real-time analytics DBMS for big data and high performance
 - **[Apache Parquet Tools](https://github.com/apache/parquet-mr)** - Command-line tools for reading, writing and manipulating Parquet files
+
+
+## Development Environments
+
+
+Tools for creating, managing, and maintaining consistent development environments across different platforms and projects.
+
+
+
+### Containerized Environments
+- **[Dev Containers](https://containers.dev/)** - Open specification for development containers with VS Code integration
+- **[Gitpod](https://gitpod.io/)** - Cloud development environments that start in seconds
+- **[Devpod](https://devpod.sh/)** - Client-only tool for creating reproducible developer environments
+- **[Coder](https://coder.com/)** - Self-hosted remote development environments on your infrastructure
+
+
+### Virtual Machines
+- **[Vagrant](https://www.vagrantup.com/)** - Tool for building and managing virtual machine environments
+- **[Lima](https://github.com/lima-vm/lima)** - Linux virtual machines for macOS with automatic file sharing
+- **[Multipass](https://multipass.run/)** - Ubuntu VMs on demand for any workstation
+- **[UTM](https://mac.getutm.app/)** - Virtual machines for iOS and macOS using QEMU
+
+
+### Reproducible Systems
+- **[Nix](https://nixos.org/)** - Functional package manager for reproducible and declarative systems
+- **[asdf](https://asdf-vm.com/)** - Version manager for multiple runtime versions with plugin ecosystem
+- **[mise](https://mise.jdx.dev/)** - Fast polyglot tool version manager and task runner
+- **[Guix](https://guix.gnu.org/)** - Functional package manager and distribution for reproducible builds
+
+
+### Local Development Orchestration
+- **[Tilt](https://tilt.dev/)** - Toolkit for microservice development with live updates
+- **[DevSpace](https://devspace.sh/)** - Client-only developer tool for deploying & developing Kubernetes apps
+- **[Garden](https://garden.io/)** - Automation platform for Kubernetes development and testing workflows
+- **[Telepresence](https://telepresence.io/)** - Local development against remote Kubernetes clusters
+
+
+### Remote Development
+- **[VS Code Remote](https://code.visualstudio.com/docs/remote/remote-overview)** - VS Code extensions for remote development via SSH, containers, and WSL
+- **[code-server](https://github.com/coder/code-server)** - VS Code in the browser running on a remote server
+- **[JetBrains Gateway](https://www.jetbrains.com/remote-development/gateway/)** - Remote development solution for JetBrains IDEs
+- **[Theia](https://theia-ide.org/)** - Cloud and desktop IDE platform built with modern web technologies
+
+
+### Project Scaffolding
+- **[Cookiecutter](https://cookiecutter.readthedocs.io/)** - Command-line utility for creating projects from templates
+- **[Yeoman](https://yeoman.io/)** - Web application scaffolding tool with generator ecosystem
+- **[degit](https://github.com/Rich-Harris/degit)** - Straightforward project scaffolding without git history
+- **[Plop](https://plopjs.com/)** - Micro-generator framework for teams to create consistent code
 
 
 ## DevOps & Infrastructure

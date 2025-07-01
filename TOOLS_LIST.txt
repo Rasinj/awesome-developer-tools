@@ -19,6 +19,16 @@
 - Replit: https://replit.com/
 - CodeSandbox: https://codesandbox.io/
 
+### Vim & Modal Editors
+- Neovim: https://neovim.io/
+- Vim: https://www.vim.org/
+- SpaceVim: https://spacevim.org/
+- LazyVim: https://lazyvim.org/
+- AstroNvim: https://astronvim.com/
+- LunarVim: https://lunarvim.org/
+- NvChad: https://nvchad.com/
+- Doom Emacs: https://doomemacs.org/
+
 ## Version Control
 
 ### Git Tools
@@ -107,6 +117,13 @@
 - Homebrew: https://brew.sh/
 - Chocolatey: https://chocolatey.org/
 - Scoop: https://scoop.sh/
+
+### Version Managers
+- nvm: https://github.com/nvm-sh/nvm
+- fnm: https://github.com/Schniz/fnm
+- rbenv: https://github.com/rbenv/rbenv
+- SDKMAN!: https://sdkman.io/
+- rustup: https://rustup.rs/
 
 ## Build Tools & Task Runners
 
@@ -210,6 +227,44 @@
 - DuckDB: https://duckdb.org/
 - ClickHouse: https://clickhouse.com/
 - Apache Parquet Tools: https://github.com/apache/parquet-mr
+
+## Development Environments
+
+### Containerized Environments
+- Dev Containers: https://containers.dev/
+- Gitpod: https://gitpod.io/
+- Devpod: https://devpod.sh/
+- Coder: https://coder.com/
+
+### Virtual Machines
+- Vagrant: https://www.vagrantup.com/
+- Lima: https://github.com/lima-vm/lima
+- Multipass: https://multipass.run/
+- UTM: https://mac.getutm.app/
+
+### Reproducible Systems
+- Nix: https://nixos.org/
+- asdf: https://asdf-vm.com/
+- mise: https://mise.jdx.dev/
+- Guix: https://guix.gnu.org/
+
+### Local Development Orchestration
+- Tilt: https://tilt.dev/
+- DevSpace: https://devspace.sh/
+- Garden: https://garden.io/
+- Telepresence: https://telepresence.io/
+
+### Remote Development
+- VS Code Remote: https://code.visualstudio.com/docs/remote/remote-overview
+- code-server: https://github.com/coder/code-server
+- JetBrains Gateway: https://www.jetbrains.com/remote-development/gateway/
+- Theia: https://theia-ide.org/
+
+### Project Scaffolding
+- Cookiecutter: https://cookiecutter.readthedocs.io/
+- Yeoman: https://yeoman.io/
+- degit: https://github.com/Rich-Harris/degit
+- Plop: https://plopjs.com/
 
 ## DevOps & Infrastructure
 
