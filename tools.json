@@ -342,6 +342,16 @@
               "name": "lazydocker",
               "url": "https://github.com/jesseduffield/lazydocker",
               "description": "Terminal UI for Docker and Docker Compose with container management"
+            },
+            {
+              "name": "parquet-tools",
+              "url": "https://github.com/chhantyal/parquet-tools",
+              "description": "Command-line tools for inspecting Parquet files"
+            },
+            {
+              "name": "visidata",
+              "url": "https://visidata.org/",
+              "description": "Terminal spreadsheet multitool for exploring and arranging data"
             }
           ]
         },
@@ -843,6 +853,36 @@
               "description": "Database schema change management"
             }
           ]
+        },
+        {
+          "name": "Graph & Analytics Databases",
+          "tools": [
+            {
+              "name": "Neo4j",
+              "url": "https://neo4j.com/",
+              "description": "Graph database platform for connected data and complex queries"
+            },
+            {
+              "name": "KuzuDB",
+              "url": "https://kuzudb.com/",
+              "description": "Embeddable graph database built for query speed and scalability"
+            },
+            {
+              "name": "DuckDB",
+              "url": "https://duckdb.org/",
+              "description": "In-process analytical database designed for OLAP workloads"
+            },
+            {
+              "name": "ClickHouse",
+              "url": "https://clickhouse.com/",
+              "description": "Real-time analytics DBMS for big data and high performance"
+            },
+            {
+              "name": "Apache Parquet Tools",
+              "url": "https://github.com/apache/parquet-mr",
+              "description": "Command-line tools for reading, writing and manipulating Parquet files"
+            }
+          ]
         }
       ]
     },
@@ -1295,6 +1335,16 @@
               "name": "Polars",
               "url": "https://pola.rs/",
               "description": "Fast DataFrame library implemented in Rust"
+            },
+            {
+              "name": "DuckDB Python",
+              "url": "https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg",
+              "description": "Python client for DuckDB in-process analytical database"
+            },
+            {
+              "name": "PyArrow",
+              "url": "https://arrow.apache.org/docs/python/",
+              "description": "Python library for Apache Arrow columnar in-memory analytics"
             }
           ]
         },
@@ -1538,6 +1588,26 @@
               "name": "NumPy",
               "url": "https://numpy.org/",
               "description": "Fundamental package for scientific computing with Python"
+            },
+            {
+              "name": "DuckDB",
+              "url": "https://duckdb.org/",
+              "description": "In-process SQL OLAP database for analytics with zero dependencies"
+            },
+            {
+              "name": "Polars",
+              "url": "https://pola.rs/",
+              "description": "Fast DataFrame library implemented in Rust with Python bindings"
+            },
+            {
+              "name": "Apache Arrow",
+              "url": "https://arrow.apache.org/",
+              "description": "Cross-language development platform for in-memory columnar data"
+            },
+            {
+              "name": "Parquet",
+              "url": "https://parquet.apache.org/",
+              "description": "Columnar storage format optimized for analytics workloads"
             }
           ]
         }

@@ -81,6 +81,8 @@
 - hyperfine: https://github.com/sharkdp/hyperfine
 - watchexec: https://watchexec.github.io/
 - lazydocker: https://github.com/jesseduffield/lazydocker
+- parquet-tools: https://github.com/chhantyal/parquet-tools
+- visidata: https://visidata.org/
 
 ### Productivity & Workflow
 - direnv: https://direnv.net/
@@ -202,6 +204,13 @@
 - Flyway: https://flywaydb.org/
 - Liquibase: https://www.liquibase.org/
 
+### Graph & Analytics Databases
+- Neo4j: https://neo4j.com/
+- KuzuDB: https://kuzudb.com/
+- DuckDB: https://duckdb.org/
+- ClickHouse: https://clickhouse.com/
+- Apache Parquet Tools: https://github.com/apache/parquet-mr
+
 ## DevOps & Infrastructure
 
 ### Containerization
@@ -296,31 +305,28 @@
 
 ## Python Development
 
-
 ### Development Environment
-
 - pyenv: https://github.com/pyenv/pyenv
 - conda: https://docs.conda.io/
 - virtualenv: https://virtualenv.pypa.io/
 - pipx: https://pypa.github.io/pipx/
 
 ### Web Frameworks
-
 - FastAPI: https://fastapi.tiangolo.com/
 - Django: https://www.djangoproject.com/
 - Flask: https://flask.palletsprojects.com/
 - Starlette: https://www.starlette.io/
 
 ### Data Science & ML
-
 - Jupyter: https://jupyter.org/
 - pandas: https://pandas.pydata.org/
 - NumPy: https://numpy.org/
 - scikit-learn: https://scikit-learn.org/
 - Polars: https://pola.rs/
+- DuckDB Python: https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg
+- PyArrow: https://arrow.apache.org/docs/python/
 
 ### CLI & Automation
-
 - Click: https://click.palletsprojects.com/
 - Typer: https://typer.tiangolo.com/
 - Rich: https://rich.readthedocs.io/
@@ -383,3 +389,7 @@
 ### Data Processing
 - pandas: https://pandas.pydata.org/
 - NumPy: https://numpy.org/
+- DuckDB: https://duckdb.org/
+- Polars: https://pola.rs/
+- Apache Arrow: https://arrow.apache.org/
+- Parquet: https://parquet.apache.org/

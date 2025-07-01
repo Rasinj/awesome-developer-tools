@@ -137,6 +137,8 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 - **[hyperfine](https://github.com/sharkdp/hyperfine)** - Command-line benchmarking tool with statistical analysis and warmup runs
 - **[watchexec](https://watchexec.github.io/)** - File watcher that runs commands when files change with flexible filtering
 - **[lazydocker](https://github.com/jesseduffield/lazydocker)** - Terminal UI for Docker and Docker Compose with container management
+- **[parquet-tools](https://github.com/chhantyal/parquet-tools)** - Command-line tools for inspecting Parquet files
+- **[visidata](https://visidata.org/)** - Terminal spreadsheet multitool for exploring and arranging data
 
 
 ### Productivity & Workflow
@@ -310,6 +312,14 @@ Database management systems, GUI clients, migration tools, and utilities for wor
 - **[Liquibase](https://www.liquibase.org/)** - Database schema change management
 
 
+### Graph & Analytics Databases
+- **[Neo4j](https://neo4j.com/)** - Graph database platform for connected data and complex queries
+- **[KuzuDB](https://kuzudb.com/)** - Embeddable graph database built for query speed and scalability
+- **[DuckDB](https://duckdb.org/)** - In-process analytical database designed for OLAP workloads
+- **[ClickHouse](https://clickhouse.com/)** - Real-time analytics DBMS for big data and high performance
+- **[Apache Parquet Tools](https://github.com/apache/parquet-mr)** - Command-line tools for reading, writing and manipulating Parquet files
+
+
 ## DevOps & Infrastructure
 
 
@@ -471,6 +481,8 @@ Note-taking apps, task management tools, time tracking software, and utilities t
 - **[NumPy](https://numpy.org/)** - Fundamental package for scientific computing
 - **[scikit-learn](https://scikit-learn.org/)** - Machine learning library for Python
 - **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust
+- **[DuckDB Python](https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg)** - Python client for DuckDB in-process analytical database
+- **[PyArrow](https://arrow.apache.org/docs/python/)** - Python library for Apache Arrow columnar in-memory analytics
 
 
 ### CLI & Automation
@@ -568,6 +580,10 @@ Tools, frameworks, and platforms for data analysis, machine learning, artificial
 ### Data Processing
 - **[pandas](https://pandas.pydata.org/)** - Powerful data manipulation and analysis library for Python
 - **[NumPy](https://numpy.org/)** - Fundamental package for scientific computing with Python
+- **[DuckDB](https://duckdb.org/)** - In-process SQL OLAP database for analytics with zero dependencies
+- **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust with Python bindings
+- **[Apache Arrow](https://arrow.apache.org/)** - Cross-language development platform for in-memory columnar data
+- **[Parquet](https://parquet.apache.org/)** - Columnar storage format optimized for analytics workloads
 
 
 

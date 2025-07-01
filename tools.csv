@@ -51,6 +51,8 @@ Terminal & Shell,Development Tools,tokei,https://github.com/XAMPPRocky/tokei,Fas
 Terminal & Shell,Development Tools,hyperfine,https://github.com/sharkdp/hyperfine,Command-line benchmarking tool with statistical analysis and warmup runs
 Terminal & Shell,Development Tools,watchexec,https://watchexec.github.io/,File watcher that runs commands when files change with flexible filtering
 Terminal & Shell,Development Tools,lazydocker,https://github.com/jesseduffield/lazydocker,Terminal UI for Docker and Docker Compose with container management
+Terminal & Shell,Development Tools,parquet-tools,https://github.com/chhantyal/parquet-tools,Command-line tools for inspecting Parquet files
+Terminal & Shell,Development Tools,visidata,https://visidata.org/,Terminal spreadsheet multitool for exploring and arranging data
 Terminal & Shell,Productivity & Workflow,direnv,https://direnv.net/,Loads and unloads environment variables based on current directory
 Terminal & Shell,Productivity & Workflow,tldr,https://github.com/tldr-pages/tldr,Collaborative cheatsheets providing simplified examples for console commands
 Terminal & Shell,Productivity & Workflow,lnav,https://lnav.org/,Advanced log file navigator with automatic format detection and SQL querying
@@ -125,6 +127,11 @@ Database Tools,Database Development,Prisma,https://www.prisma.io/,Next-generatio
 Database Tools,Database Development,Drizzle,https://orm.drizzle.team/,TypeScript ORM with SQL-like syntax
 Database Tools,Database Development,Flyway,https://flywaydb.org/,Database migration tool
 Database Tools,Database Development,Liquibase,https://www.liquibase.org/,Database schema change management
+Database Tools,Graph & Analytics Databases,Neo4j,https://neo4j.com/,Graph database platform for connected data and complex queries
+Database Tools,Graph & Analytics Databases,KuzuDB,https://kuzudb.com/,Embeddable graph database built for query speed and scalability
+Database Tools,Graph & Analytics Databases,DuckDB,https://duckdb.org/,In-process analytical database designed for OLAP workloads
+Database Tools,Graph & Analytics Databases,ClickHouse,https://clickhouse.com/,Real-time analytics DBMS for big data and high performance
+Database Tools,Graph & Analytics Databases,Apache Parquet Tools,https://github.com/apache/parquet-mr,"Command-line tools for reading, writing and manipulating Parquet files"
 DevOps & Infrastructure,Containerization,Docker,https://www.docker.com/,Platform for developing and running applications in containers
 DevOps & Infrastructure,Containerization,Podman,https://podman.io/,Daemonless container engine
 DevOps & Infrastructure,Containerization,Docker Compose,https://docs.docker.com/compose/,Tool for defining multi-container Docker applications
@@ -188,6 +195,8 @@ Python Development,Data Science & ML,pandas,https://pandas.pydata.org/,Data mani
 Python Development,Data Science & ML,NumPy,https://numpy.org/,Fundamental package for scientific computing
 Python Development,Data Science & ML,scikit-learn,https://scikit-learn.org/,Machine learning library for Python
 Python Development,Data Science & ML,Polars,https://pola.rs/,Fast DataFrame library implemented in Rust
+Python Development,Data Science & ML,DuckDB Python,https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg,Python client for DuckDB in-process analytical database
+Python Development,Data Science & ML,PyArrow,https://arrow.apache.org/docs/python/,Python library for Apache Arrow columnar in-memory analytics
 Python Development,CLI & Automation,Click,https://click.palletsprojects.com/,Composable command line interface toolkit
 Python Development,CLI & Automation,Typer,https://typer.tiangolo.com/,Modern library for building CLI applications
 Python Development,CLI & Automation,Rich,https://rich.readthedocs.io/,Library for rich text and beautiful formatting in the terminal
@@ -218,3 +227,7 @@ Data Science & Machine Learning,Machine Learning Libraries,PyTorch,https://pytor
 Data Science & Machine Learning,Machine Learning Libraries,scikit-learn,https://scikit-learn.org/,Machine learning library for Python with simple and efficient tools for data analysis
 Data Science & Machine Learning,Data Processing,pandas,https://pandas.pydata.org/,Powerful data manipulation and analysis library for Python
 Data Science & Machine Learning,Data Processing,NumPy,https://numpy.org/,Fundamental package for scientific computing with Python
+Data Science & Machine Learning,Data Processing,DuckDB,https://duckdb.org/,In-process SQL OLAP database for analytics with zero dependencies
+Data Science & Machine Learning,Data Processing,Polars,https://pola.rs/,Fast DataFrame library implemented in Rust with Python bindings
+Data Science & Machine Learning,Data Processing,Apache Arrow,https://arrow.apache.org/,Cross-language development platform for in-memory columnar data
+Data Science & Machine Learning,Data Processing,Parquet,https://parquet.apache.org/,Columnar storage format optimized for analytics workloads
