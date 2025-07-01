@@ -4,6 +4,19 @@
 
 A curated list of awesome tools, resources, and utilities that make developers' lives easier and more productive.
 
+## 🔮 Revolutionary Tool Discovery
+
+**New!** Try our [**Developer Intent Engine**](./tool-finder.html) - a revolutionary way to find tools based on what you're trying to accomplish, not just browsing categories. Simply describe your goal and get personalized tool recommendations with explanations of why each tool is perfect for your situation.
+
+✨ **Features:**
+- **Natural Language Search** - "I need to set up a new Python project quickly"
+- **Contextual Filters** - Experience level, team size, project phase, time constraints
+- **Developer Journey Map** - Find tools for each stage of development
+- **Problem-Solution Matcher** - Common frustrations mapped to solutions
+- **Intent-Driven Discovery** - Tools recommended based on your actual goals
+
+[🚀 **Launch Tool Finder**](./tool-finder.html)
+
 ## Contents
 
 - [Code Editors & IDEs](#code-editors--ides)

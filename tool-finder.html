@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Intent Engine - Find Your Perfect Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #a8edea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .search-section {
+            padding: 40px;
+        }
+        
+        .intent-search {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .intent-input {
+            width: 100%;
+            padding: 20px 25px;
+            font-size: 1.1rem;
+            border: 3px solid #e0e7ff;
+            border-radius: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+        
+        .intent-input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: white;
+        }
+        
+        .quick-intents {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .quick-intent {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .quick-intent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .context-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f1f5f9;
+            border-radius: 15px;
+        }
+        
+        .filter-group {
+            text-align: center;
+        }
+        
+        .filter-label {
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        
+        .filter-option {
+            padding: 8px 12px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-option.active {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
+        }
+        
+        .journey-map {
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 15px;
+        }
+        
+        .journey-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 20px;
+        }
+        
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .journey-step {
+            background: white;
+            padding: 15px 10px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            border: 2px solid transparent;
+        }
+        
+        .journey-step:hover {
+            transform: scale(1.05);
+            border-color: #f59e0b;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .journey-emoji {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .journey-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #92400e;
+        }
+        
+        .problem-matcher {
+            margin-bottom: 30px;
+        }
+        
+        .problem-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ef4444;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .problem-text {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        
+        .problem-solutions {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .results {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 15px;
+            display: none;
+        }
+        
+        .results.visible {
+            display: block;
+        }
+        
+        .results-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+        
+        .tool-recommendations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            border-color: #6366f1;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
+        }
+        
+        .tool-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .tool-description {
+            color: #6b7280;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .tool-why {
+            background: #eff6ff;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #1e40af;
+            margin-bottom: 12px;
+        }
+        
+        .tool-link {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .tool-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .journey-steps {
+                justify-content: center;
+            }
+            
+            .context-filters {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Developer Intent Engine</h1>
+            <p>Tell us what you're trying to do, and we'll find the perfect tools for you</p>
+        </div>
+        
+        <div class="search-section">
+            <div class="intent-search">
+                <input 
+                    type="text" 
+                    class="intent-input" 
+                    placeholder="Type what you're trying to do... e.g., 'I need to set up a new Python project quickly'"
+                    id="intentInput"
+                >
+            </div>
+            
+            <div class="quick-intents">
+                <button class="quick-intent" onclick="searchIntent('set up new project')">🚀 Set up new project</button>
+                <button class="quick-intent" onclick="searchIntent('debug performance issues')">🐛 Debug performance</button>
+                <button class="quick-intent" onclick="searchIntent('deploy to production')">🚀 Deploy safely</button>
+                <button class="quick-intent" onclick="searchIntent('manage dependencies')">📦 Manage dependencies</button>
+                <button class="quick-intent" onclick="searchIntent('code collaboration')">👥 Team collaboration</button>
+                <button class="quick-intent" onclick="searchIntent('automate testing')">🧪 Automate testing</button>
+            </div>
+            
+            <div class="context-filters">
+                <div class="filter-group">
+                    <span class="filter-label">Experience Level</span>
+                    <div class="filter-options">
+                        <div class="filter-option active" data-filter="experience" data-value="beginner">Beginner</div>
+                        <div class="filter-option" data-filter="experience" data-value="intermediate">Intermediate</div>
+                        <div class="filter-option" data-filter="experience" data-value="expert">Expert</div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Team Size</span>
+                    <div class="filter-options">
+                        <div class="filter-option active" data-filter="team" data-value="solo">Solo</div>
+                        <div class="filter-option" data-filter="team" data-value="small">Small (2-5)</div>
+                        <div class="filter-option" data-filter="team" data-value="medium">Medium (6-20)</div>
+                        <div class="filter-option" data-filter="team" data-value="large">Enterprise</div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Project Phase</span>
+                    <div class="filter-options">
+                        <div class="filter-option active" data-filter="phase" data-value="idea">Idea</div>
+                        <div class="filter-option" data-filter="phase" data-value="mvp">MVP</div>
+                        <div class="filter-option" data-filter="phase" data-value="growth">Growth</div>
+                        <div class="filter-option" data-filter="phase" data-value="scale">Scale</div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Time Available</span>
+                    <div class="filter-options">
+                        <div class="filter-option" data-filter="time" data-value="quick">5 minutes</div>
+                        <div class="filter-option active" data-filter="time" data-value="hour">1 hour</div>
+                        <div class="filter-option" data-filter="time" data-value="day">1 day</div>
+                        <div class="filter-option" data-filter="time" data-value="flexible">No rush</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="journey-map">
+                <div class="journey-title">🗺️ Developer Journey Map</div>
+                <div class="journey-steps">
+                    <div class="journey-step" onclick="searchJourney('idea')">
+                        <div class="journey-emoji">💡</div>
+                        <div class="journey-label">Idea</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('setup')">
+                        <div class="journey-emoji">🛠️</div>
+                        <div class="journey-label">Setup</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('code')">
+                        <div class="journey-emoji">💻</div>
+                        <div class="journey-label">Code</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('test')">
+                        <div class="journey-emoji">🧪</div>
+                        <div class="journey-label">Test</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('deploy')">
+                        <div class="journey-emoji">🚀</div>
+                        <div class="journey-label">Deploy</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('monitor')">
+                        <div class="journey-emoji">📊</div>
+                        <div class="journey-label">Monitor</div>
+                    </div>
+                    <div class="journey-step" onclick="searchJourney('iterate')">
+                        <div class="journey-emoji">🔄</div>
+                        <div class="journey-label">Iterate</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="problem-matcher">
+                <div class="problem-title">🎯 Common Developer Frustrations</div>
+                <div class="problems-grid">
+                    <div class="problem-card" onclick="searchProblem('dependencies')">
+                        <div class="problem-text">😤 "Dependencies are a nightmare"</div>
+                        <div class="problem-solutions">→ Nix, Docker, Poetry, uv</div>
+                    </div>
+                    <div class="problem-card" onclick="searchProblem('debugging')">
+                        <div class="problem-text">🐛 "I can't find this bug"</div>
+                        <div class="problem-solutions">→ Chrome DevTools, Sentry, pdb</div>
+                    </div>
+                    <div class="problem-card" onclick="searchProblem('slow builds')">
+                        <div class="problem-text">⏰ "Builds take forever"</div>
+                        <div class="problem-solutions">→ esbuild, Turbo, GitHub Actions cache</div>
+                    </div>
+                    <div class="problem-card" onclick="searchProblem('messy code')">
+                        <div class="problem-text">🔥 "My code is messy"</div>
+                        <div class="problem-solutions">→ Prettier, ESLint, SonarQube</div>
+                    </div>
+                    <div class="problem-card" onclick="searchProblem('setup time')">
+                        <div class="problem-text">😴 "Setup takes hours"</div>
+                        <div class="problem-solutions">→ Dev Containers, Gitpod, Vagrant</div>
+                    </div>
+                    <div class="problem-card" onclick="searchProblem('collaboration')">
+                        <div class="problem-text">👥 "Team coordination is hard"</div>
+                        <div class="problem-solutions">→ GitHub, Linear, Notion</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results" id="results">
+                <div class="results-title">🎯 Recommended Tools for You</div>
+                <div class="tool-recommendations" id="toolRecommendations">
+                    <!-- Tool cards will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tool database with intent mapping
+        const toolDatabase = {
+            'set up new project': [
+                {
+                    name: 'Cookiecutter',
+                    url: 'https://cookiecutter.readthedocs.io/',
+                    description: 'Command-line utility for creating projects from templates',
+                    why: 'Perfect for quickly scaffolding new projects with best practices built-in'
+                },
+                {
+                    name: 'Dev Containers',
+                    url: 'https://containers.dev/',
+                    description: 'Open specification for development containers',
+                    why: 'Ensures everyone on your team has the exact same development environment'
+                },
+                {
+                    name: 'Gitpod',
+                    url: 'https://gitpod.io/',
+                    description: 'Cloud development environments that start in seconds',
+                    why: 'Zero setup time - just click and start coding in a full environment'
+                }
+            ],
+            'debug performance issues': [
+                {
+                    name: 'Chrome DevTools',
+                    url: 'https://developer.chrome.com/docs/devtools/',
+                    description: 'Web debugging tools',
+                    why: 'Industry standard for debugging web performance with detailed profiling'
+                },
+                {
+                    name: 'Lighthouse',
+                    url: 'https://developers.google.com/web/tools/lighthouse',
+                    description: 'Web performance auditing tool',
+                    why: 'Automated performance analysis with actionable improvement suggestions'
+                },
+                {
+                    name: 'Sentry',
+                    url: 'https://sentry.io/',
+                    description: 'Error tracking and performance monitoring',
+                    why: 'Real-time error tracking and performance monitoring in production'
+                }
+            ],
+            'deploy to production': [
+                {
+                    name: 'GitHub Actions',
+                    url: 'https://github.com/features/actions',
+                    description: 'CI/CD platform integrated with GitHub',
+                    why: 'Seamless integration with your GitHub workflow for automated deployments'
+                },
+                {
+                    name: 'Docker',
+                    url: 'https://www.docker.com/',
+                    description: 'Platform for developing and running applications in containers',
+                    why: 'Ensures your app runs the same in development and production'
+                },
+                {
+                    name: 'Terraform',
+                    url: 'https://www.terraform.io/',
+                    description: 'Infrastructure as code tool',
+                    why: 'Manage your infrastructure with code for reproducible deployments'
+                }
+            ],
+            'manage dependencies': [
+                {
+                    name: 'Poetry',
+                    url: 'https://python-poetry.org/',
+                    description: 'Python dependency management and packaging',
+                    why: 'Modern Python dependency management with lock files and virtual environments'
+                },
+                {
+                    name: 'pnpm',
+                    url: 'https://pnpm.io/',
+                    description: 'Efficient package manager for Node.js',
+                    why: 'Faster and more disk-efficient than npm with better dependency resolution'
+                },
+                {
+                    name: 'Nix',
+                    url: 'https://nixos.org/',
+                    description: 'Functional package manager for reproducible systems',
+                    why: 'Complete reproducibility - never worry about "it works on my machine" again'
+                }
+            ],
+            'code collaboration': [
+                {
+                    name: 'GitHub',
+                    url: 'https://github.com/',
+                    description: 'Code hosting and collaboration platform',
+                    why: 'Industry standard for code collaboration with pull requests and code review'
+                },
+                {
+                    name: 'Linear',
+                    url: 'https://linear.app/',
+                    description: 'Issue tracking for modern software teams',
+                    why: 'Streamlined issue tracking designed specifically for engineering teams'
+                },
+                {
+                    name: 'Notion',
+                    url: 'https://www.notion.so/',
+                    description: 'All-in-one workspace',
+                    why: 'Centralize documentation, planning, and knowledge sharing for your team'
+                }
+            ],
+            'automate testing': [
+                {
+                    name: 'GitHub Actions',
+                    url: 'https://github.com/features/actions',
+                    description: 'CI/CD platform integrated with GitHub',
+                    why: 'Automatically run tests on every commit and pull request'
+                },
+                {
+                    name: 'pytest',
+                    url: 'https://pytest.org/',
+                    description: 'Python testing framework',
+                    why: 'Simple yet powerful testing framework with great plugin ecosystem'
+                },
+                {
+                    name: 'Playwright',
+                    url: 'https://playwright.dev/',
+                    description: 'End-to-end testing for modern web apps',
+                    why: 'Reliable browser automation for testing user workflows'
+                }
+            ]
+        };
+
+        const journeyTools = {
+            'idea': [
+                {
+                    name: 'Notion',
+                    url: 'https://www.notion.so/',
+                    description: 'All-in-one workspace',
+                    why: 'Perfect for brainstorming, documenting ideas, and planning your project structure'
+                },
+                {
+                    name: 'Figma',
+                    url: 'https://www.figma.com/',
+                    description: 'Collaborative design and prototyping tool',
+                    why: 'Quickly mock up UI ideas and share with stakeholders for feedback'
+                }
+            ],
+            'setup': [
+                {
+                    name: 'Dev Containers',
+                    url: 'https://containers.dev/',
+                    description: 'Open specification for development containers',
+                    why: 'Consistent development environment setup across your entire team'
+                },
+                {
+                    name: 'Cookiecutter',
+                    url: 'https://cookiecutter.readthedocs.io/',
+                    description: 'Command-line utility for creating projects from templates',
+                    why: 'Bootstrap projects with industry best practices and folder structure'
+                }
+            ],
+            'code': [
+                {
+                    name: 'VS Code',
+                    url: 'https://code.visualstudio.com/',
+                    description: 'Lightweight, extensible code editor',
+                    why: 'Most popular editor with excellent extension ecosystem and debugging support'
+                },
+                {
+                    name: 'GitHub Copilot',
+                    url: 'https://copilot.github.com/',
+                    description: 'AI pair programmer',
+                    why: 'AI-powered code suggestions to boost your coding productivity'
+                }
+            ],
+            'test': [
+                {
+                    name: 'Jest',
+                    url: 'https://jestjs.io/',
+                    description: 'JavaScript testing framework',
+                    why: 'Zero-config testing framework with built-in mocking and assertions'
+                },
+                {
+                    name: 'Playwright',
+                    url: 'https://playwright.dev/',
+                    description: 'End-to-end testing for modern web apps',
+                    why: 'Test your entire user workflow across different browsers automatically'
+                }
+            ],
+            'deploy': [
+                {
+                    name: 'Docker',
+                    url: 'https://www.docker.com/',
+                    description: 'Containerization platform',
+                    why: 'Package your application with all dependencies for consistent deployments'
+                },
+                {
+                    name: 'GitHub Actions',
+                    url: 'https://github.com/features/actions',
+                    description: 'CI/CD platform',
+                    why: 'Automate deployment pipeline with testing and deployment workflows'
+                }
+            ],
+            'monitor': [
+                {
+                    name: 'Sentry',
+                    url: 'https://sentry.io/',
+                    description: 'Error tracking and performance monitoring',
+                    why: 'Real-time error tracking and performance insights for production apps'
+                },
+                {
+                    name: 'Datadog',
+                    url: 'https://www.datadoghq.com/',
+                    description: 'Monitoring and analytics platform',
+                    why: 'Comprehensive monitoring with custom dashboards and alerting'
+                }
+            ],
+            'iterate': [
+                {
+                    name: 'Linear',
+                    url: 'https://linear.app/',
+                    description: 'Issue tracking for modern software teams',
+                    why: 'Track bugs, feature requests, and development progress efficiently'
+                },
+                {
+                    name: 'Hotjar',
+                    url: 'https://www.hotjar.com/',
+                    description: 'User behavior analytics',
+                    why: 'Understand how users interact with your app to guide improvements'
+                }
+            ]
+        };
+
+        const problemTools = {
+            'dependencies': [
+                {
+                    name: 'Nix',
+                    url: 'https://nixos.org/',
+                    description: 'Functional package manager',
+                    why: 'Completely reproducible environments - no more dependency conflicts'
+                },
+                {
+                    name: 'Docker',
+                    url: 'https://www.docker.com/',
+                    description: 'Containerization platform',
+                    why: 'Isolate dependencies in containers for consistent environments'
+                },
+                {
+                    name: 'Poetry',
+                    url: 'https://python-poetry.org/',
+                    description: 'Python dependency management',
+                    why: 'Modern Python dependency management with lock files'
+                }
+            ],
+            'debugging': [
+                {
+                    name: 'Chrome DevTools',
+                    url: 'https://developer.chrome.com/docs/devtools/',
+                    description: 'Web debugging tools',
+                    why: 'Powerful debugging with breakpoints, profiling, and network inspection'
+                },
+                {
+                    name: 'Sentry',
+                    url: 'https://sentry.io/',
+                    description: 'Error tracking platform',
+                    why: 'Automatically captures and tracks errors with full context'
+                }
+            ],
+            'slow builds': [
+                {
+                    name: 'esbuild',
+                    url: 'https://esbuild.github.io/',
+                    description: 'Extremely fast JavaScript bundler',
+                    why: '10-100x faster than other bundlers for JavaScript/TypeScript'
+                },
+                {
+                    name: 'Turbo',
+                    url: 'https://turbo.build/',
+                    description: 'High-performance build system',
+                    why: 'Intelligent caching and parallelization for monorepos'
+                }
+            ],
+            'messy code': [
+                {
+                    name: 'Prettier',
+                    url: 'https://prettier.io/',
+                    description: 'Opinionated code formatter',
+                    why: 'Automatically formats code to maintain consistent style'
+                },
+                {
+                    name: 'ESLint',
+                    url: 'https://eslint.org/',
+                    description: 'JavaScript linter',
+                    why: 'Catches bugs and enforces coding standards automatically'
+                }
+            ],
+            'setup time': [
+                {
+                    name: 'Gitpod',
+                    url: 'https://gitpod.io/',
+                    description: 'Cloud development environments',
+                    why: 'Zero setup time - development environment ready in seconds'
+                },
+                {
+                    name: 'Dev Containers',
+                    url: 'https://containers.dev/',
+                    description: 'Development containers specification',
+                    why: 'Consistent, pre-configured development environments'
+                }
+            ],
+            'collaboration': [
+                {
+                    name: 'GitHub',
+                    url: 'https://github.com/',
+                    description: 'Code hosting platform',
+                    why: 'Industry standard for code collaboration and version control'
+                },
+                {
+                    name: 'Linear',
+                    url: 'https://linear.app/',
+                    description: 'Issue tracking platform',
+                    why: 'Streamlined project management designed for engineering teams'
+                }
+            ]
+        };
+
+        // Event listeners
+        document.getElementById('intentInput').addEventListener('input', function(e) {
+            if (e.target.value.length > 3) {
+                searchIntent(e.target.value);
+            }
+        });
+
+        document.getElementById('intentInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchIntent(e.target.value);
+            }
+        });
+
+        // Filter options
+        document.querySelectorAll('.filter-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const filterType = this.dataset.filter;
+                document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        function searchIntent(query) {
+            const tools = findToolsForIntent(query.toLowerCase());
+            displayResults(tools, `Tools for: "${query}"`);
+        }
+
+        function searchJourney(stage) {
+            const tools = journeyTools[stage] || [];
+            displayResults(tools, `Tools for ${stage.charAt(0).toUpperCase() + stage.slice(1)} Phase`);
+        }
+
+        function searchProblem(problem) {
+            const tools = problemTools[problem] || [];
+            displayResults(tools, `Solutions for: ${problem.replace(/([A-Z])/g, ' $1').toLowerCase()}`);
+        }
+
+        function findToolsForIntent(query) {
+            // Simple keyword matching - in a real implementation, this would use NLP/ML
+            const keywords = {
+                'project': toolDatabase['set up new project'],
+                'setup': toolDatabase['set up new project'],
+                'new': toolDatabase['set up new project'],
+                'debug': toolDatabase['debug performance issues'],
+                'performance': toolDatabase['debug performance issues'],
+                'slow': toolDatabase['debug performance issues'],
+                'deploy': toolDatabase['deploy to production'],
+                'production': toolDatabase['deploy to production'],
+                'dependencies': toolDatabase['manage dependencies'],
+                'package': toolDatabase['manage dependencies'],
+                'collaboration': toolDatabase['code collaboration'],
+                'team': toolDatabase['code collaboration'],
+                'test': toolDatabase['automate testing'],
+                'testing': toolDatabase['automate testing']
+            };
+
+            for (const [keyword, tools] of Object.entries(keywords)) {
+                if (query.includes(keyword)) {
+                    return tools;
+                }
+            }
+
+            // Default fallback
+            return toolDatabase['set up new project'];
+        }
+
+        function displayResults(tools, title) {
+            const resultsDiv = document.getElementById('results');
+            const recommendationsDiv = document.getElementById('toolRecommendations');
+            
+            document.querySelector('.results-title').textContent = title;
+            
+            recommendationsDiv.innerHTML = tools.map(tool => `
+                <div class="tool-card">
+                    <div class="tool-name">${tool.name}</div>
+                    <div class="tool-description">${tool.description}</div>
+                    <div class="tool-why">💡 ${tool.why}</div>
+                    <a href="${tool.url}" target="_blank" class="tool-link">Learn More →</a>
+                </div>
+            `).join('');
+            
+            resultsDiv.classList.add('visible');
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize with a default search
+        window.addEventListener('load', function() {
+            searchIntent('set up new project');
+        });
+    </script>
+</body>
+</html>

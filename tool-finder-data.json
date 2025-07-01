@@ -1,0 +1,402 @@
+{
+  "set up new project": [
+    {
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node.js version manager with easy switching between versions",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "why": "Excellent tool for set up new project"
+    },
+    {
+      "name": "fnm",
+      "url": "https://github.com/Schniz/fnm",
+      "description": "Fast and simple Node.js version manager built in Rust",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "why": "Excellent tool for set up new project"
+    },
+    {
+      "name": "rbenv",
+      "url": "https://github.com/rbenv/rbenv",
+      "description": "Ruby version management with project-specific versions",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "why": "Excellent tool for set up new project"
+    },
+    {
+      "name": "SDKMAN!",
+      "url": "https://sdkman.io/",
+      "description": "Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "why": "Excellent tool for set up new project"
+    },
+    {
+      "name": "rustup",
+      "url": "https://rustup.rs/",
+      "description": "Official Rust toolchain installer and version manager",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "why": "Excellent tool for set up new project"
+    },
+    {
+      "name": "Dev Containers",
+      "url": "https://containers.dev/",
+      "description": "Open specification for development containers with VS Code integration",
+      "category": "Development Environments",
+      "subcategory": "Containerized Environments",
+      "why": "Ensures everyone on your team has the exact same development environment"
+    }
+  ],
+  "debug performance issues": [
+    {
+      "name": "Chrome DevTools",
+      "url": "https://developer.chrome.com/docs/devtools/",
+      "description": "Web debugging tools",
+      "category": "Debugging & Profiling",
+      "subcategory": "Debuggers",
+      "why": "Industry standard for debugging web performance with detailed profiling"
+    },
+    {
+      "name": "React Developer Tools",
+      "url": "https://react.dev/learn/react-developer-tools",
+      "description": "Browser extension for debugging React",
+      "category": "Debugging & Profiling",
+      "subcategory": "Debuggers",
+      "why": "Excellent tool for debug performance issues"
+    },
+    {
+      "name": "Vue.js DevTools",
+      "url": "https://devtools.vuejs.org/",
+      "description": "Browser extension for debugging Vue.js",
+      "category": "Debugging & Profiling",
+      "subcategory": "Debuggers",
+      "why": "Excellent tool for debug performance issues"
+    },
+    {
+      "name": "pdb",
+      "url": "https://docs.python.org/3/library/pdb.html",
+      "description": "Built-in Python debugger for interactive debugging and code inspection",
+      "category": "Debugging & Profiling",
+      "subcategory": "Debuggers",
+      "why": "Excellent tool for debug performance issues"
+    },
+    {
+      "name": "gdb",
+      "url": "https://www.gnu.org/software/gdb/",
+      "description": "GNU debugger for C/C++",
+      "category": "Debugging & Profiling",
+      "subcategory": "Debuggers",
+      "why": "Excellent tool for debug performance issues"
+    },
+    {
+      "name": "Lighthouse",
+      "url": "https://developers.google.com/web/tools/lighthouse",
+      "description": "Web performance auditing tool",
+      "category": "Debugging & Profiling",
+      "subcategory": "Performance Profiling",
+      "why": "Automated performance analysis with actionable improvement suggestions"
+    }
+  ],
+  "deploy to production": [
+    {
+      "name": "Docker",
+      "url": "https://www.docker.com/",
+      "description": "Platform for developing and running applications in containers",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Containerization",
+      "why": "Ensures your app runs the same in development and production"
+    },
+    {
+      "name": "Podman",
+      "url": "https://podman.io/",
+      "description": "Daemonless container engine",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Containerization",
+      "why": "Excellent tool for deploy to production"
+    },
+    {
+      "name": "Docker Compose",
+      "url": "https://docs.docker.com/compose/",
+      "description": "Tool for defining multi-container Docker applications",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Containerization",
+      "why": "Excellent tool for deploy to production"
+    },
+    {
+      "name": "Terraform",
+      "url": "https://www.terraform.io/",
+      "description": "Infrastructure as code tool",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Infrastructure as Code",
+      "why": "Manage your infrastructure with code for reproducible deployments"
+    },
+    {
+      "name": "Ansible",
+      "url": "https://www.ansible.com/",
+      "description": "IT automation platform",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Infrastructure as Code",
+      "why": "Excellent tool for deploy to production"
+    },
+    {
+      "name": "Pulumi",
+      "url": "https://www.pulumi.com/",
+      "description": "Modern infrastructure as code",
+      "category": "DevOps & Infrastructure",
+      "subcategory": "Infrastructure as Code",
+      "why": "Excellent tool for deploy to production"
+    }
+  ],
+  "manage dependencies": [
+    {
+      "name": "npm",
+      "url": "https://www.npmjs.com/",
+      "description": "Node.js package manager",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Excellent tool for manage dependencies"
+    },
+    {
+      "name": "Yarn",
+      "url": "https://yarnpkg.com/",
+      "description": "Fast, reliable JavaScript package manager",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Excellent tool for manage dependencies"
+    },
+    {
+      "name": "pnpm",
+      "url": "https://pnpm.io/",
+      "description": "Efficient package manager for Node.js",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Faster and more disk-efficient than npm with better dependency resolution"
+    },
+    {
+      "name": "pip",
+      "url": "https://pip.pypa.io/",
+      "description": "Python package installer",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Excellent tool for manage dependencies"
+    },
+    {
+      "name": "uv",
+      "url": "https://docs.astral.sh/uv/",
+      "description": "Fast Python package installer and resolver",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Excellent tool for manage dependencies"
+    },
+    {
+      "name": "Poetry",
+      "url": "https://python-poetry.org/",
+      "description": "Python dependency management and packaging",
+      "category": "Package Managers",
+      "subcategory": "Language-Specific",
+      "why": "Modern Python dependency management with lock files and virtual environments"
+    }
+  ],
+  "code collaboration": [
+    {
+      "name": "Git",
+      "url": "https://git-scm.com/",
+      "description": "Distributed version control system",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "why": "Excellent tool for code collaboration"
+    },
+    {
+      "name": "GitHub CLI",
+      "url": "https://cli.github.com/",
+      "description": "Command-line tool for GitHub",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "why": "Excellent tool for code collaboration"
+    },
+    {
+      "name": "Lazygit",
+      "url": "https://github.com/jesseduffield/lazygit",
+      "description": "Simple terminal UI for git commands",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "why": "Excellent tool for code collaboration"
+    },
+    {
+      "name": "GitKraken",
+      "url": "https://www.gitkraken.com/",
+      "description": "Cross-platform Git GUI client",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "why": "Excellent tool for code collaboration"
+    },
+    {
+      "name": "Sourcetree",
+      "url": "https://www.sourcetreeapp.com/",
+      "description": "Free Git GUI for Mac and Windows",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "why": "Excellent tool for code collaboration"
+    },
+    {
+      "name": "Linear",
+      "url": "https://linear.app/",
+      "description": "Issue tracking for modern software teams",
+      "category": "Productivity",
+      "subcategory": "Project Management",
+      "why": "Streamlined issue tracking designed specifically for engineering teams"
+    }
+  ],
+  "automate testing": [
+    {
+      "name": "Jest",
+      "url": "https://jestjs.io/",
+      "description": "JavaScript testing framework with focus on simplicity",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Excellent tool for automate testing"
+    },
+    {
+      "name": "Vitest",
+      "url": "https://vitest.dev/",
+      "description": "Fast unit test framework powered by Vite",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Excellent tool for automate testing"
+    },
+    {
+      "name": "Playwright",
+      "url": "https://playwright.dev/",
+      "description": "End-to-end testing for modern web apps",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Reliable browser automation for testing user workflows"
+    },
+    {
+      "name": "Cypress",
+      "url": "https://www.cypress.io/",
+      "description": "JavaScript end-to-end testing framework",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Excellent tool for automate testing"
+    },
+    {
+      "name": "pytest",
+      "url": "https://pytest.org/",
+      "description": "Python testing framework",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Simple yet powerful testing framework with great plugin ecosystem"
+    },
+    {
+      "name": "JUnit",
+      "url": "https://junit.org/",
+      "description": "Unit testing framework for Java",
+      "category": "Testing",
+      "subcategory": "Testing Frameworks",
+      "why": "Excellent tool for automate testing"
+    }
+  ],
+  "write better code": [
+    {
+      "name": "Visual Studio Code",
+      "url": "https://code.visualstudio.com/",
+      "description": "Microsoft's lightweight, extensible code editor with massive ecosystem",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "why": "Excellent tool for write better code"
+    },
+    {
+      "name": "Neovim",
+      "url": "https://neovim.io/",
+      "description": "Modern Vim fork with better defaults and Lua configuration",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "why": "Highly customizable modal editor for efficient text editing"
+    },
+    {
+      "name": "Helix",
+      "url": "https://helix-editor.com/",
+      "description": "Post-modern modal text editor written in Rust",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "why": "Excellent tool for write better code"
+    },
+    {
+      "name": "Zed",
+      "url": "https://zed.dev/",
+      "description": "High-performance, multiplayer code editor built in Rust",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "why": "Excellent tool for write better code"
+    },
+    {
+      "name": "ESLint",
+      "url": "https://eslint.org/",
+      "description": "JavaScript and TypeScript linter",
+      "category": "Code Quality & Linting",
+      "subcategory": "Linters & Formatters",
+      "why": "Catches bugs and enforces coding standards automatically"
+    },
+    {
+      "name": "Prettier",
+      "url": "https://prettier.io/",
+      "description": "Opinionated code formatter",
+      "category": "Code Quality & Linting",
+      "subcategory": "Linters & Formatters",
+      "why": "Automatically formats code to maintain consistent style"
+    }
+  ],
+  "work with databases": [
+    {
+      "name": "DBeaver",
+      "url": "https://dbeaver.io/",
+      "description": "Universal database tool",
+      "category": "Database Tools",
+      "subcategory": "Database Clients",
+      "why": "Universal database client that works with all major databases"
+    },
+    {
+      "name": "TablePlus",
+      "url": "https://tableplus.com/",
+      "description": "Modern, native database client",
+      "category": "Database Tools",
+      "subcategory": "Database Clients",
+      "why": "Excellent tool for work with databases"
+    },
+    {
+      "name": "pgAdmin",
+      "url": "https://www.pgadmin.org/",
+      "description": "PostgreSQL administration tool",
+      "category": "Database Tools",
+      "subcategory": "Database Clients",
+      "why": "Excellent tool for work with databases"
+    },
+    {
+      "name": "MongoDB Compass",
+      "url": "https://www.mongodb.com/products/compass",
+      "description": "GUI for MongoDB",
+      "category": "Database Tools",
+      "subcategory": "Database Clients",
+      "why": "Excellent tool for work with databases"
+    },
+    {
+      "name": "Prisma",
+      "url": "https://www.prisma.io/",
+      "description": "Next-generation ORM for Node.js and TypeScript",
+      "category": "Database Tools",
+      "subcategory": "Database Development",
+      "why": "Excellent tool for work with databases"
+    },
+    {
+      "name": "Drizzle",
+      "url": "https://orm.drizzle.team/",
+      "description": "TypeScript ORM with SQL-like syntax",
+      "category": "Database Tools",
+      "subcategory": "Database Development",
+      "why": "Excellent tool for work with databases"
+    }
+  ]
+}
