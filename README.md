@@ -22,6 +22,7 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - [Documentation](#documentation)
 - [Design & Prototyping](#design--prototyping)
 - [Productivity](#productivity)
+- [Python Development](#python-development)
 - [Learning & References](#learning--references)
 - [Cloud Platforms](#cloud-platforms)
 - [Mobile Development](#mobile-development)
@@ -157,6 +158,9 @@ Tools for installing, updating, and managing software dependencies and libraries
 - **[pnpm](https://pnpm.io/)** - Efficient package manager for Node.js
 - **[pip](https://pip.pypa.io/)** - Python package installer
 - **[uv](https://docs.astral.sh/uv/)** - Fast Python package installer and resolver
+- **[Poetry](https://python-poetry.org/)** - Python dependency management and packaging
+- **[PDM](https://pdm.fming.dev/)** - Modern Python package manager with PEP 582 support
+- **[Pipenv](https://pipenv.pypa.io/)** - Python development workflow for humans
 - **[Cargo](https://doc.rust-lang.org/cargo/)** - Rust package manager
 - **[Go Modules](https://golang.org/ref/mod)** - Go dependency management
 
@@ -244,8 +248,11 @@ Static analysis tools, linters, and formatters that enforce coding standards, de
 - **[ESLint](https://eslint.org/)** - JavaScript and TypeScript linter
 - **[Prettier](https://prettier.io/)** - Opinionated code formatter
 - **[Black](https://black.readthedocs.io/)** - Python code formatter
+- **[Ruff](https://docs.astral.sh/ruff/)** - Extremely fast Python linter and formatter
 - **[Pylint](https://pylint.org/)** - Python static code analysis
 - **[Flake8](https://flake8.pycqa.org/)** - Python linting tool
+- **[isort](https://pycqa.github.io/isort/)** - Python import sorting utility
+- **[mypy](https://mypy-lang.org/)** - Static type checker for Python
 - **[Rustfmt](https://github.com/rust-lang/rustfmt)** - Rust code formatter
 - **[Clippy](https://github.com/rust-lang/rust-clippy)** - Rust linter that catches common mistakes and suggests idiomatic code improvements
 
@@ -438,6 +445,39 @@ Note-taking apps, task management tools, time tracking software, and utilities t
 - **[Obsidian](https://obsidian.md/)** - Knowledge management with bidirectional links
 - **[Roam Research](https://roamresearch.com/)** - Note-taking tool for networked thought
 - **[Logseq](https://logseq.com/)** - Open-source knowledge management
+
+
+## Python Development
+
+
+
+### Development Environment
+- **[pyenv](https://github.com/pyenv/pyenv)** - Simple Python version management
+- **[conda](https://docs.conda.io/)** - Package and environment management system
+- **[virtualenv](https://virtualenv.pypa.io/)** - Virtual Python environment builder
+- **[pipx](https://pypa.github.io/pipx/)** - Install and run Python applications in isolated environments
+
+
+### Web Frameworks
+- **[FastAPI](https://fastapi.tiangolo.com/)** - Modern, fast web framework for building APIs
+- **[Django](https://www.djangoproject.com/)** - High-level Python web framework
+- **[Flask](https://flask.palletsprojects.com/)** - Lightweight WSGI web application framework
+- **[Starlette](https://www.starlette.io/)** - Lightweight ASGI framework for building async web services
+
+
+### Data Science & ML
+- **[Jupyter](https://jupyter.org/)** - Interactive computing across dozens of languages
+- **[pandas](https://pandas.pydata.org/)** - Data manipulation and analysis library
+- **[NumPy](https://numpy.org/)** - Fundamental package for scientific computing
+- **[scikit-learn](https://scikit-learn.org/)** - Machine learning library for Python
+- **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust
+
+
+### CLI & Automation
+- **[Click](https://click.palletsprojects.com/)** - Composable command line interface toolkit
+- **[Typer](https://typer.tiangolo.com/)** - Modern library for building CLI applications
+- **[Rich](https://rich.readthedocs.io/)** - Library for rich text and beautiful formatting in the terminal
+- **[Textual](https://textual.textualize.io/)** - Framework for building terminal user interfaces
 
 
 ## Learning & References

@@ -59,6 +59,9 @@ Package Managers,Language-Specific,Yarn,https://yarnpkg.com/,"Fast, reliable Jav
 Package Managers,Language-Specific,pnpm,https://pnpm.io/,Efficient package manager for Node.js
 Package Managers,Language-Specific,pip,https://pip.pypa.io/,Python package installer
 Package Managers,Language-Specific,uv,https://docs.astral.sh/uv/,Fast Python package installer and resolver
+Package Managers,Language-Specific,Poetry,https://python-poetry.org/,Python dependency management and packaging
+Package Managers,Language-Specific,PDM,https://pdm.fming.dev/,Modern Python package manager with PEP 582 support
+Package Managers,Language-Specific,Pipenv,https://pipenv.pypa.io/,Python development workflow for humans
 Package Managers,Language-Specific,Cargo,https://doc.rust-lang.org/cargo/,Rust package manager
 Package Managers,Language-Specific,Go Modules,https://golang.org/ref/mod,Go dependency management
 Package Managers,System Package Managers,Homebrew,https://brew.sh/,Package manager for macOS and Linux
@@ -94,8 +97,11 @@ Debugging & Profiling,Performance Profiling,perf,https://perf.wiki.kernel.org/,L
 Code Quality & Linting,Linters & Formatters,ESLint,https://eslint.org/,JavaScript and TypeScript linter
 Code Quality & Linting,Linters & Formatters,Prettier,https://prettier.io/,Opinionated code formatter
 Code Quality & Linting,Linters & Formatters,Black,https://black.readthedocs.io/,Python code formatter
+Code Quality & Linting,Linters & Formatters,Ruff,https://docs.astral.sh/ruff/,Extremely fast Python linter and formatter
 Code Quality & Linting,Linters & Formatters,Pylint,https://pylint.org/,Python static code analysis
 Code Quality & Linting,Linters & Formatters,Flake8,https://flake8.pycqa.org/,Python linting tool
+Code Quality & Linting,Linters & Formatters,isort,https://pycqa.github.io/isort/,Python import sorting utility
+Code Quality & Linting,Linters & Formatters,mypy,https://mypy-lang.org/,Static type checker for Python
 Code Quality & Linting,Linters & Formatters,Rustfmt,https://github.com/rust-lang/rustfmt,Rust code formatter
 Code Quality & Linting,Linters & Formatters,Clippy,https://github.com/rust-lang/rust-clippy,Rust linter that catches common mistakes and suggests idiomatic code improvements
 Code Quality & Linting,Code Analysis,SonarQube,https://www.sonarqube.org/,Static code analysis platform
@@ -169,6 +175,23 @@ Productivity,Time Management,Focus,https://heyfocus.com/,Website and application
 Productivity,Note Taking,Obsidian,https://obsidian.md/,Knowledge management with bidirectional links
 Productivity,Note Taking,Roam Research,https://roamresearch.com/,Note-taking tool for networked thought
 Productivity,Note Taking,Logseq,https://logseq.com/,Open-source knowledge management
+Python Development,Development Environment,pyenv,https://github.com/pyenv/pyenv,Simple Python version management
+Python Development,Development Environment,conda,https://docs.conda.io/,Package and environment management system
+Python Development,Development Environment,virtualenv,https://virtualenv.pypa.io/,Virtual Python environment builder
+Python Development,Development Environment,pipx,https://pypa.github.io/pipx/,Install and run Python applications in isolated environments
+Python Development,Web Frameworks,FastAPI,https://fastapi.tiangolo.com/,"Modern, fast web framework for building APIs"
+Python Development,Web Frameworks,Django,https://www.djangoproject.com/,High-level Python web framework
+Python Development,Web Frameworks,Flask,https://flask.palletsprojects.com/,Lightweight WSGI web application framework
+Python Development,Web Frameworks,Starlette,https://www.starlette.io/,Lightweight ASGI framework for building async web services
+Python Development,Data Science & ML,Jupyter,https://jupyter.org/,Interactive computing across dozens of languages
+Python Development,Data Science & ML,pandas,https://pandas.pydata.org/,Data manipulation and analysis library
+Python Development,Data Science & ML,NumPy,https://numpy.org/,Fundamental package for scientific computing
+Python Development,Data Science & ML,scikit-learn,https://scikit-learn.org/,Machine learning library for Python
+Python Development,Data Science & ML,Polars,https://pola.rs/,Fast DataFrame library implemented in Rust
+Python Development,CLI & Automation,Click,https://click.palletsprojects.com/,Composable command line interface toolkit
+Python Development,CLI & Automation,Typer,https://typer.tiangolo.com/,Modern library for building CLI applications
+Python Development,CLI & Automation,Rich,https://rich.readthedocs.io/,Library for rich text and beautiful formatting in the terminal
+Python Development,CLI & Automation,Textual,https://textual.textualize.io/,Framework for building terminal user interfaces
 Learning & References,Documentation,DevDocs,https://devdocs.io/,API documentation browser
 Learning & References,Documentation,MDN Web Docs,https://developer.mozilla.org/,Web technology documentation
 Learning & References,Documentation,Stack Overflow,https://stackoverflow.com/,Q&A platform for developers

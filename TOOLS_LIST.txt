@@ -95,6 +95,9 @@
 - pnpm: https://pnpm.io/
 - pip: https://pip.pypa.io/
 - uv: https://docs.astral.sh/uv/
+- Poetry: https://python-poetry.org/
+- PDM: https://pdm.fming.dev/
+- Pipenv: https://pipenv.pypa.io/
 - Cargo: https://doc.rust-lang.org/cargo/
 - Go Modules: https://golang.org/ref/mod
 
@@ -154,8 +157,11 @@
 - ESLint: https://eslint.org/
 - Prettier: https://prettier.io/
 - Black: https://black.readthedocs.io/
+- Ruff: https://docs.astral.sh/ruff/
 - Pylint: https://pylint.org/
 - Flake8: https://flake8.pycqa.org/
+- isort: https://pycqa.github.io/isort/
+- mypy: https://mypy-lang.org/
 - Rustfmt: https://github.com/rust-lang/rustfmt
 - Clippy: https://github.com/rust-lang/rust-clippy
 
@@ -287,6 +293,38 @@
 - Obsidian: https://obsidian.md/
 - Roam Research: https://roamresearch.com/
 - Logseq: https://logseq.com/
+
+## Python Development
+
+
+### Development Environment
+
+- pyenv: https://github.com/pyenv/pyenv
+- conda: https://docs.conda.io/
+- virtualenv: https://virtualenv.pypa.io/
+- pipx: https://pypa.github.io/pipx/
+
+### Web Frameworks
+
+- FastAPI: https://fastapi.tiangolo.com/
+- Django: https://www.djangoproject.com/
+- Flask: https://flask.palletsprojects.com/
+- Starlette: https://www.starlette.io/
+
+### Data Science & ML
+
+- Jupyter: https://jupyter.org/
+- pandas: https://pandas.pydata.org/
+- NumPy: https://numpy.org/
+- scikit-learn: https://scikit-learn.org/
+- Polars: https://pola.rs/
+
+### CLI & Automation
+
+- Click: https://click.palletsprojects.com/
+- Typer: https://typer.tiangolo.com/
+- Rich: https://rich.readthedocs.io/
+- Textual: https://textual.textualize.io/
 
 ## Learning & References
 

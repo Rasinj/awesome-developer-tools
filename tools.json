@@ -401,6 +401,21 @@
               "description": "Fast Python package installer and resolver"
             },
             {
+              "name": "Poetry",
+              "url": "https://python-poetry.org/",
+              "description": "Python dependency management and packaging"
+            },
+            {
+              "name": "PDM",
+              "url": "https://pdm.fming.dev/",
+              "description": "Modern Python package manager with PEP 582 support"
+            },
+            {
+              "name": "Pipenv",
+              "url": "https://pipenv.pypa.io/",
+              "description": "Python development workflow for humans"
+            },
+            {
               "name": "Cargo",
               "url": "https://doc.rust-lang.org/cargo/",
               "description": "Rust package manager"
@@ -644,6 +659,11 @@
               "description": "Python code formatter"
             },
             {
+              "name": "Ruff",
+              "url": "https://docs.astral.sh/ruff/",
+              "description": "Extremely fast Python linter and formatter"
+            },
+            {
               "name": "Pylint",
               "url": "https://pylint.org/",
               "description": "Python static code analysis"
@@ -652,6 +672,16 @@
               "name": "Flake8",
               "url": "https://flake8.pycqa.org/",
               "description": "Python linting tool"
+            },
+            {
+              "name": "isort",
+              "url": "https://pycqa.github.io/isort/",
+              "description": "Python import sorting utility"
+            },
+            {
+              "name": "mypy",
+              "url": "https://mypy-lang.org/",
+              "description": "Static type checker for Python"
             },
             {
               "name": "Rustfmt",
@@ -1178,6 +1208,118 @@
               "name": "Logseq",
               "url": "https://logseq.com/",
               "description": "Open-source knowledge management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Python Development",
+      "id": "python-development",
+      "description": "",
+      "subcategories": [
+        {
+          "name": "Development Environment",
+          "tools": [
+            {
+              "name": "pyenv",
+              "url": "https://github.com/pyenv/pyenv",
+              "description": "Simple Python version management"
+            },
+            {
+              "name": "conda",
+              "url": "https://docs.conda.io/",
+              "description": "Package and environment management system"
+            },
+            {
+              "name": "virtualenv",
+              "url": "https://virtualenv.pypa.io/",
+              "description": "Virtual Python environment builder"
+            },
+            {
+              "name": "pipx",
+              "url": "https://pypa.github.io/pipx/",
+              "description": "Install and run Python applications in isolated environments"
+            }
+          ]
+        },
+        {
+          "name": "Web Frameworks",
+          "tools": [
+            {
+              "name": "FastAPI",
+              "url": "https://fastapi.tiangolo.com/",
+              "description": "Modern, fast web framework for building APIs"
+            },
+            {
+              "name": "Django",
+              "url": "https://www.djangoproject.com/",
+              "description": "High-level Python web framework"
+            },
+            {
+              "name": "Flask",
+              "url": "https://flask.palletsprojects.com/",
+              "description": "Lightweight WSGI web application framework"
+            },
+            {
+              "name": "Starlette",
+              "url": "https://www.starlette.io/",
+              "description": "Lightweight ASGI framework for building async web services"
+            }
+          ]
+        },
+        {
+          "name": "Data Science & ML",
+          "tools": [
+            {
+              "name": "Jupyter",
+              "url": "https://jupyter.org/",
+              "description": "Interactive computing across dozens of languages"
+            },
+            {
+              "name": "pandas",
+              "url": "https://pandas.pydata.org/",
+              "description": "Data manipulation and analysis library"
+            },
+            {
+              "name": "NumPy",
+              "url": "https://numpy.org/",
+              "description": "Fundamental package for scientific computing"
+            },
+            {
+              "name": "scikit-learn",
+              "url": "https://scikit-learn.org/",
+              "description": "Machine learning library for Python"
+            },
+            {
+              "name": "Polars",
+              "url": "https://pola.rs/",
+              "description": "Fast DataFrame library implemented in Rust"
+            }
+          ]
+        },
+        {
+          "name": "CLI & Automation",
+          "tools": [
+            {
+              "name": "Click",
+              "url": "https://click.palletsprojects.com/",
+              "description": "Composable command line interface toolkit"
+            },
+            {
+              "name": "Typer",
+              "url": "https://typer.tiangolo.com/",
+              "description": "Modern library for building CLI applications"
+            },
+            {
+              "name": "Rich",
+              "url": "https://rich.readthedocs.io/",
+              "description": "Library for rich text and beautiful formatting in the terminal"
+            },
+            {
+              "name": "Textual",
+              "url": "https://textual.textualize.io/",
+              "description": "Framework for building terminal user interfaces"
             }
           ]
         }
