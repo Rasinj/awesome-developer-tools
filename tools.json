@@ -1842,6 +1842,31 @@
               "description": "Columnar storage format optimized for analytics workloads"
             }
           ]
+        },
+        {
+          "name": "Time Series",
+          "tools": [
+            {
+              "name": "Tsfresh",
+              "url": "https://tsfresh.com/",
+              "description": "A Python package for automatic extraction of a large number of time-series features."
+            },
+            {
+              "name": "Sktime",
+              "url": "https://www.sktime.net/",
+              "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn."
+            },
+            {
+              "name": "AutoTS",
+              "url": "https://github.com/winedarksea/AutoTS",
+              "description": "An automated time-series forecasting library for Python."
+            },
+            {
+              "name": "Prophet",
+              "url": "https://facebook.github.io/prophet/",
+              "description": "A forecasting library for time series data developed by Facebook."
+            }
+          ]
         }
       ]
     }

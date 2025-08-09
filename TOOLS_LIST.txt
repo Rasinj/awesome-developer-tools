@@ -448,3 +448,9 @@
 - Polars: https://pola.rs/
 - Apache Arrow: https://arrow.apache.org/
 - Parquet: https://parquet.apache.org/
+
+### Time Series
+- Tsfresh: https://tsfresh.com/
+- Sktime: https://www.sktime.net/
+- AutoTS: https://github.com/winedarksea/AutoTS
+- Prophet: https://facebook.github.io/prophet/

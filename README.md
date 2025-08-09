@@ -4,31 +4,6 @@
 
 A curated list of awesome tools, resources, and utilities that make developers' lives easier and more productive.
 
-## 🔮 Revolutionary Tool Discovery
-
-### [**Developer Intent Engine**](./tool-finder.html) 🎯
-Find tools based on what you're trying to accomplish, not just browsing categories. Simply describe your goal and get personalized tool recommendations.
-
-✨ **Features:**
-- **Natural Language Search** - "I need to set up a new Python project quickly"
-- **Contextual Filters** - Experience level, team size, project phase, time constraints
-- **Developer Journey Map** - Find tools for each stage of development
-- **Problem-Solution Matcher** - Common frustrations mapped to solutions
-- **Intent-Driven Discovery** - Tools recommended based on your actual goals
-
-### [**Developer Tools Timeline**](./tool-timeline.html) ⏰
-**New!** Explore the evolution of developer tools from the Unix era to the AI-powered future. Understand how tools have evolved and discover what's coming next.
-
-🌟 **Features:**
-- **Historical Timeline** - Interactive journey through 50+ years of tool evolution
-- **Trend Analysis** - Discover rising, stable, and declining tools with predictive analytics
-- **Era-based Discovery** - Browse tools by development eras (Unix, Web 2.0, Mobile, Cloud-Native, AI)
-- **Evolution Chains** - See how tools replaced or evolved from others (Webpack → Vite, etc.)
-- **Future Predictions** - AI-powered predictions of emerging tool categories and trends
-- **Educational Timeline** - Learn the history and context behind developer tooling
-
-[🚀 **Launch Tool Finder**](./tool-finder.html) | [⏰ **Explore Timeline**](./tool-timeline.html)
-
 ## Contents
 
 - [Code Editors & IDEs](#code-editors--ides)
@@ -678,6 +653,13 @@ Tools, frameworks, and platforms for data analysis, machine learning, artificial
 - **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust with Python bindings
 - **[Apache Arrow](https://arrow.apache.org/)** - Cross-language development platform for in-memory columnar data
 - **[Parquet](https://parquet.apache.org/)** - Columnar storage format optimized for analytics workloads
+
+
+### Time Series
+- **[Tsfresh](https://tsfresh.com/)** - A Python package for automatic extraction of a large number of time-series features.
+- **[Sktime](https://www.sktime.net/)** - A unified framework for time series analysis in Python, interoperable with scikit-learn.
+- **[AutoTS](https://github.com/winedarksea/AutoTS)** - An automated time-series forecasting library for Python.
+- **[Prophet](https://facebook.github.io/prophet/)** - A forecasting library for time series data developed by Facebook.
 
 
 
