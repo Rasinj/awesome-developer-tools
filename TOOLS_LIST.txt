@@ -4,7 +4,6 @@
 
 ### Modern Editors
 - Visual Studio Code: https://code.visualstudio.com/
-- Neovim: https://neovim.io/
 - Helix: https://helix-editor.com/
 - Zed: https://zed.dev/
 
@@ -224,7 +223,6 @@
 ### Graph & Analytics Databases
 - Neo4j: https://neo4j.com/
 - KuzuDB: https://kuzudb.com/
-- DuckDB: https://duckdb.org/
 - ClickHouse: https://clickhouse.com/
 - Apache Parquet Tools: https://github.com/apache/parquet-mr
 
@@ -371,15 +369,6 @@
 - Django: https://www.djangoproject.com/
 - Flask: https://flask.palletsprojects.com/
 - Starlette: https://www.starlette.io/
-
-### Data Science & ML
-- Jupyter: https://jupyter.org/
-- pandas: https://pandas.pydata.org/
-- NumPy: https://numpy.org/
-- scikit-learn: https://scikit-learn.org/
-- Polars: https://pola.rs/
-- DuckDB Python: https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg
-- PyArrow: https://arrow.apache.org/docs/python/
 
 ### CLI & Automation
 - Click: https://click.palletsprojects.com/

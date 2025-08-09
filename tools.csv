@@ -1,6 +1,5 @@
 category,subcategory,name,url,description
 Code Editors & IDEs,Modern Editors,Visual Studio Code,https://code.visualstudio.com/,"Microsoft's lightweight, extensible code editor with massive ecosystem"
-Code Editors & IDEs,Modern Editors,Neovim,https://neovim.io/,Modern Vim fork with better defaults and Lua configuration
 Code Editors & IDEs,Modern Editors,Helix,https://helix-editor.com/,Post-modern modal text editor written in Rust
 Code Editors & IDEs,Modern Editors,Zed,https://zed.dev/,"High-performance, multiplayer code editor built in Rust"
 Code Editors & IDEs,Full IDEs,IntelliJ IDEA,https://www.jetbrains.com/idea/,Powerful Java IDE with excellent refactoring tools
@@ -142,7 +141,6 @@ Database Tools,Database Development,Flyway,https://flywaydb.org/,Database migrat
 Database Tools,Database Development,Liquibase,https://www.liquibase.org/,Database schema change management
 Database Tools,Graph & Analytics Databases,Neo4j,https://neo4j.com/,Graph database platform for connected data and complex queries
 Database Tools,Graph & Analytics Databases,KuzuDB,https://kuzudb.com/,Embeddable graph database built for query speed and scalability
-Database Tools,Graph & Analytics Databases,DuckDB,https://duckdb.org/,In-process analytical database designed for OLAP workloads
 Database Tools,Graph & Analytics Databases,ClickHouse,https://clickhouse.com/,Real-time analytics DBMS for big data and high performance
 Database Tools,Graph & Analytics Databases,Apache Parquet Tools,https://github.com/apache/parquet-mr,"Command-line tools for reading, writing and manipulating Parquet files"
 Development Environments,Containerized Environments,Dev Containers,https://containers.dev/,Open specification for development containers with VS Code integration
@@ -227,13 +225,6 @@ Python Development,Web Frameworks,FastAPI,https://fastapi.tiangolo.com/,"Modern,
 Python Development,Web Frameworks,Django,https://www.djangoproject.com/,High-level Python web framework
 Python Development,Web Frameworks,Flask,https://flask.palletsprojects.com/,Lightweight WSGI web application framework
 Python Development,Web Frameworks,Starlette,https://www.starlette.io/,Lightweight ASGI framework for building async web services
-Python Development,Data Science & ML,Jupyter,https://jupyter.org/,Interactive computing across dozens of languages
-Python Development,Data Science & ML,pandas,https://pandas.pydata.org/,Data manipulation and analysis library
-Python Development,Data Science & ML,NumPy,https://numpy.org/,Fundamental package for scientific computing
-Python Development,Data Science & ML,scikit-learn,https://scikit-learn.org/,Machine learning library for Python
-Python Development,Data Science & ML,Polars,https://pola.rs/,Fast DataFrame library implemented in Rust
-Python Development,Data Science & ML,DuckDB Python,https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg,Python client for DuckDB in-process analytical database
-Python Development,Data Science & ML,PyArrow,https://arrow.apache.org/docs/python/,Python library for Apache Arrow columnar in-memory analytics
 Python Development,CLI & Automation,Click,https://click.palletsprojects.com/,Composable command line interface toolkit
 Python Development,CLI & Automation,Typer,https://typer.tiangolo.com/,Modern library for building CLI applications
 Python Development,CLI & Automation,Rich,https://rich.readthedocs.io/,Library for rich text and beautiful formatting in the terminal

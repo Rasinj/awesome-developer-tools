@@ -40,7 +40,6 @@ Essential text editors and integrated development environments for writing, edit
 
 ### Modern Editors
 - **[Visual Studio Code](https://code.visualstudio.com/)** - Microsoft's lightweight, extensible code editor with massive ecosystem
-- **[Neovim](https://neovim.io/)** - Modern Vim fork with better defaults and Lua configuration
 - **[Helix](https://helix-editor.com/)** - Post-modern modal text editor written in Rust
 - **[Zed](https://zed.dev/)** - High-performance, multiplayer code editor built in Rust
 
@@ -335,7 +334,6 @@ Database management systems, GUI clients, migration tools, and utilities for wor
 ### Graph & Analytics Databases
 - **[Neo4j](https://neo4j.com/)** - Graph database platform for connected data and complex queries
 - **[KuzuDB](https://kuzudb.com/)** - Embeddable graph database built for query speed and scalability
-- **[DuckDB](https://duckdb.org/)** - In-process analytical database designed for OLAP workloads
 - **[ClickHouse](https://clickhouse.com/)** - Real-time analytics DBMS for big data and high performance
 - **[Apache Parquet Tools](https://github.com/apache/parquet-mr)** - Command-line tools for reading, writing and manipulating Parquet files
 
@@ -542,16 +540,6 @@ Note-taking apps, task management tools, time tracking software, and utilities t
 - **[Django](https://www.djangoproject.com/)** - High-level Python web framework
 - **[Flask](https://flask.palletsprojects.com/)** - Lightweight WSGI web application framework
 - **[Starlette](https://www.starlette.io/)** - Lightweight ASGI framework for building async web services
-
-
-### Data Science & ML
-- **[Jupyter](https://jupyter.org/)** - Interactive computing across dozens of languages
-- **[pandas](https://pandas.pydata.org/)** - Data manipulation and analysis library
-- **[NumPy](https://numpy.org/)** - Fundamental package for scientific computing
-- **[scikit-learn](https://scikit-learn.org/)** - Machine learning library for Python
-- **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust
-- **[DuckDB Python](https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg)** - Python client for DuckDB in-process analytical database
-- **[PyArrow](https://arrow.apache.org/docs/python/)** - Python library for Apache Arrow columnar in-memory analytics
 
 
 ### CLI & Automation
