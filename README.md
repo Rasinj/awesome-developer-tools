@@ -4,31 +4,6 @@
 
 A curated list of awesome tools, resources, and utilities that make developers' lives easier and more productive.
 
-## 🔮 Revolutionary Tool Discovery
-
-### [**Developer Intent Engine**](./tool-finder.html) 🎯
-Find tools based on what you're trying to accomplish, not just browsing categories. Simply describe your goal and get personalized tool recommendations.
-
-✨ **Features:**
-- **Natural Language Search** - "I need to set up a new Python project quickly"
-- **Contextual Filters** - Experience level, team size, project phase, time constraints
-- **Developer Journey Map** - Find tools for each stage of development
-- **Problem-Solution Matcher** - Common frustrations mapped to solutions
-- **Intent-Driven Discovery** - Tools recommended based on your actual goals
-
-### [**Developer Tools Timeline**](./tool-timeline.html) ⏰
-**New!** Explore the evolution of developer tools from the Unix era to the AI-powered future. Understand how tools have evolved and discover what's coming next.
-
-🌟 **Features:**
-- **Historical Timeline** - Interactive journey through 50+ years of tool evolution
-- **Trend Analysis** - Discover rising, stable, and declining tools with predictive analytics
-- **Era-based Discovery** - Browse tools by development eras (Unix, Web 2.0, Mobile, Cloud-Native, AI)
-- **Evolution Chains** - See how tools replaced or evolved from others (Webpack → Vite, etc.)
-- **Future Predictions** - AI-powered predictions of emerging tool categories and trends
-- **Educational Timeline** - Learn the history and context behind developer tooling
-
-[🚀 **Launch Tool Finder**](./tool-finder.html) | [⏰ **Explore Timeline**](./tool-timeline.html)
-
 ## Contents
 
 - [Code Editors & IDEs](#code-editors--ides)
@@ -65,7 +40,6 @@ Essential text editors and integrated development environments for writing, edit
 
 ### Modern Editors
 - **[Visual Studio Code](https://code.visualstudio.com/)** - Microsoft's lightweight, extensible code editor with massive ecosystem
-- **[Neovim](https://neovim.io/)** - Modern Vim fork with better defaults and Lua configuration
 - **[Helix](https://helix-editor.com/)** - Post-modern modal text editor written in Rust
 - **[Zed](https://zed.dev/)** - High-performance, multiplayer code editor built in Rust
 
@@ -360,7 +334,6 @@ Database management systems, GUI clients, migration tools, and utilities for wor
 ### Graph & Analytics Databases
 - **[Neo4j](https://neo4j.com/)** - Graph database platform for connected data and complex queries
 - **[KuzuDB](https://kuzudb.com/)** - Embeddable graph database built for query speed and scalability
-- **[DuckDB](https://duckdb.org/)** - In-process analytical database designed for OLAP workloads
 - **[ClickHouse](https://clickhouse.com/)** - Real-time analytics DBMS for big data and high performance
 - **[Apache Parquet Tools](https://github.com/apache/parquet-mr)** - Command-line tools for reading, writing and manipulating Parquet files
 
@@ -569,16 +542,6 @@ Note-taking apps, task management tools, time tracking software, and utilities t
 - **[Starlette](https://www.starlette.io/)** - Lightweight ASGI framework for building async web services
 
 
-### Data Science & ML
-- **[Jupyter](https://jupyter.org/)** - Interactive computing across dozens of languages
-- **[pandas](https://pandas.pydata.org/)** - Data manipulation and analysis library
-- **[NumPy](https://numpy.org/)** - Fundamental package for scientific computing
-- **[scikit-learn](https://scikit-learn.org/)** - Machine learning library for Python
-- **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust
-- **[DuckDB Python](https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg)** - Python client for DuckDB in-process analytical database
-- **[PyArrow](https://arrow.apache.org/docs/python/)** - Python library for Apache Arrow columnar in-memory analytics
-
-
 ### CLI & Automation
 - **[Click](https://click.palletsprojects.com/)** - Composable command line interface toolkit
 - **[Typer](https://typer.tiangolo.com/)** - Modern library for building CLI applications
@@ -678,6 +641,13 @@ Tools, frameworks, and platforms for data analysis, machine learning, artificial
 - **[Polars](https://pola.rs/)** - Fast DataFrame library implemented in Rust with Python bindings
 - **[Apache Arrow](https://arrow.apache.org/)** - Cross-language development platform for in-memory columnar data
 - **[Parquet](https://parquet.apache.org/)** - Columnar storage format optimized for analytics workloads
+
+
+### Time Series
+- **[Tsfresh](https://tsfresh.com/)** - A Python package for automatic extraction of a large number of time-series features.
+- **[Sktime](https://www.sktime.net/)** - A unified framework for time series analysis in Python, interoperable with scikit-learn.
+- **[AutoTS](https://github.com/winedarksea/AutoTS)** - An automated time-series forecasting library for Python.
+- **[Prophet](https://facebook.github.io/prophet/)** - A forecasting library for time series data developed by Facebook.
 
 
 

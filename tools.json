@@ -20,11 +20,6 @@
               "description": "Microsoft's lightweight, extensible code editor with massive ecosystem"
             },
             {
-              "name": "Neovim",
-              "url": "https://neovim.io/",
-              "description": "Modern Vim fork with better defaults and Lua configuration"
-            },
-            {
               "name": "Helix",
               "url": "https://helix-editor.com/",
               "description": "Post-modern modal text editor written in Rust"
@@ -943,11 +938,6 @@
               "description": "Embeddable graph database built for query speed and scalability"
             },
             {
-              "name": "DuckDB",
-              "url": "https://duckdb.org/",
-              "description": "In-process analytical database designed for OLAP workloads"
-            },
-            {
               "name": "ClickHouse",
               "url": "https://clickhouse.com/",
               "description": "Real-time analytics DBMS for big data and high performance"
@@ -1541,46 +1531,6 @@
           ]
         },
         {
-          "name": "Data Science & ML",
-          "tools": [
-            {
-              "name": "Jupyter",
-              "url": "https://jupyter.org/",
-              "description": "Interactive computing across dozens of languages"
-            },
-            {
-              "name": "pandas",
-              "url": "https://pandas.pydata.org/",
-              "description": "Data manipulation and analysis library"
-            },
-            {
-              "name": "NumPy",
-              "url": "https://numpy.org/",
-              "description": "Fundamental package for scientific computing"
-            },
-            {
-              "name": "scikit-learn",
-              "url": "https://scikit-learn.org/",
-              "description": "Machine learning library for Python"
-            },
-            {
-              "name": "Polars",
-              "url": "https://pola.rs/",
-              "description": "Fast DataFrame library implemented in Rust"
-            },
-            {
-              "name": "DuckDB Python",
-              "url": "https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg",
-              "description": "Python client for DuckDB in-process analytical database"
-            },
-            {
-              "name": "PyArrow",
-              "url": "https://arrow.apache.org/docs/python/",
-              "description": "Python library for Apache Arrow columnar in-memory analytics"
-            }
-          ]
-        },
-        {
           "name": "CLI & Automation",
           "tools": [
             {
@@ -1840,6 +1790,31 @@
               "name": "Parquet",
               "url": "https://parquet.apache.org/",
               "description": "Columnar storage format optimized for analytics workloads"
+            }
+          ]
+        },
+        {
+          "name": "Time Series",
+          "tools": [
+            {
+              "name": "Tsfresh",
+              "url": "https://tsfresh.com/",
+              "description": "A Python package for automatic extraction of a large number of time-series features."
+            },
+            {
+              "name": "Sktime",
+              "url": "https://www.sktime.net/",
+              "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn."
+            },
+            {
+              "name": "AutoTS",
+              "url": "https://github.com/winedarksea/AutoTS",
+              "description": "An automated time-series forecasting library for Python."
+            },
+            {
+              "name": "Prophet",
+              "url": "https://facebook.github.io/prophet/",
+              "description": "A forecasting library for time series data developed by Facebook."
             }
           ]
         }
