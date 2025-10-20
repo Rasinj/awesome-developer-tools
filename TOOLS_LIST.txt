@@ -26,7 +26,11 @@
 - AstroNvim: https://astronvim.com/
 - LunarVim: https://lunarvim.org/
 - NvChad: https://nvchad.com/
+
+### Emacs
+- Emacs: https://www.gnu.org/software/emacs/
 - Doom Emacs: https://doomemacs.org/
+- Spacemacs: https://www.spacemacs.org/
 
 ## Version Control
 
@@ -90,7 +94,6 @@
 - hyperfine: https://github.com/sharkdp/hyperfine
 - watchexec: https://watchexec.github.io/
 - lazydocker: https://github.com/jesseduffield/lazydocker
-- parquet-tools: https://github.com/chhantyal/parquet-tools
 - visidata: https://visidata.org/
 
 ### Productivity & Workflow
@@ -121,6 +124,7 @@
 - nvm: https://github.com/nvm-sh/nvm
 - fnm: https://github.com/Schniz/fnm
 - rbenv: https://github.com/rbenv/rbenv
+- pyenv: https://github.com/pyenv/pyenv
 - SDKMAN!: https://sdkman.io/
 - rustup: https://rustup.rs/
 
@@ -356,21 +360,14 @@
 - Roam Research: https://roamresearch.com/
 - Logseq: https://logseq.com/
 
-## Python Development
+## Python Libraries & Tools
 
-### Development Environment
-- pyenv: https://github.com/pyenv/pyenv
+### Environment Management
 - conda: https://docs.conda.io/
 - virtualenv: https://virtualenv.pypa.io/
 - pipx: https://pypa.github.io/pipx/
 
-### Web Frameworks
-- FastAPI: https://fastapi.tiangolo.com/
-- Django: https://www.djangoproject.com/
-- Flask: https://flask.palletsprojects.com/
-- Starlette: https://www.starlette.io/
-
-### CLI & Automation
+### CLI Development
 - Click: https://click.palletsprojects.com/
 - Typer: https://typer.tiangolo.com/
 - Rich: https://rich.readthedocs.io/
@@ -418,6 +415,48 @@
 
 ### Native Development
 - Xcode: https://developer.apple.com/xcode/
+
+## Web Frameworks
+
+### Python
+- FastAPI: https://fastapi.tiangolo.com/
+- Django: https://www.djangoproject.com/
+- Flask: https://flask.palletsprojects.com/
+- Starlette: https://www.starlette.io/
+
+### JavaScript/TypeScript
+- Next.js: https://nextjs.org/
+- Express: https://expressjs.com/
+- NestJS: https://nestjs.com/
+- Nuxt: https://nuxt.com/
+- SvelteKit: https://kit.svelte.dev/
+- Remix: https://remix.run/
+- Hono: https://hono.dev/
+
+### Other Languages
+- Ruby on Rails: https://rubyonrails.org/
+- Laravel: https://laravel.com/
+- Spring Boot: https://spring.io/projects/spring-boot
+- ASP.NET Core: https://dotnet.microsoft.com/apps/aspnet
+- Gin: https://gin-gonic.com/
+- Fiber: https://gofiber.io/
+- Actix Web: https://actix.rs/
+- Axum: https://github.com/tokio-rs/axum
+
+## Desktop Application Development
+
+### Cross-Platform
+- Electron: https://www.electronjs.org/
+- Tauri: https://tauri.app/
+- Flutter Desktop: https://flutter.dev/desktop
+- Qt: https://www.qt.io/
+- Avalonia: https://avaloniaui.net/
+- Wails: https://wails.io/
+
+### Native
+- SwiftUI: https://developer.apple.com/xcode/swiftui/
+- WPF: https://docs.microsoft.com/en-us/dotnet/desktop/wpf/
+- WinUI: https://microsoft.github.io/microsoft-ui-xaml/
 
 ## Data Science & Machine Learning
 
