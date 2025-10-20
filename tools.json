@@ -113,11 +113,26 @@
               "name": "NvChad",
               "url": "https://nvchad.com/",
               "description": "Blazing fast Neovim config providing solid defaults and beautiful UI"
+            }
+          ]
+        },
+        {
+          "name": "Emacs",
+          "tools": [
+            {
+              "name": "Emacs",
+              "url": "https://www.gnu.org/software/emacs/",
+              "description": "Extensible, customizable text editor with powerful ecosystem"
             },
             {
               "name": "Doom Emacs",
               "url": "https://doomemacs.org/",
               "description": "Emacs framework with Vim emulation and curated package selection"
+            },
+            {
+              "name": "Spacemacs",
+              "url": "https://www.spacemacs.org/",
+              "description": "Community-driven Emacs distribution with excellent defaults"
             }
           ]
         }
@@ -384,11 +399,6 @@
               "description": "Terminal UI for Docker and Docker Compose with container management"
             },
             {
-              "name": "parquet-tools",
-              "url": "https://github.com/chhantyal/parquet-tools",
-              "description": "Command-line tools for inspecting Parquet files"
-            },
-            {
               "name": "visidata",
               "url": "https://visidata.org/",
               "description": "Terminal spreadsheet multitool for exploring and arranging data"
@@ -514,6 +524,11 @@
               "name": "rbenv",
               "url": "https://github.com/rbenv/rbenv",
               "description": "Ruby version management with project-specific versions"
+            },
+            {
+              "name": "pyenv",
+              "url": "https://github.com/pyenv/pyenv",
+              "description": "Simple Python version management with project-specific versions"
             },
             {
               "name": "SDKMAN!",
@@ -1476,27 +1491,22 @@
       ]
     },
     {
-      "name": "Python Development",
-      "id": "python-development",
-      "description": "",
+      "name": "Python Libraries & Tools",
+      "id": "python-libraries--tools",
+      "description": "Python-specific libraries, frameworks, and utilities for environment management and application development.",
       "subcategories": [
         {
-          "name": "Development Environment",
+          "name": "Environment Management",
           "tools": [
-            {
-              "name": "pyenv",
-              "url": "https://github.com/pyenv/pyenv",
-              "description": "Simple Python version management"
-            },
             {
               "name": "conda",
               "url": "https://docs.conda.io/",
-              "description": "Package and environment management system"
+              "description": "Package and environment management system for Python and other languages"
             },
             {
               "name": "virtualenv",
               "url": "https://virtualenv.pypa.io/",
-              "description": "Virtual Python environment builder"
+              "description": "Virtual Python environment builder for dependency isolation"
             },
             {
               "name": "pipx",
@@ -1506,42 +1516,17 @@
           ]
         },
         {
-          "name": "Web Frameworks",
-          "tools": [
-            {
-              "name": "FastAPI",
-              "url": "https://fastapi.tiangolo.com/",
-              "description": "Modern, fast web framework for building APIs"
-            },
-            {
-              "name": "Django",
-              "url": "https://www.djangoproject.com/",
-              "description": "High-level Python web framework"
-            },
-            {
-              "name": "Flask",
-              "url": "https://flask.palletsprojects.com/",
-              "description": "Lightweight WSGI web application framework"
-            },
-            {
-              "name": "Starlette",
-              "url": "https://www.starlette.io/",
-              "description": "Lightweight ASGI framework for building async web services"
-            }
-          ]
-        },
-        {
-          "name": "CLI & Automation",
+          "name": "CLI Development",
           "tools": [
             {
               "name": "Click",
               "url": "https://click.palletsprojects.com/",
-              "description": "Composable command line interface toolkit"
+              "description": "Composable command line interface toolkit for Python"
             },
             {
               "name": "Typer",
               "url": "https://typer.tiangolo.com/",
-              "description": "Modern library for building CLI applications"
+              "description": "Modern library for building CLI applications with type hints"
             },
             {
               "name": "Rich",
@@ -1551,7 +1536,7 @@
             {
               "name": "Textual",
               "url": "https://textual.textualize.io/",
-              "description": "Framework for building terminal user interfaces"
+              "description": "Framework for building interactive terminal user interfaces"
             }
           ]
         }
@@ -1713,6 +1698,185 @@
               "name": "Xcode",
               "url": "https://developer.apple.com/xcode/",
               "description": "Apple's integrated development environment for iOS and macOS applications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Web Frameworks",
+      "id": "web-frameworks",
+      "description": "Backend and full-stack frameworks for building web applications, REST APIs, and web services across different programming languages.",
+      "subcategories": [
+        {
+          "name": "Python",
+          "tools": [
+            {
+              "name": "FastAPI",
+              "url": "https://fastapi.tiangolo.com/",
+              "description": "Modern, fast web framework for building APIs with automatic documentation"
+            },
+            {
+              "name": "Django",
+              "url": "https://www.djangoproject.com/",
+              "description": "High-level Python web framework with batteries-included approach"
+            },
+            {
+              "name": "Flask",
+              "url": "https://flask.palletsprojects.com/",
+              "description": "Lightweight WSGI web application framework for simple to complex applications"
+            },
+            {
+              "name": "Starlette",
+              "url": "https://www.starlette.io/",
+              "description": "Lightweight ASGI framework for building high-performance async web services"
+            }
+          ]
+        },
+        {
+          "name": "JavaScript/TypeScript",
+          "tools": [
+            {
+              "name": "Next.js",
+              "url": "https://nextjs.org/",
+              "description": "React framework with server-side rendering and static site generation"
+            },
+            {
+              "name": "Express",
+              "url": "https://expressjs.com/",
+              "description": "Fast, unopinionated, minimalist web framework for Node.js"
+            },
+            {
+              "name": "NestJS",
+              "url": "https://nestjs.com/",
+              "description": "Progressive Node.js framework for building efficient and scalable server-side applications"
+            },
+            {
+              "name": "Nuxt",
+              "url": "https://nuxt.com/",
+              "description": "Vue.js framework for building universal and static web applications"
+            },
+            {
+              "name": "SvelteKit",
+              "url": "https://kit.svelte.dev/",
+              "description": "Full-stack framework for building web apps with Svelte"
+            },
+            {
+              "name": "Remix",
+              "url": "https://remix.run/",
+              "description": "Full-stack web framework built on Web Fetch API"
+            },
+            {
+              "name": "Hono",
+              "url": "https://hono.dev/",
+              "description": "Ultrafast web framework for the Edge runtime"
+            }
+          ]
+        },
+        {
+          "name": "Other Languages",
+          "tools": [
+            {
+              "name": "Ruby on Rails",
+              "url": "https://rubyonrails.org/",
+              "description": "Server-side web application framework written in Ruby"
+            },
+            {
+              "name": "Laravel",
+              "url": "https://laravel.com/",
+              "description": "PHP web application framework with elegant syntax"
+            },
+            {
+              "name": "Spring Boot",
+              "url": "https://spring.io/projects/spring-boot",
+              "description": "Java-based framework for building production-ready applications"
+            },
+            {
+              "name": "ASP.NET Core",
+              "url": "https://dotnet.microsoft.com/apps/aspnet",
+              "description": "Cross-platform framework for building modern web applications with .NET"
+            },
+            {
+              "name": "Gin",
+              "url": "https://gin-gonic.com/",
+              "description": "High-performance HTTP web framework written in Go"
+            },
+            {
+              "name": "Fiber",
+              "url": "https://gofiber.io/",
+              "description": "Express-inspired web framework built on Fasthttp for Go"
+            },
+            {
+              "name": "Actix Web",
+              "url": "https://actix.rs/",
+              "description": "Powerful, pragmatic, and fast web framework for Rust"
+            },
+            {
+              "name": "Axum",
+              "url": "https://github.com/tokio-rs/axum",
+              "description": "Ergonomic and modular web framework built with Tokio for Rust"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Desktop Application Development",
+      "id": "desktop-application-development",
+      "description": "Frameworks and tools for building cross-platform and native desktop applications.",
+      "subcategories": [
+        {
+          "name": "Cross-Platform",
+          "tools": [
+            {
+              "name": "Electron",
+              "url": "https://www.electronjs.org/",
+              "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+            },
+            {
+              "name": "Tauri",
+              "url": "https://tauri.app/",
+              "description": "Lightweight framework for building desktop apps with web technologies and Rust"
+            },
+            {
+              "name": "Flutter Desktop",
+              "url": "https://flutter.dev/desktop",
+              "description": "Build beautiful native desktop applications with Flutter"
+            },
+            {
+              "name": "Qt",
+              "url": "https://www.qt.io/",
+              "description": "Cross-platform framework for C++ desktop application development"
+            },
+            {
+              "name": "Avalonia",
+              "url": "https://avaloniaui.net/",
+              "description": "Cross-platform XAML-based UI framework for .NET"
+            },
+            {
+              "name": "Wails",
+              "url": "https://wails.io/",
+              "description": "Build desktop apps using Go and web technologies"
+            }
+          ]
+        },
+        {
+          "name": "Native",
+          "tools": [
+            {
+              "name": "SwiftUI",
+              "url": "https://developer.apple.com/xcode/swiftui/",
+              "description": "Declarative framework for building macOS applications"
+            },
+            {
+              "name": "WPF",
+              "url": "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/",
+              "description": "Windows Presentation Foundation for building Windows desktop applications"
+            },
+            {
+              "name": "WinUI",
+              "url": "https://microsoft.github.io/microsoft-ui-xaml/",
+              "description": "Modern native UI platform for Windows applications"
             }
           ]
         }

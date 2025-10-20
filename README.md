@@ -23,10 +23,12 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - [Documentation](#documentation)
 - [Design & Prototyping](#design--prototyping)
 - [Productivity](#productivity)
-- [Python Development](#python-development)
+- [Python Libraries & Tools](#python-libraries--tools)
 - [Learning & References](#learning--references)
 - [Cloud Platforms](#cloud-platforms)
 - [Mobile Development](#mobile-development)
+- [Web Frameworks](#web-frameworks)
+- [Desktop Application Development](#desktop-application-development)
 - [Data Science & Machine Learning](#data-science--machine-learning)
 
 
@@ -65,7 +67,12 @@ Essential text editors and integrated development environments for writing, edit
 - **[AstroNvim](https://astronvim.com/)** - Aesthetic and feature-rich neovim config that is extensible and easy to use
 - **[LunarVim](https://lunarvim.org/)** - IDE layer for Neovim with sane defaults and plugin management
 - **[NvChad](https://nvchad.com/)** - Blazing fast Neovim config providing solid defaults and beautiful UI
+
+
+### Emacs
+- **[Emacs](https://www.gnu.org/software/emacs/)** - Extensible, customizable text editor with powerful ecosystem
 - **[Doom Emacs](https://doomemacs.org/)** - Emacs framework with Vim emulation and curated package selection
+- **[Spacemacs](https://www.spacemacs.org/)** - Community-driven Emacs distribution with excellent defaults
 
 
 ## Version Control
@@ -148,7 +155,6 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 - **[hyperfine](https://github.com/sharkdp/hyperfine)** - Command-line benchmarking tool with statistical analysis and warmup runs
 - **[watchexec](https://watchexec.github.io/)** - File watcher that runs commands when files change with flexible filtering
 - **[lazydocker](https://github.com/jesseduffield/lazydocker)** - Terminal UI for Docker and Docker Compose with container management
-- **[parquet-tools](https://github.com/chhantyal/parquet-tools)** - Command-line tools for inspecting Parquet files
 - **[visidata](https://visidata.org/)** - Terminal spreadsheet multitool for exploring and arranging data
 
 
@@ -188,6 +194,7 @@ Tools for installing, updating, and managing software dependencies and libraries
 - **[nvm](https://github.com/nvm-sh/nvm)** - Node.js version manager with easy switching between versions
 - **[fnm](https://github.com/Schniz/fnm)** - Fast and simple Node.js version manager built in Rust
 - **[rbenv](https://github.com/rbenv/rbenv)** - Ruby version management with project-specific versions
+- **[pyenv](https://github.com/pyenv/pyenv)** - Simple Python version management with project-specific versions
 - **[SDKMAN!](https://sdkman.io/)** - Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)
 - **[rustup](https://rustup.rs/)** - Official Rust toolchain installer and version manager
 
@@ -524,29 +531,24 @@ Note-taking apps, task management tools, time tracking software, and utilities t
 - **[Logseq](https://logseq.com/)** - Open-source knowledge management
 
 
-## Python Development
+## Python Libraries & Tools
+
+
+Python-specific libraries, frameworks, and utilities for environment management and application development.
 
 
 
-### Development Environment
-- **[pyenv](https://github.com/pyenv/pyenv)** - Simple Python version management
-- **[conda](https://docs.conda.io/)** - Package and environment management system
-- **[virtualenv](https://virtualenv.pypa.io/)** - Virtual Python environment builder
+### Environment Management
+- **[conda](https://docs.conda.io/)** - Package and environment management system for Python and other languages
+- **[virtualenv](https://virtualenv.pypa.io/)** - Virtual Python environment builder for dependency isolation
 - **[pipx](https://pypa.github.io/pipx/)** - Install and run Python applications in isolated environments
 
 
-### Web Frameworks
-- **[FastAPI](https://fastapi.tiangolo.com/)** - Modern, fast web framework for building APIs
-- **[Django](https://www.djangoproject.com/)** - High-level Python web framework
-- **[Flask](https://flask.palletsprojects.com/)** - Lightweight WSGI web application framework
-- **[Starlette](https://www.starlette.io/)** - Lightweight ASGI framework for building async web services
-
-
-### CLI & Automation
-- **[Click](https://click.palletsprojects.com/)** - Composable command line interface toolkit
-- **[Typer](https://typer.tiangolo.com/)** - Modern library for building CLI applications
+### CLI Development
+- **[Click](https://click.palletsprojects.com/)** - Composable command line interface toolkit for Python
+- **[Typer](https://typer.tiangolo.com/)** - Modern library for building CLI applications with type hints
 - **[Rich](https://rich.readthedocs.io/)** - Library for rich text and beautiful formatting in the terminal
-- **[Textual](https://textual.textualize.io/)** - Framework for building terminal user interfaces
+- **[Textual](https://textual.textualize.io/)** - Framework for building interactive terminal user interfaces
 
 
 ## Learning & References
@@ -614,6 +616,63 @@ Frameworks, tools, and platforms for developing mobile applications across iOS, 
 
 ### Native Development
 - **[Xcode](https://developer.apple.com/xcode/)** - Apple's integrated development environment for iOS and macOS applications
+
+
+## Web Frameworks
+
+
+Backend and full-stack frameworks for building web applications, REST APIs, and web services across different programming languages.
+
+
+
+### Python
+- **[FastAPI](https://fastapi.tiangolo.com/)** - Modern, fast web framework for building APIs with automatic documentation
+- **[Django](https://www.djangoproject.com/)** - High-level Python web framework with batteries-included approach
+- **[Flask](https://flask.palletsprojects.com/)** - Lightweight WSGI web application framework for simple to complex applications
+- **[Starlette](https://www.starlette.io/)** - Lightweight ASGI framework for building high-performance async web services
+
+
+### JavaScript/TypeScript
+- **[Next.js](https://nextjs.org/)** - React framework with server-side rendering and static site generation
+- **[Express](https://expressjs.com/)** - Fast, unopinionated, minimalist web framework for Node.js
+- **[NestJS](https://nestjs.com/)** - Progressive Node.js framework for building efficient and scalable server-side applications
+- **[Nuxt](https://nuxt.com/)** - Vue.js framework for building universal and static web applications
+- **[SvelteKit](https://kit.svelte.dev/)** - Full-stack framework for building web apps with Svelte
+- **[Remix](https://remix.run/)** - Full-stack web framework built on Web Fetch API
+- **[Hono](https://hono.dev/)** - Ultrafast web framework for the Edge runtime
+
+
+### Other Languages
+- **[Ruby on Rails](https://rubyonrails.org/)** - Server-side web application framework written in Ruby
+- **[Laravel](https://laravel.com/)** - PHP web application framework with elegant syntax
+- **[Spring Boot](https://spring.io/projects/spring-boot)** - Java-based framework for building production-ready applications
+- **[ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet)** - Cross-platform framework for building modern web applications with .NET
+- **[Gin](https://gin-gonic.com/)** - High-performance HTTP web framework written in Go
+- **[Fiber](https://gofiber.io/)** - Express-inspired web framework built on Fasthttp for Go
+- **[Actix Web](https://actix.rs/)** - Powerful, pragmatic, and fast web framework for Rust
+- **[Axum](https://github.com/tokio-rs/axum)** - Ergonomic and modular web framework built with Tokio for Rust
+
+
+## Desktop Application Development
+
+
+Frameworks and tools for building cross-platform and native desktop applications.
+
+
+
+### Cross-Platform
+- **[Electron](https://www.electronjs.org/)** - Build cross-platform desktop apps with JavaScript, HTML, and CSS
+- **[Tauri](https://tauri.app/)** - Lightweight framework for building desktop apps with web technologies and Rust
+- **[Flutter Desktop](https://flutter.dev/desktop)** - Build beautiful native desktop applications with Flutter
+- **[Qt](https://www.qt.io/)** - Cross-platform framework for C++ desktop application development
+- **[Avalonia](https://avaloniaui.net/)** - Cross-platform XAML-based UI framework for .NET
+- **[Wails](https://wails.io/)** - Build desktop apps using Go and web technologies
+
+
+### Native
+- **[SwiftUI](https://developer.apple.com/xcode/swiftui/)** - Declarative framework for building macOS applications
+- **[WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/)** - Windows Presentation Foundation for building Windows desktop applications
+- **[WinUI](https://microsoft.github.io/microsoft-ui-xaml/)** - Modern native UI platform for Windows applications
 
 
 ## Data Science & Machine Learning

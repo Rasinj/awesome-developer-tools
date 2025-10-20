@@ -27,6 +27,22 @@
       ],
       "tools": [
         {
+          "name": "Emacs",
+          "url": "https://www.gnu.org/software/emacs/",
+          "description": "Extensible, customizable text editor with powerful ecosystem",
+          "birth_year": 1976,
+          "era": "unix",
+          "trend": "declining",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Emacs",
+          "metrics": {
+            "adoption_score": 55,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
           "name": "Doom Emacs",
           "url": "https://doomemacs.org/",
           "description": "Emacs framework with Vim emulation and curated package selection",
@@ -34,7 +50,23 @@
           "era": "unix",
           "trend": "declining",
           "category": "Code Editors & IDEs",
-          "subcategory": "Vim & Modal Editors",
+          "subcategory": "Emacs",
+          "metrics": {
+            "adoption_score": 55,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Spacemacs",
+          "url": "https://www.spacemacs.org/",
+          "description": "Community-driven Emacs distribution with excellent defaults",
+          "birth_year": 1976,
+          "era": "unix",
+          "trend": "declining",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Emacs",
           "metrics": {
             "adoption_score": 55,
             "community_size": "Medium",
@@ -175,41 +207,6 @@
             "learning_curve": "Moderate"
           },
           "github_info": null
-        },
-        {
-          "name": "NumPy",
-          "url": "https://numpy.org/",
-          "description": "Fundamental package for scientific computing",
-          "birth_year": 1995,
-          "era": "internet",
-          "trend": "declining",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 10,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "DuckDB Python",
-          "url": "https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg",
-          "description": "Python client for DuckDB in-process analytical database",
-          "birth_year": 1991,
-          "era": "internet",
-          "trend": "declining",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 85,
-            "community_size": "Large",
-            "learning_curve": "Moderate"
-          },
-          "github_info": {
-            "owner": "duckdb",
-            "repo": "duckdb"
-          }
         },
         {
           "name": "NumPy",
@@ -786,54 +783,6 @@
           "github_info": null
         },
         {
-          "name": "Django",
-          "url": "https://www.djangoproject.com/",
-          "description": "High-level Python web framework",
-          "birth_year": 2005,
-          "era": "web",
-          "trend": "declining",
-          "category": "Python Development",
-          "subcategory": "Web Frameworks",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "pandas",
-          "url": "https://pandas.pydata.org/",
-          "description": "Data manipulation and analysis library",
-          "birth_year": 2008,
-          "era": "web",
-          "trend": "declining",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "scikit-learn",
-          "url": "https://scikit-learn.org/",
-          "description": "Machine learning library for Python",
-          "birth_year": 2007,
-          "era": "web",
-          "trend": "declining",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
           "name": "MDN Web Docs",
           "url": "https://developer.mozilla.org/",
           "description": "Web technology documentation",
@@ -874,6 +823,70 @@
           "trend": "declining",
           "category": "Mobile Development",
           "subcategory": "Native Development",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Django",
+          "url": "https://www.djangoproject.com/",
+          "description": "High-level Python web framework with batteries-included approach",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Web Frameworks",
+          "subcategory": "Python",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Next.js",
+          "url": "https://nextjs.org/",
+          "description": "React framework with server-side rendering and static site generation",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "rising",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Ruby on Rails",
+          "url": "https://rubyonrails.org/",
+          "description": "Server-side web application framework written in Ruby",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "rising",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Electron",
+          "url": "https://www.electronjs.org/",
+          "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -1013,22 +1026,6 @@
             "adoption_score": 65,
             "community_size": "Medium",
             "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Neovim",
-          "url": "https://neovim.io/",
-          "description": "Modern Vim fork with better defaults and Lua configuration",
-          "birth_year": 2014,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Code Editors & IDEs",
-          "subcategory": "Modern Editors",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Steep"
           },
           "github_info": null
         },
@@ -1698,25 +1695,6 @@
           }
         },
         {
-          "name": "parquet-tools",
-          "url": "https://github.com/chhantyal/parquet-tools",
-          "description": "Command-line tools for inspecting Parquet files",
-          "birth_year": 2013,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Terminal & Shell",
-          "subcategory": "Development Tools",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": {
-            "owner": "chhantyal",
-            "repo": "parquet-tools"
-          }
-        },
-        {
           "name": "visidata",
           "url": "https://visidata.org/",
           "description": "Terminal spreadsheet multitool for exploring and arranging data",
@@ -1950,6 +1928,25 @@
           "github_info": {
             "owner": "rbenv",
             "repo": "rbenv"
+          }
+        },
+        {
+          "name": "pyenv",
+          "url": "https://github.com/pyenv/pyenv",
+          "description": "Simple Python version management with project-specific versions",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Package Managers",
+          "subcategory": "Version Managers",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "pyenv",
+            "repo": "pyenv"
           }
         },
         {
@@ -2552,22 +2549,6 @@
           "trend": "stable",
           "category": "Database Tools",
           "subcategory": "Database Development",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "DuckDB",
-          "url": "https://duckdb.org/",
-          "description": "In-process analytical database designed for OLAP workloads",
-          "birth_year": 2019,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Database Tools",
-          "subcategory": "Graph & Analytics Databases",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3599,33 +3580,14 @@
           "github_info": null
         },
         {
-          "name": "pyenv",
-          "url": "https://github.com/pyenv/pyenv",
-          "description": "Simple Python version management",
-          "birth_year": 2015,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Development Environment",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": {
-            "owner": "pyenv",
-            "repo": "pyenv"
-          }
-        },
-        {
           "name": "conda",
           "url": "https://docs.conda.io/",
-          "description": "Package and environment management system",
+          "description": "Package and environment management system for Python and other languages",
           "birth_year": 2012,
           "era": "mobile",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Development Environment",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Environment Management",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3636,12 +3598,12 @@
         {
           "name": "virtualenv",
           "url": "https://virtualenv.pypa.io/",
-          "description": "Virtual Python environment builder",
+          "description": "Virtual Python environment builder for dependency isolation",
           "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Development Environment",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Environment Management",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3656,88 +3618,8 @@
           "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Development Environment",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "FastAPI",
-          "url": "https://fastapi.tiangolo.com/",
-          "description": "Modern, fast web framework for building APIs",
-          "birth_year": 2018,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Web Frameworks",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Flask",
-          "url": "https://flask.palletsprojects.com/",
-          "description": "Lightweight WSGI web application framework",
-          "birth_year": 2010,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Web Frameworks",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Easy"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Starlette",
-          "url": "https://www.starlette.io/",
-          "description": "Lightweight ASGI framework for building async web services",
-          "birth_year": 2018,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Web Frameworks",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Jupyter",
-          "url": "https://jupyter.org/",
-          "description": "Interactive computing across dozens of languages",
-          "birth_year": 2014,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "PyArrow",
-          "url": "https://arrow.apache.org/docs/python/",
-          "description": "Python library for Apache Arrow columnar in-memory analytics",
-          "birth_year": 2016,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Environment Management",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3748,12 +3630,12 @@
         {
           "name": "Click",
           "url": "https://click.palletsprojects.com/",
-          "description": "Composable command line interface toolkit",
+          "description": "Composable command line interface toolkit for Python",
           "birth_year": 2014,
           "era": "mobile",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "CLI & Automation",
+          "category": "Python Libraries & Tools",
+          "subcategory": "CLI Development",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3764,12 +3646,12 @@
         {
           "name": "Typer",
           "url": "https://typer.tiangolo.com/",
-          "description": "Modern library for building CLI applications",
+          "description": "Modern library for building CLI applications with type hints",
           "birth_year": 2019,
           "era": "mobile",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "CLI & Automation",
+          "category": "Python Libraries & Tools",
+          "subcategory": "CLI Development",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -4034,6 +3916,393 @@
           "github_info": null
         },
         {
+          "name": "FastAPI",
+          "url": "https://fastapi.tiangolo.com/",
+          "description": "Modern, fast web framework for building APIs with automatic documentation",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Python",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Flask",
+          "url": "https://flask.palletsprojects.com/",
+          "description": "Lightweight WSGI web application framework for simple to complex applications",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Python",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Starlette",
+          "url": "https://www.starlette.io/",
+          "description": "Lightweight ASGI framework for building high-performance async web services",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Python",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/",
+          "description": "Fast, unopinionated, minimalist web framework for Node.js",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "NestJS",
+          "url": "https://nestjs.com/",
+          "description": "Progressive Node.js framework for building efficient and scalable server-side applications",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Nuxt",
+          "url": "https://nuxt.com/",
+          "description": "Vue.js framework for building universal and static web applications",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "SvelteKit",
+          "url": "https://kit.svelte.dev/",
+          "description": "Full-stack framework for building web apps with Svelte",
+          "birth_year": 2016,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Remix",
+          "url": "https://remix.run/",
+          "description": "Full-stack web framework built on Web Fetch API",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Hono",
+          "url": "https://hono.dev/",
+          "description": "Ultrafast web framework for the Edge runtime",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "JavaScript/TypeScript",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Laravel",
+          "url": "https://laravel.com/",
+          "description": "PHP web application framework with elegant syntax",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Spring Boot",
+          "url": "https://spring.io/projects/spring-boot",
+          "description": "Java-based framework for building production-ready applications",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
+          "name": "ASP.NET Core",
+          "url": "https://dotnet.microsoft.com/apps/aspnet",
+          "description": "Cross-platform framework for building modern web applications with .NET",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Gin",
+          "url": "https://gin-gonic.com/",
+          "description": "High-performance HTTP web framework written in Go",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Fiber",
+          "url": "https://gofiber.io/",
+          "description": "Express-inspired web framework built on Fasthttp for Go",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Actix Web",
+          "url": "https://actix.rs/",
+          "description": "Powerful, pragmatic, and fast web framework for Rust",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Axum",
+          "url": "https://github.com/tokio-rs/axum",
+          "description": "Ergonomic and modular web framework built with Tokio for Rust",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Web Frameworks",
+          "subcategory": "Other Languages",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "tokio-rs",
+            "repo": "axum"
+          }
+        },
+        {
+          "name": "Tauri",
+          "url": "https://tauri.app/",
+          "description": "Lightweight framework for building desktop apps with web technologies and Rust",
+          "birth_year": 2019,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Flutter Desktop",
+          "url": "https://flutter.dev/desktop",
+          "description": "Build beautiful native desktop applications with Flutter",
+          "birth_year": 2017,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Qt",
+          "url": "https://www.qt.io/",
+          "description": "Cross-platform framework for C++ desktop application development",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Avalonia",
+          "url": "https://avaloniaui.net/",
+          "description": "Cross-platform XAML-based UI framework for .NET",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Wails",
+          "url": "https://wails.io/",
+          "description": "Build desktop apps using Go and web technologies",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Desktop Application Development",
+          "subcategory": "Cross-Platform",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "SwiftUI",
+          "url": "https://developer.apple.com/xcode/swiftui/",
+          "description": "Declarative framework for building macOS applications",
+          "birth_year": 2014,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Native",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "WPF",
+          "url": "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/",
+          "description": "Windows Presentation Foundation for building Windows desktop applications",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Native",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "WinUI",
+          "url": "https://microsoft.github.io/microsoft-ui-xaml/",
+          "description": "Modern native UI platform for Windows applications",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Desktop Application Development",
+          "subcategory": "Native",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Jupyter Notebook",
           "url": "https://jupyter.org/",
           "description": "Interactive computing environment for creating and sharing documents with code and visualizations",
@@ -4074,6 +4343,73 @@
           "trend": "stable",
           "category": "Data Science & Machine Learning",
           "subcategory": "Data Processing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Tsfresh",
+          "url": "https://tsfresh.com/",
+          "description": "A Python package for automatic extraction of a large number of time-series features.",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Data Science & Machine Learning",
+          "subcategory": "Time Series",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Sktime",
+          "url": "https://www.sktime.net/",
+          "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn.",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Science & Machine Learning",
+          "subcategory": "Time Series",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "AutoTS",
+          "url": "https://github.com/winedarksea/AutoTS",
+          "description": "An automated time-series forecasting library for Python.",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Science & Machine Learning",
+          "subcategory": "Time Series",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "winedarksea",
+            "repo": "AutoTS"
+          }
+        },
+        {
+          "name": "Prophet",
+          "url": "https://facebook.github.io/prophet/",
+          "description": "A forecasting library for time series data developed by Facebook.",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Science & Machine Learning",
+          "subcategory": "Time Series",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -4481,30 +4817,14 @@
           "github_info": null
         },
         {
-          "name": "Polars",
-          "url": "https://pola.rs/",
-          "description": "Fast DataFrame library implemented in Rust",
-          "birth_year": 2020,
-          "era": "cloud",
-          "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "Data Science & ML",
-          "metrics": {
-            "adoption_score": 70,
-            "community_size": "Large",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
           "name": "Rich",
           "url": "https://rich.readthedocs.io/",
           "description": "Library for rich text and beautiful formatting in the terminal",
           "birth_year": 2020,
           "era": "cloud",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "CLI & Automation",
+          "category": "Python Libraries & Tools",
+          "subcategory": "CLI Development",
           "metrics": {
             "adoption_score": 70,
             "community_size": "Large",
@@ -4515,12 +4835,12 @@
         {
           "name": "Textual",
           "url": "https://textual.textualize.io/",
-          "description": "Framework for building terminal user interfaces",
+          "description": "Framework for building interactive terminal user interfaces",
           "birth_year": 2021,
           "era": "cloud",
           "trend": "stable",
-          "category": "Python Development",
-          "subcategory": "CLI & Automation",
+          "category": "Python Libraries & Tools",
+          "subcategory": "CLI Development",
           "metrics": {
             "adoption_score": 70,
             "community_size": "Large",
@@ -4747,9 +5067,9 @@
           "url": "https://devtools.vuejs.org/"
         },
         {
-          "name": "Svelte",
+          "name": "SvelteKit",
           "year": 2016,
-          "url": ""
+          "url": "https://kit.svelte.dev/"
         }
       ]
     },
@@ -4950,19 +5270,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 269,
+    "total_tools": 289,
     "tools_by_era": {
-      "unix": 2,
-      "internet": 9,
-      "web": 45,
-      "mobile": 186,
-      "cloud": 27,
+      "unix": 4,
+      "internet": 7,
+      "web": 46,
+      "mobile": 206,
+      "cloud": 26,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 13,
-      "stable": 197,
-      "declining": 59
+      "rising": 19,
+      "stable": 212,
+      "declining": 58
     },
     "average_age": 2013,
     "newest_tool_year": 2023,
