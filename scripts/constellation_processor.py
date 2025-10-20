@@ -16,7 +16,6 @@ from typing import Dict, List, Any, Tuple
 from collections import defaultdict
 import argparse
 
-
 class ConstellationProcessor:
     def __init__(self, data: Dict[str, Any]):
         self.data = data
@@ -24,7 +23,7 @@ class ConstellationProcessor:
         self.categories_map = {}
         self.tool_relationships = defaultdict(list)
         self.skill_paths = []
-        
+
     def process_tools(self):
         """Process all tools and create mappings."""
         tool_id = 0

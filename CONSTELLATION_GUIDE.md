@@ -1,14 +1,14 @@
-# Tool Constellation Guide 🌌
+# Tool Constellation Guide
 
-Welcome to the **Developer Tools Constellation** - a revolutionary visual discovery system that transforms the way you explore and understand developer tools. This guide explains the visual metaphors, interaction patterns, and how to make the most of this cosmic tool exploration experience.
+Welcome to the Developer Tools Constellation - a visual discovery system that transforms the way you explore and understand developer tools. This guide explains the visual metaphors, interaction patterns, and how to make the most of this tool exploration experience.
 
-## 🌟 Visual Metaphors
+## Visual Metaphors
 
 ### The Cosmic Framework
 
-The Tool Constellation uses space and astronomical metaphors to make tool discovery intuitive and memorable:
+The Tool Constellation uses space and astronomical metaphors to make tool discovery intuitive and memorable.
 
-#### **Tools as Celestial Bodies**
+#### Tools as Celestial Bodies
 - **Stars (Popular Tools)**: Bright cyan stars represent widely-used, essential tools like VS Code, Git, Docker
 - **Planets (Specialized Tools)**: Larger, colored spheres represent specialized tools with specific use cases
 - **Asteroids (Utility Tools)**: Smaller objects represent utility tools and helper applications
@@ -258,4 +258,4 @@ Search Input → Real-time filtering → Highlighted matches
 
 The Tool Constellation transforms tool discovery from linear lists into an explorable universe. Whether you're a beginner finding your first tools or an expert discovering specialized solutions, the cosmic interface provides an intuitive and memorable way to navigate the vast landscape of developer tools.
 
-**Happy exploring, space cadet! 🚀🌟**
+Happy exploring!

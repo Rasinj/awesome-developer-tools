@@ -11,7 +11,6 @@ import re
 from pathlib import Path
 from typing import Dict, List, Any
 
-
 def load_tools_data() -> Dict[str, Any]:
     """Load tools data from YAML file."""
     yaml_path = Path(__file__).parent.parent / "data" / "tools.yaml"

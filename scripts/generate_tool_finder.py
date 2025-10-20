@@ -17,7 +17,7 @@ def load_tools_data():
 
 def create_intent_mappings(tools_data):
     """Create intent-based mappings from the tools data."""
-    
+
     # Define intent keywords and their associated tool categories/subcategories
     intent_mappings = {
         'set up new project': {
@@ -61,7 +61,7 @@ def create_intent_mappings(tools_data):
             'subcategories': ['Database Clients', 'Database Development', 'Data Processing']
         }
     }
-    
+
     # Extract tools for each intent
     tool_recommendations = {}
     

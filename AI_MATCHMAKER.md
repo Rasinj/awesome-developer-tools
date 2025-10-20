@@ -1,4 +1,4 @@
-# 🤖 AI Tool Matchmaker - Technical Documentation
+# AI Tool Matchmaker - Technical Documentation
 
 ## Overview
 
@@ -6,12 +6,12 @@ The AI Tool Matchmaker is a sophisticated recommendation engine that learns from
 
 ## Key Features
 
-### 🎭 Developer Personality Profiling
+### Developer Personality Profiling
 - **Archetype Classification**: Identifies 6 distinct developer archetypes through intelligent questioning
 - **Behavioral Analysis**: Analyzes preferences for learning curves, customization levels, and tool complexity
 - **Dynamic Scoring**: Continuously refines personality understanding based on user interactions
 
-### 🧠 Contextual AI Recommendations
+### Contextual AI Recommendations
 - **Multi-factor Analysis**: Considers archetype alignment, tool characteristics, and historical feedback
 - **Learning Algorithm**: Improves recommendations over time based on user feedback
 - **Category Weighting**: Learns user preferences for different tool categories
