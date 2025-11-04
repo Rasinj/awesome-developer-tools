@@ -226,6 +226,19 @@ Python Libraries & Tools,CLI Development,Click,https://click.palletsprojects.com
 Python Libraries & Tools,CLI Development,Typer,https://typer.tiangolo.com/,Modern library for building CLI applications with type hints
 Python Libraries & Tools,CLI Development,Rich,https://rich.readthedocs.io/,Library for rich text and beautiful formatting in the terminal
 Python Libraries & Tools,CLI Development,Textual,https://textual.textualize.io/,Framework for building interactive terminal user interfaces
+Python Libraries & Tools,HTTP Clients,requests,https://requests.readthedocs.io/,Simple and elegant HTTP library for synchronous requests
+Python Libraries & Tools,HTTP Clients,httpx,https://www.python-httpx.org/,Modern HTTP client with async/sync support and HTTP/2
+Python Libraries & Tools,HTTP Clients,aiohttp,https://docs.aiohttp.org/,Async HTTP client/server framework for high-concurrency applications
+Python Libraries & Tools,Data Validation,Pydantic,https://docs.pydantic.dev/,Data validation using Python type hints with high performance
+Python Libraries & Tools,Data Validation,Marshmallow,https://marshmallow.readthedocs.io/,Object serialization and deserialization library with schema-based validation
+Python Libraries & Tools,Data Validation,Cerberus,https://docs.python-cerberus.org/,Lightweight and extensible data validation library
+Python Libraries & Tools,Testing Extensions,pytest-cov,https://pytest-cov.readthedocs.io/,Coverage plugin for pytest to measure test coverage
+Python Libraries & Tools,Testing Extensions,coverage.py,https://coverage.readthedocs.io/,Code coverage measurement tool for Python
+Python Libraries & Tools,Testing Extensions,Hypothesis,https://hypothesis.readthedocs.io/,Property-based testing library for writing powerful tests
+Python Libraries & Tools,Testing Extensions,tox,https://tox.wiki/,Automation tool for testing in multiple Python environments
+Python Libraries & Tools,Web & Data Apps,Streamlit,https://streamlit.io/,Framework for building interactive data apps and dashboards rapidly
+Python Libraries & Tools,Web & Data Apps,Gradio,https://www.gradio.app/,Build and share machine learning demos and web apps quickly
+Python Libraries & Tools,Web & Data Apps,Reflex,https://reflex.dev/,Full-stack Python framework for building web apps without JavaScript
 Learning & References,Documentation,DevDocs,https://devdocs.io/,API documentation browser
 Learning & References,Documentation,MDN Web Docs,https://developer.mozilla.org/,Web technology documentation
 Learning & References,Documentation,Stack Overflow,https://stackoverflow.com/,Q&A platform for developers

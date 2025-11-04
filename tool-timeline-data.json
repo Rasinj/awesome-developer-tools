@@ -209,6 +209,22 @@
           "github_info": null
         },
         {
+          "name": "pytest-cov",
+          "url": "https://pytest-cov.readthedocs.io/",
+          "description": "Coverage plugin for pytest to measure test coverage",
+          "birth_year": 1998,
+          "era": "internet",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Testing Extensions",
+          "metrics": {
+            "adoption_score": 10,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "NumPy",
           "url": "https://numpy.org/",
           "description": "Fundamental package for scientific computing with Python",
@@ -775,6 +791,54 @@
           "trend": "declining",
           "category": "Productivity",
           "subcategory": "Time Management",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "httpx",
+          "url": "https://www.python-httpx.org/",
+          "description": "Modern HTTP client with async/sync support and HTTP/2",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "HTTP Clients",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "aiohttp",
+          "url": "https://docs.aiohttp.org/",
+          "description": "Async HTTP client/server framework for high-concurrency applications",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "rising",
+          "category": "Python Libraries & Tools",
+          "subcategory": "HTTP Clients",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Cerberus",
+          "url": "https://docs.python-cerberus.org/",
+          "description": "Lightweight and extensible data validation library",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Data Validation",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -3660,6 +3724,150 @@
           "github_info": null
         },
         {
+          "name": "requests",
+          "url": "https://requests.readthedocs.io/",
+          "description": "Simple and elegant HTTP library for synchronous requests",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "HTTP Clients",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Pydantic",
+          "url": "https://docs.pydantic.dev/",
+          "description": "Data validation using Python type hints with high performance",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Data Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Marshmallow",
+          "url": "https://marshmallow.readthedocs.io/",
+          "description": "Object serialization and deserialization library with schema-based validation",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Data Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "coverage.py",
+          "url": "https://coverage.readthedocs.io/",
+          "description": "Code coverage measurement tool for Python",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Testing Extensions",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Hypothesis",
+          "url": "https://hypothesis.readthedocs.io/",
+          "description": "Property-based testing library for writing powerful tests",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Testing Extensions",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "tox",
+          "url": "https://tox.wiki/",
+          "description": "Automation tool for testing in multiple Python environments",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Testing Extensions",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Streamlit",
+          "url": "https://streamlit.io/",
+          "description": "Framework for building interactive data apps and dashboards rapidly",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Web & Data Apps",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Gradio",
+          "url": "https://www.gradio.app/",
+          "description": "Build and share machine learning demos and web apps quickly",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Web & Data Apps",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Reflex",
+          "url": "https://reflex.dev/",
+          "description": "Full-stack Python framework for building web apps without JavaScript",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Web & Data Apps",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "DevDocs",
           "url": "https://devdocs.io/",
           "description": "API documentation browser",
@@ -5270,19 +5478,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 289,
+    "total_tools": 302,
     "tools_by_era": {
       "unix": 4,
-      "internet": 7,
-      "web": 46,
-      "mobile": 206,
+      "internet": 8,
+      "web": 49,
+      "mobile": 215,
       "cloud": 26,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 19,
-      "stable": 212,
-      "declining": 58
+      "rising": 21,
+      "stable": 220,
+      "declining": 61
     },
     "average_age": 2013,
     "newest_tool_year": 2023,

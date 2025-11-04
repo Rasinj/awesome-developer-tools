@@ -1539,6 +1539,91 @@
               "description": "Framework for building interactive terminal user interfaces"
             }
           ]
+        },
+        {
+          "name": "HTTP Clients",
+          "tools": [
+            {
+              "name": "requests",
+              "url": "https://requests.readthedocs.io/",
+              "description": "Simple and elegant HTTP library for synchronous requests"
+            },
+            {
+              "name": "httpx",
+              "url": "https://www.python-httpx.org/",
+              "description": "Modern HTTP client with async/sync support and HTTP/2"
+            },
+            {
+              "name": "aiohttp",
+              "url": "https://docs.aiohttp.org/",
+              "description": "Async HTTP client/server framework for high-concurrency applications"
+            }
+          ]
+        },
+        {
+          "name": "Data Validation",
+          "tools": [
+            {
+              "name": "Pydantic",
+              "url": "https://docs.pydantic.dev/",
+              "description": "Data validation using Python type hints with high performance"
+            },
+            {
+              "name": "Marshmallow",
+              "url": "https://marshmallow.readthedocs.io/",
+              "description": "Object serialization and deserialization library with schema-based validation"
+            },
+            {
+              "name": "Cerberus",
+              "url": "https://docs.python-cerberus.org/",
+              "description": "Lightweight and extensible data validation library"
+            }
+          ]
+        },
+        {
+          "name": "Testing Extensions",
+          "tools": [
+            {
+              "name": "pytest-cov",
+              "url": "https://pytest-cov.readthedocs.io/",
+              "description": "Coverage plugin for pytest to measure test coverage"
+            },
+            {
+              "name": "coverage.py",
+              "url": "https://coverage.readthedocs.io/",
+              "description": "Code coverage measurement tool for Python"
+            },
+            {
+              "name": "Hypothesis",
+              "url": "https://hypothesis.readthedocs.io/",
+              "description": "Property-based testing library for writing powerful tests"
+            },
+            {
+              "name": "tox",
+              "url": "https://tox.wiki/",
+              "description": "Automation tool for testing in multiple Python environments"
+            }
+          ]
+        },
+        {
+          "name": "Web & Data Apps",
+          "tools": [
+            {
+              "name": "Streamlit",
+              "url": "https://streamlit.io/",
+              "description": "Framework for building interactive data apps and dashboards rapidly"
+            },
+            {
+              "name": "Gradio",
+              "url": "https://www.gradio.app/",
+              "description": "Build and share machine learning demos and web apps quickly"
+            },
+            {
+              "name": "Reflex",
+              "url": "https://reflex.dev/",
+              "description": "Full-stack Python framework for building web apps without JavaScript"
+            }
+          ]
         }
       ]
     },
