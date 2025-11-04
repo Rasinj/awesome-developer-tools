@@ -239,6 +239,30 @@ Python Libraries & Tools,Testing Extensions,tox,https://tox.wiki/,Automation too
 Python Libraries & Tools,Web & Data Apps,Streamlit,https://streamlit.io/,Framework for building interactive data apps and dashboards rapidly
 Python Libraries & Tools,Web & Data Apps,Gradio,https://www.gradio.app/,Build and share machine learning demos and web apps quickly
 Python Libraries & Tools,Web & Data Apps,Reflex,https://reflex.dev/,Full-stack Python framework for building web apps without JavaScript
+Python Libraries & Tools,Async Libraries,asyncio,https://docs.python.org/3/library/asyncio.html,Built-in library for writing concurrent code using async/await syntax
+Python Libraries & Tools,Async Libraries,Trio,https://trio.readthedocs.io/,Friendly Python library for async concurrency with structured concurrency
+Python Libraries & Tools,Async Libraries,AnyIO,https://anyio.readthedocs.io/,Compatibility layer for asyncio and Trio with unified high-level API
+Python Libraries & Tools,ORMs & Database Libraries,SQLAlchemy,https://www.sqlalchemy.org/,Powerful and flexible SQL toolkit and ORM for Python
+Python Libraries & Tools,ORMs & Database Libraries,Tortoise ORM,https://tortoise.github.io/,Async ORM inspired by Django with excellent performance
+Python Libraries & Tools,ORMs & Database Libraries,Peewee,http://docs.peewee-orm.com/,Lightweight and expressive ORM for small to medium applications
+Python Libraries & Tools,Task Queues & Scheduling,Celery,https://docs.celeryq.dev/,Distributed task queue for handling asynchronous jobs at scale
+Python Libraries & Tools,Task Queues & Scheduling,RQ,https://python-rq.org/,Simple Python library for queueing jobs backed by Redis
+Python Libraries & Tools,Task Queues & Scheduling,Dramatiq,https://dramatiq.io/,Fast and reliable alternative to Celery for distributed tasks
+Python Libraries & Tools,Task Queues & Scheduling,APScheduler,https://apscheduler.readthedocs.io/,Advanced Python scheduler for running jobs at specific times or intervals
+Python Libraries & Tools,Logging,loguru,https://loguru.readthedocs.io/,Simplified logging library with beautiful colors and easy configuration
+Python Libraries & Tools,Logging,structlog,https://www.structlog.org/,Structured logging library for producing JSON or Logfmt output
+Python Libraries & Tools,Configuration Management,Dynaconf,https://www.dynaconf.com/,Layered configuration system supporting multiple formats and environments
+Python Libraries & Tools,Configuration Management,pydantic-settings,https://docs.pydantic.dev/latest/concepts/pydantic_settings/,Type-safe settings management with Pydantic integration
+Python Libraries & Tools,Configuration Management,python-decouple,https://github.com/HBNetwork/python-decouple,Strict separation of settings from code for 12-factor apps
+Python Libraries & Tools,Documentation Generators,Sphinx,https://www.sphinx-doc.org/,Popular documentation generator supporting multiple output formats
+Python Libraries & Tools,Documentation Generators,pdoc,https://pdoc.dev/,Lightweight automatic API documentation generator with zero configuration
+Python Libraries & Tools,Documentation Generators,mkdocstrings,https://mkdocstrings.github.io/,Automatic documentation from docstrings for MkDocs
+Python Libraries & Tools,Serialization,orjson,https://github.com/ijl/orjson,"Fast, correct JSON library for Python written in Rust"
+Python Libraries & Tools,Serialization,msgpack,https://msgpack.org/,Efficient binary serialization format faster and smaller than JSON
+Python Libraries & Tools,Serialization,msgspec,https://jcristharif.com/msgspec/,"Fast serialization library supporting JSON, MessagePack, YAML, and TOML"
+Python Libraries & Tools,Profiling & Performance,py-spy,https://github.com/benfred/py-spy,Sampling profiler for Python programs with minimal overhead
+Python Libraries & Tools,Profiling & Performance,Scalene,https://github.com/plasma-umass/scalene,"High-performance CPU, GPU, and memory profiler with AI optimization suggestions"
+Python Libraries & Tools,Profiling & Performance,Memray,https://bloomberg.github.io/memray/,Memory profiler for Python tracking allocations in native extensions
 Learning & References,Documentation,DevDocs,https://devdocs.io/,API documentation browser
 Learning & References,Documentation,MDN Web Docs,https://developer.mozilla.org/,Web technology documentation
 Learning & References,Documentation,Stack Overflow,https://stackoverflow.com/,Q&A platform for developers

@@ -394,6 +394,46 @@
 - Gradio: https://www.gradio.app/
 - Reflex: https://reflex.dev/
 
+### Async Libraries
+- asyncio: https://docs.python.org/3/library/asyncio.html
+- Trio: https://trio.readthedocs.io/
+- AnyIO: https://anyio.readthedocs.io/
+
+### ORMs & Database Libraries
+- SQLAlchemy: https://www.sqlalchemy.org/
+- Tortoise ORM: https://tortoise.github.io/
+- Peewee: http://docs.peewee-orm.com/
+
+### Task Queues & Scheduling
+- Celery: https://docs.celeryq.dev/
+- RQ: https://python-rq.org/
+- Dramatiq: https://dramatiq.io/
+- APScheduler: https://apscheduler.readthedocs.io/
+
+### Logging
+- loguru: https://loguru.readthedocs.io/
+- structlog: https://www.structlog.org/
+
+### Configuration Management
+- Dynaconf: https://www.dynaconf.com/
+- pydantic-settings: https://docs.pydantic.dev/latest/concepts/pydantic_settings/
+- python-decouple: https://github.com/HBNetwork/python-decouple
+
+### Documentation Generators
+- Sphinx: https://www.sphinx-doc.org/
+- pdoc: https://pdoc.dev/
+- mkdocstrings: https://mkdocstrings.github.io/
+
+### Serialization
+- orjson: https://github.com/ijl/orjson
+- msgpack: https://msgpack.org/
+- msgspec: https://jcristharif.com/msgspec/
+
+### Profiling & Performance
+- py-spy: https://github.com/benfred/py-spy
+- Scalene: https://github.com/plasma-umass/scalene
+- Memray: https://bloomberg.github.io/memray/
+
 ## Learning & References
 
 ### Documentation

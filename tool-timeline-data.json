@@ -225,6 +225,25 @@
           "github_info": null
         },
         {
+          "name": "python-decouple",
+          "url": "https://github.com/HBNetwork/python-decouple",
+          "description": "Strict separation of settings from code for 12-factor apps",
+          "birth_year": 1991,
+          "era": "internet",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Configuration Management",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "HBNetwork",
+            "repo": "python-decouple"
+          }
+        },
+        {
           "name": "NumPy",
           "url": "https://numpy.org/",
           "description": "Fundamental package for scientific computing with Python",
@@ -839,6 +858,102 @@
           "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "Data Validation",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "asyncio",
+          "url": "https://docs.python.org/3/library/asyncio.html",
+          "description": "Built-in library for writing concurrent code using async/await syntax",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Async Libraries",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "SQLAlchemy",
+          "url": "https://www.sqlalchemy.org/",
+          "description": "Powerful and flexible SQL toolkit and ORM for Python",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "ORMs & Database Libraries",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "RQ",
+          "url": "https://python-rq.org/",
+          "description": "Simple Python library for queueing jobs backed by Redis",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Task Queues & Scheduling",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "structlog",
+          "url": "https://www.structlog.org/",
+          "description": "Structured logging library for producing JSON or Logfmt output",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Logging",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Sphinx",
+          "url": "https://www.sphinx-doc.org/",
+          "description": "Popular documentation generator supporting multiple output formats",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Documentation Generators",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "msgpack",
+          "url": "https://msgpack.org/",
+          "description": "Efficient binary serialization format faster and smaller than JSON",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Serialization",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -3868,6 +3983,287 @@
           "github_info": null
         },
         {
+          "name": "Trio",
+          "url": "https://trio.readthedocs.io/",
+          "description": "Friendly Python library for async concurrency with structured concurrency",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Async Libraries",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "AnyIO",
+          "url": "https://anyio.readthedocs.io/",
+          "description": "Compatibility layer for asyncio and Trio with unified high-level API",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Async Libraries",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Tortoise ORM",
+          "url": "https://tortoise.github.io/",
+          "description": "Async ORM inspired by Django with excellent performance",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "ORMs & Database Libraries",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Peewee",
+          "url": "http://docs.peewee-orm.com/",
+          "description": "Lightweight and expressive ORM for small to medium applications",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "ORMs & Database Libraries",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Celery",
+          "url": "https://docs.celeryq.dev/",
+          "description": "Distributed task queue for handling asynchronous jobs at scale",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Task Queues & Scheduling",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Dramatiq",
+          "url": "https://dramatiq.io/",
+          "description": "Fast and reliable alternative to Celery for distributed tasks",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Task Queues & Scheduling",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "APScheduler",
+          "url": "https://apscheduler.readthedocs.io/",
+          "description": "Advanced Python scheduler for running jobs at specific times or intervals",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Task Queues & Scheduling",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "loguru",
+          "url": "https://loguru.readthedocs.io/",
+          "description": "Simplified logging library with beautiful colors and easy configuration",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Logging",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Dynaconf",
+          "url": "https://www.dynaconf.com/",
+          "description": "Layered configuration system supporting multiple formats and environments",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Configuration Management",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "pydantic-settings",
+          "url": "https://docs.pydantic.dev/latest/concepts/pydantic_settings/",
+          "description": "Type-safe settings management with Pydantic integration",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Configuration Management",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "pdoc",
+          "url": "https://pdoc.dev/",
+          "description": "Lightweight automatic API documentation generator with zero configuration",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Documentation Generators",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "mkdocstrings",
+          "url": "https://mkdocstrings.github.io/",
+          "description": "Automatic documentation from docstrings for MkDocs",
+          "birth_year": 2014,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Documentation Generators",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "orjson",
+          "url": "https://github.com/ijl/orjson",
+          "description": "Fast, correct JSON library for Python written in Rust",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Serialization",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "ijl",
+            "repo": "orjson"
+          }
+        },
+        {
+          "name": "msgspec",
+          "url": "https://jcristharif.com/msgspec/",
+          "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Serialization",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "py-spy",
+          "url": "https://github.com/benfred/py-spy",
+          "description": "Sampling profiler for Python programs with minimal overhead",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Profiling & Performance",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "benfred",
+            "repo": "py-spy"
+          }
+        },
+        {
+          "name": "Scalene",
+          "url": "https://github.com/plasma-umass/scalene",
+          "description": "High-performance CPU, GPU, and memory profiler with AI optimization suggestions",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Profiling & Performance",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "plasma-umass",
+            "repo": "scalene"
+          }
+        },
+        {
+          "name": "Memray",
+          "url": "https://bloomberg.github.io/memray/",
+          "description": "Memory profiler for Python tracking allocations in native extensions",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Python Libraries & Tools",
+          "subcategory": "Profiling & Performance",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "DevDocs",
           "url": "https://devdocs.io/",
           "description": "API documentation browser",
@@ -5478,19 +5874,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 302,
+    "total_tools": 326,
     "tools_by_era": {
       "unix": 4,
-      "internet": 8,
-      "web": 49,
-      "mobile": 215,
+      "internet": 9,
+      "web": 55,
+      "mobile": 232,
       "cloud": 26,
       "ai": 0
     },
     "tools_by_trend": {
       "rising": 21,
-      "stable": 220,
-      "declining": 61
+      "stable": 237,
+      "declining": 68
     },
     "average_age": 2013,
     "newest_tool_year": 2023,

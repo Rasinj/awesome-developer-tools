@@ -576,6 +576,54 @@ Python-specific libraries, frameworks, and utilities for environment management 
 - **[Reflex](https://reflex.dev/)** - Full-stack Python framework for building web apps without JavaScript
 
 
+### Async Libraries
+- **[asyncio](https://docs.python.org/3/library/asyncio.html)** - Built-in library for writing concurrent code using async/await syntax
+- **[Trio](https://trio.readthedocs.io/)** - Friendly Python library for async concurrency with structured concurrency
+- **[AnyIO](https://anyio.readthedocs.io/)** - Compatibility layer for asyncio and Trio with unified high-level API
+
+
+### ORMs & Database Libraries
+- **[SQLAlchemy](https://www.sqlalchemy.org/)** - Powerful and flexible SQL toolkit and ORM for Python
+- **[Tortoise ORM](https://tortoise.github.io/)** - Async ORM inspired by Django with excellent performance
+- **[Peewee](http://docs.peewee-orm.com/)** - Lightweight and expressive ORM for small to medium applications
+
+
+### Task Queues & Scheduling
+- **[Celery](https://docs.celeryq.dev/)** - Distributed task queue for handling asynchronous jobs at scale
+- **[RQ](https://python-rq.org/)** - Simple Python library for queueing jobs backed by Redis
+- **[Dramatiq](https://dramatiq.io/)** - Fast and reliable alternative to Celery for distributed tasks
+- **[APScheduler](https://apscheduler.readthedocs.io/)** - Advanced Python scheduler for running jobs at specific times or intervals
+
+
+### Logging
+- **[loguru](https://loguru.readthedocs.io/)** - Simplified logging library with beautiful colors and easy configuration
+- **[structlog](https://www.structlog.org/)** - Structured logging library for producing JSON or Logfmt output
+
+
+### Configuration Management
+- **[Dynaconf](https://www.dynaconf.com/)** - Layered configuration system supporting multiple formats and environments
+- **[pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)** - Type-safe settings management with Pydantic integration
+- **[python-decouple](https://github.com/HBNetwork/python-decouple)** - Strict separation of settings from code for 12-factor apps
+
+
+### Documentation Generators
+- **[Sphinx](https://www.sphinx-doc.org/)** - Popular documentation generator supporting multiple output formats
+- **[pdoc](https://pdoc.dev/)** - Lightweight automatic API documentation generator with zero configuration
+- **[mkdocstrings](https://mkdocstrings.github.io/)** - Automatic documentation from docstrings for MkDocs
+
+
+### Serialization
+- **[orjson](https://github.com/ijl/orjson)** - Fast, correct JSON library for Python written in Rust
+- **[msgpack](https://msgpack.org/)** - Efficient binary serialization format faster and smaller than JSON
+- **[msgspec](https://jcristharif.com/msgspec/)** - Fast serialization library supporting JSON, MessagePack, YAML, and TOML
+
+
+### Profiling & Performance
+- **[py-spy](https://github.com/benfred/py-spy)** - Sampling profiler for Python programs with minimal overhead
+- **[Scalene](https://github.com/plasma-umass/scalene)** - High-performance CPU, GPU, and memory profiler with AI optimization suggestions
+- **[Memray](https://bloomberg.github.io/memray/)** - Memory profiler for Python tracking allocations in native extensions
+
+
 ## Learning & References
 
 
