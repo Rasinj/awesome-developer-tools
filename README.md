@@ -551,6 +551,79 @@ Python-specific libraries, frameworks, and utilities for environment management 
 - **[Textual](https://textual.textualize.io/)** - Framework for building interactive terminal user interfaces
 
 
+### HTTP Clients
+- **[requests](https://requests.readthedocs.io/)** - Simple and elegant HTTP library for synchronous requests
+- **[httpx](https://www.python-httpx.org/)** - Modern HTTP client with async/sync support and HTTP/2
+- **[aiohttp](https://docs.aiohttp.org/)** - Async HTTP client/server framework for high-concurrency applications
+
+
+### Data Validation
+- **[Pydantic](https://docs.pydantic.dev/)** - Data validation using Python type hints with high performance
+- **[Marshmallow](https://marshmallow.readthedocs.io/)** - Object serialization and deserialization library with schema-based validation
+- **[Cerberus](https://docs.python-cerberus.org/)** - Lightweight and extensible data validation library
+
+
+### Testing Extensions
+- **[pytest-cov](https://pytest-cov.readthedocs.io/)** - Coverage plugin for pytest to measure test coverage
+- **[coverage.py](https://coverage.readthedocs.io/)** - Code coverage measurement tool for Python
+- **[Hypothesis](https://hypothesis.readthedocs.io/)** - Property-based testing library for writing powerful tests
+- **[tox](https://tox.wiki/)** - Automation tool for testing in multiple Python environments
+
+
+### Web & Data Apps
+- **[Streamlit](https://streamlit.io/)** - Framework for building interactive data apps and dashboards rapidly
+- **[Gradio](https://www.gradio.app/)** - Build and share machine learning demos and web apps quickly
+- **[Reflex](https://reflex.dev/)** - Full-stack Python framework for building web apps without JavaScript
+
+
+### Async Libraries
+- **[asyncio](https://docs.python.org/3/library/asyncio.html)** - Built-in library for writing concurrent code using async/await syntax
+- **[Trio](https://trio.readthedocs.io/)** - Friendly Python library for async concurrency with structured concurrency
+- **[AnyIO](https://anyio.readthedocs.io/)** - Compatibility layer for asyncio and Trio with unified high-level API
+
+
+### ORMs & Database Libraries
+- **[SQLAlchemy](https://www.sqlalchemy.org/)** - Powerful and flexible SQL toolkit and ORM for Python
+- **[Tortoise ORM](https://tortoise.github.io/)** - Async ORM inspired by Django with excellent performance
+- **[Peewee](http://docs.peewee-orm.com/)** - Lightweight and expressive ORM for small to medium applications
+
+
+### Task Queues & Scheduling
+- **[Celery](https://docs.celeryq.dev/)** - Distributed task queue for handling asynchronous jobs at scale
+- **[RQ](https://python-rq.org/)** - Simple Python library for queueing jobs backed by Redis
+- **[Dramatiq](https://dramatiq.io/)** - Fast and reliable alternative to Celery for distributed tasks
+- **[APScheduler](https://apscheduler.readthedocs.io/)** - Advanced Python scheduler for running jobs at specific times or intervals
+
+
+### Logging
+- **[loguru](https://loguru.readthedocs.io/)** - Simplified logging library with beautiful colors and easy configuration
+- **[structlog](https://www.structlog.org/)** - Structured logging library for producing JSON or Logfmt output
+
+
+### Configuration Management
+- **[Dynaconf](https://www.dynaconf.com/)** - Layered configuration system supporting multiple formats and environments
+- **[pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)** - Type-safe settings management with Pydantic integration
+- **[python-decouple](https://github.com/HBNetwork/python-decouple)** - Strict separation of settings from code for 12-factor apps
+
+
+### Documentation Generators
+- **[Sphinx](https://www.sphinx-doc.org/)** - Popular documentation generator supporting multiple output formats
+- **[pdoc](https://pdoc.dev/)** - Lightweight automatic API documentation generator with zero configuration
+- **[mkdocstrings](https://mkdocstrings.github.io/)** - Automatic documentation from docstrings for MkDocs
+
+
+### Serialization
+- **[orjson](https://github.com/ijl/orjson)** - Fast, correct JSON library for Python written in Rust
+- **[msgpack](https://msgpack.org/)** - Efficient binary serialization format faster and smaller than JSON
+- **[msgspec](https://jcristharif.com/msgspec/)** - Fast serialization library supporting JSON, MessagePack, YAML, and TOML
+
+
+### Profiling & Performance
+- **[py-spy](https://github.com/benfred/py-spy)** - Sampling profiler for Python programs with minimal overhead
+- **[Scalene](https://github.com/plasma-umass/scalene)** - High-performance CPU, GPU, and memory profiler with AI optimization suggestions
+- **[Memray](https://bloomberg.github.io/memray/)** - Memory profiler for Python tracking allocations in native extensions
+
+
 ## Learning & References
 
 

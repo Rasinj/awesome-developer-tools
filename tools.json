@@ -1539,6 +1539,251 @@
               "description": "Framework for building interactive terminal user interfaces"
             }
           ]
+        },
+        {
+          "name": "HTTP Clients",
+          "tools": [
+            {
+              "name": "requests",
+              "url": "https://requests.readthedocs.io/",
+              "description": "Simple and elegant HTTP library for synchronous requests"
+            },
+            {
+              "name": "httpx",
+              "url": "https://www.python-httpx.org/",
+              "description": "Modern HTTP client with async/sync support and HTTP/2"
+            },
+            {
+              "name": "aiohttp",
+              "url": "https://docs.aiohttp.org/",
+              "description": "Async HTTP client/server framework for high-concurrency applications"
+            }
+          ]
+        },
+        {
+          "name": "Data Validation",
+          "tools": [
+            {
+              "name": "Pydantic",
+              "url": "https://docs.pydantic.dev/",
+              "description": "Data validation using Python type hints with high performance"
+            },
+            {
+              "name": "Marshmallow",
+              "url": "https://marshmallow.readthedocs.io/",
+              "description": "Object serialization and deserialization library with schema-based validation"
+            },
+            {
+              "name": "Cerberus",
+              "url": "https://docs.python-cerberus.org/",
+              "description": "Lightweight and extensible data validation library"
+            }
+          ]
+        },
+        {
+          "name": "Testing Extensions",
+          "tools": [
+            {
+              "name": "pytest-cov",
+              "url": "https://pytest-cov.readthedocs.io/",
+              "description": "Coverage plugin for pytest to measure test coverage"
+            },
+            {
+              "name": "coverage.py",
+              "url": "https://coverage.readthedocs.io/",
+              "description": "Code coverage measurement tool for Python"
+            },
+            {
+              "name": "Hypothesis",
+              "url": "https://hypothesis.readthedocs.io/",
+              "description": "Property-based testing library for writing powerful tests"
+            },
+            {
+              "name": "tox",
+              "url": "https://tox.wiki/",
+              "description": "Automation tool for testing in multiple Python environments"
+            }
+          ]
+        },
+        {
+          "name": "Web & Data Apps",
+          "tools": [
+            {
+              "name": "Streamlit",
+              "url": "https://streamlit.io/",
+              "description": "Framework for building interactive data apps and dashboards rapidly"
+            },
+            {
+              "name": "Gradio",
+              "url": "https://www.gradio.app/",
+              "description": "Build and share machine learning demos and web apps quickly"
+            },
+            {
+              "name": "Reflex",
+              "url": "https://reflex.dev/",
+              "description": "Full-stack Python framework for building web apps without JavaScript"
+            }
+          ]
+        },
+        {
+          "name": "Async Libraries",
+          "tools": [
+            {
+              "name": "asyncio",
+              "url": "https://docs.python.org/3/library/asyncio.html",
+              "description": "Built-in library for writing concurrent code using async/await syntax"
+            },
+            {
+              "name": "Trio",
+              "url": "https://trio.readthedocs.io/",
+              "description": "Friendly Python library for async concurrency with structured concurrency"
+            },
+            {
+              "name": "AnyIO",
+              "url": "https://anyio.readthedocs.io/",
+              "description": "Compatibility layer for asyncio and Trio with unified high-level API"
+            }
+          ]
+        },
+        {
+          "name": "ORMs & Database Libraries",
+          "tools": [
+            {
+              "name": "SQLAlchemy",
+              "url": "https://www.sqlalchemy.org/",
+              "description": "Powerful and flexible SQL toolkit and ORM for Python"
+            },
+            {
+              "name": "Tortoise ORM",
+              "url": "https://tortoise.github.io/",
+              "description": "Async ORM inspired by Django with excellent performance"
+            },
+            {
+              "name": "Peewee",
+              "url": "http://docs.peewee-orm.com/",
+              "description": "Lightweight and expressive ORM for small to medium applications"
+            }
+          ]
+        },
+        {
+          "name": "Task Queues & Scheduling",
+          "tools": [
+            {
+              "name": "Celery",
+              "url": "https://docs.celeryq.dev/",
+              "description": "Distributed task queue for handling asynchronous jobs at scale"
+            },
+            {
+              "name": "RQ",
+              "url": "https://python-rq.org/",
+              "description": "Simple Python library for queueing jobs backed by Redis"
+            },
+            {
+              "name": "Dramatiq",
+              "url": "https://dramatiq.io/",
+              "description": "Fast and reliable alternative to Celery for distributed tasks"
+            },
+            {
+              "name": "APScheduler",
+              "url": "https://apscheduler.readthedocs.io/",
+              "description": "Advanced Python scheduler for running jobs at specific times or intervals"
+            }
+          ]
+        },
+        {
+          "name": "Logging",
+          "tools": [
+            {
+              "name": "loguru",
+              "url": "https://loguru.readthedocs.io/",
+              "description": "Simplified logging library with beautiful colors and easy configuration"
+            },
+            {
+              "name": "structlog",
+              "url": "https://www.structlog.org/",
+              "description": "Structured logging library for producing JSON or Logfmt output"
+            }
+          ]
+        },
+        {
+          "name": "Configuration Management",
+          "tools": [
+            {
+              "name": "Dynaconf",
+              "url": "https://www.dynaconf.com/",
+              "description": "Layered configuration system supporting multiple formats and environments"
+            },
+            {
+              "name": "pydantic-settings",
+              "url": "https://docs.pydantic.dev/latest/concepts/pydantic_settings/",
+              "description": "Type-safe settings management with Pydantic integration"
+            },
+            {
+              "name": "python-decouple",
+              "url": "https://github.com/HBNetwork/python-decouple",
+              "description": "Strict separation of settings from code for 12-factor apps"
+            }
+          ]
+        },
+        {
+          "name": "Documentation Generators",
+          "tools": [
+            {
+              "name": "Sphinx",
+              "url": "https://www.sphinx-doc.org/",
+              "description": "Popular documentation generator supporting multiple output formats"
+            },
+            {
+              "name": "pdoc",
+              "url": "https://pdoc.dev/",
+              "description": "Lightweight automatic API documentation generator with zero configuration"
+            },
+            {
+              "name": "mkdocstrings",
+              "url": "https://mkdocstrings.github.io/",
+              "description": "Automatic documentation from docstrings for MkDocs"
+            }
+          ]
+        },
+        {
+          "name": "Serialization",
+          "tools": [
+            {
+              "name": "orjson",
+              "url": "https://github.com/ijl/orjson",
+              "description": "Fast, correct JSON library for Python written in Rust"
+            },
+            {
+              "name": "msgpack",
+              "url": "https://msgpack.org/",
+              "description": "Efficient binary serialization format faster and smaller than JSON"
+            },
+            {
+              "name": "msgspec",
+              "url": "https://jcristharif.com/msgspec/",
+              "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML"
+            }
+          ]
+        },
+        {
+          "name": "Profiling & Performance",
+          "tools": [
+            {
+              "name": "py-spy",
+              "url": "https://github.com/benfred/py-spy",
+              "description": "Sampling profiler for Python programs with minimal overhead"
+            },
+            {
+              "name": "Scalene",
+              "url": "https://github.com/plasma-umass/scalene",
+              "description": "High-performance CPU, GPU, and memory profiler with AI optimization suggestions"
+            },
+            {
+              "name": "Memray",
+              "url": "https://bloomberg.github.io/memray/",
+              "description": "Memory profiler for Python tracking allocations in native extensions"
+            }
+          ]
         }
       ]
     },
