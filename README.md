@@ -30,6 +30,7 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 - [Web Frameworks](#web-frameworks)
 - [Desktop Application Development](#desktop-application-development)
 - [Data Science & Machine Learning](#data-science--machine-learning)
+- [Data Engineering](#data-engineering)
 
 
 
@@ -707,6 +708,83 @@ Tools, frameworks, and platforms for data analysis, machine learning, artificial
 - **[Sktime](https://www.sktime.net/)** - A unified framework for time series analysis in Python, interoperable with scikit-learn.
 - **[AutoTS](https://github.com/winedarksea/AutoTS)** - An automated time-series forecasting library for Python.
 - **[Prophet](https://facebook.github.io/prophet/)** - A forecasting library for time series data developed by Facebook.
+
+
+## Data Engineering
+
+
+Tools and frameworks for building, orchestrating, and managing data pipelines, ETL/ELT processes, and data infrastructure at scale.
+
+
+
+### Workflow Orchestration
+- **[Apache Airflow](https://airflow.apache.org/)** - Platform to programmatically author, schedule, and monitor workflows as DAGs
+- **[Prefect](https://www.prefect.io/)** - Modern workflow orchestration tool with dynamic, Pythonic pipeline definitions
+- **[Dagster](https://dagster.io/)** - Data orchestration platform with built-in testing, data quality, and observability
+- **[Temporal](https://temporal.io/)** - Durable execution framework for building resilient workflows and distributed systems
+- **[Mage](https://www.mage.ai/)** - Modern data pipeline tool with notebook-style development and built-in observability
+- **[Argo Workflows](https://argoproj.github.io/workflows/)** - Kubernetes-native workflow engine for orchestrating parallel jobs
+
+
+### Data Transformation
+- **[dbt](https://www.getdbt.com/)** - Data build tool for transforming data in your warehouse using SQL and version control
+- **[Apache Spark](https://spark.apache.org/)** - Unified analytics engine for large-scale data processing with batch and streaming
+- **[SQLMesh](https://sqlmesh.com/)** - DataOps framework for SQL transformations with built-in testing and CI/CD
+- **[dlt](https://dlthub.com/)** - Python library for building data pipelines with automatic schema inference
+- **[Malloy](https://github.com/malloydata/malloy)** - Experimental language for describing data relationships and transformations
+
+
+### Data Integration
+- **[Airbyte](https://airbyte.com/)** - Open-source data integration platform with 300+ pre-built connectors
+- **[Meltano](https://meltano.com/)** - Open-source ELT platform built on top of Singer with CLI-first approach
+- **[Singer](https://www.singer.io/)** - Open-source standard for writing scripts that move data between systems
+- **[Fivetran](https://www.fivetran.com/)** - Fully managed ELT service with automated connectors and schema management
+- **[Estuary Flow](https://estuary.dev/)** - Real-time data integration platform built on change data capture
+
+
+### Stream Processing
+- **[Apache Kafka](https://kafka.apache.org/)** - Distributed event streaming platform for high-performance data pipelines and streaming apps
+- **[Apache Flink](https://flink.apache.org/)** - Stateful stream processing framework for distributed, high-performing applications
+- **[Redpanda](https://redpanda.com/)** - Kafka-compatible streaming platform built in C++ for faster performance
+- **[Apache Pulsar](https://pulsar.apache.org/)** - Cloud-native distributed messaging and streaming platform with multi-tenancy
+- **[Kafka Streams](https://kafka.apache.org/documentation/streams/)** - Client library for building stream processing applications with Apache Kafka
+- **[Benthos](https://www.benthos.dev/)** - Stream processor for mundane tasks with a declarative configuration approach
+
+
+### Data Quality & Validation
+- **[Great Expectations](https://greatexpectations.io/)** - Python-based data validation framework with declarative expectations and profiling
+- **[Soda](https://www.soda.io/)** - Data quality platform with SQL-based checks and automated monitoring
+- **[deequ](https://github.com/awslabs/deequ)** - Data quality library built on Apache Spark for defining unit tests on data
+- **[Pandera](https://pandera.readthedocs.io/)** - Statistical data validation library for pandas DataFrames with type hints
+- **[ydata-profiling](https://github.com/ydataai/ydata-profiling)** - Python library for generating comprehensive data profiling reports from DataFrames
+- **[whylogs](https://whylogs.readthedocs.io/)** - Data logging library for monitoring data quality in production pipelines
+
+
+### Data Lake Technologies
+- **[Apache Iceberg](https://iceberg.apache.org/)** - High-performance table format for huge analytic datasets with ACID transactions
+- **[Delta Lake](https://delta.io/)** - Open-source storage framework with ACID transactions for data lakes
+- **[Apache Hudi](https://hudi.apache.org/)** - Streaming data lake platform with incremental processing and upsert capabilities
+- **[lakeFS](https://lakefs.io/)** - Git-like version control for data lakes with branching and rollback support
+- **[Project Nessie](https://projectnessie.org/)** - Git-like version control for data lakes compatible with Iceberg, Delta, and Hudi
+
+
+### Query Engines
+- **[Trino](https://trino.io/)** - Distributed SQL query engine for querying data across multiple sources
+- **[Presto](https://prestodb.io/)** - Distributed SQL query engine for running interactive queries against diverse data sources
+- **[Apache Drill](https://drill.apache.org/)** - Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage
+- **[Dremio](https://www.dremio.com/)** - Data lakehouse platform with SQL query acceleration and self-service analytics
+
+
+### Data Cataloging & Metadata
+- **[DataHub](https://datahubproject.io/)** - Extensible metadata platform for data discovery and governance with lineage tracking
+- **[Amundsen](https://www.amundsen.io/)** - Data discovery and metadata platform for improving data productivity
+- **[OpenMetadata](https://open-metadata.org/)** - Open standard for metadata with data discovery, lineage, and quality capabilities
+- **[Apache Atlas](https://atlas.apache.org/)** - Scalable metadata and governance platform for Hadoop and cloud environments
+
+
+### Data Version Control
+- **[DVC](https://dvc.org/)** - Git-based data version control for machine learning projects with experiment tracking
+- **[Pachyderm](https://www.pachyderm.com/)** - Data versioning and pipeline platform with reproducible data science workflows
 
 
 

@@ -989,6 +989,214 @@
             "learning_curve": "Moderate"
           },
           "github_info": null
+        },
+        {
+          "name": "Apache Airflow",
+          "url": "https://airflow.apache.org/",
+          "description": "Platform to programmatically author, schedule, and monitor workflows as DAGs",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "rising",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Spark",
+          "url": "https://spark.apache.org/",
+          "description": "Unified analytics engine for large-scale data processing with batch and streaming",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Transformation",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Kafka",
+          "url": "https://kafka.apache.org/",
+          "description": "Distributed event streaming platform for high-performance data pipelines and streaming apps",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Flink",
+          "url": "https://flink.apache.org/",
+          "description": "Stateful stream processing framework for distributed, high-performing applications",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Pulsar",
+          "url": "https://pulsar.apache.org/",
+          "description": "Cloud-native distributed messaging and streaming platform with multi-tenancy",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Kafka Streams",
+          "url": "https://kafka.apache.org/documentation/streams/",
+          "description": "Client library for building stream processing applications with Apache Kafka",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Iceberg",
+          "url": "https://iceberg.apache.org/",
+          "description": "High-performance table format for huge analytic datasets with ACID transactions",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Lake Technologies",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Hudi",
+          "url": "https://hudi.apache.org/",
+          "description": "Streaming data lake platform with incremental processing and upsert capabilities",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Lake Technologies",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Project Nessie",
+          "url": "https://projectnessie.org/",
+          "description": "Git-like version control for data lakes compatible with Iceberg, Delta, and Hudi",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Lake Technologies",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Drill",
+          "url": "https://drill.apache.org/",
+          "description": "Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Query Engines",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "OpenMetadata",
+          "url": "https://open-metadata.org/",
+          "description": "Open standard for metadata with data discovery, lineage, and quality capabilities",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Cataloging & Metadata",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Apache Atlas",
+          "url": "https://atlas.apache.org/",
+          "description": "Scalable metadata and governance platform for Hadoop and cloud environments",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Cataloging & Metadata",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "DVC",
+          "url": "https://dvc.org/",
+          "description": "Git-based data version control for machine learning projects with experiment tracking",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Data Engineering",
+          "subcategory": "Data Version Control",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
         }
       ]
     },
@@ -4416,6 +4624,495 @@
             "learning_curve": "Moderate"
           },
           "github_info": null
+        },
+        {
+          "name": "Prefect",
+          "url": "https://www.prefect.io/",
+          "description": "Modern workflow orchestration tool with dynamic, Pythonic pipeline definitions",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Dagster",
+          "url": "https://dagster.io/",
+          "description": "Data orchestration platform with built-in testing, data quality, and observability",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "description": "Durable execution framework for building resilient workflows and distributed systems",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Mage",
+          "url": "https://www.mage.ai/",
+          "description": "Modern data pipeline tool with notebook-style development and built-in observability",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Argo Workflows",
+          "url": "https://argoproj.github.io/workflows/",
+          "description": "Kubernetes-native workflow engine for orchestrating parallel jobs",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Workflow Orchestration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "dbt",
+          "url": "https://www.getdbt.com/",
+          "description": "Data build tool for transforming data in your warehouse using SQL and version control",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Transformation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "SQLMesh",
+          "url": "https://sqlmesh.com/",
+          "description": "DataOps framework for SQL transformations with built-in testing and CI/CD",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Transformation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "dlt",
+          "url": "https://dlthub.com/",
+          "description": "Python library for building data pipelines with automatic schema inference",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Transformation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Malloy",
+          "url": "https://github.com/malloydata/malloy",
+          "description": "Experimental language for describing data relationships and transformations",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Transformation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "malloydata",
+            "repo": "malloy"
+          }
+        },
+        {
+          "name": "Airbyte",
+          "url": "https://airbyte.com/",
+          "description": "Open-source data integration platform with 300+ pre-built connectors",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Data Engineering",
+          "subcategory": "Data Integration",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Meltano",
+          "url": "https://meltano.com/",
+          "description": "Open-source ELT platform built on top of Singer with CLI-first approach",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Integration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Singer",
+          "url": "https://www.singer.io/",
+          "description": "Open-source standard for writing scripts that move data between systems",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Integration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Fivetran",
+          "url": "https://www.fivetran.com/",
+          "description": "Fully managed ELT service with automated connectors and schema management",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Integration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Estuary Flow",
+          "url": "https://estuary.dev/",
+          "description": "Real-time data integration platform built on change data capture",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Integration",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Redpanda",
+          "url": "https://redpanda.com/",
+          "description": "Kafka-compatible streaming platform built in C++ for faster performance",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Benthos",
+          "url": "https://www.benthos.dev/",
+          "description": "Stream processor for mundane tasks with a declarative configuration approach",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Stream Processing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Great Expectations",
+          "url": "https://greatexpectations.io/",
+          "description": "Python-based data validation framework with declarative expectations and profiling",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Soda",
+          "url": "https://www.soda.io/",
+          "description": "Data quality platform with SQL-based checks and automated monitoring",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "deequ",
+          "url": "https://github.com/awslabs/deequ",
+          "description": "Data quality library built on Apache Spark for defining unit tests on data",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "awslabs",
+            "repo": "deequ"
+          }
+        },
+        {
+          "name": "Pandera",
+          "url": "https://pandera.readthedocs.io/",
+          "description": "Statistical data validation library for pandas DataFrames with type hints",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "ydata-profiling",
+          "url": "https://github.com/ydataai/ydata-profiling",
+          "description": "Python library for generating comprehensive data profiling reports from DataFrames",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "ydataai",
+            "repo": "ydata-profiling"
+          }
+        },
+        {
+          "name": "whylogs",
+          "url": "https://whylogs.readthedocs.io/",
+          "description": "Data logging library for monitoring data quality in production pipelines",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Quality & Validation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Delta Lake",
+          "url": "https://delta.io/",
+          "description": "Open-source storage framework with ACID transactions for data lakes",
+          "birth_year": 2019,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Lake Technologies",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "lakeFS",
+          "url": "https://lakefs.io/",
+          "description": "Git-like version control for data lakes with branching and rollback support",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Lake Technologies",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Trino",
+          "url": "https://trino.io/",
+          "description": "Distributed SQL query engine for querying data across multiple sources",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Query Engines",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Presto",
+          "url": "https://prestodb.io/",
+          "description": "Distributed SQL query engine for running interactive queries against diverse data sources",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Query Engines",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Dremio",
+          "url": "https://www.dremio.com/",
+          "description": "Data lakehouse platform with SQL query acceleration and self-service analytics",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Query Engines",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "DataHub",
+          "url": "https://datahubproject.io/",
+          "description": "Extensible metadata platform for data discovery and governance with lineage tracking",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Cataloging & Metadata",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Amundsen",
+          "url": "https://www.amundsen.io/",
+          "description": "Data discovery and metadata platform for improving data productivity",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Cataloging & Metadata",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Pachyderm",
+          "url": "https://www.pachyderm.com/",
+          "description": "Data versioning and pipeline platform with reproducible data science workflows",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Data Engineering",
+          "subcategory": "Data Version Control",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
         }
       ]
     },
@@ -5270,19 +5967,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 289,
+    "total_tools": 332,
     "tools_by_era": {
       "unix": 4,
       "internet": 7,
-      "web": 46,
-      "mobile": 206,
+      "web": 59,
+      "mobile": 236,
       "cloud": 26,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 19,
-      "stable": 212,
-      "declining": 58
+      "rising": 21,
+      "stable": 241,
+      "declining": 70
     },
     "average_age": 2013,
     "newest_tool_year": 2023,

@@ -1983,6 +1983,273 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Data Engineering",
+      "id": "data-engineering",
+      "description": "Tools and frameworks for building, orchestrating, and managing data pipelines, ETL/ELT processes, and data infrastructure at scale.",
+      "subcategories": [
+        {
+          "name": "Workflow Orchestration",
+          "tools": [
+            {
+              "name": "Apache Airflow",
+              "url": "https://airflow.apache.org/",
+              "description": "Platform to programmatically author, schedule, and monitor workflows as DAGs"
+            },
+            {
+              "name": "Prefect",
+              "url": "https://www.prefect.io/",
+              "description": "Modern workflow orchestration tool with dynamic, Pythonic pipeline definitions"
+            },
+            {
+              "name": "Dagster",
+              "url": "https://dagster.io/",
+              "description": "Data orchestration platform with built-in testing, data quality, and observability"
+            },
+            {
+              "name": "Temporal",
+              "url": "https://temporal.io/",
+              "description": "Durable execution framework for building resilient workflows and distributed systems"
+            },
+            {
+              "name": "Mage",
+              "url": "https://www.mage.ai/",
+              "description": "Modern data pipeline tool with notebook-style development and built-in observability"
+            },
+            {
+              "name": "Argo Workflows",
+              "url": "https://argoproj.github.io/workflows/",
+              "description": "Kubernetes-native workflow engine for orchestrating parallel jobs"
+            }
+          ]
+        },
+        {
+          "name": "Data Transformation",
+          "tools": [
+            {
+              "name": "dbt",
+              "url": "https://www.getdbt.com/",
+              "description": "Data build tool for transforming data in your warehouse using SQL and version control"
+            },
+            {
+              "name": "Apache Spark",
+              "url": "https://spark.apache.org/",
+              "description": "Unified analytics engine for large-scale data processing with batch and streaming"
+            },
+            {
+              "name": "SQLMesh",
+              "url": "https://sqlmesh.com/",
+              "description": "DataOps framework for SQL transformations with built-in testing and CI/CD"
+            },
+            {
+              "name": "dlt",
+              "url": "https://dlthub.com/",
+              "description": "Python library for building data pipelines with automatic schema inference"
+            },
+            {
+              "name": "Malloy",
+              "url": "https://github.com/malloydata/malloy",
+              "description": "Experimental language for describing data relationships and transformations"
+            }
+          ]
+        },
+        {
+          "name": "Data Integration",
+          "tools": [
+            {
+              "name": "Airbyte",
+              "url": "https://airbyte.com/",
+              "description": "Open-source data integration platform with 300+ pre-built connectors"
+            },
+            {
+              "name": "Meltano",
+              "url": "https://meltano.com/",
+              "description": "Open-source ELT platform built on top of Singer with CLI-first approach"
+            },
+            {
+              "name": "Singer",
+              "url": "https://www.singer.io/",
+              "description": "Open-source standard for writing scripts that move data between systems"
+            },
+            {
+              "name": "Fivetran",
+              "url": "https://www.fivetran.com/",
+              "description": "Fully managed ELT service with automated connectors and schema management"
+            },
+            {
+              "name": "Estuary Flow",
+              "url": "https://estuary.dev/",
+              "description": "Real-time data integration platform built on change data capture"
+            }
+          ]
+        },
+        {
+          "name": "Stream Processing",
+          "tools": [
+            {
+              "name": "Apache Kafka",
+              "url": "https://kafka.apache.org/",
+              "description": "Distributed event streaming platform for high-performance data pipelines and streaming apps"
+            },
+            {
+              "name": "Apache Flink",
+              "url": "https://flink.apache.org/",
+              "description": "Stateful stream processing framework for distributed, high-performing applications"
+            },
+            {
+              "name": "Redpanda",
+              "url": "https://redpanda.com/",
+              "description": "Kafka-compatible streaming platform built in C++ for faster performance"
+            },
+            {
+              "name": "Apache Pulsar",
+              "url": "https://pulsar.apache.org/",
+              "description": "Cloud-native distributed messaging and streaming platform with multi-tenancy"
+            },
+            {
+              "name": "Kafka Streams",
+              "url": "https://kafka.apache.org/documentation/streams/",
+              "description": "Client library for building stream processing applications with Apache Kafka"
+            },
+            {
+              "name": "Benthos",
+              "url": "https://www.benthos.dev/",
+              "description": "Stream processor for mundane tasks with a declarative configuration approach"
+            }
+          ]
+        },
+        {
+          "name": "Data Quality & Validation",
+          "tools": [
+            {
+              "name": "Great Expectations",
+              "url": "https://greatexpectations.io/",
+              "description": "Python-based data validation framework with declarative expectations and profiling"
+            },
+            {
+              "name": "Soda",
+              "url": "https://www.soda.io/",
+              "description": "Data quality platform with SQL-based checks and automated monitoring"
+            },
+            {
+              "name": "deequ",
+              "url": "https://github.com/awslabs/deequ",
+              "description": "Data quality library built on Apache Spark for defining unit tests on data"
+            },
+            {
+              "name": "Pandera",
+              "url": "https://pandera.readthedocs.io/",
+              "description": "Statistical data validation library for pandas DataFrames with type hints"
+            },
+            {
+              "name": "ydata-profiling",
+              "url": "https://github.com/ydataai/ydata-profiling",
+              "description": "Python library for generating comprehensive data profiling reports from DataFrames"
+            },
+            {
+              "name": "whylogs",
+              "url": "https://whylogs.readthedocs.io/",
+              "description": "Data logging library for monitoring data quality in production pipelines"
+            }
+          ]
+        },
+        {
+          "name": "Data Lake Technologies",
+          "tools": [
+            {
+              "name": "Apache Iceberg",
+              "url": "https://iceberg.apache.org/",
+              "description": "High-performance table format for huge analytic datasets with ACID transactions"
+            },
+            {
+              "name": "Delta Lake",
+              "url": "https://delta.io/",
+              "description": "Open-source storage framework with ACID transactions for data lakes"
+            },
+            {
+              "name": "Apache Hudi",
+              "url": "https://hudi.apache.org/",
+              "description": "Streaming data lake platform with incremental processing and upsert capabilities"
+            },
+            {
+              "name": "lakeFS",
+              "url": "https://lakefs.io/",
+              "description": "Git-like version control for data lakes with branching and rollback support"
+            },
+            {
+              "name": "Project Nessie",
+              "url": "https://projectnessie.org/",
+              "description": "Git-like version control for data lakes compatible with Iceberg, Delta, and Hudi"
+            }
+          ]
+        },
+        {
+          "name": "Query Engines",
+          "tools": [
+            {
+              "name": "Trino",
+              "url": "https://trino.io/",
+              "description": "Distributed SQL query engine for querying data across multiple sources"
+            },
+            {
+              "name": "Presto",
+              "url": "https://prestodb.io/",
+              "description": "Distributed SQL query engine for running interactive queries against diverse data sources"
+            },
+            {
+              "name": "Apache Drill",
+              "url": "https://drill.apache.org/",
+              "description": "Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage"
+            },
+            {
+              "name": "Dremio",
+              "url": "https://www.dremio.com/",
+              "description": "Data lakehouse platform with SQL query acceleration and self-service analytics"
+            }
+          ]
+        },
+        {
+          "name": "Data Cataloging & Metadata",
+          "tools": [
+            {
+              "name": "DataHub",
+              "url": "https://datahubproject.io/",
+              "description": "Extensible metadata platform for data discovery and governance with lineage tracking"
+            },
+            {
+              "name": "Amundsen",
+              "url": "https://www.amundsen.io/",
+              "description": "Data discovery and metadata platform for improving data productivity"
+            },
+            {
+              "name": "OpenMetadata",
+              "url": "https://open-metadata.org/",
+              "description": "Open standard for metadata with data discovery, lineage, and quality capabilities"
+            },
+            {
+              "name": "Apache Atlas",
+              "url": "https://atlas.apache.org/",
+              "description": "Scalable metadata and governance platform for Hadoop and cloud environments"
+            }
+          ]
+        },
+        {
+          "name": "Data Version Control",
+          "tools": [
+            {
+              "name": "DVC",
+              "url": "https://dvc.org/",
+              "description": "Git-based data version control for machine learning projects with experiment tracking"
+            },
+            {
+              "name": "Pachyderm",
+              "url": "https://www.pachyderm.com/",
+              "description": "Data versioning and pipeline platform with reproducible data science workflows"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
