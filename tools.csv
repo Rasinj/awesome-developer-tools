@@ -325,3 +325,46 @@ Data Science & Machine Learning,Time Series,Tsfresh,https://tsfresh.com/,A Pytho
 Data Science & Machine Learning,Time Series,Sktime,https://www.sktime.net/,"A unified framework for time series analysis in Python, interoperable with scikit-learn."
 Data Science & Machine Learning,Time Series,AutoTS,https://github.com/winedarksea/AutoTS,An automated time-series forecasting library for Python.
 Data Science & Machine Learning,Time Series,Prophet,https://facebook.github.io/prophet/,A forecasting library for time series data developed by Facebook.
+Data Engineering,Workflow Orchestration,Apache Airflow,https://airflow.apache.org/,"Platform to programmatically author, schedule, and monitor workflows as DAGs"
+Data Engineering,Workflow Orchestration,Prefect,https://www.prefect.io/,"Modern workflow orchestration tool with dynamic, Pythonic pipeline definitions"
+Data Engineering,Workflow Orchestration,Dagster,https://dagster.io/,"Data orchestration platform with built-in testing, data quality, and observability"
+Data Engineering,Workflow Orchestration,Temporal,https://temporal.io/,Durable execution framework for building resilient workflows and distributed systems
+Data Engineering,Workflow Orchestration,Mage,https://www.mage.ai/,Modern data pipeline tool with notebook-style development and built-in observability
+Data Engineering,Workflow Orchestration,Argo Workflows,https://argoproj.github.io/workflows/,Kubernetes-native workflow engine for orchestrating parallel jobs
+Data Engineering,Data Transformation,dbt,https://www.getdbt.com/,Data build tool for transforming data in your warehouse using SQL and version control
+Data Engineering,Data Transformation,Apache Spark,https://spark.apache.org/,Unified analytics engine for large-scale data processing with batch and streaming
+Data Engineering,Data Transformation,SQLMesh,https://sqlmesh.com/,DataOps framework for SQL transformations with built-in testing and CI/CD
+Data Engineering,Data Transformation,dlt,https://dlthub.com/,Python library for building data pipelines with automatic schema inference
+Data Engineering,Data Transformation,Malloy,https://github.com/malloydata/malloy,Experimental language for describing data relationships and transformations
+Data Engineering,Data Integration,Airbyte,https://airbyte.com/,Open-source data integration platform with 300+ pre-built connectors
+Data Engineering,Data Integration,Meltano,https://meltano.com/,Open-source ELT platform built on top of Singer with CLI-first approach
+Data Engineering,Data Integration,Singer,https://www.singer.io/,Open-source standard for writing scripts that move data between systems
+Data Engineering,Data Integration,Fivetran,https://www.fivetran.com/,Fully managed ELT service with automated connectors and schema management
+Data Engineering,Data Integration,Estuary Flow,https://estuary.dev/,Real-time data integration platform built on change data capture
+Data Engineering,Stream Processing,Apache Kafka,https://kafka.apache.org/,Distributed event streaming platform for high-performance data pipelines and streaming apps
+Data Engineering,Stream Processing,Apache Flink,https://flink.apache.org/,"Stateful stream processing framework for distributed, high-performing applications"
+Data Engineering,Stream Processing,Redpanda,https://redpanda.com/,Kafka-compatible streaming platform built in C++ for faster performance
+Data Engineering,Stream Processing,Apache Pulsar,https://pulsar.apache.org/,Cloud-native distributed messaging and streaming platform with multi-tenancy
+Data Engineering,Stream Processing,Kafka Streams,https://kafka.apache.org/documentation/streams/,Client library for building stream processing applications with Apache Kafka
+Data Engineering,Stream Processing,Benthos,https://www.benthos.dev/,Stream processor for mundane tasks with a declarative configuration approach
+Data Engineering,Data Quality & Validation,Great Expectations,https://greatexpectations.io/,Python-based data validation framework with declarative expectations and profiling
+Data Engineering,Data Quality & Validation,Soda,https://www.soda.io/,Data quality platform with SQL-based checks and automated monitoring
+Data Engineering,Data Quality & Validation,deequ,https://github.com/awslabs/deequ,Data quality library built on Apache Spark for defining unit tests on data
+Data Engineering,Data Quality & Validation,Pandera,https://pandera.readthedocs.io/,Statistical data validation library for pandas DataFrames with type hints
+Data Engineering,Data Quality & Validation,ydata-profiling,https://github.com/ydataai/ydata-profiling,Python library for generating comprehensive data profiling reports from DataFrames
+Data Engineering,Data Quality & Validation,whylogs,https://whylogs.readthedocs.io/,Data logging library for monitoring data quality in production pipelines
+Data Engineering,Data Lake Technologies,Apache Iceberg,https://iceberg.apache.org/,High-performance table format for huge analytic datasets with ACID transactions
+Data Engineering,Data Lake Technologies,Delta Lake,https://delta.io/,Open-source storage framework with ACID transactions for data lakes
+Data Engineering,Data Lake Technologies,Apache Hudi,https://hudi.apache.org/,Streaming data lake platform with incremental processing and upsert capabilities
+Data Engineering,Data Lake Technologies,lakeFS,https://lakefs.io/,Git-like version control for data lakes with branching and rollback support
+Data Engineering,Data Lake Technologies,Project Nessie,https://projectnessie.org/,"Git-like version control for data lakes compatible with Iceberg, Delta, and Hudi"
+Data Engineering,Query Engines,Trino,https://trino.io/,Distributed SQL query engine for querying data across multiple sources
+Data Engineering,Query Engines,Presto,https://prestodb.io/,Distributed SQL query engine for running interactive queries against diverse data sources
+Data Engineering,Query Engines,Apache Drill,https://drill.apache.org/,"Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage"
+Data Engineering,Query Engines,Dremio,https://www.dremio.com/,Data lakehouse platform with SQL query acceleration and self-service analytics
+Data Engineering,Data Cataloging & Metadata,DataHub,https://datahubproject.io/,Extensible metadata platform for data discovery and governance with lineage tracking
+Data Engineering,Data Cataloging & Metadata,Amundsen,https://www.amundsen.io/,Data discovery and metadata platform for improving data productivity
+Data Engineering,Data Cataloging & Metadata,OpenMetadata,https://open-metadata.org/,"Open standard for metadata with data discovery, lineage, and quality capabilities"
+Data Engineering,Data Cataloging & Metadata,Apache Atlas,https://atlas.apache.org/,Scalable metadata and governance platform for Hadoop and cloud environments
+Data Engineering,Data Version Control,DVC,https://dvc.org/,Git-based data version control for machine learning projects with experiment tracking
+Data Engineering,Data Version Control,Pachyderm,https://www.pachyderm.com/,Data versioning and pipeline platform with reproducible data science workflows

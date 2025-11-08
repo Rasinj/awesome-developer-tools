@@ -543,3 +543,66 @@
 - Sktime: https://www.sktime.net/
 - AutoTS: https://github.com/winedarksea/AutoTS
 - Prophet: https://facebook.github.io/prophet/
+
+## Data Engineering
+
+### Workflow Orchestration
+- Apache Airflow: https://airflow.apache.org/
+- Prefect: https://www.prefect.io/
+- Dagster: https://dagster.io/
+- Temporal: https://temporal.io/
+- Mage: https://www.mage.ai/
+- Argo Workflows: https://argoproj.github.io/workflows/
+
+### Data Transformation
+- dbt: https://www.getdbt.com/
+- Apache Spark: https://spark.apache.org/
+- SQLMesh: https://sqlmesh.com/
+- dlt: https://dlthub.com/
+- Malloy: https://github.com/malloydata/malloy
+
+### Data Integration
+- Airbyte: https://airbyte.com/
+- Meltano: https://meltano.com/
+- Singer: https://www.singer.io/
+- Fivetran: https://www.fivetran.com/
+- Estuary Flow: https://estuary.dev/
+
+### Stream Processing
+- Apache Kafka: https://kafka.apache.org/
+- Apache Flink: https://flink.apache.org/
+- Redpanda: https://redpanda.com/
+- Apache Pulsar: https://pulsar.apache.org/
+- Kafka Streams: https://kafka.apache.org/documentation/streams/
+- Benthos: https://www.benthos.dev/
+
+### Data Quality & Validation
+- Great Expectations: https://greatexpectations.io/
+- Soda: https://www.soda.io/
+- deequ: https://github.com/awslabs/deequ
+- Pandera: https://pandera.readthedocs.io/
+- ydata-profiling: https://github.com/ydataai/ydata-profiling
+- whylogs: https://whylogs.readthedocs.io/
+
+### Data Lake Technologies
+- Apache Iceberg: https://iceberg.apache.org/
+- Delta Lake: https://delta.io/
+- Apache Hudi: https://hudi.apache.org/
+- lakeFS: https://lakefs.io/
+- Project Nessie: https://projectnessie.org/
+
+### Query Engines
+- Trino: https://trino.io/
+- Presto: https://prestodb.io/
+- Apache Drill: https://drill.apache.org/
+- Dremio: https://www.dremio.com/
+
+### Data Cataloging & Metadata
+- DataHub: https://datahubproject.io/
+- Amundsen: https://www.amundsen.io/
+- OpenMetadata: https://open-metadata.org/
+- Apache Atlas: https://atlas.apache.org/
+
+### Data Version Control
+- DVC: https://dvc.org/
+- Pachyderm: https://www.pachyderm.com/
