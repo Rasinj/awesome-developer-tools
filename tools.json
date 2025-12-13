@@ -28,6 +28,31 @@
               "name": "Zed",
               "url": "https://zed.dev/",
               "description": "High-performance, multiplayer code editor built in Rust"
+            },
+            {
+              "name": "Cursor",
+              "url": "https://www.cursor.com/",
+              "description": "AI-first code editor built for pair programming"
+            },
+            {
+              "name": "Sublime Text",
+              "url": "https://www.sublimetext.com/",
+              "description": "Fast, lightweight text editor for code and prose"
+            },
+            {
+              "name": "VSCodium",
+              "url": "https://vscodium.com/",
+              "description": "Telemetry-free build of VS Code"
+            },
+            {
+              "name": "Kate",
+              "url": "https://kate-editor.org/",
+              "description": "Advanced text editor from the KDE project"
+            },
+            {
+              "name": "Notepad++",
+              "url": "https://notepad-plus-plus.org/",
+              "description": "Free source code editor for Windows"
             }
           ]
         },
@@ -48,6 +73,11 @@
               "name": "WebStorm",
               "url": "https://www.jetbrains.com/webstorm/",
               "description": "JavaScript and TypeScript IDE"
+            },
+            {
+              "name": "JetBrains Fleet",
+              "url": "https://www.jetbrains.com/fleet/",
+              "description": "Lightweight IDE by JetBrains with a modern UI"
             },
             {
               "name": "Android Studio",
@@ -120,9 +150,9 @@
           "name": "Emacs",
           "tools": [
             {
-              "name": "Emacs",
+              "name": "GNU Emacs",
               "url": "https://www.gnu.org/software/emacs/",
-              "description": "Extensible, customizable text editor with powerful ecosystem"
+              "description": "Extensible, customizable text editor and computing environment"
             },
             {
               "name": "Doom Emacs",
@@ -157,9 +187,19 @@
               "description": "Command-line tool for GitHub"
             },
             {
+              "name": "GitHub Desktop",
+              "url": "https://desktop.github.com/",
+              "description": "Simple Git GUI client for GitHub workflows"
+            },
+            {
               "name": "Lazygit",
               "url": "https://github.com/jesseduffield/lazygit",
               "description": "Simple terminal UI for git commands"
+            },
+            {
+              "name": "Fork",
+              "url": "https://git-fork.com/",
+              "description": "Fast and friendly Git client for macOS and Windows"
             },
             {
               "name": "GitKraken",
@@ -180,6 +220,11 @@
               "name": "pre-commit",
               "url": "https://pre-commit.com/",
               "description": "Framework for managing git pre-commit hooks"
+            },
+            {
+              "name": "Git LFS",
+              "url": "https://git-lfs.com/",
+              "description": "Git extension for versioning large files"
             },
             {
               "name": "commitizen",
@@ -209,9 +254,24 @@
               "description": "Fast, cross-platform terminal emulator"
             },
             {
+              "name": "kitty",
+              "url": "https://sw.kovidgoyal.net/kitty/",
+              "description": "Fast, feature-rich GPU-based terminal emulator"
+            },
+            {
               "name": "WezTerm",
               "url": "https://wezfurlong.org/wezterm/",
               "description": "GPU-accelerated terminal emulator and multiplexer"
+            },
+            {
+              "name": "Ghostty",
+              "url": "https://ghostty.org/",
+              "description": "Fast, native terminal emulator focused on performance"
+            },
+            {
+              "name": "Warp",
+              "url": "https://www.warp.dev/",
+              "description": "Modern terminal with a collaborative, AI-assisted workflow"
             },
             {
               "name": "iTerm2",
@@ -550,6 +610,31 @@
       "description": "Automation tools for compiling code, running tasks, managing builds, and streamlining development workflows.",
       "subcategories": [
         {
+          "name": "General Build Systems",
+          "tools": [
+            {
+              "name": "CMake",
+              "url": "https://cmake.org/",
+              "description": "Cross-platform build system generator"
+            },
+            {
+              "name": "Ninja",
+              "url": "https://ninja-build.org/",
+              "description": "Small build system focused on speed"
+            },
+            {
+              "name": "Meson",
+              "url": "https://mesonbuild.com/",
+              "description": "Fast, user-friendly build system"
+            },
+            {
+              "name": "Bazel",
+              "url": "https://bazel.build/",
+              "description": "Build and test tool for large codebases"
+            }
+          ]
+        },
+        {
           "name": "Build Systems",
           "tools": [
             {
@@ -831,6 +916,16 @@
               "description": "HTTP and GraphQL client"
             },
             {
+              "name": "Bruno",
+              "url": "https://www.usebruno.com/",
+              "description": "Fast, git-friendly API client"
+            },
+            {
+              "name": "Hoppscotch",
+              "url": "https://hoppscotch.io/",
+              "description": "Open-source API development ecosystem"
+            },
+            {
               "name": "HTTPie",
               "url": "https://httpie.io/",
               "description": "Command-line HTTP client"
@@ -854,6 +949,11 @@
               "name": "Redoc",
               "url": "https://redoc.ly/",
               "description": "OpenAPI documentation generator"
+            },
+            {
+              "name": "OpenAPI Generator",
+              "url": "https://openapi-generator.tech/",
+              "description": "Generate API clients, servers, and docs from OpenAPI specs"
             },
             {
               "name": "API Blueprint",
@@ -1252,6 +1352,31 @@
               "name": "Grafana",
               "url": "https://grafana.com/",
               "description": "Open-source analytics and monitoring"
+            },
+            {
+              "name": "SigNoz",
+              "url": "https://signoz.io/",
+              "description": "Open-source observability platform for metrics, logs, and traces"
+            }
+          ]
+        },
+        {
+          "name": "Tracing & Observability",
+          "tools": [
+            {
+              "name": "OpenTelemetry",
+              "url": "https://opentelemetry.io/",
+              "description": "Open-source observability framework for traces, metrics, and logs"
+            },
+            {
+              "name": "Jaeger",
+              "url": "https://www.jaegertracing.io/",
+              "description": "Distributed tracing system"
+            },
+            {
+              "name": "Grafana Tempo",
+              "url": "https://grafana.com/oss/tempo/",
+              "description": "High-scale distributed tracing backend"
             }
           ]
         },
@@ -1296,9 +1421,29 @@
               "description": "Web application security scanner"
             },
             {
+              "name": "Burp Suite",
+              "url": "https://portswigger.net/burp",
+              "description": "Web security testing toolkit"
+            },
+            {
               "name": "Bandit",
               "url": "https://bandit.readthedocs.io/",
               "description": "Security linter for Python"
+            },
+            {
+              "name": "Trivy",
+              "url": "https://trivy.dev/",
+              "description": "Vulnerability scanner for containers and dependencies"
+            },
+            {
+              "name": "Gitleaks",
+              "url": "https://gitleaks.io/",
+              "description": "Detect and prevent secrets in Git repos"
+            },
+            {
+              "name": "Checkov",
+              "url": "https://www.checkov.io/",
+              "description": "Infrastructure as code security scanner"
             },
             {
               "name": "npm audit",

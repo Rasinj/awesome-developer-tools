@@ -27,9 +27,9 @@
       ],
       "tools": [
         {
-          "name": "Emacs",
+          "name": "GNU Emacs",
           "url": "https://www.gnu.org/software/emacs/",
-          "description": "Extensible, customizable text editor with powerful ecosystem",
+          "description": "Extensible, customizable text editor and computing environment",
           "birth_year": 1976,
           "era": "unix",
           "trend": "declining",
@@ -281,6 +281,54 @@
       ],
       "tools": [
         {
+          "name": "Sublime Text",
+          "url": "https://www.sublimetext.com/",
+          "description": "Fast, lightweight text editor for code and prose",
+          "birth_year": 2008,
+          "era": "web",
+          "trend": "declining",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Modern Editors",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Kate",
+          "url": "https://kate-editor.org/",
+          "description": "Advanced text editor from the KDE project",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Modern Editors",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Notepad++",
+          "url": "https://notepad-plus-plus.org/",
+          "description": "Free source code editor for Windows",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Modern Editors",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "IntelliJ IDEA",
           "url": "https://www.jetbrains.com/idea/",
           "description": "Powerful Java IDE with excellent refactoring tools",
@@ -396,9 +444,41 @@
           "github_info": null
         },
         {
+          "name": "GitHub Desktop",
+          "url": "https://desktop.github.com/",
+          "description": "Simple Git GUI client for GitHub workflows",
+          "birth_year": 2008,
+          "era": "web",
+          "trend": "declining",
+          "category": "Version Control",
+          "subcategory": "Git Tools",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
           "name": "WezTerm",
           "url": "https://wezfurlong.org/wezterm/",
           "description": "GPU-accelerated terminal emulator and multiplexer",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Terminal & Shell",
+          "subcategory": "Terminal Emulators",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Ghostty",
+          "url": "https://ghostty.org/",
+          "description": "Fast, native terminal emulator focused on performance",
           "birth_year": 2005,
           "era": "web",
           "trend": "declining",
@@ -554,6 +634,22 @@
           "trend": "declining",
           "category": "Package Managers",
           "subcategory": "System Package Managers",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "CMake",
+          "url": "https://cmake.org/",
+          "description": "Cross-platform build system generator",
+          "birth_year": 2000,
+          "era": "web",
+          "trend": "declining",
+          "category": "Build Tools & Task Runners",
+          "subcategory": "General Build Systems",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -1417,6 +1513,22 @@
           "github_info": null
         },
         {
+          "name": "VSCodium",
+          "url": "https://vscodium.com/",
+          "description": "Telemetry-free build of VS Code",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Modern Editors",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "PyCharm",
           "url": "https://www.jetbrains.com/pycharm/",
           "description": "Professional Python IDE with advanced debugging",
@@ -1444,6 +1556,22 @@
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "JetBrains Fleet",
+          "url": "https://www.jetbrains.com/fleet/",
+          "description": "Lightweight IDE by JetBrains with a modern UI",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Full IDEs",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1564,6 +1692,22 @@
           }
         },
         {
+          "name": "Fork",
+          "url": "https://git-fork.com/",
+          "description": "Fast and friendly Git client for macOS and Windows",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Version Control",
+          "subcategory": "Git Tools",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "GitKraken",
           "url": "https://www.gitkraken.com/",
           "description": "Cross-platform Git GUI client",
@@ -1612,6 +1756,22 @@
           "github_info": null
         },
         {
+          "name": "Git LFS",
+          "url": "https://git-lfs.com/",
+          "description": "Git extension for versioning large files",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Version Control",
+          "subcategory": "Git Utilities",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
           "name": "commitizen",
           "url": "https://commitizen-tools.github.io/commitizen/",
           "description": "Tool for creating committing rules",
@@ -1648,6 +1808,38 @@
           "url": "https://alacritty.org/",
           "description": "Fast, cross-platform terminal emulator",
           "birth_year": 2017,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Terminal & Shell",
+          "subcategory": "Terminal Emulators",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "kitty",
+          "url": "https://sw.kovidgoyal.net/kitty/",
+          "description": "Fast, feature-rich GPU-based terminal emulator",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Terminal & Shell",
+          "subcategory": "Terminal Emulators",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Warp",
+          "url": "https://www.warp.dev/",
+          "description": "Modern terminal with a collaborative, AI-assisted workflow",
+          "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
           "category": "Terminal & Shell",
@@ -2369,6 +2561,54 @@
           "github_info": null
         },
         {
+          "name": "Ninja",
+          "url": "https://ninja-build.org/",
+          "description": "Small build system focused on speed",
+          "birth_year": 2012,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Build Tools & Task Runners",
+          "subcategory": "General Build Systems",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Meson",
+          "url": "https://mesonbuild.com/",
+          "description": "Fast, user-friendly build system",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Build Tools & Task Runners",
+          "subcategory": "General Build Systems",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Bazel",
+          "url": "https://bazel.build/",
+          "description": "Build and test tool for large codebases",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Build Tools & Task Runners",
+          "subcategory": "General Build Systems",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Webpack",
           "url": "https://webpack.js.org/",
           "description": "Module bundler for JavaScript applications",
@@ -2765,6 +3005,38 @@
           "github_info": null
         },
         {
+          "name": "Bruno",
+          "url": "https://www.usebruno.com/",
+          "description": "Fast, git-friendly API client",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "API Development & Testing",
+          "subcategory": "API Testing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Hoppscotch",
+          "url": "https://hoppscotch.io/",
+          "description": "Open-source API development ecosystem",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "API Development & Testing",
+          "subcategory": "API Testing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
           "name": "HTTPie",
           "url": "https://httpie.io/",
           "description": "Command-line HTTP client",
@@ -2800,6 +3072,22 @@
           "name": "Redoc",
           "url": "https://redoc.ly/",
           "description": "OpenAPI documentation generator",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "API Development & Testing",
+          "subcategory": "API Documentation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "OpenAPI Generator",
+          "url": "https://openapi-generator.tech/",
+          "description": "Generate API clients, servers, and docs from OpenAPI specs",
           "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
@@ -3580,6 +3868,70 @@
           "github_info": null
         },
         {
+          "name": "SigNoz",
+          "url": "https://signoz.io/",
+          "description": "Open-source observability platform for metrics, logs, and traces",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Monitoring & Logging",
+          "subcategory": "Application Monitoring",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "OpenTelemetry",
+          "url": "https://opentelemetry.io/",
+          "description": "Open-source observability framework for traces, metrics, and logs",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Monitoring & Logging",
+          "subcategory": "Tracing & Observability",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Jaeger",
+          "url": "https://www.jaegertracing.io/",
+          "description": "Distributed tracing system",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Monitoring & Logging",
+          "subcategory": "Tracing & Observability",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Grafana Tempo",
+          "url": "https://grafana.com/oss/tempo/",
+          "description": "High-scale distributed tracing backend",
+          "birth_year": 2014,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Monitoring & Logging",
+          "subcategory": "Tracing & Observability",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "ELK Stack",
           "url": "https://www.elastic.co/elk-stack",
           "description": "Elasticsearch, Logstash, and Kibana",
@@ -3660,10 +4012,74 @@
           "github_info": null
         },
         {
+          "name": "Burp Suite",
+          "url": "https://portswigger.net/burp",
+          "description": "Web security testing toolkit",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Security",
+          "subcategory": "Security Scanning",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Bandit",
           "url": "https://bandit.readthedocs.io/",
           "description": "Security linter for Python",
           "birth_year": 2014,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Security",
+          "subcategory": "Security Scanning",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Trivy",
+          "url": "https://trivy.dev/",
+          "description": "Vulnerability scanner for containers and dependencies",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Security",
+          "subcategory": "Security Scanning",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Gitleaks",
+          "url": "https://gitleaks.io/",
+          "description": "Detect and prevent secrets in Git repos",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Security",
+          "subcategory": "Security Scanning",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Checkov",
+          "url": "https://www.checkov.io/",
+          "description": "Infrastructure as code security scanner",
+          "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
           "category": "Security",
@@ -5773,6 +6189,22 @@
           "github_info": null
         },
         {
+          "name": "Cursor",
+          "url": "https://www.cursor.com/",
+          "description": "AI-first code editor built for pair programming",
+          "birth_year": 2023,
+          "era": "cloud",
+          "trend": "rising",
+          "category": "Code Editors & IDEs",
+          "subcategory": "Modern Editors",
+          "metrics": {
+            "adoption_score": 90,
+            "community_size": "Huge",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "zoxide",
           "url": "https://github.com/ajeetdsouza/zoxide",
           "description": "Smarter cd command that learns your habits and jumps to frequently used directories",
@@ -6254,7 +6686,7 @@
         {
           "name": "Cursor",
           "year": 2023,
-          "url": ""
+          "url": "https://www.cursor.com/"
         }
       ]
     },
@@ -6296,9 +6728,9 @@
       "description": "From simple makefiles to modern ultra-fast bundlers",
       "tools": [
         {
-          "name": "Make",
-          "year": 1976,
-          "url": "https://www.gnu.org/software/make/"
+          "name": "CMake",
+          "year": 2000,
+          "url": "https://cmake.org/"
         },
         {
           "name": "Maven",
@@ -6571,19 +7003,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 326,
+    "total_tools": 396,
     "tools_by_era": {
       "unix": 4,
       "internet": 9,
-      "web": 55,
-      "mobile": 232,
-      "cloud": 26,
+      "web": 74,
+      "mobile": 282,
+      "cloud": 27,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 21,
-      "stable": 237,
-      "declining": 68
+      "rising": 25,
+      "stable": 285,
+      "declining": 86
     },
     "average_age": 2013,
     "newest_tool_year": 2023,

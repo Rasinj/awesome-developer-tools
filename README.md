@@ -45,12 +45,18 @@ Essential text editors and integrated development environments for writing, edit
 - **[Visual Studio Code](https://code.visualstudio.com/)** - Microsoft's lightweight, extensible code editor with massive ecosystem
 - **[Helix](https://helix-editor.com/)** - Post-modern modal text editor written in Rust
 - **[Zed](https://zed.dev/)** - High-performance, multiplayer code editor built in Rust
+- **[Cursor](https://www.cursor.com/)** - AI-first code editor built for pair programming
+- **[Sublime Text](https://www.sublimetext.com/)** - Fast, lightweight text editor for code and prose
+- **[VSCodium](https://vscodium.com/)** - Telemetry-free build of VS Code
+- **[Kate](https://kate-editor.org/)** - Advanced text editor from the KDE project
+- **[Notepad++](https://notepad-plus-plus.org/)** - Free source code editor for Windows
 
 
 ### Full IDEs
 - **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** - Powerful Java IDE with excellent refactoring tools
 - **[PyCharm](https://www.jetbrains.com/pycharm/)** - Professional Python IDE with advanced debugging
 - **[WebStorm](https://www.jetbrains.com/webstorm/)** - JavaScript and TypeScript IDE
+- **[JetBrains Fleet](https://www.jetbrains.com/fleet/)** - Lightweight IDE by JetBrains with a modern UI
 - **[Android Studio](https://developer.android.com/studio)** - Official Android development environment
 
 
@@ -71,7 +77,7 @@ Essential text editors and integrated development environments for writing, edit
 
 
 ### Emacs
-- **[Emacs](https://www.gnu.org/software/emacs/)** - Extensible, customizable text editor with powerful ecosystem
+- **[GNU Emacs](https://www.gnu.org/software/emacs/)** - Extensible, customizable text editor and computing environment
 - **[Doom Emacs](https://doomemacs.org/)** - Emacs framework with Vim emulation and curated package selection
 - **[Spacemacs](https://www.spacemacs.org/)** - Community-driven Emacs distribution with excellent defaults
 
@@ -86,13 +92,16 @@ Tools for tracking changes in code, collaborating with teams, and managing diffe
 ### Git Tools
 - **[Git](https://git-scm.com/)** - Distributed version control system
 - **[GitHub CLI](https://cli.github.com/)** - Command-line tool for GitHub
+- **[GitHub Desktop](https://desktop.github.com/)** - Simple Git GUI client for GitHub workflows
 - **[Lazygit](https://github.com/jesseduffield/lazygit)** - Simple terminal UI for git commands
+- **[Fork](https://git-fork.com/)** - Fast and friendly Git client for macOS and Windows
 - **[GitKraken](https://www.gitkraken.com/)** - Cross-platform Git GUI client
 - **[Sourcetree](https://www.sourcetreeapp.com/)** - Free Git GUI for Mac and Windows
 
 
 ### Git Utilities
 - **[pre-commit](https://pre-commit.com/)** - Framework for managing git pre-commit hooks
+- **[Git LFS](https://git-lfs.com/)** - Git extension for versioning large files
 - **[commitizen](https://commitizen-tools.github.io/commitizen/)** - Tool for creating committing rules
 - **[semantic-release](https://semantic-release.gitbook.io/)** - Automated version management and package publishing
 
@@ -106,7 +115,10 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 
 ### Terminal Emulators
 - **[Alacritty](https://alacritty.org/)** - Fast, cross-platform terminal emulator
+- **[kitty](https://sw.kovidgoyal.net/kitty/)** - Fast, feature-rich GPU-based terminal emulator
 - **[WezTerm](https://wezfurlong.org/wezterm/)** - GPU-accelerated terminal emulator and multiplexer
+- **[Ghostty](https://ghostty.org/)** - Fast, native terminal emulator focused on performance
+- **[Warp](https://www.warp.dev/)** - Modern terminal with a collaborative, AI-assisted workflow
 - **[iTerm2](https://iterm2.com/)** - macOS terminal replacement with advanced features
 - **[Windows Terminal](https://github.com/microsoft/terminal)** - Modern terminal for Windows
 
@@ -207,6 +219,13 @@ Automation tools for compiling code, running tasks, managing builds, and streaml
 
 
 
+### General Build Systems
+- **[CMake](https://cmake.org/)** - Cross-platform build system generator
+- **[Ninja](https://ninja-build.org/)** - Small build system focused on speed
+- **[Meson](https://mesonbuild.com/)** - Fast, user-friendly build system
+- **[Bazel](https://bazel.build/)** - Build and test tool for large codebases
+
+
 ### Build Systems
 - **[Webpack](https://webpack.js.org/)** - Module bundler for JavaScript applications
 - **[Vite](https://vitejs.dev/)** - Fast build tool for modern web projects
@@ -302,6 +321,8 @@ Tools for designing, building, testing, and documenting APIs including REST, Gra
 ### API Testing
 - **[Postman](https://www.postman.com/)** - API development and testing platform
 - **[Insomnia](https://insomnia.rest/)** - HTTP and GraphQL client
+- **[Bruno](https://www.usebruno.com/)** - Fast, git-friendly API client
+- **[Hoppscotch](https://hoppscotch.io/)** - Open-source API development ecosystem
 - **[HTTPie](https://httpie.io/)** - Command-line HTTP client
 - **[curl](https://curl.se/)** - Command-line tool for transferring data
 
@@ -309,6 +330,7 @@ Tools for designing, building, testing, and documenting APIs including REST, Gra
 ### API Documentation
 - **[Swagger/OpenAPI](https://swagger.io/)** - API documentation framework
 - **[Redoc](https://redoc.ly/)** - OpenAPI documentation generator
+- **[OpenAPI Generator](https://openapi-generator.tech/)** - Generate API clients, servers, and docs from OpenAPI specs
 - **[API Blueprint](https://apiblueprint.org/)** - API documentation format
 
 
@@ -441,6 +463,13 @@ Application performance monitoring, log aggregation, error tracking, and observa
 - **[New Relic](https://newrelic.com/)** - Application performance monitoring
 - **[Sentry](https://sentry.io/)** - Error tracking and performance monitoring
 - **[Grafana](https://grafana.com/)** - Open-source analytics and monitoring
+- **[SigNoz](https://signoz.io/)** - Open-source observability platform for metrics, logs, and traces
+
+
+### Tracing & Observability
+- **[OpenTelemetry](https://opentelemetry.io/)** - Open-source observability framework for traces, metrics, and logs
+- **[Jaeger](https://www.jaegertracing.io/)** - Distributed tracing system
+- **[Grafana Tempo](https://grafana.com/oss/tempo/)** - High-scale distributed tracing backend
 
 
 ### Logging
@@ -459,7 +488,11 @@ Tools for vulnerability scanning, security testing, secret management, and prote
 ### Security Scanning
 - **[Snyk](https://snyk.io/)** - Developer-first security platform
 - **[OWASP ZAP](https://owasp.org/www-project-zap/)** - Web application security scanner
+- **[Burp Suite](https://portswigger.net/burp)** - Web security testing toolkit
 - **[Bandit](https://bandit.readthedocs.io/)** - Security linter for Python
+- **[Trivy](https://trivy.dev/)** - Vulnerability scanner for containers and dependencies
+- **[Gitleaks](https://gitleaks.io/)** - Detect and prevent secrets in Git repos
+- **[Checkov](https://www.checkov.io/)** - Infrastructure as code security scanner
 - **[npm audit](https://docs.npmjs.com/cli/v7/commands/npm-audit)** - Security vulnerability scanner for npm
 
 

@@ -2,9 +2,15 @@ category,subcategory,name,url,description
 Code Editors & IDEs,Modern Editors,Visual Studio Code,https://code.visualstudio.com/,"Microsoft's lightweight, extensible code editor with massive ecosystem"
 Code Editors & IDEs,Modern Editors,Helix,https://helix-editor.com/,Post-modern modal text editor written in Rust
 Code Editors & IDEs,Modern Editors,Zed,https://zed.dev/,"High-performance, multiplayer code editor built in Rust"
+Code Editors & IDEs,Modern Editors,Cursor,https://www.cursor.com/,AI-first code editor built for pair programming
+Code Editors & IDEs,Modern Editors,Sublime Text,https://www.sublimetext.com/,"Fast, lightweight text editor for code and prose"
+Code Editors & IDEs,Modern Editors,VSCodium,https://vscodium.com/,Telemetry-free build of VS Code
+Code Editors & IDEs,Modern Editors,Kate,https://kate-editor.org/,Advanced text editor from the KDE project
+Code Editors & IDEs,Modern Editors,Notepad++,https://notepad-plus-plus.org/,Free source code editor for Windows
 Code Editors & IDEs,Full IDEs,IntelliJ IDEA,https://www.jetbrains.com/idea/,Powerful Java IDE with excellent refactoring tools
 Code Editors & IDEs,Full IDEs,PyCharm,https://www.jetbrains.com/pycharm/,Professional Python IDE with advanced debugging
 Code Editors & IDEs,Full IDEs,WebStorm,https://www.jetbrains.com/webstorm/,JavaScript and TypeScript IDE
+Code Editors & IDEs,Full IDEs,JetBrains Fleet,https://www.jetbrains.com/fleet/,Lightweight IDE by JetBrains with a modern UI
 Code Editors & IDEs,Full IDEs,Android Studio,https://developer.android.com/studio,Official Android development environment
 Code Editors & IDEs,Online Editors,GitHub Codespaces,https://github.com/features/codespaces,Cloud development environments
 Code Editors & IDEs,Online Editors,Replit,https://replit.com/,Browser-based IDE for collaborative coding
@@ -16,19 +22,25 @@ Code Editors & IDEs,Vim & Modal Editors,LazyVim,https://lazyvim.org/,Neovim conf
 Code Editors & IDEs,Vim & Modal Editors,AstroNvim,https://astronvim.com/,Aesthetic and feature-rich neovim config that is extensible and easy to use
 Code Editors & IDEs,Vim & Modal Editors,LunarVim,https://lunarvim.org/,IDE layer for Neovim with sane defaults and plugin management
 Code Editors & IDEs,Vim & Modal Editors,NvChad,https://nvchad.com/,Blazing fast Neovim config providing solid defaults and beautiful UI
-Code Editors & IDEs,Emacs,Emacs,https://www.gnu.org/software/emacs/,"Extensible, customizable text editor with powerful ecosystem"
+Code Editors & IDEs,Emacs,GNU Emacs,https://www.gnu.org/software/emacs/,"Extensible, customizable text editor and computing environment"
 Code Editors & IDEs,Emacs,Doom Emacs,https://doomemacs.org/,Emacs framework with Vim emulation and curated package selection
 Code Editors & IDEs,Emacs,Spacemacs,https://www.spacemacs.org/,Community-driven Emacs distribution with excellent defaults
 Version Control,Git Tools,Git,https://git-scm.com/,Distributed version control system
 Version Control,Git Tools,GitHub CLI,https://cli.github.com/,Command-line tool for GitHub
+Version Control,Git Tools,GitHub Desktop,https://desktop.github.com/,Simple Git GUI client for GitHub workflows
 Version Control,Git Tools,Lazygit,https://github.com/jesseduffield/lazygit,Simple terminal UI for git commands
+Version Control,Git Tools,Fork,https://git-fork.com/,Fast and friendly Git client for macOS and Windows
 Version Control,Git Tools,GitKraken,https://www.gitkraken.com/,Cross-platform Git GUI client
 Version Control,Git Tools,Sourcetree,https://www.sourcetreeapp.com/,Free Git GUI for Mac and Windows
 Version Control,Git Utilities,pre-commit,https://pre-commit.com/,Framework for managing git pre-commit hooks
+Version Control,Git Utilities,Git LFS,https://git-lfs.com/,Git extension for versioning large files
 Version Control,Git Utilities,commitizen,https://commitizen-tools.github.io/commitizen/,Tool for creating committing rules
 Version Control,Git Utilities,semantic-release,https://semantic-release.gitbook.io/,Automated version management and package publishing
 Terminal & Shell,Terminal Emulators,Alacritty,https://alacritty.org/,"Fast, cross-platform terminal emulator"
+Terminal & Shell,Terminal Emulators,kitty,https://sw.kovidgoyal.net/kitty/,"Fast, feature-rich GPU-based terminal emulator"
 Terminal & Shell,Terminal Emulators,WezTerm,https://wezfurlong.org/wezterm/,GPU-accelerated terminal emulator and multiplexer
+Terminal & Shell,Terminal Emulators,Ghostty,https://ghostty.org/,"Fast, native terminal emulator focused on performance"
+Terminal & Shell,Terminal Emulators,Warp,https://www.warp.dev/,"Modern terminal with a collaborative, AI-assisted workflow"
 Terminal & Shell,Terminal Emulators,iTerm2,https://iterm2.com/,macOS terminal replacement with advanced features
 Terminal & Shell,Terminal Emulators,Windows Terminal,https://github.com/microsoft/terminal,Modern terminal for Windows
 Terminal & Shell,Shell Enhancement,Fish,https://fishshell.com/,Smart and user-friendly command line shell
@@ -83,6 +95,10 @@ Package Managers,Version Managers,rbenv,https://github.com/rbenv/rbenv,Ruby vers
 Package Managers,Version Managers,pyenv,https://github.com/pyenv/pyenv,Simple Python version management with project-specific versions
 Package Managers,Version Managers,SDKMAN!,https://sdkman.io/,"Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)"
 Package Managers,Version Managers,rustup,https://rustup.rs/,Official Rust toolchain installer and version manager
+Build Tools & Task Runners,General Build Systems,CMake,https://cmake.org/,Cross-platform build system generator
+Build Tools & Task Runners,General Build Systems,Ninja,https://ninja-build.org/,Small build system focused on speed
+Build Tools & Task Runners,General Build Systems,Meson,https://mesonbuild.com/,"Fast, user-friendly build system"
+Build Tools & Task Runners,General Build Systems,Bazel,https://bazel.build/,Build and test tool for large codebases
 Build Tools & Task Runners,Build Systems,Webpack,https://webpack.js.org/,Module bundler for JavaScript applications
 Build Tools & Task Runners,Build Systems,Vite,https://vitejs.dev/,Fast build tool for modern web projects
 Build Tools & Task Runners,Build Systems,Rollup,https://rollupjs.org/,Module bundler for JavaScript libraries
@@ -125,10 +141,13 @@ Code Quality & Linting,Code Analysis,CodeClimate,https://codeclimate.com/,Automa
 Code Quality & Linting,Code Analysis,Semgrep,https://semgrep.dev/,Static analysis tool for finding bugs
 API Development & Testing,API Testing,Postman,https://www.postman.com/,API development and testing platform
 API Development & Testing,API Testing,Insomnia,https://insomnia.rest/,HTTP and GraphQL client
+API Development & Testing,API Testing,Bruno,https://www.usebruno.com/,"Fast, git-friendly API client"
+API Development & Testing,API Testing,Hoppscotch,https://hoppscotch.io/,Open-source API development ecosystem
 API Development & Testing,API Testing,HTTPie,https://httpie.io/,Command-line HTTP client
 API Development & Testing,API Testing,curl,https://curl.se/,Command-line tool for transferring data
 API Development & Testing,API Documentation,Swagger/OpenAPI,https://swagger.io/,API documentation framework
 API Development & Testing,API Documentation,Redoc,https://redoc.ly/,OpenAPI documentation generator
+API Development & Testing,API Documentation,OpenAPI Generator,https://openapi-generator.tech/,"Generate API clients, servers, and docs from OpenAPI specs"
 API Development & Testing,API Documentation,API Blueprint,https://apiblueprint.org/,API documentation format
 API Development & Testing,Mock Servers,json-server,https://github.com/typicode/json-server,Create a full fake REST API with zero coding in less than 30 seconds
 API Development & Testing,Mock Servers,WireMock,http://wiremock.org/,HTTP service virtualization
@@ -188,12 +207,20 @@ Monitoring & Logging,Application Monitoring,Datadog,https://www.datadoghq.com/,M
 Monitoring & Logging,Application Monitoring,New Relic,https://newrelic.com/,Application performance monitoring
 Monitoring & Logging,Application Monitoring,Sentry,https://sentry.io/,Error tracking and performance monitoring
 Monitoring & Logging,Application Monitoring,Grafana,https://grafana.com/,Open-source analytics and monitoring
+Monitoring & Logging,Application Monitoring,SigNoz,https://signoz.io/,"Open-source observability platform for metrics, logs, and traces"
+Monitoring & Logging,Tracing & Observability,OpenTelemetry,https://opentelemetry.io/,"Open-source observability framework for traces, metrics, and logs"
+Monitoring & Logging,Tracing & Observability,Jaeger,https://www.jaegertracing.io/,Distributed tracing system
+Monitoring & Logging,Tracing & Observability,Grafana Tempo,https://grafana.com/oss/tempo/,High-scale distributed tracing backend
 Monitoring & Logging,Logging,ELK Stack,https://www.elastic.co/elk-stack,"Elasticsearch, Logstash, and Kibana"
 Monitoring & Logging,Logging,Fluentd,https://www.fluentd.org/,Open-source data collector
 Monitoring & Logging,Logging,Loki,https://grafana.com/oss/loki/,Log aggregation system
 Security,Security Scanning,Snyk,https://snyk.io/,Developer-first security platform
 Security,Security Scanning,OWASP ZAP,https://owasp.org/www-project-zap/,Web application security scanner
+Security,Security Scanning,Burp Suite,https://portswigger.net/burp,Web security testing toolkit
 Security,Security Scanning,Bandit,https://bandit.readthedocs.io/,Security linter for Python
+Security,Security Scanning,Trivy,https://trivy.dev/,Vulnerability scanner for containers and dependencies
+Security,Security Scanning,Gitleaks,https://gitleaks.io/,Detect and prevent secrets in Git repos
+Security,Security Scanning,Checkov,https://www.checkov.io/,Infrastructure as code security scanner
 Security,Security Scanning,npm audit,https://docs.npmjs.com/cli/v7/commands/npm-audit,Security vulnerability scanner for npm
 Security,Secret Management,HashiCorp Vault,https://www.vaultproject.io/,Secrets management platform
 Security,Secret Management,1Password CLI,https://developer.1password.com/docs/cli/,Command-line interface for 1Password

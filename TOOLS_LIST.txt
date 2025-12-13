@@ -6,11 +6,17 @@
 - Visual Studio Code: https://code.visualstudio.com/
 - Helix: https://helix-editor.com/
 - Zed: https://zed.dev/
+- Cursor: https://www.cursor.com/
+- Sublime Text: https://www.sublimetext.com/
+- VSCodium: https://vscodium.com/
+- Kate: https://kate-editor.org/
+- Notepad++: https://notepad-plus-plus.org/
 
 ### Full IDEs
 - IntelliJ IDEA: https://www.jetbrains.com/idea/
 - PyCharm: https://www.jetbrains.com/pycharm/
 - WebStorm: https://www.jetbrains.com/webstorm/
+- JetBrains Fleet: https://www.jetbrains.com/fleet/
 - Android Studio: https://developer.android.com/studio
 
 ### Online Editors
@@ -28,7 +34,7 @@
 - NvChad: https://nvchad.com/
 
 ### Emacs
-- Emacs: https://www.gnu.org/software/emacs/
+- GNU Emacs: https://www.gnu.org/software/emacs/
 - Doom Emacs: https://doomemacs.org/
 - Spacemacs: https://www.spacemacs.org/
 
@@ -37,12 +43,15 @@
 ### Git Tools
 - Git: https://git-scm.com/
 - GitHub CLI: https://cli.github.com/
+- GitHub Desktop: https://desktop.github.com/
 - Lazygit: https://github.com/jesseduffield/lazygit
+- Fork: https://git-fork.com/
 - GitKraken: https://www.gitkraken.com/
 - Sourcetree: https://www.sourcetreeapp.com/
 
 ### Git Utilities
 - pre-commit: https://pre-commit.com/
+- Git LFS: https://git-lfs.com/
 - commitizen: https://commitizen-tools.github.io/commitizen/
 - semantic-release: https://semantic-release.gitbook.io/
 
@@ -50,7 +59,10 @@
 
 ### Terminal Emulators
 - Alacritty: https://alacritty.org/
+- kitty: https://sw.kovidgoyal.net/kitty/
 - WezTerm: https://wezfurlong.org/wezterm/
+- Ghostty: https://ghostty.org/
+- Warp: https://www.warp.dev/
 - iTerm2: https://iterm2.com/
 - Windows Terminal: https://github.com/microsoft/terminal
 
@@ -130,6 +142,12 @@
 
 ## Build Tools & Task Runners
 
+### General Build Systems
+- CMake: https://cmake.org/
+- Ninja: https://ninja-build.org/
+- Meson: https://mesonbuild.com/
+- Bazel: https://bazel.build/
+
 ### Build Systems
 - Webpack: https://webpack.js.org/
 - Vite: https://vitejs.dev/
@@ -197,12 +215,15 @@
 ### API Testing
 - Postman: https://www.postman.com/
 - Insomnia: https://insomnia.rest/
+- Bruno: https://www.usebruno.com/
+- Hoppscotch: https://hoppscotch.io/
 - HTTPie: https://httpie.io/
 - curl: https://curl.se/
 
 ### API Documentation
 - Swagger/OpenAPI: https://swagger.io/
 - Redoc: https://redoc.ly/
+- OpenAPI Generator: https://openapi-generator.tech/
 - API Blueprint: https://apiblueprint.org/
 
 ### Mock Servers
@@ -300,6 +321,12 @@
 - New Relic: https://newrelic.com/
 - Sentry: https://sentry.io/
 - Grafana: https://grafana.com/
+- SigNoz: https://signoz.io/
+
+### Tracing & Observability
+- OpenTelemetry: https://opentelemetry.io/
+- Jaeger: https://www.jaegertracing.io/
+- Grafana Tempo: https://grafana.com/oss/tempo/
 
 ### Logging
 - ELK Stack: https://www.elastic.co/elk-stack
@@ -311,7 +338,11 @@
 ### Security Scanning
 - Snyk: https://snyk.io/
 - OWASP ZAP: https://owasp.org/www-project-zap/
+- Burp Suite: https://portswigger.net/burp
 - Bandit: https://bandit.readthedocs.io/
+- Trivy: https://trivy.dev/
+- Gitleaks: https://gitleaks.io/
+- Checkov: https://www.checkov.io/
 - npm audit: https://docs.npmjs.com/cli/v7/commands/npm-audit
 
 ### Secret Management
