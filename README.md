@@ -540,6 +540,9 @@ UI/UX design tools, wireframing software, and prototyping platforms for creating
 - **[SVGO](https://github.com/svg/svgo)** - SVG optimizer
 
 
+### Web Utilities
+- **[TinyTools](https://tinytools-smoky.vercel.app/)** - Free single-purpose browser utilities (favicon generator, OG image generator, color palette, SEO meta tags, AI background remover, AI cost calculator) — no signup, runs in browser
+
 ## Productivity
 
 
