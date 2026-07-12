@@ -7,6 +7,7 @@ A curated list of awesome tools, resources, and utilities that make developers' 
 ## Contents
 
 - [Code Editors & IDEs](#code-editors--ides)
+- [AI & LLM Tools](#ai--llm-tools)
 - [Version Control](#version-control)
 - [Terminal & Shell](#terminal--shell)
 - [Package Managers](#package-managers)
@@ -69,7 +70,6 @@ Essential text editors and integrated development environments for writing, edit
 ### Vim & Modal Editors
 - **[Neovim](https://neovim.io/)** - Modern Vim fork with better defaults, Lua scripting, and built-in LSP
 - **[Vim](https://www.vim.org/)** - Highly configurable text editor built to make creating and changing text efficient
-- **[SpaceVim](https://spacevim.org/)** - Community-driven Vim distribution with modular configuration
 - **[LazyVim](https://lazyvim.org/)** - Neovim configuration for the lazy with sane defaults and easy customization
 - **[AstroNvim](https://astronvim.com/)** - Aesthetic and feature-rich neovim config that is extensible and easy to use
 - **[LunarVim](https://lunarvim.org/)** - IDE layer for Neovim with sane defaults and plugin management
@@ -78,8 +78,34 @@ Essential text editors and integrated development environments for writing, edit
 
 ### Emacs
 - **[GNU Emacs](https://www.gnu.org/software/emacs/)** - Extensible, customizable text editor and computing environment
-- **[Doom Emacs](https://doomemacs.org/)** - Emacs framework with Vim emulation and curated package selection
+- **[Doom Emacs](https://github.com/doomemacs/doomemacs)** - Emacs framework with Vim emulation and curated package selection
 - **[Spacemacs](https://www.spacemacs.org/)** - Community-driven Emacs distribution with excellent defaults
+
+
+## AI & LLM Tools
+
+
+AI-powered coding assistants, local model runtimes, and frameworks for building applications with large language models.
+
+
+
+### AI Coding Assistants
+- **[GitHub Copilot](https://github.com/features/copilot)** - AI pair programmer integrated into editors and the GitHub platform
+- **[Claude Code](https://www.claude.com/product/claude-code)** - Anthropic's agentic coding tool for the terminal, IDEs, and the web
+- **[aider](https://aider.chat/)** - AI pair programming in your terminal with automatic git integration
+- **[Continue](https://www.continue.dev/)** - Open-source AI code assistant with support for custom models and context
+- **[Cline](https://cline.bot/)** - Autonomous AI coding agent for VS Code with human-in-the-loop control
+
+
+### Local Model Runtimes
+- **[Ollama](https://ollama.com/)** - Run large language models locally with a simple CLI and API
+- **[LM Studio](https://lmstudio.ai/)** - Desktop app for discovering, downloading, and running local LLMs
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** - LLM inference in C/C++ that runs models efficiently on consumer hardware
+
+
+### LLM Application Frameworks
+- **[LangChain](https://www.langchain.com/)** - Framework for developing applications powered by large language models
+- **[LlamaIndex](https://www.llamaindex.ai/)** - Data framework for connecting custom data sources to large language models
 
 
 ## Version Control
@@ -92,6 +118,7 @@ Tools for tracking changes in code, collaborating with teams, and managing diffe
 ### Git Tools
 - **[Git](https://git-scm.com/)** - Distributed version control system
 - **[GitHub CLI](https://cli.github.com/)** - Command-line tool for GitHub
+- **[Jujutsu](https://jj-vcs.github.io/jj/)** - Git-compatible version control system with automatic rebasing and simpler conflict handling
 - **[GitHub Desktop](https://desktop.github.com/)** - Simple Git GUI client for GitHub workflows
 - **[Lazygit](https://github.com/jesseduffield/lazygit)** - Simple terminal UI for git commands
 - **[Fork](https://git-fork.com/)** - Fast and friendly Git client for macOS and Windows
@@ -102,7 +129,7 @@ Tools for tracking changes in code, collaborating with teams, and managing diffe
 ### Git Utilities
 - **[pre-commit](https://pre-commit.com/)** - Framework for managing git pre-commit hooks
 - **[Git LFS](https://git-lfs.com/)** - Git extension for versioning large files
-- **[commitizen](https://commitizen-tools.github.io/commitizen/)** - Tool for creating committing rules
+- **[commitizen](https://commitizen-tools.github.io/commitizen/)** - Command-line tool that enforces consistent commit message conventions
 - **[semantic-release](https://semantic-release.gitbook.io/)** - Automated version management and package publishing
 
 
@@ -128,6 +155,7 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 - **[Zsh](https://www.zsh.org/)** - Extended Bourne shell with improvements
 - **[Oh My Zsh](https://ohmyz.sh/)** - Framework for managing Zsh configuration
 - **[Starship](https://starship.rs/)** - Fast, customizable prompt for any shell
+- **[Atuin](https://atuin.sh/)** - Shell history replacement with full-text search, sync, and statistics
 
 
 ### Session Management
@@ -147,7 +175,7 @@ Command-line interfaces, terminal emulators, shells, and utilities that enhance 
 
 ### Text Processing & Viewing
 - **[bat](https://github.com/sharkdp/bat)** - Cat clone with syntax highlighting and Git integration
-- **[exa](https://the.exa.website/)** - Modern replacement for ls with colors and Git status
+- **[eza](https://eza.rocks/)** - Modern replacement for ls with colors, icons, and Git status
 - **[jq](https://github.com/jqlang/jq)** - Lightweight command-line JSON processor for parsing and transforming data
 - **[fx](https://github.com/antonmedv/fx)** - Interactive JSON processor and filter with JavaScript expressions
 - **[yq](https://github.com/mikefarah/yq)** - Portable command-line YAML, JSON, XML, CSV, TOML processor
@@ -191,10 +219,12 @@ Tools for installing, updating, and managing software dependencies and libraries
 - **[pip](https://pip.pypa.io/)** - Python package installer
 - **[uv](https://docs.astral.sh/uv/)** - Fast Python package installer and resolver
 - **[Poetry](https://python-poetry.org/)** - Python dependency management and packaging
-- **[PDM](https://pdm.fming.dev/)** - Modern Python package manager with PEP 582 support
+- **[PDM](https://pdm-project.org/)** - Modern Python package and dependency manager supporting the latest PEP standards
 - **[Pipenv](https://pipenv.pypa.io/)** - Python development workflow for humans
 - **[Cargo](https://doc.rust-lang.org/cargo/)** - Rust package manager
-- **[Go Modules](https://golang.org/ref/mod)** - Go dependency management
+- **[Go Modules](https://go.dev/ref/mod)** - Go dependency management
+- **[Bun](https://bun.sh/)** - Fast all-in-one JavaScript runtime with built-in package manager, bundler, and test runner
+- **[Deno](https://deno.com/)** - Secure JavaScript and TypeScript runtime with built-in tooling and package management
 
 
 ### System Package Managers
@@ -210,6 +240,8 @@ Tools for installing, updating, and managing software dependencies and libraries
 - **[pyenv](https://github.com/pyenv/pyenv)** - Simple Python version management with project-specific versions
 - **[SDKMAN!](https://sdkman.io/)** - Tool for managing parallel versions of multiple SDKs (Java, Scala, etc.)
 - **[rustup](https://rustup.rs/)** - Official Rust toolchain installer and version manager
+- **[asdf](https://asdf-vm.com/)** - Version manager for multiple runtime versions with plugin ecosystem
+- **[mise](https://mise.jdx.dev/)** - Fast polyglot tool version manager and task runner
 
 
 ## Build Tools & Task Runners
@@ -226,12 +258,12 @@ Automation tools for compiling code, running tasks, managing builds, and streaml
 - **[Bazel](https://bazel.build/)** - Build and test tool for large codebases
 
 
-### Build Systems
+### JavaScript Bundlers
 - **[Webpack](https://webpack.js.org/)** - Module bundler for JavaScript applications
-- **[Vite](https://vitejs.dev/)** - Fast build tool for modern web projects
+- **[Vite](https://vite.dev/)** - Fast build tool for modern web projects
 - **[Rollup](https://rollupjs.org/)** - Module bundler for JavaScript libraries
 - **[esbuild](https://esbuild.github.io/)** - Extremely fast JavaScript bundler
-- **[Turbo](https://turbo.build/)** - High-performance build system for JavaScript/TypeScript
+- **[Turborepo](https://turborepo.dev/)** - High-performance build system for JavaScript and TypeScript monorepos
 
 
 ### Task Runners
@@ -253,7 +285,7 @@ Frameworks and tools for writing, running, and managing different types of tests
 - **[Vitest](https://vitest.dev/)** - Fast unit test framework powered by Vite
 - **[Playwright](https://playwright.dev/)** - End-to-end testing for modern web apps
 - **[Cypress](https://www.cypress.io/)** - JavaScript end-to-end testing framework
-- **[pytest](https://pytest.org/)** - Python testing framework
+- **[pytest](https://docs.pytest.org/)** - Python testing framework
 - **[JUnit](https://junit.org/)** - Unit testing framework for Java
 
 
@@ -261,6 +293,12 @@ Frameworks and tools for writing, running, and managing different types of tests
 - **[Faker.js](https://fakerjs.dev/)** - Generate massive amounts of fake data
 - **[Storybook](https://storybook.js.org/)** - Tool for building UI components in isolation
 - **[Testing Library](https://testing-library.com/)** - Simple testing utilities for DOM testing
+- **[Testcontainers](https://testcontainers.com/)** - Library for throwaway, containerized dependencies in integration tests
+
+
+### Load & Performance Testing
+- **[k6](https://k6.io/)** - Developer-centric load testing tool scriptable in JavaScript
+- **[Locust](https://locust.io/)** - Scalable load testing framework with tests defined in Python
 
 
 ## Debugging & Profiling
@@ -279,10 +317,9 @@ Tools for identifying bugs, analyzing code performance, memory usage, and optimi
 
 
 ### Performance Profiling
-- **[Lighthouse](https://developers.google.com/web/tools/lighthouse)** - Web performance auditing tool
+- **[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)** - Web performance auditing tool
 - **[WebPageTest](https://www.webpagetest.org/)** - Website performance testing
-- **[Pyflame](https://github.com/uber-archive/pyflame)** - Profiling tool for Python
-- **[perf](https://perf.wiki.kernel.org/)** - Linux profiling tool
+- **[perf](https://perfwiki.github.io/)** - Linux profiling tool
 
 
 ## Code Quality & Linting
@@ -303,10 +340,11 @@ Static analysis tools, linters, and formatters that enforce coding standards, de
 - **[mypy](https://mypy-lang.org/)** - Static type checker for Python
 - **[Rustfmt](https://github.com/rust-lang/rustfmt)** - Rust code formatter
 - **[Clippy](https://github.com/rust-lang/rust-clippy)** - Rust linter that catches common mistakes and suggests idiomatic code improvements
+- **[Biome](https://biomejs.dev/)** - Fast formatter and linter for JavaScript, TypeScript, JSON, and CSS written in Rust
 
 
 ### Code Analysis
-- **[SonarQube](https://www.sonarqube.org/)** - Static code analysis platform
+- **[SonarQube](https://www.sonarsource.com/products/sonarqube/)** - Static code analysis platform
 - **[CodeClimate](https://codeclimate.com/)** - Automated code review
 - **[Semgrep](https://semgrep.dev/)** - Static analysis tool for finding bugs
 
@@ -329,14 +367,14 @@ Tools for designing, building, testing, and documenting APIs including REST, Gra
 
 ### API Documentation
 - **[Swagger/OpenAPI](https://swagger.io/)** - API documentation framework
-- **[Redoc](https://redoc.ly/)** - OpenAPI documentation generator
+- **[Redoc](https://redocly.com/)** - OpenAPI documentation generator
 - **[OpenAPI Generator](https://openapi-generator.tech/)** - Generate API clients, servers, and docs from OpenAPI specs
 - **[API Blueprint](https://apiblueprint.org/)** - API documentation format
 
 
 ### Mock Servers
 - **[json-server](https://github.com/typicode/json-server)** - Create a full fake REST API with zero coding in less than 30 seconds
-- **[WireMock](http://wiremock.org/)** - HTTP service virtualization
+- **[WireMock](https://wiremock.org/)** - HTTP service virtualization
 - **[Mockoon](https://mockoon.com/)** - Desktop API mocking application
 
 
@@ -357,15 +395,18 @@ Database management systems, GUI clients, migration tools, and utilities for wor
 ### Database Development
 - **[Prisma](https://www.prisma.io/)** - Next-generation ORM for Node.js and TypeScript
 - **[Drizzle](https://orm.drizzle.team/)** - TypeScript ORM with SQL-like syntax
-- **[Flyway](https://flywaydb.org/)** - Database migration tool
-- **[Liquibase](https://www.liquibase.org/)** - Database schema change management
+- **[Flyway](https://www.red-gate.com/products/flyway/community/)** - Database migration tool
+- **[Liquibase](https://www.liquibase.com/)** - Database schema change management
 
 
 ### Graph & Analytics Databases
 - **[Neo4j](https://neo4j.com/)** - Graph database platform for connected data and complex queries
-- **[KuzuDB](https://kuzudb.com/)** - Embeddable graph database built for query speed and scalability
 - **[ClickHouse](https://clickhouse.com/)** - Real-time analytics DBMS for big data and high performance
-- **[Apache Parquet Tools](https://github.com/apache/parquet-mr)** - Command-line tools for reading, writing and manipulating Parquet files
+
+
+### Embedded Databases
+- **[SQLite](https://www.sqlite.org/)** - Self-contained, serverless SQL database engine and the most widely deployed database
+- **[libSQL](https://github.com/tursodatabase/libsql)** - Open contribution fork of SQLite with replication and edge deployment features
 
 
 ## Development Environments
@@ -383,16 +424,14 @@ Tools for creating, managing, and maintaining consistent development environment
 
 
 ### Virtual Machines
-- **[Vagrant](https://www.vagrantup.com/)** - Tool for building and managing virtual machine environments
+- **[Vagrant](https://developer.hashicorp.com/vagrant)** - Tool for building and managing virtual machine environments
 - **[Lima](https://github.com/lima-vm/lima)** - Linux virtual machines for macOS with automatic file sharing
-- **[Multipass](https://multipass.run/)** - Ubuntu VMs on demand for any workstation
+- **[Multipass](https://canonical.com/multipass)** - Ubuntu VMs on demand for any workstation
 - **[UTM](https://mac.getutm.app/)** - Virtual machines for iOS and macOS using QEMU
 
 
 ### Reproducible Systems
 - **[Nix](https://nixos.org/)** - Functional package manager for reproducible and declarative systems
-- **[asdf](https://asdf-vm.com/)** - Version manager for multiple runtime versions with plugin ecosystem
-- **[mise](https://mise.jdx.dev/)** - Fast polyglot tool version manager and task runner
 - **[Guix](https://guix.gnu.org/)** - Functional package manager and distribution for reproducible builds
 
 
@@ -438,8 +477,8 @@ Deployment, containerization, orchestration, and infrastructure management tools
 
 
 ### Infrastructure as Code
-- **[Terraform](https://www.terraform.io/)** - Infrastructure as code tool
-- **[Ansible](https://www.ansible.com/)** - IT automation platform
+- **[Terraform](https://developer.hashicorp.com/terraform)** - Infrastructure as code tool
+- **[Ansible](https://docs.ansible.com/)** - IT automation platform
 - **[Pulumi](https://www.pulumi.com/)** - Modern infrastructure as code
 - **[AWS CDK](https://aws.amazon.com/cdk/)** - Cloud Development Kit for AWS
 
@@ -451,6 +490,16 @@ Deployment, containerization, orchestration, and infrastructure management tools
 - **[Circle CI](https://circleci.com/)** - Continuous integration and delivery platform
 
 
+### GitOps & Continuous Delivery
+- **[Argo CD](https://argo-cd.readthedocs.io/)** - Declarative GitOps continuous delivery for Kubernetes
+- **[Flux](https://fluxcd.io/)** - GitOps toolkit for keeping Kubernetes clusters in sync with configuration sources
+
+
+### Dependency Automation
+- **[Renovate](https://docs.renovatebot.com/)** - Automated dependency update tool with highly configurable update strategies
+- **[Dependabot](https://docs.github.com/en/code-security/dependabot)** - GitHub-native automated dependency updates and security alerts
+
+
 ## Monitoring & Logging
 
 
@@ -459,6 +508,7 @@ Application performance monitoring, log aggregation, error tracking, and observa
 
 
 ### Application Monitoring
+- **[Prometheus](https://prometheus.io/)** - Open-source monitoring system with a dimensional data model and powerful query language
 - **[Datadog](https://www.datadoghq.com/)** - Monitoring and analytics platform
 - **[New Relic](https://newrelic.com/)** - Application performance monitoring
 - **[Sentry](https://sentry.io/)** - Error tracking and performance monitoring
@@ -487,7 +537,7 @@ Tools for vulnerability scanning, security testing, secret management, and prote
 
 ### Security Scanning
 - **[Snyk](https://snyk.io/)** - Developer-first security platform
-- **[OWASP ZAP](https://owasp.org/www-project-zap/)** - Web application security scanner
+- **[ZAP](https://www.zaproxy.org/)** - Web application security scanner
 - **[Burp Suite](https://portswigger.net/burp)** - Web security testing toolkit
 - **[Bandit](https://bandit.readthedocs.io/)** - Security linter for Python
 - **[Trivy](https://trivy.dev/)** - Vulnerability scanner for containers and dependencies
@@ -497,7 +547,7 @@ Tools for vulnerability scanning, security testing, secret management, and prote
 
 
 ### Secret Management
-- **[HashiCorp Vault](https://www.vaultproject.io/)** - Secrets management platform
+- **[HashiCorp Vault](https://developer.hashicorp.com/vault)** - Secrets management platform
 - **[1Password CLI](https://developer.1password.com/docs/cli/)** - Command-line interface for 1Password
 - **[AWS Secrets Manager](https://aws.amazon.com/secrets-manager/)** - Secrets management service
 
@@ -531,7 +581,8 @@ UI/UX design tools, wireframing software, and prototyping platforms for creating
 ### Design Tools
 - **[Figma](https://www.figma.com/)** - Collaborative design and prototyping tool
 - **[Sketch](https://www.sketch.com/)** - Digital design toolkit (macOS)
-- **[Adobe XD](https://www.adobe.com/products/xd.html)** - UI/UX design and collaboration tool
+- **[Penpot](https://penpot.app/)** - Open-source design and prototyping platform
+- **[Excalidraw](https://excalidraw.com/)** - Virtual whiteboard for sketching hand-drawn style diagrams
 
 
 ### Asset Management
@@ -575,7 +626,7 @@ Python-specific libraries, frameworks, and utilities for environment management 
 ### Environment Management
 - **[conda](https://docs.conda.io/)** - Package and environment management system for Python and other languages
 - **[virtualenv](https://virtualenv.pypa.io/)** - Virtual Python environment builder for dependency isolation
-- **[pipx](https://pypa.github.io/pipx/)** - Install and run Python applications in isolated environments
+- **[pipx](https://pipx.pypa.io/)** - Install and run Python applications in isolated environments
 
 
 ### CLI Development
@@ -619,7 +670,7 @@ Python-specific libraries, frameworks, and utilities for environment management 
 ### ORMs & Database Libraries
 - **[SQLAlchemy](https://www.sqlalchemy.org/)** - Powerful and flexible SQL toolkit and ORM for Python
 - **[Tortoise ORM](https://tortoise.github.io/)** - Async ORM inspired by Django with excellent performance
-- **[Peewee](http://docs.peewee-orm.com/)** - Lightweight and expressive ORM for small to medium applications
+- **[Peewee](https://docs.peewee-orm.com/)** - Lightweight and expressive ORM for small to medium applications
 
 
 ### Task Queues & Scheduling
@@ -649,7 +700,7 @@ Python-specific libraries, frameworks, and utilities for environment management 
 ### Serialization
 - **[orjson](https://github.com/ijl/orjson)** - Fast, correct JSON library for Python written in Rust
 - **[msgpack](https://msgpack.org/)** - Efficient binary serialization format faster and smaller than JSON
-- **[msgspec](https://jcristharif.com/msgspec/)** - Fast serialization library supporting JSON, MessagePack, YAML, and TOML
+- **[msgspec](https://github.com/jcrist/msgspec)** - Fast serialization library supporting JSON, MessagePack, YAML, and TOML
 
 
 ### Profiling & Performance
@@ -682,7 +733,7 @@ Educational platforms, coding challenges, documentation sites, and reference mat
 - **[LeetCode](https://leetcode.com/)** - Coding interview preparation
 - **[HackerRank](https://www.hackerrank.com/)** - Programming challenges
 - **[Codewars](https://www.codewars.com/)** - Coding challenges and kata
-- **[Exercism](https://exercism.io/)** - Code practice and mentorship
+- **[Exercism](https://exercism.org/)** - Code practice and mentorship
 
 
 ## Cloud Platforms
@@ -692,16 +743,10 @@ Command-line tools and SDKs for interacting with major cloud service providers a
 
 
 
-### AWS Tools
+### Cloud CLIs
 - **[AWS CLI](https://aws.amazon.com/cli/)** - Official command-line interface for Amazon Web Services
-
-
-### Google Cloud
 - **[Google Cloud CLI](https://cloud.google.com/sdk/gcloud)** - Command-line interface for Google Cloud Platform services
-
-
-### Microsoft Azure
-- **[Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)** - Cross-platform command-line interface for Microsoft Azure
+- **[Azure CLI](https://learn.microsoft.com/en-us/cli/azure/)** - Cross-platform command-line interface for Microsoft Azure
 
 
 ### Multi-Cloud
@@ -744,7 +789,7 @@ Backend and full-stack frameworks for building web applications, REST APIs, and 
 - **[Express](https://expressjs.com/)** - Fast, unopinionated, minimalist web framework for Node.js
 - **[NestJS](https://nestjs.com/)** - Progressive Node.js framework for building efficient and scalable server-side applications
 - **[Nuxt](https://nuxt.com/)** - Vue.js framework for building universal and static web applications
-- **[SvelteKit](https://kit.svelte.dev/)** - Full-stack framework for building web apps with Svelte
+- **[SvelteKit](https://svelte.dev/docs/kit)** - Full-stack framework for building web apps with Svelte
 - **[Remix](https://remix.run/)** - Full-stack web framework built on Web Fetch API
 - **[Hono](https://hono.dev/)** - Ultrafast web framework for the Edge runtime
 
@@ -777,9 +822,9 @@ Frameworks and tools for building cross-platform and native desktop applications
 
 
 ### Native
-- **[SwiftUI](https://developer.apple.com/xcode/swiftui/)** - Declarative framework for building macOS applications
-- **[WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/)** - Windows Presentation Foundation for building Windows desktop applications
-- **[WinUI](https://microsoft.github.io/microsoft-ui-xaml/)** - Modern native UI platform for Windows applications
+- **[SwiftUI](https://developer.apple.com/xcode/swiftui/)** - Declarative UI framework for building apps across all Apple platforms
+- **[WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/)** - Windows Presentation Foundation for building Windows desktop applications
+- **[WinUI](https://learn.microsoft.com/en-us/windows/apps/winui/)** - Modern native UI platform for Windows applications
 
 
 ## Data Science & Machine Learning
@@ -810,10 +855,10 @@ Tools, frameworks, and platforms for data analysis, machine learning, artificial
 
 
 ### Time Series
-- **[Tsfresh](https://tsfresh.com/)** - A Python package for automatic extraction of a large number of time-series features.
-- **[Sktime](https://www.sktime.net/)** - A unified framework for time series analysis in Python, interoperable with scikit-learn.
-- **[AutoTS](https://github.com/winedarksea/AutoTS)** - An automated time-series forecasting library for Python.
-- **[Prophet](https://facebook.github.io/prophet/)** - A forecasting library for time series data developed by Facebook.
+- **[tsfresh](https://github.com/blue-yonder/tsfresh)** - Automatic extraction of relevant features from time series data
+- **[sktime](https://www.sktime.net/)** - Unified framework for time series machine learning, interoperable with scikit-learn
+- **[AutoTS](https://github.com/winedarksea/AutoTS)** - Automated time series forecasting library for Python
+- **[Prophet](https://facebook.github.io/prophet/)** - Forecasting library for time series data developed by Meta
 
 
 ## Data Engineering
@@ -835,7 +880,7 @@ Tools and frameworks for building, orchestrating, and managing data pipelines, E
 ### Data Transformation
 - **[dbt](https://www.getdbt.com/)** - Data build tool for transforming data in your warehouse using SQL and version control
 - **[Apache Spark](https://spark.apache.org/)** - Unified analytics engine for large-scale data processing with batch and streaming
-- **[SQLMesh](https://sqlmesh.com/)** - DataOps framework for SQL transformations with built-in testing and CI/CD
+- **[SQLMesh](https://sqlmesh.readthedocs.io/)** - DataOps framework for SQL transformations with built-in testing and CI/CD
 - **[dlt](https://dlthub.com/)** - Python library for building data pipelines with automatic schema inference
 - **[Malloy](https://github.com/malloydata/malloy)** - Experimental language for describing data relationships and transformations
 
@@ -854,7 +899,7 @@ Tools and frameworks for building, orchestrating, and managing data pipelines, E
 - **[Redpanda](https://redpanda.com/)** - Kafka-compatible streaming platform built in C++ for faster performance
 - **[Apache Pulsar](https://pulsar.apache.org/)** - Cloud-native distributed messaging and streaming platform with multi-tenancy
 - **[Kafka Streams](https://kafka.apache.org/documentation/streams/)** - Client library for building stream processing applications with Apache Kafka
-- **[Benthos](https://www.benthos.dev/)** - Stream processor for mundane tasks with a declarative configuration approach
+- **[Redpanda Connect](https://www.redpanda.com/connect)** - Declarative stream processor for data pipelines, formerly known as Benthos
 
 
 ### Data Quality & Validation
@@ -882,17 +927,19 @@ Tools and frameworks for building, orchestrating, and managing data pipelines, E
 
 
 ### Data Cataloging & Metadata
-- **[DataHub](https://datahubproject.io/)** - Extensible metadata platform for data discovery and governance with lineage tracking
-- **[Amundsen](https://www.amundsen.io/)** - Data discovery and metadata platform for improving data productivity
+- **[DataHub](https://datahub.com/)** - Extensible metadata platform for data discovery and governance with lineage tracking
 - **[OpenMetadata](https://open-metadata.org/)** - Open standard for metadata with data discovery, lineage, and quality capabilities
 - **[Apache Atlas](https://atlas.apache.org/)** - Scalable metadata and governance platform for Hadoop and cloud environments
 
 
 ### Data Version Control
 - **[DVC](https://dvc.org/)** - Git-based data version control for machine learning projects with experiment tracking
-- **[Pachyderm](https://www.pachyderm.com/)** - Data versioning and pipeline platform with reproducible data science workflows
 
 
+
+## Extras
+
+- **[Interactive Timeline](tool-timeline.html)** - Explore the history and evolution of these tools on an interactive timeline (download and open locally, or serve the repository as a static site)
 
 ## Contributing
 
