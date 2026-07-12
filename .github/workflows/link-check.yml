@@ -1,0 +1,40 @@
+name: Link Check
+
+on:
+  schedule:
+    # Run weekly on Sundays at 6 AM UTC
+    - cron: '0 6 * * 0'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429 are almost always bot-blocking (GitHub, npm, LeetCode, ...),
+          # not dead links, so don't report them.
+          args: >-
+            --accept '200..=204,403,429'
+            --max-concurrency 8
+            --timeout 30
+            --no-progress
+            README.md
+          fail: false
+
+      - name: Open issue on broken links
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Link checker found broken links'
+          content-filepath: ./lychee/out.md
+          labels: |
+            link-rot
+            automated
