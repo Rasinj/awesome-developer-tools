@@ -120,11 +120,6 @@
               "description": "Highly configurable text editor built to make creating and changing text efficient"
             },
             {
-              "name": "SpaceVim",
-              "url": "https://spacevim.org/",
-              "description": "Community-driven Vim distribution with modular configuration"
-            },
-            {
               "name": "LazyVim",
               "url": "https://lazyvim.org/",
               "description": "Neovim configuration for the lazy with sane defaults and easy customization"
@@ -156,13 +151,85 @@
             },
             {
               "name": "Doom Emacs",
-              "url": "https://doomemacs.org/",
+              "url": "https://github.com/doomemacs/doomemacs",
               "description": "Emacs framework with Vim emulation and curated package selection"
             },
             {
               "name": "Spacemacs",
               "url": "https://www.spacemacs.org/",
               "description": "Community-driven Emacs distribution with excellent defaults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AI & LLM Tools",
+      "id": "ai--llm-tools",
+      "description": "AI-powered coding assistants, local model runtimes, and frameworks for building applications with large language models.",
+      "subcategories": [
+        {
+          "name": "AI Coding Assistants",
+          "tools": [
+            {
+              "name": "GitHub Copilot",
+              "url": "https://github.com/features/copilot",
+              "description": "AI pair programmer integrated into editors and the GitHub platform"
+            },
+            {
+              "name": "Claude Code",
+              "url": "https://www.claude.com/product/claude-code",
+              "description": "Anthropic's agentic coding tool for the terminal, IDEs, and the web"
+            },
+            {
+              "name": "aider",
+              "url": "https://aider.chat/",
+              "description": "AI pair programming in your terminal with automatic git integration"
+            },
+            {
+              "name": "Continue",
+              "url": "https://www.continue.dev/",
+              "description": "Open-source AI code assistant with support for custom models and context"
+            },
+            {
+              "name": "Cline",
+              "url": "https://cline.bot/",
+              "description": "Autonomous AI coding agent for VS Code with human-in-the-loop control"
+            }
+          ]
+        },
+        {
+          "name": "Local Model Runtimes",
+          "tools": [
+            {
+              "name": "Ollama",
+              "url": "https://ollama.com/",
+              "description": "Run large language models locally with a simple CLI and API"
+            },
+            {
+              "name": "LM Studio",
+              "url": "https://lmstudio.ai/",
+              "description": "Desktop app for discovering, downloading, and running local LLMs"
+            },
+            {
+              "name": "llama.cpp",
+              "url": "https://github.com/ggml-org/llama.cpp",
+              "description": "LLM inference in C/C++ that runs models efficiently on consumer hardware"
+            }
+          ]
+        },
+        {
+          "name": "LLM Application Frameworks",
+          "tools": [
+            {
+              "name": "LangChain",
+              "url": "https://www.langchain.com/",
+              "description": "Framework for developing applications powered by large language models"
+            },
+            {
+              "name": "LlamaIndex",
+              "url": "https://www.llamaindex.ai/",
+              "description": "Data framework for connecting custom data sources to large language models"
             }
           ]
         }
@@ -185,6 +252,11 @@
               "name": "GitHub CLI",
               "url": "https://cli.github.com/",
               "description": "Command-line tool for GitHub"
+            },
+            {
+              "name": "Jujutsu",
+              "url": "https://jj-vcs.github.io/jj/",
+              "description": "Git-compatible version control system with automatic rebasing and simpler conflict handling"
             },
             {
               "name": "GitHub Desktop",
@@ -229,7 +301,7 @@
             {
               "name": "commitizen",
               "url": "https://commitizen-tools.github.io/commitizen/",
-              "description": "Tool for creating committing rules"
+              "description": "Command-line tool that enforces consistent commit message conventions"
             },
             {
               "name": "semantic-release",
@@ -307,6 +379,11 @@
               "name": "Starship",
               "url": "https://starship.rs/",
               "description": "Fast, customizable prompt for any shell"
+            },
+            {
+              "name": "Atuin",
+              "url": "https://atuin.sh/",
+              "description": "Shell history replacement with full-text search, sync, and statistics"
             }
           ]
         },
@@ -374,9 +451,9 @@
               "description": "Cat clone with syntax highlighting and Git integration"
             },
             {
-              "name": "exa",
-              "url": "https://the.exa.website/",
-              "description": "Modern replacement for ls with colors and Git status"
+              "name": "eza",
+              "url": "https://eza.rocks/",
+              "description": "Modern replacement for ls with colors, icons, and Git status"
             },
             {
               "name": "jq",
@@ -527,8 +604,8 @@
             },
             {
               "name": "PDM",
-              "url": "https://pdm.fming.dev/",
-              "description": "Modern Python package manager with PEP 582 support"
+              "url": "https://pdm-project.org/",
+              "description": "Modern Python package and dependency manager supporting the latest PEP standards"
             },
             {
               "name": "Pipenv",
@@ -542,8 +619,18 @@
             },
             {
               "name": "Go Modules",
-              "url": "https://golang.org/ref/mod",
+              "url": "https://go.dev/ref/mod",
               "description": "Go dependency management"
+            },
+            {
+              "name": "Bun",
+              "url": "https://bun.sh/",
+              "description": "Fast all-in-one JavaScript runtime with built-in package manager, bundler, and test runner"
+            },
+            {
+              "name": "Deno",
+              "url": "https://deno.com/",
+              "description": "Secure JavaScript and TypeScript runtime with built-in tooling and package management"
             }
           ]
         },
@@ -599,6 +686,16 @@
               "name": "rustup",
               "url": "https://rustup.rs/",
               "description": "Official Rust toolchain installer and version manager"
+            },
+            {
+              "name": "asdf",
+              "url": "https://asdf-vm.com/",
+              "description": "Version manager for multiple runtime versions with plugin ecosystem"
+            },
+            {
+              "name": "mise",
+              "url": "https://mise.jdx.dev/",
+              "description": "Fast polyglot tool version manager and task runner"
             }
           ]
         }
@@ -635,7 +732,7 @@
           ]
         },
         {
-          "name": "Build Systems",
+          "name": "JavaScript Bundlers",
           "tools": [
             {
               "name": "Webpack",
@@ -644,7 +741,7 @@
             },
             {
               "name": "Vite",
-              "url": "https://vitejs.dev/",
+              "url": "https://vite.dev/",
               "description": "Fast build tool for modern web projects"
             },
             {
@@ -658,9 +755,9 @@
               "description": "Extremely fast JavaScript bundler"
             },
             {
-              "name": "Turbo",
-              "url": "https://turbo.build/",
-              "description": "High-performance build system for JavaScript/TypeScript"
+              "name": "Turborepo",
+              "url": "https://turborepo.dev/",
+              "description": "High-performance build system for JavaScript and TypeScript monorepos"
             }
           ]
         },
@@ -721,7 +818,7 @@
             },
             {
               "name": "pytest",
-              "url": "https://pytest.org/",
+              "url": "https://docs.pytest.org/",
               "description": "Python testing framework"
             },
             {
@@ -748,6 +845,26 @@
               "name": "Testing Library",
               "url": "https://testing-library.com/",
               "description": "Simple testing utilities for DOM testing"
+            },
+            {
+              "name": "Testcontainers",
+              "url": "https://testcontainers.com/",
+              "description": "Library for throwaway, containerized dependencies in integration tests"
+            }
+          ]
+        },
+        {
+          "name": "Load & Performance Testing",
+          "tools": [
+            {
+              "name": "k6",
+              "url": "https://k6.io/",
+              "description": "Developer-centric load testing tool scriptable in JavaScript"
+            },
+            {
+              "name": "Locust",
+              "url": "https://locust.io/",
+              "description": "Scalable load testing framework with tests defined in Python"
             }
           ]
         }
@@ -793,7 +910,7 @@
           "tools": [
             {
               "name": "Lighthouse",
-              "url": "https://developers.google.com/web/tools/lighthouse",
+              "url": "https://developer.chrome.com/docs/lighthouse/overview",
               "description": "Web performance auditing tool"
             },
             {
@@ -802,13 +919,8 @@
               "description": "Website performance testing"
             },
             {
-              "name": "Pyflame",
-              "url": "https://github.com/uber-archive/pyflame",
-              "description": "Profiling tool for Python"
-            },
-            {
               "name": "perf",
-              "url": "https://perf.wiki.kernel.org/",
+              "url": "https://perfwiki.github.io/",
               "description": "Linux profiling tool"
             }
           ]
@@ -872,6 +984,11 @@
               "name": "Clippy",
               "url": "https://github.com/rust-lang/rust-clippy",
               "description": "Rust linter that catches common mistakes and suggests idiomatic code improvements"
+            },
+            {
+              "name": "Biome",
+              "url": "https://biomejs.dev/",
+              "description": "Fast formatter and linter for JavaScript, TypeScript, JSON, and CSS written in Rust"
             }
           ]
         },
@@ -880,7 +997,7 @@
           "tools": [
             {
               "name": "SonarQube",
-              "url": "https://www.sonarqube.org/",
+              "url": "https://www.sonarsource.com/products/sonarqube/",
               "description": "Static code analysis platform"
             },
             {
@@ -947,7 +1064,7 @@
             },
             {
               "name": "Redoc",
-              "url": "https://redoc.ly/",
+              "url": "https://redocly.com/",
               "description": "OpenAPI documentation generator"
             },
             {
@@ -972,7 +1089,7 @@
             },
             {
               "name": "WireMock",
-              "url": "http://wiremock.org/",
+              "url": "https://wiremock.org/",
               "description": "HTTP service virtualization"
             },
             {
@@ -1029,12 +1146,12 @@
             },
             {
               "name": "Flyway",
-              "url": "https://flywaydb.org/",
+              "url": "https://www.red-gate.com/products/flyway/community/",
               "description": "Database migration tool"
             },
             {
               "name": "Liquibase",
-              "url": "https://www.liquibase.org/",
+              "url": "https://www.liquibase.com/",
               "description": "Database schema change management"
             }
           ]
@@ -1048,19 +1165,24 @@
               "description": "Graph database platform for connected data and complex queries"
             },
             {
-              "name": "KuzuDB",
-              "url": "https://kuzudb.com/",
-              "description": "Embeddable graph database built for query speed and scalability"
-            },
-            {
               "name": "ClickHouse",
               "url": "https://clickhouse.com/",
               "description": "Real-time analytics DBMS for big data and high performance"
+            }
+          ]
+        },
+        {
+          "name": "Embedded Databases",
+          "tools": [
+            {
+              "name": "SQLite",
+              "url": "https://www.sqlite.org/",
+              "description": "Self-contained, serverless SQL database engine and the most widely deployed database"
             },
             {
-              "name": "Apache Parquet Tools",
-              "url": "https://github.com/apache/parquet-mr",
-              "description": "Command-line tools for reading, writing and manipulating Parquet files"
+              "name": "libSQL",
+              "url": "https://github.com/tursodatabase/libsql",
+              "description": "Open contribution fork of SQLite with replication and edge deployment features"
             }
           ]
         }
@@ -1101,7 +1223,7 @@
           "tools": [
             {
               "name": "Vagrant",
-              "url": "https://www.vagrantup.com/",
+              "url": "https://developer.hashicorp.com/vagrant",
               "description": "Tool for building and managing virtual machine environments"
             },
             {
@@ -1111,7 +1233,7 @@
             },
             {
               "name": "Multipass",
-              "url": "https://multipass.run/",
+              "url": "https://canonical.com/multipass",
               "description": "Ubuntu VMs on demand for any workstation"
             },
             {
@@ -1128,16 +1250,6 @@
               "name": "Nix",
               "url": "https://nixos.org/",
               "description": "Functional package manager for reproducible and declarative systems"
-            },
-            {
-              "name": "asdf",
-              "url": "https://asdf-vm.com/",
-              "description": "Version manager for multiple runtime versions with plugin ecosystem"
-            },
-            {
-              "name": "mise",
-              "url": "https://mise.jdx.dev/",
-              "description": "Fast polyglot tool version manager and task runner"
             },
             {
               "name": "Guix",
@@ -1278,12 +1390,12 @@
           "tools": [
             {
               "name": "Terraform",
-              "url": "https://www.terraform.io/",
+              "url": "https://developer.hashicorp.com/terraform",
               "description": "Infrastructure as code tool"
             },
             {
               "name": "Ansible",
-              "url": "https://www.ansible.com/",
+              "url": "https://docs.ansible.com/",
               "description": "IT automation platform"
             },
             {
@@ -1322,6 +1434,36 @@
               "description": "Continuous integration and delivery platform"
             }
           ]
+        },
+        {
+          "name": "GitOps & Continuous Delivery",
+          "tools": [
+            {
+              "name": "Argo CD",
+              "url": "https://argo-cd.readthedocs.io/",
+              "description": "Declarative GitOps continuous delivery for Kubernetes"
+            },
+            {
+              "name": "Flux",
+              "url": "https://fluxcd.io/",
+              "description": "GitOps toolkit for keeping Kubernetes clusters in sync with configuration sources"
+            }
+          ]
+        },
+        {
+          "name": "Dependency Automation",
+          "tools": [
+            {
+              "name": "Renovate",
+              "url": "https://docs.renovatebot.com/",
+              "description": "Automated dependency update tool with highly configurable update strategies"
+            },
+            {
+              "name": "Dependabot",
+              "url": "https://docs.github.com/en/code-security/dependabot",
+              "description": "GitHub-native automated dependency updates and security alerts"
+            }
+          ]
         }
       ]
     },
@@ -1333,6 +1475,11 @@
         {
           "name": "Application Monitoring",
           "tools": [
+            {
+              "name": "Prometheus",
+              "url": "https://prometheus.io/",
+              "description": "Open-source monitoring system with a dimensional data model and powerful query language"
+            },
             {
               "name": "Datadog",
               "url": "https://www.datadoghq.com/",
@@ -1416,8 +1563,8 @@
               "description": "Developer-first security platform"
             },
             {
-              "name": "OWASP ZAP",
-              "url": "https://owasp.org/www-project-zap/",
+              "name": "ZAP",
+              "url": "https://www.zaproxy.org/",
               "description": "Web application security scanner"
             },
             {
@@ -1457,7 +1604,7 @@
           "tools": [
             {
               "name": "HashiCorp Vault",
-              "url": "https://www.vaultproject.io/",
+              "url": "https://developer.hashicorp.com/vault",
               "description": "Secrets management platform"
             },
             {
@@ -1540,9 +1687,14 @@
               "description": "Digital design toolkit (macOS)"
             },
             {
-              "name": "Adobe XD",
-              "url": "https://www.adobe.com/products/xd.html",
-              "description": "UI/UX design and collaboration tool"
+              "name": "Penpot",
+              "url": "https://penpot.app/",
+              "description": "Open-source design and prototyping platform"
+            },
+            {
+              "name": "Excalidraw",
+              "url": "https://excalidraw.com/",
+              "description": "Virtual whiteboard for sketching hand-drawn style diagrams"
             }
           ]
         },
@@ -1655,7 +1807,7 @@
             },
             {
               "name": "pipx",
-              "url": "https://pypa.github.io/pipx/",
+              "url": "https://pipx.pypa.io/",
               "description": "Install and run Python applications in isolated environments"
             }
           ]
@@ -1805,7 +1957,7 @@
             },
             {
               "name": "Peewee",
-              "url": "http://docs.peewee-orm.com/",
+              "url": "https://docs.peewee-orm.com/",
               "description": "Lightweight and expressive ORM for small to medium applications"
             }
           ]
@@ -1905,7 +2057,7 @@
             },
             {
               "name": "msgspec",
-              "url": "https://jcristharif.com/msgspec/",
+              "url": "https://github.com/jcrist/msgspec",
               "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML"
             }
           ]
@@ -2002,7 +2154,7 @@
             },
             {
               "name": "Exercism",
-              "url": "https://exercism.io/",
+              "url": "https://exercism.org/",
               "description": "Code practice and mentorship"
             }
           ]
@@ -2015,31 +2167,21 @@
       "description": "Command-line tools and SDKs for interacting with major cloud service providers and managing cloud infrastructure.",
       "subcategories": [
         {
-          "name": "AWS Tools",
+          "name": "Cloud CLIs",
           "tools": [
             {
               "name": "AWS CLI",
               "url": "https://aws.amazon.com/cli/",
               "description": "Official command-line interface for Amazon Web Services"
-            }
-          ]
-        },
-        {
-          "name": "Google Cloud",
-          "tools": [
+            },
             {
               "name": "Google Cloud CLI",
               "url": "https://cloud.google.com/sdk/gcloud",
               "description": "Command-line interface for Google Cloud Platform services"
-            }
-          ]
-        },
-        {
-          "name": "Microsoft Azure",
-          "tools": [
+            },
             {
               "name": "Azure CLI",
-              "url": "https://docs.microsoft.com/en-us/cli/azure/",
+              "url": "https://learn.microsoft.com/en-us/cli/azure/",
               "description": "Cross-platform command-line interface for Microsoft Azure"
             }
           ]
@@ -2148,7 +2290,7 @@
             },
             {
               "name": "SvelteKit",
-              "url": "https://kit.svelte.dev/",
+              "url": "https://svelte.dev/docs/kit",
               "description": "Full-stack framework for building web apps with Svelte"
             },
             {
@@ -2256,16 +2398,16 @@
             {
               "name": "SwiftUI",
               "url": "https://developer.apple.com/xcode/swiftui/",
-              "description": "Declarative framework for building macOS applications"
+              "description": "Declarative UI framework for building apps across all Apple platforms"
             },
             {
               "name": "WPF",
-              "url": "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/",
+              "url": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/",
               "description": "Windows Presentation Foundation for building Windows desktop applications"
             },
             {
               "name": "WinUI",
-              "url": "https://microsoft.github.io/microsoft-ui-xaml/",
+              "url": "https://learn.microsoft.com/en-us/windows/apps/winui/",
               "description": "Modern native UI platform for Windows applications"
             }
           ]
@@ -2351,24 +2493,24 @@
           "name": "Time Series",
           "tools": [
             {
-              "name": "Tsfresh",
-              "url": "https://tsfresh.com/",
-              "description": "A Python package for automatic extraction of a large number of time-series features."
+              "name": "tsfresh",
+              "url": "https://github.com/blue-yonder/tsfresh",
+              "description": "Automatic extraction of relevant features from time series data"
             },
             {
-              "name": "Sktime",
+              "name": "sktime",
               "url": "https://www.sktime.net/",
-              "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn."
+              "description": "Unified framework for time series machine learning, interoperable with scikit-learn"
             },
             {
               "name": "AutoTS",
               "url": "https://github.com/winedarksea/AutoTS",
-              "description": "An automated time-series forecasting library for Python."
+              "description": "Automated time series forecasting library for Python"
             },
             {
               "name": "Prophet",
               "url": "https://facebook.github.io/prophet/",
-              "description": "A forecasting library for time series data developed by Facebook."
+              "description": "Forecasting library for time series data developed by Meta"
             }
           ]
         }
@@ -2429,7 +2571,7 @@
             },
             {
               "name": "SQLMesh",
-              "url": "https://sqlmesh.com/",
+              "url": "https://sqlmesh.readthedocs.io/",
               "description": "DataOps framework for SQL transformations with built-in testing and CI/CD"
             },
             {
@@ -2503,9 +2645,9 @@
               "description": "Client library for building stream processing applications with Apache Kafka"
             },
             {
-              "name": "Benthos",
-              "url": "https://www.benthos.dev/",
-              "description": "Stream processor for mundane tasks with a declarative configuration approach"
+              "name": "Redpanda Connect",
+              "url": "https://www.redpanda.com/connect",
+              "description": "Declarative stream processor for data pipelines, formerly known as Benthos"
             }
           ]
         },
@@ -2604,13 +2746,8 @@
           "tools": [
             {
               "name": "DataHub",
-              "url": "https://datahubproject.io/",
+              "url": "https://datahub.com/",
               "description": "Extensible metadata platform for data discovery and governance with lineage tracking"
-            },
-            {
-              "name": "Amundsen",
-              "url": "https://www.amundsen.io/",
-              "description": "Data discovery and metadata platform for improving data productivity"
             },
             {
               "name": "OpenMetadata",
@@ -2631,11 +2768,6 @@
               "name": "DVC",
               "url": "https://dvc.org/",
               "description": "Git-based data version control for machine learning projects with experiment tracking"
-            },
-            {
-              "name": "Pachyderm",
-              "url": "https://www.pachyderm.com/",
-              "description": "Data versioning and pipeline platform with reproducible data science workflows"
             }
           ]
         }

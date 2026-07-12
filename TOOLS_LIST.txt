@@ -27,7 +27,6 @@
 ### Vim & Modal Editors
 - Neovim: https://neovim.io/
 - Vim: https://www.vim.org/
-- SpaceVim: https://spacevim.org/
 - LazyVim: https://lazyvim.org/
 - AstroNvim: https://astronvim.com/
 - LunarVim: https://lunarvim.org/
@@ -35,14 +34,33 @@
 
 ### Emacs
 - GNU Emacs: https://www.gnu.org/software/emacs/
-- Doom Emacs: https://doomemacs.org/
+- Doom Emacs: https://github.com/doomemacs/doomemacs
 - Spacemacs: https://www.spacemacs.org/
+
+## AI & LLM Tools
+
+### AI Coding Assistants
+- GitHub Copilot: https://github.com/features/copilot
+- Claude Code: https://www.claude.com/product/claude-code
+- aider: https://aider.chat/
+- Continue: https://www.continue.dev/
+- Cline: https://cline.bot/
+
+### Local Model Runtimes
+- Ollama: https://ollama.com/
+- LM Studio: https://lmstudio.ai/
+- llama.cpp: https://github.com/ggml-org/llama.cpp
+
+### LLM Application Frameworks
+- LangChain: https://www.langchain.com/
+- LlamaIndex: https://www.llamaindex.ai/
 
 ## Version Control
 
 ### Git Tools
 - Git: https://git-scm.com/
 - GitHub CLI: https://cli.github.com/
+- Jujutsu: https://jj-vcs.github.io/jj/
 - GitHub Desktop: https://desktop.github.com/
 - Lazygit: https://github.com/jesseduffield/lazygit
 - Fork: https://git-fork.com/
@@ -71,6 +89,7 @@
 - Zsh: https://www.zsh.org/
 - Oh My Zsh: https://ohmyz.sh/
 - Starship: https://starship.rs/
+- Atuin: https://atuin.sh/
 
 ### Session Management
 - tmux: https://github.com/tmux/tmux
@@ -87,7 +106,7 @@
 
 ### Text Processing & Viewing
 - bat: https://github.com/sharkdp/bat
-- exa: https://the.exa.website/
+- eza: https://eza.rocks/
 - jq: https://github.com/jqlang/jq
 - fx: https://github.com/antonmedv/fx
 - yq: https://github.com/mikefarah/yq
@@ -122,10 +141,12 @@
 - pip: https://pip.pypa.io/
 - uv: https://docs.astral.sh/uv/
 - Poetry: https://python-poetry.org/
-- PDM: https://pdm.fming.dev/
+- PDM: https://pdm-project.org/
 - Pipenv: https://pipenv.pypa.io/
 - Cargo: https://doc.rust-lang.org/cargo/
-- Go Modules: https://golang.org/ref/mod
+- Go Modules: https://go.dev/ref/mod
+- Bun: https://bun.sh/
+- Deno: https://deno.com/
 
 ### System Package Managers
 - Homebrew: https://brew.sh/
@@ -139,6 +160,8 @@
 - pyenv: https://github.com/pyenv/pyenv
 - SDKMAN!: https://sdkman.io/
 - rustup: https://rustup.rs/
+- asdf: https://asdf-vm.com/
+- mise: https://mise.jdx.dev/
 
 ## Build Tools & Task Runners
 
@@ -148,12 +171,12 @@
 - Meson: https://mesonbuild.com/
 - Bazel: https://bazel.build/
 
-### Build Systems
+### JavaScript Bundlers
 - Webpack: https://webpack.js.org/
-- Vite: https://vitejs.dev/
+- Vite: https://vite.dev/
 - Rollup: https://rollupjs.org/
 - esbuild: https://esbuild.github.io/
-- Turbo: https://turbo.build/
+- Turborepo: https://turborepo.dev/
 
 ### Task Runners
 - Make: https://www.gnu.org/software/make/
@@ -168,13 +191,18 @@
 - Vitest: https://vitest.dev/
 - Playwright: https://playwright.dev/
 - Cypress: https://www.cypress.io/
-- pytest: https://pytest.org/
+- pytest: https://docs.pytest.org/
 - JUnit: https://junit.org/
 
 ### Testing Utilities
 - Faker.js: https://fakerjs.dev/
 - Storybook: https://storybook.js.org/
 - Testing Library: https://testing-library.com/
+- Testcontainers: https://testcontainers.com/
+
+### Load & Performance Testing
+- k6: https://k6.io/
+- Locust: https://locust.io/
 
 ## Debugging & Profiling
 
@@ -186,10 +214,9 @@
 - gdb: https://www.gnu.org/software/gdb/
 
 ### Performance Profiling
-- Lighthouse: https://developers.google.com/web/tools/lighthouse
+- Lighthouse: https://developer.chrome.com/docs/lighthouse/overview
 - WebPageTest: https://www.webpagetest.org/
-- Pyflame: https://github.com/uber-archive/pyflame
-- perf: https://perf.wiki.kernel.org/
+- perf: https://perfwiki.github.io/
 
 ## Code Quality & Linting
 
@@ -204,9 +231,10 @@
 - mypy: https://mypy-lang.org/
 - Rustfmt: https://github.com/rust-lang/rustfmt
 - Clippy: https://github.com/rust-lang/rust-clippy
+- Biome: https://biomejs.dev/
 
 ### Code Analysis
-- SonarQube: https://www.sonarqube.org/
+- SonarQube: https://www.sonarsource.com/products/sonarqube/
 - CodeClimate: https://codeclimate.com/
 - Semgrep: https://semgrep.dev/
 
@@ -222,13 +250,13 @@
 
 ### API Documentation
 - Swagger/OpenAPI: https://swagger.io/
-- Redoc: https://redoc.ly/
+- Redoc: https://redocly.com/
 - OpenAPI Generator: https://openapi-generator.tech/
 - API Blueprint: https://apiblueprint.org/
 
 ### Mock Servers
 - json-server: https://github.com/typicode/json-server
-- WireMock: http://wiremock.org/
+- WireMock: https://wiremock.org/
 - Mockoon: https://mockoon.com/
 
 ## Database Tools
@@ -242,14 +270,16 @@
 ### Database Development
 - Prisma: https://www.prisma.io/
 - Drizzle: https://orm.drizzle.team/
-- Flyway: https://flywaydb.org/
-- Liquibase: https://www.liquibase.org/
+- Flyway: https://www.red-gate.com/products/flyway/community/
+- Liquibase: https://www.liquibase.com/
 
 ### Graph & Analytics Databases
 - Neo4j: https://neo4j.com/
-- KuzuDB: https://kuzudb.com/
 - ClickHouse: https://clickhouse.com/
-- Apache Parquet Tools: https://github.com/apache/parquet-mr
+
+### Embedded Databases
+- SQLite: https://www.sqlite.org/
+- libSQL: https://github.com/tursodatabase/libsql
 
 ## Development Environments
 
@@ -260,15 +290,13 @@
 - Coder: https://coder.com/
 
 ### Virtual Machines
-- Vagrant: https://www.vagrantup.com/
+- Vagrant: https://developer.hashicorp.com/vagrant
 - Lima: https://github.com/lima-vm/lima
-- Multipass: https://multipass.run/
+- Multipass: https://canonical.com/multipass
 - UTM: https://mac.getutm.app/
 
 ### Reproducible Systems
 - Nix: https://nixos.org/
-- asdf: https://asdf-vm.com/
-- mise: https://mise.jdx.dev/
 - Guix: https://guix.gnu.org/
 
 ### Local Development Orchestration
@@ -303,8 +331,8 @@
 - Skaffold: https://skaffold.dev/
 
 ### Infrastructure as Code
-- Terraform: https://www.terraform.io/
-- Ansible: https://www.ansible.com/
+- Terraform: https://developer.hashicorp.com/terraform
+- Ansible: https://docs.ansible.com/
 - Pulumi: https://www.pulumi.com/
 - AWS CDK: https://aws.amazon.com/cdk/
 
@@ -314,9 +342,18 @@
 - Jenkins: https://www.jenkins.io/
 - Circle CI: https://circleci.com/
 
+### GitOps & Continuous Delivery
+- Argo CD: https://argo-cd.readthedocs.io/
+- Flux: https://fluxcd.io/
+
+### Dependency Automation
+- Renovate: https://docs.renovatebot.com/
+- Dependabot: https://docs.github.com/en/code-security/dependabot
+
 ## Monitoring & Logging
 
 ### Application Monitoring
+- Prometheus: https://prometheus.io/
 - Datadog: https://www.datadoghq.com/
 - New Relic: https://newrelic.com/
 - Sentry: https://sentry.io/
@@ -337,7 +374,7 @@
 
 ### Security Scanning
 - Snyk: https://snyk.io/
-- OWASP ZAP: https://owasp.org/www-project-zap/
+- ZAP: https://www.zaproxy.org/
 - Burp Suite: https://portswigger.net/burp
 - Bandit: https://bandit.readthedocs.io/
 - Trivy: https://trivy.dev/
@@ -346,7 +383,7 @@
 - npm audit: https://docs.npmjs.com/cli/v7/commands/npm-audit
 
 ### Secret Management
-- HashiCorp Vault: https://www.vaultproject.io/
+- HashiCorp Vault: https://developer.hashicorp.com/vault
 - 1Password CLI: https://developer.1password.com/docs/cli/
 - AWS Secrets Manager: https://aws.amazon.com/secrets-manager/
 
@@ -367,7 +404,8 @@
 ### Design Tools
 - Figma: https://www.figma.com/
 - Sketch: https://www.sketch.com/
-- Adobe XD: https://www.adobe.com/products/xd.html
+- Penpot: https://penpot.app/
+- Excalidraw: https://excalidraw.com/
 
 ### Asset Management
 - ImageOptim: https://imageoptim.com/
@@ -396,7 +434,7 @@
 ### Environment Management
 - conda: https://docs.conda.io/
 - virtualenv: https://virtualenv.pypa.io/
-- pipx: https://pypa.github.io/pipx/
+- pipx: https://pipx.pypa.io/
 
 ### CLI Development
 - Click: https://click.palletsprojects.com/
@@ -433,7 +471,7 @@
 ### ORMs & Database Libraries
 - SQLAlchemy: https://www.sqlalchemy.org/
 - Tortoise ORM: https://tortoise.github.io/
-- Peewee: http://docs.peewee-orm.com/
+- Peewee: https://docs.peewee-orm.com/
 
 ### Task Queues & Scheduling
 - Celery: https://docs.celeryq.dev/
@@ -458,7 +496,7 @@
 ### Serialization
 - orjson: https://github.com/ijl/orjson
 - msgpack: https://msgpack.org/
-- msgspec: https://jcristharif.com/msgspec/
+- msgspec: https://github.com/jcrist/msgspec
 
 ### Profiling & Performance
 - py-spy: https://github.com/benfred/py-spy
@@ -482,18 +520,14 @@
 - LeetCode: https://leetcode.com/
 - HackerRank: https://www.hackerrank.com/
 - Codewars: https://www.codewars.com/
-- Exercism: https://exercism.io/
+- Exercism: https://exercism.org/
 
 ## Cloud Platforms
 
-### AWS Tools
+### Cloud CLIs
 - AWS CLI: https://aws.amazon.com/cli/
-
-### Google Cloud
 - Google Cloud CLI: https://cloud.google.com/sdk/gcloud
-
-### Microsoft Azure
-- Azure CLI: https://docs.microsoft.com/en-us/cli/azure/
+- Azure CLI: https://learn.microsoft.com/en-us/cli/azure/
 
 ### Multi-Cloud
 - Crossplane: https://crossplane.io/
@@ -521,7 +555,7 @@
 - Express: https://expressjs.com/
 - NestJS: https://nestjs.com/
 - Nuxt: https://nuxt.com/
-- SvelteKit: https://kit.svelte.dev/
+- SvelteKit: https://svelte.dev/docs/kit
 - Remix: https://remix.run/
 - Hono: https://hono.dev/
 
@@ -547,8 +581,8 @@
 
 ### Native
 - SwiftUI: https://developer.apple.com/xcode/swiftui/
-- WPF: https://docs.microsoft.com/en-us/dotnet/desktop/wpf/
-- WinUI: https://microsoft.github.io/microsoft-ui-xaml/
+- WPF: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/
+- WinUI: https://learn.microsoft.com/en-us/windows/apps/winui/
 
 ## Data Science & Machine Learning
 
@@ -570,8 +604,8 @@
 - Parquet: https://parquet.apache.org/
 
 ### Time Series
-- Tsfresh: https://tsfresh.com/
-- Sktime: https://www.sktime.net/
+- tsfresh: https://github.com/blue-yonder/tsfresh
+- sktime: https://www.sktime.net/
 - AutoTS: https://github.com/winedarksea/AutoTS
 - Prophet: https://facebook.github.io/prophet/
 
@@ -588,7 +622,7 @@
 ### Data Transformation
 - dbt: https://www.getdbt.com/
 - Apache Spark: https://spark.apache.org/
-- SQLMesh: https://sqlmesh.com/
+- SQLMesh: https://sqlmesh.readthedocs.io/
 - dlt: https://dlthub.com/
 - Malloy: https://github.com/malloydata/malloy
 
@@ -605,7 +639,7 @@
 - Redpanda: https://redpanda.com/
 - Apache Pulsar: https://pulsar.apache.org/
 - Kafka Streams: https://kafka.apache.org/documentation/streams/
-- Benthos: https://www.benthos.dev/
+- Redpanda Connect: https://www.redpanda.com/connect
 
 ### Data Quality & Validation
 - Great Expectations: https://greatexpectations.io/
@@ -629,11 +663,9 @@
 - Dremio: https://www.dremio.com/
 
 ### Data Cataloging & Metadata
-- DataHub: https://datahubproject.io/
-- Amundsen: https://www.amundsen.io/
+- DataHub: https://datahub.com/
 - OpenMetadata: https://open-metadata.org/
 - Apache Atlas: https://atlas.apache.org/
 
 ### Data Version Control
 - DVC: https://dvc.org/
-- Pachyderm: https://www.pachyderm.com/

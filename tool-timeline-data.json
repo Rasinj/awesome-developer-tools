@@ -44,7 +44,7 @@
         },
         {
           "name": "Doom Emacs",
-          "url": "https://doomemacs.org/",
+          "url": "https://github.com/doomemacs/doomemacs",
           "description": "Emacs framework with Vim emulation and curated package selection",
           "birth_year": 1976,
           "era": "unix",
@@ -56,7 +56,10 @@
             "community_size": "Medium",
             "learning_curve": "Steep"
           },
-          "github_info": null
+          "github_info": {
+            "owner": "doomemacs",
+            "repo": "doomemacs"
+          }
         },
         {
           "name": "Spacemacs",
@@ -146,7 +149,7 @@
         },
         {
           "name": "pytest",
-          "url": "https://pytest.org/",
+          "url": "https://docs.pytest.org/",
           "description": "Python testing framework",
           "birth_year": 1998,
           "era": "internet",
@@ -362,22 +365,6 @@
             "owner": "features",
             "repo": "codespaces"
           }
-        },
-        {
-          "name": "SpaceVim",
-          "url": "https://spacevim.org/",
-          "description": "Community-driven Vim distribution with modular configuration",
-          "birth_year": 2005,
-          "era": "web",
-          "trend": "declining",
-          "category": "Code Editors & IDEs",
-          "subcategory": "Vim & Modal Editors",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Steep"
-          },
-          "github_info": null
         },
         {
           "name": "LazyVim",
@@ -610,22 +597,6 @@
           "github_info": null
         },
         {
-          "name": "Go Modules",
-          "url": "https://golang.org/ref/mod",
-          "description": "Go dependency management",
-          "birth_year": 2005,
-          "era": "web",
-          "trend": "declining",
-          "category": "Package Managers",
-          "subcategory": "Language-Specific",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
           "name": "Homebrew",
           "url": "https://brew.sh/",
           "description": "Package manager for macOS and Linux",
@@ -706,22 +677,6 @@
           "github_info": null
         },
         {
-          "name": "perf",
-          "url": "https://perf.wiki.kernel.org/",
-          "description": "Linux profiling tool",
-          "birth_year": 2005,
-          "era": "web",
-          "trend": "declining",
-          "category": "Debugging & Profiling",
-          "subcategory": "Performance Profiling",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
           "name": "Pylint",
           "url": "https://pylint.org/",
           "description": "Python static code analysis",
@@ -730,22 +685,6 @@
           "trend": "declining",
           "category": "Code Quality & Linting",
           "subcategory": "Linters & Formatters",
-          "metrics": {
-            "adoption_score": 20,
-            "community_size": "Niche",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "SonarQube",
-          "url": "https://www.sonarqube.org/",
-          "description": "Static code analysis platform",
-          "birth_year": 2005,
-          "era": "web",
-          "trend": "declining",
-          "category": "Code Quality & Linting",
-          "subcategory": "Code Analysis",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -771,7 +710,7 @@
         },
         {
           "name": "Liquibase",
-          "url": "https://www.liquibase.org/",
+          "url": "https://www.liquibase.com/",
           "description": "Database schema change management",
           "birth_year": 2006,
           "era": "web",
@@ -794,6 +733,22 @@
           "trend": "declining",
           "category": "Database Tools",
           "subcategory": "Graph & Analytics Databases",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "SQLite",
+          "url": "https://www.sqlite.org/",
+          "description": "Self-contained, serverless SQL database engine and the most widely deployed database",
+          "birth_year": 2000,
+          "era": "web",
+          "trend": "declining",
+          "category": "Database Tools",
+          "subcategory": "Embedded Databases",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -842,6 +797,22 @@
           "trend": "declining",
           "category": "Monitoring & Logging",
           "subcategory": "Application Monitoring",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "ZAP",
+          "url": "https://www.zaproxy.org/",
+          "description": "Web application security scanner",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Security",
+          "subcategory": "Security Scanning",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -1082,6 +1053,22 @@
           "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
+          "metrics": {
+            "adoption_score": 20,
+            "community_size": "Niche",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Exercism",
+          "url": "https://exercism.org/",
+          "description": "Code practice and mentorship",
+          "birth_year": 2005,
+          "era": "web",
+          "trend": "declining",
+          "category": "Learning & References",
+          "subcategory": "Practice & Challenges",
           "metrics": {
             "adoption_score": 20,
             "community_size": "Niche",
@@ -1518,12 +1505,12 @@
           "description": "Telemetry-free build of VS Code",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Modern Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1534,12 +1521,12 @@
           "description": "Professional Python IDE with advanced debugging",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Full IDEs",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1550,12 +1537,12 @@
           "description": "JavaScript and TypeScript IDE",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Full IDEs",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1598,12 +1585,12 @@
           "description": "Browser-based IDE for collaborative coding",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Online Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1646,12 +1633,12 @@
           "description": "Aesthetic and feature-rich neovim config that is extensible and easy to use",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Vim & Modal Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -1662,9 +1649,156 @@
           "description": "Blazing fast Neovim config providing solid defaults and beautiful UI",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Vim & Modal Editors",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "aider",
+          "url": "https://aider.chat/",
+          "description": "AI pair programming in your terminal with automatic git integration",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "AI & LLM Tools",
+          "subcategory": "AI Coding Assistants",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Continue",
+          "url": "https://www.continue.dev/",
+          "description": "Open-source AI code assistant with support for custom models and context",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "AI & LLM Tools",
+          "subcategory": "AI Coding Assistants",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Cline",
+          "url": "https://cline.bot/",
+          "description": "Autonomous AI coding agent for VS Code with human-in-the-loop control",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "AI & LLM Tools",
+          "subcategory": "AI Coding Assistants",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Ollama",
+          "url": "https://ollama.com/",
+          "description": "Run large language models locally with a simple CLI and API",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "AI & LLM Tools",
+          "subcategory": "Local Model Runtimes",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "LM Studio",
+          "url": "https://lmstudio.ai/",
+          "description": "Desktop app for discovering, downloading, and running local LLMs",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "AI & LLM Tools",
+          "subcategory": "Local Model Runtimes",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "llama.cpp",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "description": "LLM inference in C/C++ that runs models efficiently on consumer hardware",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "AI & LLM Tools",
+          "subcategory": "Local Model Runtimes",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": {
+            "owner": "ggml-org",
+            "repo": "llama.cpp"
+          }
+        },
+        {
+          "name": "LangChain",
+          "url": "https://www.langchain.com/",
+          "description": "Framework for developing applications powered by large language models",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "AI & LLM Tools",
+          "subcategory": "LLM Application Frameworks",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "LlamaIndex",
+          "url": "https://www.llamaindex.ai/",
+          "description": "Data framework for connecting custom data sources to large language models",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "AI & LLM Tools",
+          "subcategory": "LLM Application Frameworks",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Jujutsu",
+          "url": "https://jj-vcs.github.io/jj/",
+          "description": "Git-compatible version control system with automatic rebasing and simpler conflict handling",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Version Control",
+          "subcategory": "Git Tools",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -1697,12 +1831,12 @@
           "description": "Fast and friendly Git client for macOS and Windows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1713,7 +1847,7 @@
           "description": "Cross-platform Git GUI client",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
@@ -1729,12 +1863,12 @@
           "description": "Free Git GUI for Mac and Windows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1745,12 +1879,12 @@
           "description": "Framework for managing git pre-commit hooks",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Utilities",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1761,7 +1895,7 @@
           "description": "Git extension for versioning large files",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Utilities",
           "metrics": {
@@ -1774,7 +1908,7 @@
         {
           "name": "commitizen",
           "url": "https://commitizen-tools.github.io/commitizen/",
-          "description": "Tool for creating committing rules",
+          "description": "Command-line tool that enforces consistent commit message conventions",
           "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
@@ -1891,6 +2025,22 @@
           "url": "https://starship.rs/",
           "description": "Fast, customizable prompt for any shell",
           "birth_year": 2019,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Terminal & Shell",
+          "subcategory": "Shell Enhancement",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Atuin",
+          "url": "https://atuin.sh/",
+          "description": "Shell history replacement with full-text search, sync, and statistics",
+          "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
           "category": "Terminal & Shell",
@@ -2033,10 +2183,10 @@
           }
         },
         {
-          "name": "exa",
-          "url": "https://the.exa.website/",
-          "description": "Modern replacement for ls with colors and Git status",
-          "birth_year": 2014,
+          "name": "eza",
+          "url": "https://eza.rocks/",
+          "description": "Modern replacement for ls with colors, icons, and Git status",
+          "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
           "category": "Terminal & Shell",
@@ -2295,12 +2445,12 @@
           "description": "Loads and unloads environment variables based on current directory",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Terminal & Shell",
           "subcategory": "Productivity & Workflow",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2330,7 +2480,7 @@
           "description": "Node.js package manager",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Package Managers",
           "subcategory": "Language-Specific",
           "metrics": {
@@ -2421,6 +2571,54 @@
           "github_info": null
         },
         {
+          "name": "Go Modules",
+          "url": "https://go.dev/ref/mod",
+          "description": "Go dependency management",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Package Managers",
+          "subcategory": "Language-Specific",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Bun",
+          "url": "https://bun.sh/",
+          "description": "Fast all-in-one JavaScript runtime with built-in package manager, bundler, and test runner",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Package Managers",
+          "subcategory": "Language-Specific",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Deno",
+          "url": "https://deno.com/",
+          "description": "Secure JavaScript and TypeScript runtime with built-in tooling and package management",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Package Managers",
+          "subcategory": "Language-Specific",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Chocolatey",
           "url": "https://chocolatey.org/",
           "description": "Package manager for Windows",
@@ -2458,12 +2656,12 @@
           "description": "Node.js version manager with easy switching between versions",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Package Managers",
           "subcategory": "Version Managers",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": {
@@ -2561,6 +2759,22 @@
           "github_info": null
         },
         {
+          "name": "asdf",
+          "url": "https://asdf-vm.com/",
+          "description": "Version manager for multiple runtime versions with plugin ecosystem",
+          "birth_year": 2014,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Package Managers",
+          "subcategory": "Version Managers",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Ninja",
           "url": "https://ninja-build.org/",
           "description": "Small build system focused on speed",
@@ -2582,12 +2796,12 @@
           "description": "Fast, user-friendly build system",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Build Tools & Task Runners",
           "subcategory": "General Build Systems",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2616,7 +2830,7 @@
           "era": "mobile",
           "trend": "stable",
           "category": "Build Tools & Task Runners",
-          "subcategory": "Build Systems",
+          "subcategory": "JavaScript Bundlers",
           "metrics": {
             "adoption_score": 70,
             "community_size": "Large",
@@ -2632,7 +2846,7 @@
           "era": "mobile",
           "trend": "stable",
           "category": "Build Tools & Task Runners",
-          "subcategory": "Build Systems",
+          "subcategory": "JavaScript Bundlers",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -2681,7 +2895,7 @@
           "description": "Built-in task runner for Node.js projects",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Build Tools & Task Runners",
           "subcategory": "Task Runners",
           "metrics": {
@@ -2729,12 +2943,12 @@
           "description": "Generate massive amounts of fake data",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Testing",
           "subcategory": "Testing Utilities",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -2764,6 +2978,54 @@
           "trend": "stable",
           "category": "Testing",
           "subcategory": "Testing Utilities",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Testcontainers",
+          "url": "https://testcontainers.com/",
+          "description": "Library for throwaway, containerized dependencies in integration tests",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "rising",
+          "category": "Testing",
+          "subcategory": "Testing Utilities",
+          "metrics": {
+            "adoption_score": 85,
+            "community_size": "Large",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "k6",
+          "url": "https://k6.io/",
+          "description": "Developer-centric load testing tool scriptable in JavaScript",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Testing",
+          "subcategory": "Load & Performance Testing",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Locust",
+          "url": "https://locust.io/",
+          "description": "Scalable load testing framework with tests defined in Python",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "Testing",
+          "subcategory": "Load & Performance Testing",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -2805,9 +3067,25 @@
         },
         {
           "name": "Lighthouse",
-          "url": "https://developers.google.com/web/tools/lighthouse",
+          "url": "https://developer.chrome.com/docs/lighthouse/overview",
           "description": "Web performance auditing tool",
           "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "Debugging & Profiling",
+          "subcategory": "Performance Profiling",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "perf",
+          "url": "https://perfwiki.github.io/",
+          "description": "Linux profiling tool",
+          "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
           "category": "Debugging & Profiling",
@@ -2818,25 +3096,6 @@
             "learning_curve": "Moderate"
           },
           "github_info": null
-        },
-        {
-          "name": "Pyflame",
-          "url": "https://github.com/uber-archive/pyflame",
-          "description": "Profiling tool for Python",
-          "birth_year": 2015,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Debugging & Profiling",
-          "subcategory": "Performance Profiling",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": {
-            "owner": "uber-archive",
-            "repo": "pyflame"
-          }
         },
         {
           "name": "ESLint",
@@ -2892,12 +3151,12 @@
           "description": "Python linting tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Quality & Linting",
           "subcategory": "Linters & Formatters",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2973,6 +3232,22 @@
           }
         },
         {
+          "name": "SonarQube",
+          "url": "https://www.sonarsource.com/products/sonarqube/",
+          "description": "Static code analysis platform",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "Code Quality & Linting",
+          "subcategory": "Code Analysis",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Postman",
           "url": "https://www.postman.com/",
           "description": "API development and testing platform",
@@ -3010,12 +3285,12 @@
           "description": "Fast, git-friendly API client",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "API Development & Testing",
           "subcategory": "API Testing",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -3070,7 +3345,7 @@
         },
         {
           "name": "Redoc",
-          "url": "https://redoc.ly/",
+          "url": "https://redocly.com/",
           "description": "OpenAPI documentation generator",
           "birth_year": 2015,
           "era": "mobile",
@@ -3121,7 +3396,7 @@
         },
         {
           "name": "WireMock",
-          "url": "http://wiremock.org/",
+          "url": "https://wiremock.org/",
           "description": "HTTP service virtualization",
           "birth_year": 2011,
           "era": "mobile",
@@ -3157,12 +3432,12 @@
           "description": "Universal database tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Database Tools",
           "subcategory": "Database Clients",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3217,16 +3492,16 @@
         },
         {
           "name": "Flyway",
-          "url": "https://flywaydb.org/",
+          "url": "https://www.red-gate.com/products/flyway/community/",
           "description": "Database migration tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Database Tools",
           "subcategory": "Database Development",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3248,22 +3523,22 @@
           "github_info": null
         },
         {
-          "name": "Apache Parquet Tools",
-          "url": "https://github.com/apache/parquet-mr",
-          "description": "Command-line tools for reading, writing and manipulating Parquet files",
+          "name": "libSQL",
+          "url": "https://github.com/tursodatabase/libsql",
+          "description": "Open contribution fork of SQLite with replication and edge deployment features",
           "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
           "category": "Database Tools",
-          "subcategory": "Graph & Analytics Databases",
+          "subcategory": "Embedded Databases",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
             "learning_curve": "Moderate"
           },
           "github_info": {
-            "owner": "apache",
-            "repo": "parquet-mr"
+            "owner": "tursodatabase",
+            "repo": "libsql"
           }
         },
         {
@@ -3316,23 +3591,23 @@
         },
         {
           "name": "Vagrant",
-          "url": "https://www.vagrantup.com/",
+          "url": "https://developer.hashicorp.com/vagrant",
           "description": "Tool for building and managing virtual machine environments",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Development Environments",
           "subcategory": "Virtual Machines",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "Multipass",
-          "url": "https://multipass.run/",
+          "url": "https://canonical.com/multipass",
           "description": "Ubuntu VMs on demand for any workstation",
           "birth_year": 2018,
           "era": "mobile",
@@ -3355,22 +3630,6 @@
           "trend": "stable",
           "category": "Development Environments",
           "subcategory": "Virtual Machines",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "asdf",
-          "url": "https://asdf-vm.com/",
-          "description": "Version manager for multiple runtime versions with plugin ecosystem",
-          "birth_year": 2014,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Development Environments",
-          "subcategory": "Reproducible Systems",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -3706,7 +3965,7 @@
         },
         {
           "name": "Terraform",
-          "url": "https://www.terraform.io/",
+          "url": "https://developer.hashicorp.com/terraform",
           "description": "Infrastructure as code tool",
           "birth_year": 2014,
           "era": "mobile",
@@ -3722,7 +3981,7 @@
         },
         {
           "name": "Ansible",
-          "url": "https://www.ansible.com/",
+          "url": "https://docs.ansible.com/",
           "description": "IT automation platform",
           "birth_year": 2012,
           "era": "mobile",
@@ -3742,12 +4001,12 @@
           "description": "Modern infrastructure as code",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "DevOps & Infrastructure",
           "subcategory": "Infrastructure as Code",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -3758,12 +4017,12 @@
           "description": "Cloud Development Kit for AWS",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "DevOps & Infrastructure",
           "subcategory": "Infrastructure as Code",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -3836,10 +4095,77 @@
           "github_info": null
         },
         {
-          "name": "Datadog",
-          "url": "https://www.datadoghq.com/",
-          "description": "Monitoring and analytics platform",
+          "name": "Argo CD",
+          "url": "https://argo-cd.readthedocs.io/",
+          "description": "Declarative GitOps continuous delivery for Kubernetes",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "DevOps & Infrastructure",
+          "subcategory": "GitOps & Continuous Delivery",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Flux",
+          "url": "https://fluxcd.io/",
+          "description": "GitOps toolkit for keeping Kubernetes clusters in sync with configuration sources",
+          "birth_year": 2018,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "DevOps & Infrastructure",
+          "subcategory": "GitOps & Continuous Delivery",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Renovate",
+          "url": "https://docs.renovatebot.com/",
+          "description": "Automated dependency update tool with highly configurable update strategies",
           "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "DevOps & Infrastructure",
+          "subcategory": "Dependency Automation",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Steep"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Dependabot",
+          "url": "https://docs.github.com/en/code-security/dependabot",
+          "description": "GitHub-native automated dependency updates and security alerts",
+          "birth_year": 2015,
+          "era": "mobile",
+          "trend": "stable",
+          "category": "DevOps & Infrastructure",
+          "subcategory": "Dependency Automation",
+          "metrics": {
+            "adoption_score": 65,
+            "community_size": "Medium",
+            "learning_curve": "Steep"
+          },
+          "github_info": {
+            "owner": "en",
+            "repo": "code-security"
+          }
+        },
+        {
+          "name": "Prometheus",
+          "url": "https://prometheus.io/",
+          "description": "Open-source monitoring system with a dimensional data model and powerful query language",
+          "birth_year": 2012,
           "era": "mobile",
           "trend": "stable",
           "category": "Monitoring & Logging",
@@ -3847,6 +4173,22 @@
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Datadog",
+          "url": "https://www.datadoghq.com/",
+          "description": "Monitoring and analytics platform",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "Monitoring & Logging",
+          "subcategory": "Application Monitoring",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3937,12 +4279,12 @@
           "description": "Elasticsearch, Logstash, and Kibana",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Monitoring & Logging",
           "subcategory": "Logging",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3984,22 +4326,6 @@
           "url": "https://snyk.io/",
           "description": "Developer-first security platform",
           "birth_year": 2015,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Security",
-          "subcategory": "Security Scanning",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "OWASP ZAP",
-          "url": "https://owasp.org/www-project-zap/",
-          "description": "Web application security scanner",
-          "birth_year": 2010,
           "era": "mobile",
           "trend": "stable",
           "category": "Security",
@@ -4097,7 +4423,7 @@
           "description": "Security vulnerability scanner for npm",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Security Scanning",
           "metrics": {
@@ -4109,7 +4435,7 @@
         },
         {
           "name": "HashiCorp Vault",
-          "url": "https://www.vaultproject.io/",
+          "url": "https://developer.hashicorp.com/vault",
           "description": "Secrets management platform",
           "birth_year": 2015,
           "era": "mobile",
@@ -4129,12 +4455,12 @@
           "description": "Command-line interface for 1Password",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Secret Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4145,12 +4471,12 @@
           "description": "Secrets management service",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Secret Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4225,12 +4551,12 @@
           "description": "Developer hub for API documentation",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Documentation",
           "subcategory": "API Documentation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4257,6 +4583,22 @@
           "description": "Digital design toolkit (macOS)",
           "birth_year": 2010,
           "era": "mobile",
+          "trend": "declining",
+          "category": "Design & Prototyping",
+          "subcategory": "Design Tools",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
+          "name": "Penpot",
+          "url": "https://penpot.app/",
+          "description": "Open-source design and prototyping platform",
+          "birth_year": 2018,
+          "era": "mobile",
           "trend": "stable",
           "category": "Design & Prototyping",
           "subcategory": "Design Tools",
@@ -4268,17 +4610,17 @@
           "github_info": null
         },
         {
-          "name": "Adobe XD",
-          "url": "https://www.adobe.com/products/xd.html",
-          "description": "UI/UX design and collaboration tool",
-          "birth_year": 2016,
+          "name": "Excalidraw",
+          "url": "https://excalidraw.com/",
+          "description": "Virtual whiteboard for sketching hand-drawn style diagrams",
+          "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Design & Prototyping",
           "subcategory": "Design Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4356,12 +4698,12 @@
           "description": "Website and application blocker",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Productivity",
           "subcategory": "Time Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4416,7 +4758,7 @@
         },
         {
           "name": "pipx",
-          "url": "https://pypa.github.io/pipx/",
+          "url": "https://pipx.pypa.io/",
           "description": "Install and run Python applications in isolated environments",
           "birth_year": 2018,
           "era": "mobile",
@@ -4656,16 +4998,16 @@
         },
         {
           "name": "Peewee",
-          "url": "http://docs.peewee-orm.com/",
+          "url": "https://docs.peewee-orm.com/",
           "description": "Lightweight and expressive ORM for small to medium applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "ORMs & Database Libraries",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4740,12 +5082,12 @@
           "description": "Layered configuration system supporting multiple formats and environments",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "Configuration Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4819,9 +5161,9 @@
         },
         {
           "name": "msgspec",
-          "url": "https://jcristharif.com/msgspec/",
+          "url": "https://github.com/jcrist/msgspec",
           "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML",
-          "birth_year": 2010,
+          "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
           "category": "Python Libraries & Tools",
@@ -4831,7 +5173,10 @@
             "community_size": "Medium",
             "learning_curve": "Moderate"
           },
-          "github_info": null
+          "github_info": {
+            "owner": "jcrist",
+            "repo": "msgspec"
+          }
         },
         {
           "name": "py-spy",
@@ -4909,12 +5254,12 @@
           "description": "Q&A platform for developers",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Documentation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4925,12 +5270,12 @@
           "description": "Interactive coding lessons",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4941,12 +5286,12 @@
           "description": "Technology skills platform",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4957,12 +5302,12 @@
           "description": "Online learning marketplace",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4973,12 +5318,12 @@
           "description": "Coding interview preparation",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4989,12 +5334,12 @@
           "description": "Programming challenges",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5005,28 +5350,12 @@
           "description": "Coding challenges and kata",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Exercism",
-          "url": "https://exercism.io/",
-          "description": "Code practice and mentorship",
-          "birth_year": 2018,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Learning & References",
-          "subcategory": "Practice & Challenges",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5039,7 +5368,7 @@
           "era": "mobile",
           "trend": "stable",
           "category": "Cloud Platforms",
-          "subcategory": "AWS Tools",
+          "subcategory": "Cloud CLIs",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -5053,25 +5382,25 @@
           "description": "Command-line interface for Google Cloud Platform services",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Cloud Platforms",
-          "subcategory": "Google Cloud",
+          "subcategory": "Cloud CLIs",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "Azure CLI",
-          "url": "https://docs.microsoft.com/en-us/cli/azure/",
+          "url": "https://learn.microsoft.com/en-us/cli/azure/",
           "description": "Cross-platform command-line interface for Microsoft Azure",
           "birth_year": 2017,
           "era": "mobile",
           "trend": "stable",
           "category": "Cloud Platforms",
-          "subcategory": "Microsoft Azure",
+          "subcategory": "Cloud CLIs",
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
@@ -5165,12 +5494,12 @@
           "description": "Lightweight WSGI web application framework for simple to complex applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Python",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -5197,12 +5526,12 @@
           "description": "Fast, unopinionated, minimalist web framework for Node.js",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -5213,12 +5542,12 @@
           "description": "Progressive Node.js framework for building efficient and scalable server-side applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5229,19 +5558,19 @@
           "description": "Vue.js framework for building universal and static web applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "SvelteKit",
-          "url": "https://kit.svelte.dev/",
+          "url": "https://svelte.dev/docs/kit",
           "description": "Full-stack framework for building web apps with Svelte",
           "birth_year": 2016,
           "era": "mobile",
@@ -5293,12 +5622,12 @@
           "description": "PHP web application framework with elegant syntax",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5325,12 +5654,12 @@
           "description": "Cross-platform framework for building modern web applications with .NET",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5341,12 +5670,12 @@
           "description": "High-performance HTTP web framework written in Go",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5485,7 +5814,7 @@
         {
           "name": "SwiftUI",
           "url": "https://developer.apple.com/xcode/swiftui/",
-          "description": "Declarative framework for building macOS applications",
+          "description": "Declarative UI framework for building apps across all Apple platforms",
           "birth_year": 2014,
           "era": "mobile",
           "trend": "stable",
@@ -5500,32 +5829,32 @@
         },
         {
           "name": "WPF",
-          "url": "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/",
+          "url": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/",
           "description": "Windows Presentation Foundation for building Windows desktop applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Desktop Application Development",
           "subcategory": "Native",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "WinUI",
-          "url": "https://microsoft.github.io/microsoft-ui-xaml/",
+          "url": "https://learn.microsoft.com/en-us/windows/apps/winui/",
           "description": "Modern native UI platform for Windows applications",
-          "birth_year": 2018,
+          "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Desktop Application Development",
           "subcategory": "Native",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5579,10 +5908,10 @@
           "github_info": null
         },
         {
-          "name": "Tsfresh",
-          "url": "https://tsfresh.com/",
-          "description": "A Python package for automatic extraction of a large number of time-series features.",
-          "birth_year": 2010,
+          "name": "tsfresh",
+          "url": "https://github.com/blue-yonder/tsfresh",
+          "description": "Automatic extraction of relevant features from time series data",
+          "birth_year": 2015,
           "era": "mobile",
           "trend": "rising",
           "category": "Data Science & Machine Learning",
@@ -5592,12 +5921,15 @@
             "community_size": "Large",
             "learning_curve": "Moderate"
           },
-          "github_info": null
+          "github_info": {
+            "owner": "blue-yonder",
+            "repo": "tsfresh"
+          }
         },
         {
-          "name": "Sktime",
+          "name": "sktime",
           "url": "https://www.sktime.net/",
-          "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn.",
+          "description": "Unified framework for time series machine learning, interoperable with scikit-learn",
           "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
@@ -5613,7 +5945,7 @@
         {
           "name": "AutoTS",
           "url": "https://github.com/winedarksea/AutoTS",
-          "description": "An automated time-series forecasting library for Python.",
+          "description": "Automated time series forecasting library for Python",
           "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
@@ -5632,7 +5964,7 @@
         {
           "name": "Prophet",
           "url": "https://facebook.github.io/prophet/",
-          "description": "A forecasting library for time series data developed by Facebook.",
+          "description": "Forecasting library for time series data developed by Meta",
           "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
@@ -5731,21 +6063,21 @@
           "description": "Data build tool for transforming data in your warehouse using SQL and version control",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Transformation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "SQLMesh",
-          "url": "https://sqlmesh.com/",
+          "url": "https://sqlmesh.readthedocs.io/",
           "description": "DataOps framework for SQL transformations with built-in testing and CI/CD",
-          "birth_year": 2010,
+          "birth_year": 2018,
           "era": "mobile",
           "trend": "stable",
           "category": "Data Engineering",
@@ -5763,12 +6095,12 @@
           "description": "Python library for building data pipelines with automatic schema inference",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Transformation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5814,12 +6146,12 @@
           "description": "Open-source ELT platform built on top of Singer with CLI-first approach",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Integration",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5846,12 +6178,12 @@
           "description": "Fully managed ELT service with automated connectors and schema management",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Integration",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5878,28 +6210,28 @@
           "description": "Kafka-compatible streaming platform built in C++ for faster performance",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Stream Processing",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
-          "name": "Benthos",
-          "url": "https://www.benthos.dev/",
-          "description": "Stream processor for mundane tasks with a declarative configuration approach",
-          "birth_year": 2018,
+          "name": "Redpanda Connect",
+          "url": "https://www.redpanda.com/connect",
+          "description": "Declarative stream processor for data pipelines, formerly known as Benthos",
+          "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Stream Processing",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6076,60 +6408,28 @@
           "description": "Data lakehouse platform with SQL query acceleration and self-service analytics",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Query Engines",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "DataHub",
-          "url": "https://datahubproject.io/",
+          "url": "https://datahub.com/",
           "description": "Extensible metadata platform for data discovery and governance with lineage tracking",
-          "birth_year": 2018,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Data Engineering",
-          "subcategory": "Data Cataloging & Metadata",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Amundsen",
-          "url": "https://www.amundsen.io/",
-          "description": "Data discovery and metadata platform for improving data productivity",
-          "birth_year": 2018,
-          "era": "mobile",
-          "trend": "stable",
-          "category": "Data Engineering",
-          "subcategory": "Data Cataloging & Metadata",
-          "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
-          "name": "Pachyderm",
-          "url": "https://www.pachyderm.com/",
-          "description": "Data versioning and pipeline platform with reproducible data science workflows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
-          "subcategory": "Data Version Control",
+          "subcategory": "Data Cataloging & Metadata",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6205,6 +6505,41 @@
           "github_info": null
         },
         {
+          "name": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "description": "AI pair programmer integrated into editors and the GitHub platform",
+          "birth_year": 2021,
+          "era": "cloud",
+          "trend": "rising",
+          "category": "AI & LLM Tools",
+          "subcategory": "AI Coding Assistants",
+          "metrics": {
+            "adoption_score": 90,
+            "community_size": "Huge",
+            "learning_curve": "Easy"
+          },
+          "github_info": {
+            "owner": "features",
+            "repo": "copilot"
+          }
+        },
+        {
+          "name": "Claude Code",
+          "url": "https://www.claude.com/product/claude-code",
+          "description": "Anthropic's agentic coding tool for the terminal, IDEs, and the web",
+          "birth_year": 2022,
+          "era": "cloud",
+          "trend": "rising",
+          "category": "AI & LLM Tools",
+          "subcategory": "AI Coding Assistants",
+          "metrics": {
+            "adoption_score": 90,
+            "community_size": "Huge",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "zoxide",
           "url": "https://github.com/ajeetdsouza/zoxide",
           "description": "Smarter cd command that learns your habits and jumps to frequently used directories",
@@ -6248,20 +6583,20 @@
           "description": "Fast Python package installer and resolver",
           "birth_year": 2023,
           "era": "cloud",
-          "trend": "rising",
+          "trend": "stable",
           "category": "Package Managers",
           "subcategory": "Language-Specific",
           "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
+            "adoption_score": 70,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
         },
         {
           "name": "PDM",
-          "url": "https://pdm.fming.dev/",
-          "description": "Modern Python package manager with PEP 582 support",
+          "url": "https://pdm-project.org/",
+          "description": "Modern Python package and dependency manager supporting the latest PEP standards",
           "birth_year": 2021,
           "era": "cloud",
           "trend": "stable",
@@ -6275,14 +6610,30 @@
           "github_info": null
         },
         {
+          "name": "mise",
+          "url": "https://mise.jdx.dev/",
+          "description": "Fast polyglot tool version manager and task runner",
+          "birth_year": 2023,
+          "era": "cloud",
+          "trend": "stable",
+          "category": "Package Managers",
+          "subcategory": "Version Managers",
+          "metrics": {
+            "adoption_score": 70,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "Vite",
-          "url": "https://vitejs.dev/",
+          "url": "https://vite.dev/",
           "description": "Fast build tool for modern web projects",
           "birth_year": 2020,
           "era": "cloud",
           "trend": "rising",
           "category": "Build Tools & Task Runners",
-          "subcategory": "Build Systems",
+          "subcategory": "JavaScript Bundlers",
           "metrics": {
             "adoption_score": 90,
             "community_size": "Huge",
@@ -6298,7 +6649,7 @@
           "era": "cloud",
           "trend": "stable",
           "category": "Build Tools & Task Runners",
-          "subcategory": "Build Systems",
+          "subcategory": "JavaScript Bundlers",
           "metrics": {
             "adoption_score": 70,
             "community_size": "Large",
@@ -6307,14 +6658,14 @@
           "github_info": null
         },
         {
-          "name": "Turbo",
-          "url": "https://turbo.build/",
-          "description": "High-performance build system for JavaScript/TypeScript",
+          "name": "Turborepo",
+          "url": "https://turborepo.dev/",
+          "description": "High-performance build system for JavaScript and TypeScript monorepos",
           "birth_year": 2021,
           "era": "cloud",
           "trend": "stable",
           "category": "Build Tools & Task Runners",
-          "subcategory": "Build Systems",
+          "subcategory": "JavaScript Bundlers",
           "metrics": {
             "adoption_score": 70,
             "community_size": "Large",
@@ -6387,6 +6738,22 @@
           "github_info": null
         },
         {
+          "name": "Biome",
+          "url": "https://biomejs.dev/",
+          "description": "Fast formatter and linter for JavaScript, TypeScript, JSON, and CSS written in Rust",
+          "birth_year": 2023,
+          "era": "cloud",
+          "trend": "stable",
+          "category": "Code Quality & Linting",
+          "subcategory": "Linters & Formatters",
+          "metrics": {
+            "adoption_score": 70,
+            "community_size": "Large",
+            "learning_curve": "Moderate"
+          },
+          "github_info": null
+        },
+        {
           "name": "CodeClimate",
           "url": "https://codeclimate.com/",
           "description": "Automated code review",
@@ -6435,33 +6802,17 @@
           "github_info": null
         },
         {
-          "name": "KuzuDB",
-          "url": "https://kuzudb.com/",
-          "description": "Embeddable graph database built for query speed and scalability",
-          "birth_year": 2022,
-          "era": "cloud",
-          "trend": "stable",
-          "category": "Database Tools",
-          "subcategory": "Graph & Analytics Databases",
-          "metrics": {
-            "adoption_score": 70,
-            "community_size": "Large",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
-        },
-        {
           "name": "Devpod",
           "url": "https://devpod.sh/",
           "description": "Client-only tool for creating reproducible developer environments",
           "birth_year": 2023,
           "era": "cloud",
-          "trend": "rising",
+          "trend": "stable",
           "category": "Development Environments",
           "subcategory": "Containerized Environments",
           "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
+            "adoption_score": 70,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6484,22 +6835,6 @@
             "owner": "lima-vm",
             "repo": "lima"
           }
-        },
-        {
-          "name": "mise",
-          "url": "https://mise.jdx.dev/",
-          "description": "Fast polyglot tool version manager and task runner",
-          "birth_year": 2023,
-          "era": "cloud",
-          "trend": "rising",
-          "category": "Development Environments",
-          "subcategory": "Reproducible Systems",
-          "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
-            "learning_curve": "Moderate"
-          },
-          "github_info": null
         },
         {
           "name": "VitePress",
@@ -6659,6 +6994,11 @@
       "description": "From heavyweight IDEs to lightweight, extensible editors",
       "tools": [
         {
+          "name": "Turbo Pascal",
+          "year": 2000,
+          "url": ""
+        },
+        {
           "name": "Eclipse",
           "year": 2001,
           "url": ""
@@ -6677,11 +7017,6 @@
           "name": "VS Code Remote",
           "year": 2015,
           "url": "https://code.visualstudio.com/docs/remote/remote-overview"
-        },
-        {
-          "name": "Turbo",
-          "year": 2021,
-          "url": "https://turbo.build/"
         },
         {
           "name": "Cursor",
@@ -6760,7 +7095,7 @@
         {
           "name": "Vite",
           "year": 2020,
-          "url": "https://vitejs.dev/"
+          "url": "https://vite.dev/"
         }
       ]
     },
@@ -6802,7 +7137,7 @@
         {
           "name": "SvelteKit",
           "year": 2016,
-          "url": "https://kit.svelte.dev/"
+          "url": "https://svelte.dev/docs/kit"
         }
       ]
     },
@@ -6876,7 +7211,7 @@
         {
           "name": "Vite",
           "year": 2020,
-          "url": "https://vitejs.dev/"
+          "url": "https://vite.dev/"
         }
       ]
     },
@@ -7003,19 +7338,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 396,
+    "total_tools": 416,
     "tools_by_era": {
       "unix": 4,
       "internet": 9,
-      "web": 74,
-      "mobile": 282,
-      "cloud": 27,
+      "web": 73,
+      "mobile": 301,
+      "cloud": 29,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 25,
-      "stable": 285,
-      "declining": 86
+      "rising": 30,
+      "stable": 237,
+      "declining": 149
     },
     "average_age": 2013,
     "newest_tool_year": 2023,
