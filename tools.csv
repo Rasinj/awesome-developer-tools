@@ -114,6 +114,7 @@ Testing,Testing Frameworks,Playwright,https://playwright.dev/,End-to-end testing
 Testing,Testing Frameworks,Cypress,https://www.cypress.io/,JavaScript end-to-end testing framework
 Testing,Testing Frameworks,pytest,https://pytest.org/,Python testing framework
 Testing,Testing Frameworks,JUnit,https://junit.org/,Unit testing framework for Java
+Testing,Testing Utilities,Agent QA,https://github.com/vostride/agent-qa,Agentic QA for natural-language web and mobile tests with persistent test memory
 Testing,Testing Utilities,Faker.js,https://fakerjs.dev/,Generate massive amounts of fake data
 Testing,Testing Utilities,Storybook,https://storybook.js.org/,Tool for building UI components in isolation
 Testing,Testing Utilities,Testing Library,https://testing-library.com/,Simple testing utilities for DOM testing
