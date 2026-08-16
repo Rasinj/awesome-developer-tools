@@ -20,28 +20,6 @@
         "collaborator": 5
       }
     },
-    "Neovim": {
-      "name": "Neovim",
-      "url": "https://neovim.io/",
-      "description": "Modern Vim fork with better defaults, Lua scripting, and built-in LSP",
-      "category": "Code Editors & IDEs",
-      "subcategory": "Vim & Modal Editors",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "modern"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 6,
-        "enterprise": 5,
-        "explorer": 8,
-        "pragmatist": 4,
-        "collaborator": 5
-      }
-    },
     "Helix": {
       "name": "Helix",
       "url": "https://helix-editor.com/",
@@ -85,6 +63,108 @@
         "enterprise": 5,
         "explorer": 7,
         "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Cursor": {
+      "name": "Cursor",
+      "url": "https://www.cursor.com/",
+      "description": "AI-first code editor built for pair programming",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Sublime Text": {
+      "name": "Sublime Text",
+      "url": "https://www.sublimetext.com/",
+      "description": "Fast, lightweight text editor for code and prose",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 10,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
+    "VSCodium": {
+      "name": "VSCodium",
+      "url": "https://vscodium.com/",
+      "description": "Telemetry-free build of VS Code",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Kate": {
+      "name": "Kate",
+      "url": "https://kate-editor.org/",
+      "description": "Advanced text editor from the KDE project",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
+    "Notepad++": {
+      "name": "Notepad++",
+      "url": "https://notepad-plus-plus.org/",
+      "description": "Free source code editor for Windows",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Modern Editors",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
         "collaborator": 5
       }
     },
@@ -154,6 +234,28 @@
         "explorer": 6,
         "pragmatist": 5,
         "collaborator": 6
+      }
+    },
+    "JetBrains Fleet": {
+      "name": "JetBrains Fleet",
+      "url": "https://www.jetbrains.com/fleet/",
+      "description": "Lightweight IDE by JetBrains with a modern UI",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Full IDEs",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 6,
+        "collaborator": 5
       }
     },
     "Android Studio": {
@@ -233,6 +335,28 @@
         "enterprise": 5,
         "explorer": 5,
         "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Neovim": {
+      "name": "Neovim",
+      "url": "https://neovim.io/",
+      "description": "Modern Vim fork with better defaults, Lua scripting, and built-in LSP",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Vim & Modal Editors",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 4,
         "collaborator": 5
       }
     },
@@ -360,12 +484,32 @@
         "collaborator": 5
       }
     },
+    "GNU Emacs": {
+      "name": "GNU Emacs",
+      "url": "https://www.gnu.org/software/emacs/",
+      "description": "Extensible, customizable text editor and computing environment",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Emacs",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "extensive",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
     "Doom Emacs": {
       "name": "Doom Emacs",
       "url": "https://doomemacs.org/",
       "description": "Emacs framework with Vim emulation and curated package selection",
       "category": "Code Editors & IDEs",
-      "subcategory": "Vim & Modal Editors",
+      "subcategory": "Emacs",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -376,6 +520,28 @@
         "tinkerer": 5,
         "enterprise": 5,
         "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Spacemacs": {
+      "name": "Spacemacs",
+      "url": "https://www.spacemacs.org/",
+      "description": "Community-driven Emacs distribution with excellent defaults",
+      "category": "Code Editors & IDEs",
+      "subcategory": "Emacs",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "open-source"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 7,
+        "enterprise": 5,
+        "explorer": 6,
         "pragmatist": 5,
         "collaborator": 5
       }
@@ -422,6 +588,29 @@
         "collaborator": 5
       }
     },
+    "GitHub Desktop": {
+      "name": "GitHub Desktop",
+      "url": "https://desktop.github.com/",
+      "description": "Simple Git GUI client for GitHub workflows",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "gui"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 6
+      }
+    },
     "Lazygit": {
       "name": "Lazygit",
       "url": "https://github.com/jesseduffield/lazygit",
@@ -441,6 +630,29 @@
         "enterprise": 4,
         "explorer": 5,
         "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "Fork": {
+      "name": "Fork",
+      "url": "https://git-fork.com/",
+      "description": "Fast and friendly Git client for macOS and Windows",
+      "category": "Version Control",
+      "subcategory": "Git Tools",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 6,
         "collaborator": 5
       }
     },
@@ -494,6 +706,26 @@
       "name": "pre-commit",
       "url": "https://pre-commit.com/",
       "description": "Framework for managing git pre-commit hooks",
+      "category": "Version Control",
+      "subcategory": "Git Utilities",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Git LFS": {
+      "name": "Git LFS",
+      "url": "https://git-lfs.com/",
+      "description": "Git extension for versioning large files",
       "category": "Version Control",
       "subcategory": "Git Utilities",
       "characteristics": {
@@ -574,6 +806,29 @@
         "collaborator": 5
       }
     },
+    "kitty": {
+      "name": "kitty",
+      "url": "https://sw.kovidgoyal.net/kitty/",
+      "description": "Fast, feature-rich GPU-based terminal emulator",
+      "category": "Terminal & Shell",
+      "subcategory": "Terminal Emulators",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
     "WezTerm": {
       "name": "WezTerm",
       "url": "https://wezfurlong.org/wezterm/",
@@ -593,6 +848,52 @@
         "enterprise": 4,
         "explorer": 5,
         "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Ghostty": {
+      "name": "Ghostty",
+      "url": "https://ghostty.org/",
+      "description": "Fast, native terminal emulator focused on performance",
+      "category": "Terminal & Shell",
+      "subcategory": "Terminal Emulators",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Warp": {
+      "name": "Warp",
+      "url": "https://www.warp.dev/",
+      "description": "Modern terminal with a collaborative, AI-assisted workflow",
+      "category": "Terminal & Shell",
+      "subcategory": "Terminal Emulators",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 8,
+        "enterprise": 4,
+        "explorer": 8,
+        "pragmatist": 4,
         "collaborator": 5
       }
     },
@@ -1261,28 +1562,6 @@
         "collaborator": 5
       }
     },
-    "parquet-tools": {
-      "name": "parquet-tools",
-      "url": "https://github.com/chhantyal/parquet-tools",
-      "description": "Command-line tools for inspecting Parquet files",
-      "category": "Terminal & Shell",
-      "subcategory": "Development Tools",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "terminal"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 7,
-        "tinkerer": 7,
-        "enterprise": 4,
-        "explorer": 5,
-        "pragmatist": 5,
-        "collaborator": 5
-      }
-    },
     "visidata": {
       "name": "visidata",
       "url": "https://visidata.org/",
@@ -1715,6 +1994,28 @@
         "collaborator": 5
       }
     },
+    "pyenv": {
+      "name": "pyenv",
+      "url": "https://github.com/pyenv/pyenv",
+      "description": "Simple Python version management with project-specific versions",
+      "category": "Package Managers",
+      "subcategory": "Version Managers",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
     "SDKMAN!": {
       "name": "SDKMAN!",
       "url": "https://sdkman.io/",
@@ -1755,6 +2056,92 @@
         "tinkerer": 7,
         "enterprise": 5,
         "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "CMake": {
+      "name": "CMake",
+      "url": "https://cmake.org/",
+      "description": "Cross-platform build system generator",
+      "category": "Build Tools & Task Runners",
+      "subcategory": "General Build Systems",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "cross-platform"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Ninja": {
+      "name": "Ninja",
+      "url": "https://ninja-build.org/",
+      "description": "Small build system focused on speed",
+      "category": "Build Tools & Task Runners",
+      "subcategory": "General Build Systems",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Meson": {
+      "name": "Meson",
+      "url": "https://mesonbuild.com/",
+      "description": "Fast, user-friendly build system",
+      "category": "Build Tools & Task Runners",
+      "subcategory": "General Build Systems",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Bazel": {
+      "name": "Bazel",
+      "url": "https://bazel.build/",
+      "description": "Build and test tool for large codebases",
+      "category": "Build Tools & Task Runners",
+      "subcategory": "General Build Systems",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
         "pragmatist": 5,
         "collaborator": 5
       }
@@ -2082,6 +2469,26 @@
         "tags": [
           "java"
         ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Agent QA": {
+      "name": "Agent QA",
+      "url": "https://github.com/vostride/agent-qa",
+      "description": "Agentic QA for natural-language web and mobile tests with persistent test memory",
+      "category": "Testing",
+      "subcategory": "Testing Utilities",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
       },
       "archetype_scores": {
         "minimalist": 5,
@@ -2664,6 +3071,49 @@
         "collaborator": 5
       }
     },
+    "Bruno": {
+      "name": "Bruno",
+      "url": "https://www.usebruno.com/",
+      "description": "Fast, git-friendly API client",
+      "category": "API Development & Testing",
+      "subcategory": "API Testing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Hoppscotch": {
+      "name": "Hoppscotch",
+      "url": "https://hoppscotch.io/",
+      "description": "Open-source API development ecosystem",
+      "category": "API Development & Testing",
+      "subcategory": "API Testing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
     "HTTPie": {
       "name": "HTTPie",
       "url": "https://httpie.io/",
@@ -2743,6 +3193,28 @@
         "minimalist": 5,
         "tinkerer": 5,
         "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "OpenAPI Generator": {
+      "name": "OpenAPI Generator",
+      "url": "https://openapi-generator.tech/",
+      "description": "Generate API clients, servers, and docs from OpenAPI specs",
+      "category": "API Development & Testing",
+      "subcategory": "API Documentation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 7,
+        "enterprise": 4,
         "explorer": 5,
         "pragmatist": 5,
         "collaborator": 5
@@ -3035,26 +3507,6 @@
         "enterprise": 5,
         "explorer": 5,
         "pragmatist": 6,
-        "collaborator": 5
-      }
-    },
-    "DuckDB": {
-      "name": "DuckDB",
-      "url": "https://duckdb.org/",
-      "description": "In-process SQL OLAP database for analytics with zero dependencies",
-      "category": "Data Science & Machine Learning",
-      "subcategory": "Data Processing",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": []
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 5,
-        "enterprise": 5,
-        "explorer": 5,
-        "pragmatist": 5,
         "collaborator": 5
       }
     },
@@ -3984,6 +4436,86 @@
         "collaborator": 5
       }
     },
+    "SigNoz": {
+      "name": "SigNoz",
+      "url": "https://signoz.io/",
+      "description": "Open-source observability platform for metrics, logs, and traces",
+      "category": "Monitoring & Logging",
+      "subcategory": "Application Monitoring",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "OpenTelemetry": {
+      "name": "OpenTelemetry",
+      "url": "https://opentelemetry.io/",
+      "description": "Open-source observability framework for traces, metrics, and logs",
+      "category": "Monitoring & Logging",
+      "subcategory": "Tracing & Observability",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Jaeger": {
+      "name": "Jaeger",
+      "url": "https://www.jaegertracing.io/",
+      "description": "Distributed tracing system",
+      "category": "Monitoring & Logging",
+      "subcategory": "Tracing & Observability",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Grafana Tempo": {
+      "name": "Grafana Tempo",
+      "url": "https://grafana.com/oss/tempo/",
+      "description": "High-scale distributed tracing backend",
+      "category": "Monitoring & Logging",
+      "subcategory": "Tracing & Observability",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
     "ELK Stack": {
       "name": "ELK Stack",
       "url": "https://www.elastic.co/elk-stack",
@@ -4084,6 +4616,26 @@
         "collaborator": 5
       }
     },
+    "Burp Suite": {
+      "name": "Burp Suite",
+      "url": "https://portswigger.net/burp",
+      "description": "Web security testing toolkit",
+      "category": "Security",
+      "subcategory": "Security Scanning",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
     "Bandit": {
       "name": "Bandit",
       "url": "https://bandit.readthedocs.io/",
@@ -4103,6 +4655,66 @@
         "enterprise": 5,
         "explorer": 6,
         "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Trivy": {
+      "name": "Trivy",
+      "url": "https://trivy.dev/",
+      "description": "Vulnerability scanner for containers and dependencies",
+      "category": "Security",
+      "subcategory": "Security Scanning",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Gitleaks": {
+      "name": "Gitleaks",
+      "url": "https://gitleaks.io/",
+      "description": "Detect and prevent secrets in Git repos",
+      "category": "Security",
+      "subcategory": "Security Scanning",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Checkov": {
+      "name": "Checkov",
+      "url": "https://www.checkov.io/",
+      "description": "Infrastructure as code security scanner",
+      "category": "Security",
+      "subcategory": "Security Scanning",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
         "collaborator": 5
       }
     },
@@ -4616,54 +5228,34 @@
         "collaborator": 5
       }
     },
-    "pyenv": {
-      "name": "pyenv",
-      "url": "https://github.com/pyenv/pyenv",
-      "description": "Simple Python version management",
-      "category": "Python Development",
-      "subcategory": "Development Environment",
+    "conda": {
+      "name": "conda",
+      "url": "https://docs.conda.io/",
+      "description": "Package and environment management system for Python and other languages",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Environment Management",
       "characteristics": {
-        "learning_curve": "gentle",
+        "learning_curve": "moderate",
         "customization": "moderate",
         "tags": [
           "python"
         ]
       },
       "archetype_scores": {
-        "minimalist": 8,
-        "tinkerer": 4,
-        "enterprise": 5,
-        "explorer": 6,
-        "pragmatist": 8,
-        "collaborator": 5
-      }
-    },
-    "conda": {
-      "name": "conda",
-      "url": "https://docs.conda.io/",
-      "description": "Package and environment management system",
-      "category": "Python Development",
-      "subcategory": "Development Environment",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": []
-      },
-      "archetype_scores": {
         "minimalist": 5,
         "tinkerer": 5,
         "enterprise": 5,
-        "explorer": 5,
-        "pragmatist": 5,
+        "explorer": 6,
+        "pragmatist": 6,
         "collaborator": 5
       }
     },
     "virtualenv": {
       "name": "virtualenv",
       "url": "https://virtualenv.pypa.io/",
-      "description": "Virtual Python environment builder",
-      "category": "Python Development",
-      "subcategory": "Development Environment",
+      "description": "Virtual Python environment builder for dependency isolation",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Environment Management",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -4684,248 +5276,8 @@
       "name": "pipx",
       "url": "https://pypa.github.io/pipx/",
       "description": "Install and run Python applications in isolated environments",
-      "category": "Python Development",
-      "subcategory": "Development Environment",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "python"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 5,
-        "enterprise": 5,
-        "explorer": 6,
-        "pragmatist": 6,
-        "collaborator": 5
-      }
-    },
-    "FastAPI": {
-      "name": "FastAPI",
-      "url": "https://fastapi.tiangolo.com/",
-      "description": "Modern, fast web framework for building APIs",
-      "category": "Python Development",
-      "subcategory": "Web Frameworks",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "fast",
-          "modern"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 7,
-        "tinkerer": 6,
-        "enterprise": 5,
-        "explorer": 8,
-        "pragmatist": 5,
-        "collaborator": 5
-      }
-    },
-    "Django": {
-      "name": "Django",
-      "url": "https://www.djangoproject.com/",
-      "description": "High-level Python web framework",
-      "category": "Python Development",
-      "subcategory": "Web Frameworks",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "python"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 5,
-        "enterprise": 5,
-        "explorer": 6,
-        "pragmatist": 6,
-        "collaborator": 5
-      }
-    },
-    "Flask": {
-      "name": "Flask",
-      "url": "https://flask.palletsprojects.com/",
-      "description": "Lightweight WSGI web application framework",
-      "category": "Python Development",
-      "subcategory": "Web Frameworks",
-      "characteristics": {
-        "learning_curve": "gentle",
-        "customization": "moderate",
-        "tags": []
-      },
-      "archetype_scores": {
-        "minimalist": 8,
-        "tinkerer": 4,
-        "enterprise": 5,
-        "explorer": 5,
-        "pragmatist": 7,
-        "collaborator": 5
-      }
-    },
-    "Starlette": {
-      "name": "Starlette",
-      "url": "https://www.starlette.io/",
-      "description": "Lightweight ASGI framework for building async web services",
-      "category": "Python Development",
-      "subcategory": "Web Frameworks",
-      "characteristics": {
-        "learning_curve": "gentle",
-        "customization": "moderate",
-        "tags": []
-      },
-      "archetype_scores": {
-        "minimalist": 8,
-        "tinkerer": 4,
-        "enterprise": 5,
-        "explorer": 5,
-        "pragmatist": 7,
-        "collaborator": 5
-      }
-    },
-    "Jupyter": {
-      "name": "Jupyter",
-      "url": "https://jupyter.org/",
-      "description": "Interactive computing across dozens of languages",
-      "category": "Python Development",
-      "subcategory": "Data Science & ML",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": []
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 5,
-        "enterprise": 5,
-        "explorer": 5,
-        "pragmatist": 5,
-        "collaborator": 5
-      }
-    },
-    "pandas": {
-      "name": "pandas",
-      "url": "https://pandas.pydata.org/",
-      "description": "Powerful data manipulation and analysis library for Python",
-      "category": "Data Science & Machine Learning",
-      "subcategory": "Data Processing",
-      "characteristics": {
-        "learning_curve": "steep",
-        "customization": "moderate",
-        "tags": [
-          "python"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 3,
-        "tinkerer": 8,
-        "enterprise": 5,
-        "explorer": 7,
-        "pragmatist": 5,
-        "collaborator": 5
-      }
-    },
-    "NumPy": {
-      "name": "NumPy",
-      "url": "https://numpy.org/",
-      "description": "Fundamental package for scientific computing with Python",
-      "category": "Data Science & Machine Learning",
-      "subcategory": "Data Processing",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "python"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 5,
-        "tinkerer": 5,
-        "enterprise": 5,
-        "explorer": 6,
-        "pragmatist": 6,
-        "collaborator": 5
-      }
-    },
-    "scikit-learn": {
-      "name": "scikit-learn",
-      "url": "https://scikit-learn.org/",
-      "description": "Machine learning library for Python with simple and efficient tools for data analysis",
-      "category": "Data Science & Machine Learning",
-      "subcategory": "Machine Learning Libraries",
-      "characteristics": {
-        "learning_curve": "gentle",
-        "customization": "moderate",
-        "tags": [
-          "python"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 8,
-        "tinkerer": 4,
-        "enterprise": 5,
-        "explorer": 6,
-        "pragmatist": 8,
-        "collaborator": 5
-      }
-    },
-    "Polars": {
-      "name": "Polars",
-      "url": "https://pola.rs/",
-      "description": "Fast DataFrame library implemented in Rust with Python bindings",
-      "category": "Data Science & Machine Learning",
-      "subcategory": "Data Processing",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "python",
-          "rust",
-          "fast"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 8,
-        "tinkerer": 7,
-        "enterprise": 5,
-        "explorer": 8,
-        "pragmatist": 7,
-        "collaborator": 5
-      }
-    },
-    "DuckDB Python": {
-      "name": "DuckDB Python",
-      "url": "https://github.com/duckdb/duckdb/tree/master/tools/pythonpkg",
-      "description": "Python client for DuckDB in-process analytical database",
-      "category": "Python Development",
-      "subcategory": "Data Science & ML",
-      "characteristics": {
-        "learning_curve": "moderate",
-        "customization": "moderate",
-        "tags": [
-          "python",
-          "terminal"
-        ]
-      },
-      "archetype_scores": {
-        "minimalist": 7,
-        "tinkerer": 7,
-        "enterprise": 4,
-        "explorer": 6,
-        "pragmatist": 6,
-        "collaborator": 5
-      }
-    },
-    "PyArrow": {
-      "name": "PyArrow",
-      "url": "https://arrow.apache.org/docs/python/",
-      "description": "Python library for Apache Arrow columnar in-memory analytics",
-      "category": "Python Development",
-      "subcategory": "Data Science & ML",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Environment Management",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -4945,13 +5297,14 @@
     "Click": {
       "name": "Click",
       "url": "https://click.palletsprojects.com/",
-      "description": "Composable command line interface toolkit",
-      "category": "Python Development",
-      "subcategory": "CLI & Automation",
+      "description": "Composable command line interface toolkit for Python",
+      "category": "Python Libraries & Tools",
+      "subcategory": "CLI Development",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
         "tags": [
+          "python",
           "gui"
         ]
       },
@@ -4959,17 +5312,17 @@
         "minimalist": 4,
         "tinkerer": 5,
         "enterprise": 6,
-        "explorer": 5,
-        "pragmatist": 5,
+        "explorer": 6,
+        "pragmatist": 6,
         "collaborator": 6
       }
     },
     "Typer": {
       "name": "Typer",
       "url": "https://typer.tiangolo.com/",
-      "description": "Modern library for building CLI applications",
-      "category": "Python Development",
-      "subcategory": "CLI & Automation",
+      "description": "Modern library for building CLI applications with type hints",
+      "category": "Python Libraries & Tools",
+      "subcategory": "CLI Development",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -4991,8 +5344,8 @@
       "name": "Rich",
       "url": "https://rich.readthedocs.io/",
       "description": "Library for rich text and beautiful formatting in the terminal",
-      "category": "Python Development",
-      "subcategory": "CLI & Automation",
+      "category": "Python Libraries & Tools",
+      "subcategory": "CLI Development",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -5012,9 +5365,9 @@
     "Textual": {
       "name": "Textual",
       "url": "https://textual.textualize.io/",
-      "description": "Framework for building terminal user interfaces",
-      "category": "Python Development",
-      "subcategory": "CLI & Automation",
+      "description": "Framework for building interactive terminal user interfaces",
+      "category": "Python Libraries & Tools",
+      "subcategory": "CLI Development",
       "characteristics": {
         "learning_curve": "moderate",
         "customization": "moderate",
@@ -5030,6 +5383,793 @@
         "explorer": 5,
         "pragmatist": 5,
         "collaborator": 6
+      }
+    },
+    "requests": {
+      "name": "requests",
+      "url": "https://requests.readthedocs.io/",
+      "description": "Simple and elegant HTTP library for synchronous requests",
+      "category": "Python Libraries & Tools",
+      "subcategory": "HTTP Clients",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "httpx": {
+      "name": "httpx",
+      "url": "https://www.python-httpx.org/",
+      "description": "Modern HTTP client with async/sync support and HTTP/2",
+      "category": "Python Libraries & Tools",
+      "subcategory": "HTTP Clients",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal",
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 8,
+        "enterprise": 4,
+        "explorer": 8,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
+    "aiohttp": {
+      "name": "aiohttp",
+      "url": "https://docs.aiohttp.org/",
+      "description": "Async HTTP client/server framework for high-concurrency applications",
+      "category": "Python Libraries & Tools",
+      "subcategory": "HTTP Clients",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Pydantic": {
+      "name": "Pydantic",
+      "url": "https://docs.pydantic.dev/",
+      "description": "Data validation using Python type hints with high performance",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Data Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "Marshmallow": {
+      "name": "Marshmallow",
+      "url": "https://marshmallow.readthedocs.io/",
+      "description": "Object serialization and deserialization library with schema-based validation",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Data Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Cerberus": {
+      "name": "Cerberus",
+      "url": "https://docs.python-cerberus.org/",
+      "description": "Lightweight and extensible data validation library",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Data Validation",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "extensive",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 6,
+        "tinkerer": 7,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "pytest-cov": {
+      "name": "pytest-cov",
+      "url": "https://pytest-cov.readthedocs.io/",
+      "description": "Coverage plugin for pytest to measure test coverage",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Testing Extensions",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "coverage.py": {
+      "name": "coverage.py",
+      "url": "https://coverage.readthedocs.io/",
+      "description": "Code coverage measurement tool for Python",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Testing Extensions",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Hypothesis": {
+      "name": "Hypothesis",
+      "url": "https://hypothesis.readthedocs.io/",
+      "description": "Property-based testing library for writing powerful tests",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Testing Extensions",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
+    "tox": {
+      "name": "tox",
+      "url": "https://tox.wiki/",
+      "description": "Automation tool for testing in multiple Python environments",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Testing Extensions",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Streamlit": {
+      "name": "Streamlit",
+      "url": "https://streamlit.io/",
+      "description": "Framework for building interactive data apps and dashboards rapidly",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Web & Data Apps",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Gradio": {
+      "name": "Gradio",
+      "url": "https://www.gradio.app/",
+      "description": "Build and share machine learning demos and web apps quickly",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Web & Data Apps",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Reflex": {
+      "name": "Reflex",
+      "url": "https://reflex.dev/",
+      "description": "Full-stack Python framework for building web apps without JavaScript",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Web & Data Apps",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript",
+          "python",
+          "java"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 6,
+        "collaborator": 6
+      }
+    },
+    "asyncio": {
+      "name": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "description": "Built-in library for writing concurrent code using async/await syntax",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Async Libraries",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Trio": {
+      "name": "Trio",
+      "url": "https://trio.readthedocs.io/",
+      "description": "Friendly Python library for async concurrency with structured concurrency",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Async Libraries",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "AnyIO": {
+      "name": "AnyIO",
+      "url": "https://anyio.readthedocs.io/",
+      "description": "Compatibility layer for asyncio and Trio with unified high-level API",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Async Libraries",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "SQLAlchemy": {
+      "name": "SQLAlchemy",
+      "url": "https://www.sqlalchemy.org/",
+      "description": "Powerful and flexible SQL toolkit and ORM for Python",
+      "category": "Python Libraries & Tools",
+      "subcategory": "ORMs & Database Libraries",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Tortoise ORM": {
+      "name": "Tortoise ORM",
+      "url": "https://tortoise.github.io/",
+      "description": "Async ORM inspired by Django with excellent performance",
+      "category": "Python Libraries & Tools",
+      "subcategory": "ORMs & Database Libraries",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Peewee": {
+      "name": "Peewee",
+      "url": "http://docs.peewee-orm.com/",
+      "description": "Lightweight and expressive ORM for small to medium applications",
+      "category": "Python Libraries & Tools",
+      "subcategory": "ORMs & Database Libraries",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "Celery": {
+      "name": "Celery",
+      "url": "https://docs.celeryq.dev/",
+      "description": "Distributed task queue for handling asynchronous jobs at scale",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Task Queues & Scheduling",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "RQ": {
+      "name": "RQ",
+      "url": "https://python-rq.org/",
+      "description": "Simple Python library for queueing jobs backed by Redis",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Task Queues & Scheduling",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
+    "Dramatiq": {
+      "name": "Dramatiq",
+      "url": "https://dramatiq.io/",
+      "description": "Fast and reliable alternative to Celery for distributed tasks",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Task Queues & Scheduling",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "APScheduler": {
+      "name": "APScheduler",
+      "url": "https://apscheduler.readthedocs.io/",
+      "description": "Advanced Python scheduler for running jobs at specific times or intervals",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Task Queues & Scheduling",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "loguru": {
+      "name": "loguru",
+      "url": "https://loguru.readthedocs.io/",
+      "description": "Simplified logging library with beautiful colors and easy configuration",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Logging",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "structlog": {
+      "name": "structlog",
+      "url": "https://www.structlog.org/",
+      "description": "Structured logging library for producing JSON or Logfmt output",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Logging",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 6
+      }
+    },
+    "Dynaconf": {
+      "name": "Dynaconf",
+      "url": "https://www.dynaconf.com/",
+      "description": "Layered configuration system supporting multiple formats and environments",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Configuration Management",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "pydantic-settings": {
+      "name": "pydantic-settings",
+      "url": "https://docs.pydantic.dev/latest/concepts/pydantic_settings/",
+      "description": "Type-safe settings management with Pydantic integration",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Configuration Management",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "python-decouple": {
+      "name": "python-decouple",
+      "url": "https://github.com/HBNetwork/python-decouple",
+      "description": "Strict separation of settings from code for 12-factor apps",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Configuration Management",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Sphinx": {
+      "name": "Sphinx",
+      "url": "https://www.sphinx-doc.org/",
+      "description": "Popular documentation generator supporting multiple output formats",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Documentation Generators",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "pdoc": {
+      "name": "pdoc",
+      "url": "https://pdoc.dev/",
+      "description": "Lightweight automatic API documentation generator with zero configuration",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Documentation Generators",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "mkdocstrings": {
+      "name": "mkdocstrings",
+      "url": "https://mkdocstrings.github.io/",
+      "description": "Automatic documentation from docstrings for MkDocs",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Documentation Generators",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "orjson": {
+      "name": "orjson",
+      "url": "https://github.com/ijl/orjson",
+      "description": "Fast, correct JSON library for Python written in Rust",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Serialization",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript",
+          "python",
+          "rust",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 7,
+        "enterprise": 5,
+        "explorer": 9,
+        "pragmatist": 7,
+        "collaborator": 6
+      }
+    },
+    "msgpack": {
+      "name": "msgpack",
+      "url": "https://msgpack.org/",
+      "description": "Efficient binary serialization format faster and smaller than JSON",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Serialization",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 6
+      }
+    },
+    "msgspec": {
+      "name": "msgspec",
+      "url": "https://jcristharif.com/msgspec/",
+      "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Serialization",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 6
+      }
+    },
+    "py-spy": {
+      "name": "py-spy",
+      "url": "https://github.com/benfred/py-spy",
+      "description": "Sampling profiler for Python programs with minimal overhead",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Profiling & Performance",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
+    "Scalene": {
+      "name": "Scalene",
+      "url": "https://github.com/plasma-umass/scalene",
+      "description": "High-performance CPU, GPU, and memory profiler with AI optimization suggestions",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Profiling & Performance",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Memray": {
+      "name": "Memray",
+      "url": "https://bloomberg.github.io/memray/",
+      "description": "Memory profiler for Python tracking allocations in native extensions",
+      "category": "Python Libraries & Tools",
+      "subcategory": "Profiling & Performance",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
       }
     },
     "DevDocs": {
@@ -5425,6 +6565,608 @@
         "collaborator": 5
       }
     },
+    "FastAPI": {
+      "name": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/",
+      "description": "Modern, fast web framework for building APIs with automatic documentation",
+      "category": "Web Frameworks",
+      "subcategory": "Python",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast",
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Django": {
+      "name": "Django",
+      "url": "https://www.djangoproject.com/",
+      "description": "High-level Python web framework with batteries-included approach",
+      "category": "Web Frameworks",
+      "subcategory": "Python",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Flask": {
+      "name": "Flask",
+      "url": "https://flask.palletsprojects.com/",
+      "description": "Lightweight WSGI web application framework for simple to complex applications",
+      "category": "Web Frameworks",
+      "subcategory": "Python",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "Starlette": {
+      "name": "Starlette",
+      "url": "https://www.starlette.io/",
+      "description": "Lightweight ASGI framework for building high-performance async web services",
+      "category": "Web Frameworks",
+      "subcategory": "Python",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 10,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
+    "Next.js": {
+      "name": "Next.js",
+      "url": "https://nextjs.org/",
+      "description": "React framework with server-side rendering and static site generation",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Express": {
+      "name": "Express",
+      "url": "https://expressjs.com/",
+      "description": "Fast, unopinionated, minimalist web framework for Node.js",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "minimal",
+        "tags": [
+          "javascript",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 10,
+        "tinkerer": 2,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 9,
+        "collaborator": 6
+      }
+    },
+    "NestJS": {
+      "name": "NestJS",
+      "url": "https://nestjs.com/",
+      "description": "Progressive Node.js framework for building efficient and scalable server-side applications",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 6
+      }
+    },
+    "Nuxt": {
+      "name": "Nuxt",
+      "url": "https://nuxt.com/",
+      "description": "Vue.js framework for building universal and static web applications",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 6
+      }
+    },
+    "SvelteKit": {
+      "name": "SvelteKit",
+      "url": "https://kit.svelte.dev/",
+      "description": "Full-stack framework for building web apps with Svelte",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Remix": {
+      "name": "Remix",
+      "url": "https://remix.run/",
+      "description": "Full-stack web framework built on Web Fetch API",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Hono": {
+      "name": "Hono",
+      "url": "https://hono.dev/",
+      "description": "Ultrafast web framework for the Edge runtime",
+      "category": "Web Frameworks",
+      "subcategory": "JavaScript/TypeScript",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Ruby on Rails": {
+      "name": "Ruby on Rails",
+      "url": "https://rubyonrails.org/",
+      "description": "Server-side web application framework written in Ruby",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Laravel": {
+      "name": "Laravel",
+      "url": "https://laravel.com/",
+      "description": "PHP web application framework with elegant syntax",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Spring Boot": {
+      "name": "Spring Boot",
+      "url": "https://spring.io/projects/spring-boot",
+      "description": "Java-based framework for building production-ready applications",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "java"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "ASP.NET Core": {
+      "name": "ASP.NET Core",
+      "url": "https://dotnet.microsoft.com/apps/aspnet",
+      "description": "Cross-platform framework for building modern web applications with .NET",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "modern",
+          "cross-platform"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
+    "Gin": {
+      "name": "Gin",
+      "url": "https://gin-gonic.com/",
+      "description": "High-performance HTTP web framework written in Go",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Fiber": {
+      "name": "Fiber",
+      "url": "https://gofiber.io/",
+      "description": "Express-inspired web framework built on Fasthttp for Go",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Actix Web": {
+      "name": "Actix Web",
+      "url": "https://actix.rs/",
+      "description": "Powerful, pragmatic, and fast web framework for Rust",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": [
+          "rust",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 6,
+        "tinkerer": 10,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Axum": {
+      "name": "Axum",
+      "url": "https://github.com/tokio-rs/axum",
+      "description": "Ergonomic and modular web framework built with Tokio for Rust",
+      "category": "Web Frameworks",
+      "subcategory": "Other Languages",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "rust"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 6,
+        "tinkerer": 7,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Electron": {
+      "name": "Electron",
+      "url": "https://www.electronjs.org/",
+      "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "javascript",
+          "java",
+          "cross-platform"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 6
+      }
+    },
+    "Tauri": {
+      "name": "Tauri",
+      "url": "https://tauri.app/",
+      "description": "Lightweight framework for building desktop apps with web technologies and Rust",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "rust"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 9,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
+    "Flutter Desktop": {
+      "name": "Flutter Desktop",
+      "url": "https://flutter.dev/desktop",
+      "description": "Build beautiful native desktop applications with Flutter",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Qt": {
+      "name": "Qt",
+      "url": "https://www.qt.io/",
+      "description": "Cross-platform framework for C++ desktop application development",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "cross-platform"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Avalonia": {
+      "name": "Avalonia",
+      "url": "https://avaloniaui.net/",
+      "description": "Cross-platform XAML-based UI framework for .NET",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "cross-platform"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Wails": {
+      "name": "Wails",
+      "url": "https://wails.io/",
+      "description": "Build desktop apps using Go and web technologies",
+      "category": "Desktop Application Development",
+      "subcategory": "Cross-Platform",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "SwiftUI": {
+      "name": "SwiftUI",
+      "url": "https://developer.apple.com/xcode/swiftui/",
+      "description": "Declarative framework for building macOS applications",
+      "category": "Desktop Application Development",
+      "subcategory": "Native",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "WPF": {
+      "name": "WPF",
+      "url": "https://docs.microsoft.com/en-us/dotnet/desktop/wpf/",
+      "description": "Windows Presentation Foundation for building Windows desktop applications",
+      "category": "Desktop Application Development",
+      "subcategory": "Native",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "WinUI": {
+      "name": "WinUI",
+      "url": "https://microsoft.github.io/microsoft-ui-xaml/",
+      "description": "Modern native UI platform for Windows applications",
+      "category": "Desktop Application Development",
+      "subcategory": "Native",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
     "Jupyter Notebook": {
       "name": "Jupyter Notebook",
       "url": "https://jupyter.org/",
@@ -5510,6 +7252,116 @@
         "collaborator": 5
       }
     },
+    "scikit-learn": {
+      "name": "scikit-learn",
+      "url": "https://scikit-learn.org/",
+      "description": "Machine learning library for Python with simple and efficient tools for data analysis",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Machine Learning Libraries",
+      "characteristics": {
+        "learning_curve": "gentle",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 4,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 8,
+        "collaborator": 5
+      }
+    },
+    "pandas": {
+      "name": "pandas",
+      "url": "https://pandas.pydata.org/",
+      "description": "Powerful data manipulation and analysis library for Python",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Data Processing",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "NumPy": {
+      "name": "NumPy",
+      "url": "https://numpy.org/",
+      "description": "Fundamental package for scientific computing with Python",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Data Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "DuckDB": {
+      "name": "DuckDB",
+      "url": "https://duckdb.org/",
+      "description": "In-process SQL OLAP database for analytics with zero dependencies",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Data Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Polars": {
+      "name": "Polars",
+      "url": "https://pola.rs/",
+      "description": "Fast DataFrame library implemented in Rust with Python bindings",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Data Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python",
+          "rust",
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 8,
+        "tinkerer": 7,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 7,
+        "collaborator": 5
+      }
+    },
     "Apache Arrow": {
       "name": "Apache Arrow",
       "url": "https://arrow.apache.org/",
@@ -5549,6 +7401,973 @@
         "pragmatist": 5,
         "collaborator": 5
       }
+    },
+    "Tsfresh": {
+      "name": "Tsfresh",
+      "url": "https://tsfresh.com/",
+      "description": "A Python package for automatic extraction of a large number of time-series features.",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Time Series",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Sktime": {
+      "name": "Sktime",
+      "url": "https://www.sktime.net/",
+      "description": "A unified framework for time series analysis in Python, interoperable with scikit-learn.",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Time Series",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "AutoTS": {
+      "name": "AutoTS",
+      "url": "https://github.com/winedarksea/AutoTS",
+      "description": "An automated time-series forecasting library for Python.",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Time Series",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Prophet": {
+      "name": "Prophet",
+      "url": "https://facebook.github.io/prophet/",
+      "description": "A forecasting library for time series data developed by Facebook.",
+      "category": "Data Science & Machine Learning",
+      "subcategory": "Time Series",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Airflow": {
+      "name": "Apache Airflow",
+      "url": "https://airflow.apache.org/",
+      "description": "Platform to programmatically author, schedule, and monitor workflows as DAGs",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Prefect": {
+      "name": "Prefect",
+      "url": "https://www.prefect.io/",
+      "description": "Modern workflow orchestration tool with dynamic, Pythonic pipeline definitions",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python",
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 9,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Dagster": {
+      "name": "Dagster",
+      "url": "https://dagster.io/",
+      "description": "Data orchestration platform with built-in testing, data quality, and observability",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Temporal": {
+      "name": "Temporal",
+      "url": "https://temporal.io/",
+      "description": "Durable execution framework for building resilient workflows and distributed systems",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Mage": {
+      "name": "Mage",
+      "url": "https://www.mage.ai/",
+      "description": "Modern data pipeline tool with notebook-style development and built-in observability",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "modern"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 6,
+        "enterprise": 5,
+        "explorer": 8,
+        "pragmatist": 4,
+        "collaborator": 5
+      }
+    },
+    "Argo Workflows": {
+      "name": "Argo Workflows",
+      "url": "https://argoproj.github.io/workflows/",
+      "description": "Kubernetes-native workflow engine for orchestrating parallel jobs",
+      "category": "Data Engineering",
+      "subcategory": "Workflow Orchestration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "dbt": {
+      "name": "dbt",
+      "url": "https://www.getdbt.com/",
+      "description": "Data build tool for transforming data in your warehouse using SQL and version control",
+      "category": "Data Engineering",
+      "subcategory": "Data Transformation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Spark": {
+      "name": "Apache Spark",
+      "url": "https://spark.apache.org/",
+      "description": "Unified analytics engine for large-scale data processing with batch and streaming",
+      "category": "Data Engineering",
+      "subcategory": "Data Transformation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "SQLMesh": {
+      "name": "SQLMesh",
+      "url": "https://sqlmesh.com/",
+      "description": "DataOps framework for SQL transformations with built-in testing and CI/CD",
+      "category": "Data Engineering",
+      "subcategory": "Data Transformation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "dlt": {
+      "name": "dlt",
+      "url": "https://dlthub.com/",
+      "description": "Python library for building data pipelines with automatic schema inference",
+      "category": "Data Engineering",
+      "subcategory": "Data Transformation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Malloy": {
+      "name": "Malloy",
+      "url": "https://github.com/malloydata/malloy",
+      "description": "Experimental language for describing data relationships and transformations",
+      "category": "Data Engineering",
+      "subcategory": "Data Transformation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Airbyte": {
+      "name": "Airbyte",
+      "url": "https://airbyte.com/",
+      "description": "Open-source data integration platform with 300+ pre-built connectors",
+      "category": "Data Engineering",
+      "subcategory": "Data Integration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Meltano": {
+      "name": "Meltano",
+      "url": "https://meltano.com/",
+      "description": "Open-source ELT platform built on top of Singer with CLI-first approach",
+      "category": "Data Engineering",
+      "subcategory": "Data Integration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Singer": {
+      "name": "Singer",
+      "url": "https://www.singer.io/",
+      "description": "Open-source standard for writing scripts that move data between systems",
+      "category": "Data Engineering",
+      "subcategory": "Data Integration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Fivetran": {
+      "name": "Fivetran",
+      "url": "https://www.fivetran.com/",
+      "description": "Fully managed ELT service with automated connectors and schema management",
+      "category": "Data Engineering",
+      "subcategory": "Data Integration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Estuary Flow": {
+      "name": "Estuary Flow",
+      "url": "https://estuary.dev/",
+      "description": "Real-time data integration platform built on change data capture",
+      "category": "Data Engineering",
+      "subcategory": "Data Integration",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Kafka": {
+      "name": "Apache Kafka",
+      "url": "https://kafka.apache.org/",
+      "description": "Distributed event streaming platform for high-performance data pipelines and streaming apps",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Apache Flink": {
+      "name": "Apache Flink",
+      "url": "https://flink.apache.org/",
+      "description": "Stateful stream processing framework for distributed, high-performing applications",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Redpanda": {
+      "name": "Redpanda",
+      "url": "https://redpanda.com/",
+      "description": "Kafka-compatible streaming platform built in C++ for faster performance",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Apache Pulsar": {
+      "name": "Apache Pulsar",
+      "url": "https://pulsar.apache.org/",
+      "description": "Cloud-native distributed messaging and streaming platform with multi-tenancy",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Kafka Streams": {
+      "name": "Kafka Streams",
+      "url": "https://kafka.apache.org/documentation/streams/",
+      "description": "Client library for building stream processing applications with Apache Kafka",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "terminal"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 7,
+        "enterprise": 4,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Benthos": {
+      "name": "Benthos",
+      "url": "https://www.benthos.dev/",
+      "description": "Stream processor for mundane tasks with a declarative configuration approach",
+      "category": "Data Engineering",
+      "subcategory": "Stream Processing",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Great Expectations": {
+      "name": "Great Expectations",
+      "url": "https://greatexpectations.io/",
+      "description": "Python-based data validation framework with declarative expectations and profiling",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Soda": {
+      "name": "Soda",
+      "url": "https://www.soda.io/",
+      "description": "Data quality platform with SQL-based checks and automated monitoring",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "deequ": {
+      "name": "deequ",
+      "url": "https://github.com/awslabs/deequ",
+      "description": "Data quality library built on Apache Spark for defining unit tests on data",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Pandera": {
+      "name": "Pandera",
+      "url": "https://pandera.readthedocs.io/",
+      "description": "Statistical data validation library for pandas DataFrames with type hints",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "ydata-profiling": {
+      "name": "ydata-profiling",
+      "url": "https://github.com/ydataai/ydata-profiling",
+      "description": "Python library for generating comprehensive data profiling reports from DataFrames",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "steep",
+        "customization": "moderate",
+        "tags": [
+          "python"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 7,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "whylogs": {
+      "name": "whylogs",
+      "url": "https://whylogs.readthedocs.io/",
+      "description": "Data logging library for monitoring data quality in production pipelines",
+      "category": "Data Engineering",
+      "subcategory": "Data Quality & Validation",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Iceberg": {
+      "name": "Apache Iceberg",
+      "url": "https://iceberg.apache.org/",
+      "description": "High-performance table format for huge analytic datasets with ACID transactions",
+      "category": "Data Engineering",
+      "subcategory": "Data Lake Technologies",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": [
+          "fast"
+        ]
+      },
+      "archetype_scores": {
+        "minimalist": 7,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 6,
+        "collaborator": 5
+      }
+    },
+    "Delta Lake": {
+      "name": "Delta Lake",
+      "url": "https://delta.io/",
+      "description": "Open-source storage framework with ACID transactions for data lakes",
+      "category": "Data Engineering",
+      "subcategory": "Data Lake Technologies",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Hudi": {
+      "name": "Apache Hudi",
+      "url": "https://hudi.apache.org/",
+      "description": "Streaming data lake platform with incremental processing and upsert capabilities",
+      "category": "Data Engineering",
+      "subcategory": "Data Lake Technologies",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "lakeFS": {
+      "name": "lakeFS",
+      "url": "https://lakefs.io/",
+      "description": "Git-like version control for data lakes with branching and rollback support",
+      "category": "Data Engineering",
+      "subcategory": "Data Lake Technologies",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Project Nessie": {
+      "name": "Project Nessie",
+      "url": "https://projectnessie.org/",
+      "description": "Git-like version control for data lakes compatible with Iceberg, Delta, and Hudi",
+      "category": "Data Engineering",
+      "subcategory": "Data Lake Technologies",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Trino": {
+      "name": "Trino",
+      "url": "https://trino.io/",
+      "description": "Distributed SQL query engine for querying data across multiple sources",
+      "category": "Data Engineering",
+      "subcategory": "Query Engines",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Presto": {
+      "name": "Presto",
+      "url": "https://prestodb.io/",
+      "description": "Distributed SQL query engine for running interactive queries against diverse data sources",
+      "category": "Data Engineering",
+      "subcategory": "Query Engines",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Drill": {
+      "name": "Apache Drill",
+      "url": "https://drill.apache.org/",
+      "description": "Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage",
+      "category": "Data Engineering",
+      "subcategory": "Query Engines",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Dremio": {
+      "name": "Dremio",
+      "url": "https://www.dremio.com/",
+      "description": "Data lakehouse platform with SQL query acceleration and self-service analytics",
+      "category": "Data Engineering",
+      "subcategory": "Query Engines",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "DataHub": {
+      "name": "DataHub",
+      "url": "https://datahubproject.io/",
+      "description": "Extensible metadata platform for data discovery and governance with lineage tracking",
+      "category": "Data Engineering",
+      "subcategory": "Data Cataloging & Metadata",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "extensive",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 3,
+        "tinkerer": 8,
+        "enterprise": 5,
+        "explorer": 6,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Amundsen": {
+      "name": "Amundsen",
+      "url": "https://www.amundsen.io/",
+      "description": "Data discovery and metadata platform for improving data productivity",
+      "category": "Data Engineering",
+      "subcategory": "Data Cataloging & Metadata",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "OpenMetadata": {
+      "name": "OpenMetadata",
+      "url": "https://open-metadata.org/",
+      "description": "Open standard for metadata with data discovery, lineage, and quality capabilities",
+      "category": "Data Engineering",
+      "subcategory": "Data Cataloging & Metadata",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Apache Atlas": {
+      "name": "Apache Atlas",
+      "url": "https://atlas.apache.org/",
+      "description": "Scalable metadata and governance platform for Hadoop and cloud environments",
+      "category": "Data Engineering",
+      "subcategory": "Data Cataloging & Metadata",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "DVC": {
+      "name": "DVC",
+      "url": "https://dvc.org/",
+      "description": "Git-based data version control for machine learning projects with experiment tracking",
+      "category": "Data Engineering",
+      "subcategory": "Data Version Control",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
+    },
+    "Pachyderm": {
+      "name": "Pachyderm",
+      "url": "https://www.pachyderm.com/",
+      "description": "Data versioning and pipeline platform with reproducible data science workflows",
+      "category": "Data Engineering",
+      "subcategory": "Data Version Control",
+      "characteristics": {
+        "learning_curve": "moderate",
+        "customization": "moderate",
+        "tags": []
+      },
+      "archetype_scores": {
+        "minimalist": 5,
+        "tinkerer": 5,
+        "enterprise": 5,
+        "explorer": 5,
+        "pragmatist": 5,
+        "collaborator": 5
+      }
     }
   },
   "categories": {
@@ -5557,12 +8376,17 @@
       "description": "Essential text editors and integrated development environments for writing, editing, and managing code across different programming languages.",
       "tools": [
         "Visual Studio Code",
-        "Neovim",
         "Helix",
         "Zed",
+        "Cursor",
+        "Sublime Text",
+        "VSCodium",
+        "Kate",
+        "Notepad++",
         "IntelliJ IDEA",
         "PyCharm",
         "WebStorm",
+        "JetBrains Fleet",
         "Android Studio",
         "GitHub Codespaces",
         "Replit",
@@ -5574,7 +8398,9 @@
         "AstroNvim",
         "LunarVim",
         "NvChad",
-        "Doom Emacs"
+        "GNU Emacs",
+        "Doom Emacs",
+        "Spacemacs"
       ]
     },
     "Version Control": {
@@ -5583,10 +8409,13 @@
       "tools": [
         "Git",
         "GitHub CLI",
+        "GitHub Desktop",
         "Lazygit",
+        "Fork",
         "GitKraken",
         "Sourcetree",
         "pre-commit",
+        "Git LFS",
         "commitizen",
         "semantic-release"
       ]
@@ -5596,7 +8425,10 @@
       "description": "Command-line interfaces, terminal emulators, shells, and utilities that enhance productivity in the terminal environment.",
       "tools": [
         "Alacritty",
+        "kitty",
         "WezTerm",
+        "Ghostty",
+        "Warp",
         "iTerm2",
         "Windows Terminal",
         "Fish",
@@ -5628,7 +8460,6 @@
         "hyperfine",
         "watchexec",
         "lazydocker",
-        "parquet-tools",
         "visidata",
         "direnv",
         "tldr",
@@ -5655,6 +8486,7 @@
         "nvm",
         "fnm",
         "rbenv",
+        "pyenv",
         "SDKMAN!",
         "rustup"
       ]
@@ -5663,6 +8495,10 @@
       "id": "build-tools--task-runners",
       "description": "Automation tools for compiling code, running tasks, managing builds, and streamlining development workflows.",
       "tools": [
+        "CMake",
+        "Ninja",
+        "Meson",
+        "Bazel",
         "Webpack",
         "Vite",
         "Rollup",
@@ -5684,6 +8520,7 @@
         "Cypress",
         "pytest",
         "JUnit",
+        "Agent QA",
         "Faker.js",
         "Storybook",
         "Testing Library"
@@ -5729,10 +8566,13 @@
       "tools": [
         "Postman",
         "Insomnia",
+        "Bruno",
+        "Hoppscotch",
         "HTTPie",
         "curl",
         "Swagger/OpenAPI",
         "Redoc",
+        "OpenAPI Generator",
         "API Blueprint",
         "json-server",
         "WireMock",
@@ -5753,7 +8593,6 @@
         "Liquibase",
         "Neo4j",
         "KuzuDB",
-        "DuckDB",
         "ClickHouse",
         "Apache Parquet Tools"
       ]
@@ -5817,6 +8656,10 @@
         "New Relic",
         "Sentry",
         "Grafana",
+        "SigNoz",
+        "OpenTelemetry",
+        "Jaeger",
+        "Grafana Tempo",
         "ELK Stack",
         "Fluentd",
         "Loki"
@@ -5828,7 +8671,11 @@
       "tools": [
         "Snyk",
         "OWASP ZAP",
+        "Burp Suite",
         "Bandit",
+        "Trivy",
+        "Gitleaks",
+        "Checkov",
         "npm audit",
         "HashiCorp Vault",
         "1Password CLI",
@@ -5874,29 +8721,54 @@
         "Logseq"
       ]
     },
-    "Python Development": {
-      "id": "python-development",
-      "description": "",
+    "Python Libraries & Tools": {
+      "id": "python-libraries--tools",
+      "description": "Python-specific libraries, frameworks, and utilities for environment management and application development.",
       "tools": [
-        "pyenv",
         "conda",
         "virtualenv",
         "pipx",
-        "FastAPI",
-        "Django",
-        "Flask",
-        "Starlette",
-        "Jupyter",
-        "pandas",
-        "NumPy",
-        "scikit-learn",
-        "Polars",
-        "DuckDB Python",
-        "PyArrow",
         "Click",
         "Typer",
         "Rich",
-        "Textual"
+        "Textual",
+        "requests",
+        "httpx",
+        "aiohttp",
+        "Pydantic",
+        "Marshmallow",
+        "Cerberus",
+        "pytest-cov",
+        "coverage.py",
+        "Hypothesis",
+        "tox",
+        "Streamlit",
+        "Gradio",
+        "Reflex",
+        "asyncio",
+        "Trio",
+        "AnyIO",
+        "SQLAlchemy",
+        "Tortoise ORM",
+        "Peewee",
+        "Celery",
+        "RQ",
+        "Dramatiq",
+        "APScheduler",
+        "loguru",
+        "structlog",
+        "Dynaconf",
+        "pydantic-settings",
+        "python-decouple",
+        "Sphinx",
+        "pdoc",
+        "mkdocstrings",
+        "orjson",
+        "msgpack",
+        "msgspec",
+        "py-spy",
+        "Scalene",
+        "Memray"
       ]
     },
     "Learning & References": {
@@ -5936,6 +8808,46 @@
         "Xcode"
       ]
     },
+    "Web Frameworks": {
+      "id": "web-frameworks",
+      "description": "Backend and full-stack frameworks for building web applications, REST APIs, and web services across different programming languages.",
+      "tools": [
+        "FastAPI",
+        "Django",
+        "Flask",
+        "Starlette",
+        "Next.js",
+        "Express",
+        "NestJS",
+        "Nuxt",
+        "SvelteKit",
+        "Remix",
+        "Hono",
+        "Ruby on Rails",
+        "Laravel",
+        "Spring Boot",
+        "ASP.NET Core",
+        "Gin",
+        "Fiber",
+        "Actix Web",
+        "Axum"
+      ]
+    },
+    "Desktop Application Development": {
+      "id": "desktop-application-development",
+      "description": "Frameworks and tools for building cross-platform and native desktop applications.",
+      "tools": [
+        "Electron",
+        "Tauri",
+        "Flutter Desktop",
+        "Qt",
+        "Avalonia",
+        "Wails",
+        "SwiftUI",
+        "WPF",
+        "WinUI"
+      ]
+    },
     "Data Science & Machine Learning": {
       "id": "data-science--machine-learning",
       "description": "Tools, frameworks, and platforms for data analysis, machine learning, artificial intelligence, and scientific computing.",
@@ -5950,13 +8862,66 @@
         "DuckDB",
         "Polars",
         "Apache Arrow",
-        "Parquet"
+        "Parquet",
+        "Tsfresh",
+        "Sktime",
+        "AutoTS",
+        "Prophet"
+      ]
+    },
+    "Data Engineering": {
+      "id": "data-engineering",
+      "description": "Tools and frameworks for building, orchestrating, and managing data pipelines, ETL/ELT processes, and data infrastructure at scale.",
+      "tools": [
+        "Apache Airflow",
+        "Prefect",
+        "Dagster",
+        "Temporal",
+        "Mage",
+        "Argo Workflows",
+        "dbt",
+        "Apache Spark",
+        "SQLMesh",
+        "dlt",
+        "Malloy",
+        "Airbyte",
+        "Meltano",
+        "Singer",
+        "Fivetran",
+        "Estuary Flow",
+        "Apache Kafka",
+        "Apache Flink",
+        "Redpanda",
+        "Apache Pulsar",
+        "Kafka Streams",
+        "Benthos",
+        "Great Expectations",
+        "Soda",
+        "deequ",
+        "Pandera",
+        "ydata-profiling",
+        "whylogs",
+        "Apache Iceberg",
+        "Delta Lake",
+        "Apache Hudi",
+        "lakeFS",
+        "Project Nessie",
+        "Trino",
+        "Presto",
+        "Apache Drill",
+        "Dremio",
+        "DataHub",
+        "Amundsen",
+        "OpenMetadata",
+        "Apache Atlas",
+        "DVC",
+        "Pachyderm"
       ]
     }
   },
   "metadata": {
     "version": "1.0",
     "generated_at": null,
-    "total_tools": 263
+    "total_tools": 397
   }
 }

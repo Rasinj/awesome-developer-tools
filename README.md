@@ -258,6 +258,7 @@ Frameworks and tools for writing, running, and managing different types of tests
 
 
 ### Testing Utilities
+- **[Agent QA](https://github.com/vostride/agent-qa)** - Agentic QA for natural-language web and mobile tests with persistent test memory
 - **[Faker.js](https://fakerjs.dev/)** - Generate massive amounts of fake data
 - **[Storybook](https://storybook.js.org/)** - Tool for building UI components in isolation
 - **[Testing Library](https://testing-library.com/)** - Simple testing utilities for DOM testing

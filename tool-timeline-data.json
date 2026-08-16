@@ -1518,12 +1518,12 @@
           "description": "Telemetry-free build of VS Code",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Modern Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1534,12 +1534,12 @@
           "description": "Professional Python IDE with advanced debugging",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Full IDEs",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1550,12 +1550,12 @@
           "description": "JavaScript and TypeScript IDE",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Full IDEs",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1598,12 +1598,12 @@
           "description": "Browser-based IDE for collaborative coding",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Online Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1646,12 +1646,12 @@
           "description": "Aesthetic and feature-rich neovim config that is extensible and easy to use",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Vim & Modal Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -1662,12 +1662,12 @@
           "description": "Blazing fast Neovim config providing solid defaults and beautiful UI",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Editors & IDEs",
           "subcategory": "Vim & Modal Editors",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1697,12 +1697,12 @@
           "description": "Fast and friendly Git client for macOS and Windows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1713,7 +1713,7 @@
           "description": "Cross-platform Git GUI client",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
@@ -1729,12 +1729,12 @@
           "description": "Free Git GUI for Mac and Windows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1745,12 +1745,12 @@
           "description": "Framework for managing git pre-commit hooks",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Utilities",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -1761,7 +1761,7 @@
           "description": "Git extension for versioning large files",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Version Control",
           "subcategory": "Git Utilities",
           "metrics": {
@@ -2295,12 +2295,12 @@
           "description": "Loads and unloads environment variables based on current directory",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Terminal & Shell",
           "subcategory": "Productivity & Workflow",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2330,7 +2330,7 @@
           "description": "Node.js package manager",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Package Managers",
           "subcategory": "Language-Specific",
           "metrics": {
@@ -2458,12 +2458,12 @@
           "description": "Node.js version manager with easy switching between versions",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Package Managers",
           "subcategory": "Version Managers",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": {
@@ -2582,12 +2582,12 @@
           "description": "Fast, user-friendly build system",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Build Tools & Task Runners",
           "subcategory": "General Build Systems",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2681,7 +2681,7 @@
           "description": "Built-in task runner for Node.js projects",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Build Tools & Task Runners",
           "subcategory": "Task Runners",
           "metrics": {
@@ -2724,10 +2724,10 @@
           "github_info": null
         },
         {
-          "name": "Faker.js",
-          "url": "https://fakerjs.dev/",
-          "description": "Generate massive amounts of fake data",
-          "birth_year": 2010,
+          "name": "Agent QA",
+          "url": "https://github.com/vostride/agent-qa",
+          "description": "Agentic QA for natural-language web and mobile tests with persistent test memory",
+          "birth_year": 2015,
           "era": "mobile",
           "trend": "stable",
           "category": "Testing",
@@ -2735,6 +2735,25 @@
           "metrics": {
             "adoption_score": 65,
             "community_size": "Medium",
+            "learning_curve": "Easy"
+          },
+          "github_info": {
+            "owner": "vostride",
+            "repo": "agent-qa"
+          }
+        },
+        {
+          "name": "Faker.js",
+          "url": "https://fakerjs.dev/",
+          "description": "Generate massive amounts of fake data",
+          "birth_year": 2010,
+          "era": "mobile",
+          "trend": "declining",
+          "category": "Testing",
+          "subcategory": "Testing Utilities",
+          "metrics": {
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -2809,12 +2828,12 @@
           "description": "Web performance auditing tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Debugging & Profiling",
           "subcategory": "Performance Profiling",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -2892,12 +2911,12 @@
           "description": "Python linting tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Code Quality & Linting",
           "subcategory": "Linters & Formatters",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3010,12 +3029,12 @@
           "description": "Fast, git-friendly API client",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "API Development & Testing",
           "subcategory": "API Testing",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -3157,12 +3176,12 @@
           "description": "Universal database tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Database Tools",
           "subcategory": "Database Clients",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3221,12 +3240,12 @@
           "description": "Database migration tool",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Database Tools",
           "subcategory": "Database Development",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3320,12 +3339,12 @@
           "description": "Tool for building and managing virtual machine environments",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Development Environments",
           "subcategory": "Virtual Machines",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3742,12 +3761,12 @@
           "description": "Modern infrastructure as code",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "DevOps & Infrastructure",
           "subcategory": "Infrastructure as Code",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -3758,12 +3777,12 @@
           "description": "Cloud Development Kit for AWS",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "DevOps & Infrastructure",
           "subcategory": "Infrastructure as Code",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Steep"
           },
           "github_info": null
@@ -3841,12 +3860,12 @@
           "description": "Monitoring and analytics platform",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Monitoring & Logging",
           "subcategory": "Application Monitoring",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -3937,12 +3956,12 @@
           "description": "Elasticsearch, Logstash, and Kibana",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Monitoring & Logging",
           "subcategory": "Logging",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4001,12 +4020,12 @@
           "description": "Web application security scanner",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Security Scanning",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4097,7 +4116,7 @@
           "description": "Security vulnerability scanner for npm",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Security Scanning",
           "metrics": {
@@ -4129,12 +4148,12 @@
           "description": "Command-line interface for 1Password",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Secret Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4145,12 +4164,12 @@
           "description": "Secrets management service",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Security",
           "subcategory": "Secret Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4225,12 +4244,12 @@
           "description": "Developer hub for API documentation",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Documentation",
           "subcategory": "API Documentation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4257,12 +4276,12 @@
           "description": "Digital design toolkit (macOS)",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Design & Prototyping",
           "subcategory": "Design Tools",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4356,12 +4375,12 @@
           "description": "Website and application blocker",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Productivity",
           "subcategory": "Time Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4660,12 +4679,12 @@
           "description": "Lightweight and expressive ORM for small to medium applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "ORMs & Database Libraries",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4740,12 +4759,12 @@
           "description": "Layered configuration system supporting multiple formats and environments",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "Configuration Management",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4823,12 +4842,12 @@
           "description": "Fast serialization library supporting JSON, MessagePack, YAML, and TOML",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Python Libraries & Tools",
           "subcategory": "Serialization",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4909,12 +4928,12 @@
           "description": "Q&A platform for developers",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Documentation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4925,12 +4944,12 @@
           "description": "Interactive coding lessons",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4941,12 +4960,12 @@
           "description": "Technology skills platform",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4957,12 +4976,12 @@
           "description": "Online learning marketplace",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Learning Platforms",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4973,12 +4992,12 @@
           "description": "Coding interview preparation",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -4989,12 +5008,12 @@
           "description": "Programming challenges",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5005,12 +5024,12 @@
           "description": "Coding challenges and kata",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Learning & References",
           "subcategory": "Practice & Challenges",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5053,12 +5072,12 @@
           "description": "Command-line interface for Google Cloud Platform services",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Cloud Platforms",
           "subcategory": "Google Cloud",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5165,12 +5184,12 @@
           "description": "Lightweight WSGI web application framework for simple to complex applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Python",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -5197,12 +5216,12 @@
           "description": "Fast, unopinionated, minimalist web framework for Node.js",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Easy"
           },
           "github_info": null
@@ -5213,12 +5232,12 @@
           "description": "Progressive Node.js framework for building efficient and scalable server-side applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5229,12 +5248,12 @@
           "description": "Vue.js framework for building universal and static web applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "JavaScript/TypeScript",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5293,12 +5312,12 @@
           "description": "PHP web application framework with elegant syntax",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5325,12 +5344,12 @@
           "description": "Cross-platform framework for building modern web applications with .NET",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5341,12 +5360,12 @@
           "description": "High-performance HTTP web framework written in Go",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Web Frameworks",
           "subcategory": "Other Languages",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5504,12 +5523,12 @@
           "description": "Windows Presentation Foundation for building Windows desktop applications",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Desktop Application Development",
           "subcategory": "Native",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5731,12 +5750,12 @@
           "description": "Data build tool for transforming data in your warehouse using SQL and version control",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Transformation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5747,12 +5766,12 @@
           "description": "DataOps framework for SQL transformations with built-in testing and CI/CD",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Transformation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5763,12 +5782,12 @@
           "description": "Python library for building data pipelines with automatic schema inference",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Transformation",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5814,12 +5833,12 @@
           "description": "Open-source ELT platform built on top of Singer with CLI-first approach",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Integration",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5846,12 +5865,12 @@
           "description": "Fully managed ELT service with automated connectors and schema management",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Integration",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -5878,12 +5897,12 @@
           "description": "Kafka-compatible streaming platform built in C++ for faster performance",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Stream Processing",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6076,12 +6095,12 @@
           "description": "Data lakehouse platform with SQL query acceleration and self-service analytics",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Query Engines",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6124,12 +6143,12 @@
           "description": "Data versioning and pipeline platform with reproducible data science workflows",
           "birth_year": 2010,
           "era": "mobile",
-          "trend": "stable",
+          "trend": "declining",
           "category": "Data Engineering",
           "subcategory": "Data Version Control",
           "metrics": {
-            "adoption_score": 65,
-            "community_size": "Medium",
+            "adoption_score": 40,
+            "community_size": "Small",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6248,12 +6267,12 @@
           "description": "Fast Python package installer and resolver",
           "birth_year": 2023,
           "era": "cloud",
-          "trend": "rising",
+          "trend": "stable",
           "category": "Package Managers",
           "subcategory": "Language-Specific",
           "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
+            "adoption_score": 70,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6456,12 +6475,12 @@
           "description": "Client-only tool for creating reproducible developer environments",
           "birth_year": 2023,
           "era": "cloud",
-          "trend": "rising",
+          "trend": "stable",
           "category": "Development Environments",
           "subcategory": "Containerized Environments",
           "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
+            "adoption_score": 70,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -6491,12 +6510,12 @@
           "description": "Fast polyglot tool version manager and task runner",
           "birth_year": 2023,
           "era": "cloud",
-          "trend": "rising",
+          "trend": "stable",
           "category": "Development Environments",
           "subcategory": "Reproducible Systems",
           "metrics": {
-            "adoption_score": 90,
-            "community_size": "Huge",
+            "adoption_score": 70,
+            "community_size": "Large",
             "learning_curve": "Moderate"
           },
           "github_info": null
@@ -7003,19 +7022,19 @@
     }
   ],
   "statistics": {
-    "total_tools": 396,
+    "total_tools": 397,
     "tools_by_era": {
       "unix": 4,
       "internet": 9,
       "web": 74,
-      "mobile": 282,
+      "mobile": 283,
       "cloud": 27,
       "ai": 0
     },
     "tools_by_trend": {
-      "rising": 25,
-      "stable": 285,
-      "declining": 86
+      "rising": 22,
+      "stable": 228,
+      "declining": 147
     },
     "average_age": 2013,
     "newest_tool_year": 2023,

@@ -172,6 +172,7 @@
 - JUnit: https://junit.org/
 
 ### Testing Utilities
+- Agent QA: https://github.com/vostride/agent-qa
 - Faker.js: https://fakerjs.dev/
 - Storybook: https://storybook.js.org/
 - Testing Library: https://testing-library.com/

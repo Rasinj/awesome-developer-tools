@@ -426,6 +426,9 @@ categories:
             description: "Unit testing framework for Java"
       - name: "Testing Utilities"
         tools:
+          - name: "Agent QA"
+            url: "https://github.com/vostride/agent-qa"
+            description: "Agentic QA for natural-language web and mobile tests with persistent test memory"
           - name: "Faker.js"
             url: "https://fakerjs.dev/"
             description: "Generate massive amounts of fake data"
