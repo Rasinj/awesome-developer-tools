@@ -184,6 +184,7 @@ Development Environments,Remote Development,VS Code Remote,https://code.visualst
 Development Environments,Remote Development,code-server,https://github.com/coder/code-server,VS Code in the browser running on a remote server
 Development Environments,Remote Development,JetBrains Gateway,https://www.jetbrains.com/remote-development/gateway/,Remote development solution for JetBrains IDEs
 Development Environments,Remote Development,Theia,https://theia-ide.org/,Cloud and desktop IDE platform built with modern web technologies
+Development Environments,Remote Development,AppWizzy,https://appwizzy.com/,AI web app development in a dedicated cloud VM with Git integration and browser-based editing
 Development Environments,Project Scaffolding,Cookiecutter,https://cookiecutter.readthedocs.io/,Command-line utility for creating projects from templates
 Development Environments,Project Scaffolding,Yeoman,https://yeoman.io/,Web application scaffolding tool with generator ecosystem
 Development Environments,Project Scaffolding,degit,https://github.com/Rich-Harris/degit,Straightforward project scaffolding without git history

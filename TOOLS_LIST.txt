@@ -282,6 +282,7 @@
 - code-server: https://github.com/coder/code-server
 - JetBrains Gateway: https://www.jetbrains.com/remote-development/gateway/
 - Theia: https://theia-ide.org/
+- AppWizzy: https://appwizzy.com/
 
 ### Project Scaffolding
 - Cookiecutter: https://cookiecutter.readthedocs.io/

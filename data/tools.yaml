@@ -691,6 +691,9 @@ categories:
           - name: "Theia"
             url: "https://theia-ide.org/"
             description: "Cloud and desktop IDE platform built with modern web technologies"
+          - name: "AppWizzy"
+            url: "https://appwizzy.com/"
+            description: "AI web app development in a dedicated cloud VM with Git integration and browser-based editing"
       - name: "Project Scaffolding"
         tools:
           - name: "Cookiecutter"

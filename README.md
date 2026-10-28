@@ -408,6 +408,7 @@ Tools for creating, managing, and maintaining consistent development environment
 - **[code-server](https://github.com/coder/code-server)** - VS Code in the browser running on a remote server
 - **[JetBrains Gateway](https://www.jetbrains.com/remote-development/gateway/)** - Remote development solution for JetBrains IDEs
 - **[Theia](https://theia-ide.org/)** - Cloud and desktop IDE platform built with modern web technologies
+- **[AppWizzy](https://appwizzy.com/)** - AI web app development in a dedicated cloud VM with Git integration and browser-based editing
 
 
 ### Project Scaffolding
